@@ -31,11 +31,11 @@ export function calculateNextReview(card: SRSCard, rating: SRSRating): SRSCard {
     const now = Date.now();
     let { easeFactor, interval, repetitions } = card;
 
-    // Quality score: again=0, hard=1, good=2, easy=3
+    // Quality score: again=0, hard=3, good=4, easy=5
     const qualityScores: Record<SRSRating, number> = {
         again: 0,
-        hard: 2,
-        good: 3,
+        hard: 3,
+        good: 4,
         easy: 5,
     };
     const quality = qualityScores[rating];
@@ -43,7 +43,9 @@ export function calculateNextReview(card: SRSCard, rating: SRSRating): SRSCard {
     if (rating === 'again') {
         // Reset on failure
         repetitions = 0;
-        interval = 1; // 1 minute for immediate re-study
+        interval = 1;
+        // Ease Factor Reduction: SM-2 usually reduces EF even on fail
+        easeFactor = Math.max(MIN_EASE_FACTOR, easeFactor - 0.2);
     } else {
         // Successful review
         repetitions += 1;
@@ -53,7 +55,9 @@ export function calculateNextReview(card: SRSCard, rating: SRSRating): SRSCard {
         } else if (repetitions === 2) {
             interval = 6; // 6 days
         } else {
-            interval = Math.round(interval * easeFactor * RATING_MULTIPLIERS[rating]);
+            // Use a specific multiplier for Hard, otherwise use Ease Factor
+            const multiplier = rating === 'hard' ? 1.2 : (easeFactor * RATING_MULTIPLIERS[rating]);
+            interval = Math.ceil(interval * multiplier);
         }
 
         // Update ease factor using SM-2 formula
@@ -65,7 +69,7 @@ export function calculateNextReview(card: SRSCard, rating: SRSRating): SRSCard {
 
     // Calculate next due date
     const intervalMs = rating === 'again'
-        ? 60 * 1000 // 1 minute for 'again'
+        ? 60 * 5 * 1000 // 5 minutes for 'again'
         : interval * 24 * 60 * 60 * 1000; // days to ms
 
     return {
@@ -81,9 +85,11 @@ export function calculateNextReview(card: SRSCard, rating: SRSRating): SRSCard {
 // Get cards that are due for review
 export function getDueCards(cards: Record<string, SRSCard>): SRSCard[] {
     const now = Date.now();
-    return Object.values(cards)
+    const dueCards = Object.values(cards)
         .filter(card => card.dueDate <= now)
         .sort((a, b) => a.dueDate - b.dueDate);
+    console.log(dueCards);
+    return dueCards;
 }
 
 // Get cards that are new (never reviewed)

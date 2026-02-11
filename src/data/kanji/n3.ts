@@ -2,347 +2,223 @@ import type { Kanji } from '../../types';
 
 // JLPT N3 Kanji
 export const n3Kanji: Kanji[] = [{
-    "id": "k-n3-1",
+    "id": "k-n3-001",
     "character": "政",
     "onyomi": ["セイ"],
     "kunyomi": ["まつりごと"],
     "meaning": ["politics", "government"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "政治家",
-            "reading": "せいじか",
-            "meaning": "politician"
-        },
-        {
-            "word": "政府",
-            "reading": "せいふ",
-            "meaning": "government"
-        }
-    ]
+    "jlptLevel": 3
 },
 {
-    "id": "k-n3-2",
+    "id": "k-n3-002",
     "character": "議",
     "onyomi": ["ギ"],
     "kunyomi": [],
     "meaning": ["deliberation", "consultation", "debate"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "議員",
-            "reading": "いいん",
-            "meaning": "member of parliament"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-3",
+    "id": "k-n3-003",
     "character": "民",
     "onyomi": ["ミン"],
     "kunyomi": ["たみ"],
     "meaning": ["people", "nation", "subjects"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "国民",
-            "reading": "こくみん",
-            "meaning": "citizen"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-4",
+    "id": "k-n3-004",
     "character": "連",
     "onyomi": ["レン"],
-    "kunyomi": ["つら(なる)", "つ(れる)"],
+    "kunyomi": ["つら.なる", "つ.れる"],
     "meaning": ["take along", "lead", "join", "connect"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "連合",
-            "reading": "れんごう",
-            "meaning": "coalition"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-5",
+    "id": "k-n3-005",
     "character": "対",
     "onyomi": ["タイ", "ツイ"],
     "kunyomi": [],
     "meaning": ["opposite", "even", "equal", "versus", "anti-", "compare"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "対立",
-            "reading": "たいりつ",
-            "meaning": "opposition"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-6",
+    "id": "k-n3-006",
     "character": "部",
     "onyomi": ["ブ"],
     "kunyomi": [],
     "meaning": ["section", "bureau", "dept", "class", "copy", "part", "portion"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "部屋",
-            "reading": "ぶや",
-            "meaning": "room"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-7",
+    "id": "k-n3-007",
     "character": "合",
     "onyomi": ["ゴウ", "ガッ", "カッ"],
-    "kunyomi": ["あ(う)", "あい"],
+    "kunyomi": ["あ.う", "あい"],
     "meaning": ["fit", "suit", "join", "0.1"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "集合",
-            "reading": "けいごう",
-            "meaning": "meeting"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-8",
+    "id": "k-n3-008",
     "character": "市",
     "onyomi": ["シ"],
     "kunyomi": ["いち"],
     "meaning": ["market", "city", "town"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "都会",
-            "reading": "たと",
-            "meaning": "metropolis"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-9",
+    "id": "k-n3-009",
     "character": "内",
     "onyomi": ["ナイ"],
     "kunyomi": ["うち"],
     "meaning": ["inside", "within", "between", "among", "house", "home"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "内閣",
-            "reading": "うちかく",
-            "meaning": "cabinet"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-10",
+    "id": "k-n3-010",
     "character": "相",
     "onyomi": ["ソウ", "ショウ"],
     "kunyomi": ["あい"],
     "meaning": ["inter-", "mutual", "together", "each other", "minister of state"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "相手",
-            "reading": "あいだ",
-            "meaning": "opponent"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-11",
+    "id": "k-n3-011",
     "character": "定",
     "onyomi": ["テイ", "ジョウ"],
-    "kunyomi": ["さだ(める)"],
+    "kunyomi": ["さだ.める"],
     "meaning": ["determine", "fix", "establish", "decide"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "定数",
-            "reading": "ていすう",
-            "meaning": "constant"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-12",
+    "id": "k-n3-012",
     "character": "回",
     "onyomi": ["カイ"],
-    "kunyomi": ["まわ(す)"],
+    "kunyomi": ["まわ.す"],
     "meaning": ["-times", "round", "revolve", "counter"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "回数",
-            "reading": "かいすう",
-            "meaning": "number of times"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-13",
+    "id": "k-n3-013",
     "character": "選",
     "onyomi": ["セン"],
-    "kunyomi": ["えら(ぶ)"],
+    "kunyomi": ["えら.ぶ"],
     "meaning": ["elect", "select", "choose", "prefer"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "選挙",
-            "reading": "せんきょ",
-            "meaning": "election"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-14",
+    "id": "k-n3-014",
     "character": "米",
     "onyomi": ["ベイ", "マイ", "メエトル"],
     "kunyomi": ["こめ"],
     "meaning": ["rice", "USA", "meter"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "米国",
-            "reading": "まいこく",
-            "meaning": "USA"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-15",
+    "id": "k-n3-015",
     "character": "実",
     "onyomi": ["ジツ"],
-    "kunyomi": ["み", "みの(る)"],
+    "kunyomi": ["み", "みの.る"],
     "meaning": ["reality", "truth"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "実際",
-            "reading": "じっさい",
-            "meaning": "in fact"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-16",
+    "id": "k-n3-016",
     "character": "関",
     "onyomi": ["カン"],
-    "kunyomi": ["せき", "かか(わる)"],
+    "kunyomi": ["せき", "かか.わる"],
     "meaning": ["connection", "barrier", "gateway", "involve", "concerning"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "関係",
-            "reading": "かんかわ",
-            "meaning": "relationship"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-17",
+    "id": "k-n3-017",
     "character": "決",
     "onyomi": ["ケツ"],
-    "kunyomi": ["き(める)"],
+    "kunyomi": ["き.める"],
     "meaning": ["decide", "fix", "agree upon", "appoint"],
-    "jlptLevel": 3,
-    "examples": [
-        {
-            "word": "決定",
-            "reading": "けっさい",
-            "meaning": "decision"
-        }
-    ]
+    jlptLevel: 3
 },
 {
-    "id": "k-n3-18",
+    "id": "k-n3-018",
     "character": "全",
     "onyomi": ["ゼン"],
-    "kunyomi": ["まった(く)", "すべ(て)"],
+    "kunyomi": ["まった.く", "すべ.て"],
     "meaning": ["whole", "entire", "all", "complete", "fulfill"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-19",
+    "id": "k-n3-019",
     "character": "表",
     "onyomi": ["ヒョウ"],
-    "kunyomi": ["おもて", "あらわ(す)"],
+    "kunyomi": ["おもて", "あらわ.す"],
     "meaning": ["surface", "table", "chart", "diagram"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-20",
+    "id": "k-n3-020",
     "character": "戦",
     "onyomi": ["セン"],
-    "kunyomi": ["いくさ", "たたか(う)"],
+    "kunyomi": ["いくさ", "たたか.う"],
     "meaning": ["war", "battle", "match"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-21",
+    "id": "k-n3-021",
     "character": "経",
     "onyomi": ["ケイ"],
-    "kunyomi": ["へ(る)", "た(つ)"],
+    "kunyomi": ["へ.る", "た.つ"],
     "meaning": ["longitude", "pass thru", "expire", "warp"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-22",
+    "id": "k-n3-022",
     "character": "最",
     "onyomi": ["サイ"],
-    "kunyomi": ["もっと(も)"],
+    "kunyomi": ["もっと.も"],
     "meaning": ["utmost", "most", "extreme"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-23",
+    "id": "k-n3-023",
     "character": "現",
     "onyomi": ["ゲン"],
-    "kunyomi": ["あらわ(れる)", "うつ(つ)"],
+    "kunyomi": ["あらわ.れる", "うつ.つ"],
     "meaning": ["present", "existing", "actual"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-24",
+    "id": "k-n3-024",
     "character": "調",
     "onyomi": ["チョウ"],
-    "kunyomi": ["しら(べる)", "ととの(う)"],
+    "kunyomi": ["しら.べる", "ととの.う"],
     "meaning": ["tune", "tone", "meter", "prepare", "investigate"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-25",
+    "id": "k-n3-025",
     "character": "化",
     "onyomi": ["カ", "ケ"],
-    "kunyomi": ["ば(ける)", "ふ(ける)"],
+    "kunyomi": ["ば.ける", "ふ.ける"],
     "meaning": ["change", "take the form of", "influence", "enchant", "delude", "-ization"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-26",
+    "id": "k-n3-026",
     "character": "当",
     "onyomi": ["トウ"],
-    "kunyomi": ["あ(たる)"],
+    "kunyomi": ["あ.たる"],
     "meaning": ["hit", "right", "appropriate"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-27",
+    "id": "k-n3-027",
     "character": "約",
     "onyomi": ["ヤク"],
-    "kunyomi": ["つづ(まる)"],
+    "kunyomi": ["つづ.まる"],
     "meaning": ["promise", "approximately", "shrink"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-28",
+    "id": "k-n3-028",
     "character": "首",
     "onyomi": ["シュ"],
     "kunyomi": ["くび"],
@@ -350,7 +226,7 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-29",
+    "id": "k-n3-029",
     "character": "法",
     "onyomi": ["ホウ"],
     "kunyomi": ["のり"],
@@ -358,7 +234,7 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-30",
+    "id": "k-n3-030",
     "character": "性",
     "onyomi": ["セイ", "ショウ"],
     "kunyomi": [],
@@ -366,7 +242,7 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-31",
+    "id": "k-n3-031",
     "character": "的",
     "onyomi": ["テキ"],
     "kunyomi": [],
@@ -374,15 +250,15 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-32",
+    "id": "k-n3-032",
     "character": "要",
     "onyomi": ["ヨウ"],
-    "kunyomi": ["い(る)", "かなめ"],
+    "kunyomi": ["い.る", "かなめ"],
     "meaning": ["need", "main point", "essence", "pivot"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-33",
+    "id": "k-n3-033",
     "character": "制",
     "onyomi": ["セイ"],
     "kunyomi": [],
@@ -390,31 +266,31 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-34",
+    "id": "k-n3-034",
     "character": "治",
     "onyomi": ["ジ", "チ"],
-    "kunyomi": ["おさ(める)", "なお(る)"],
+    "kunyomi": ["おさ.める", "なお.る"],
     "meaning": ["reign", "cure", "heal"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-35",
+    "id": "k-n3-035",
     "character": "務",
     "onyomi": ["ム"],
-    "kunyomi": ["つと(める)"],
+    "kunyomi": ["つと.める"],
     "meaning": ["task", "duties"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-36",
+    "id": "k-n3-036",
     "character": "成",
     "onyomi": ["セイ", "ジョウ"],
-    "kunyomi": ["な(る)"],
+    "kunyomi": ["な.る"],
     "meaning": ["turn into", "become", "get", "grow", "elapse"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-37",
+    "id": "k-n3-037",
     "character": "期",
     "onyomi": ["キ", "ゴ"],
     "kunyomi": [],
@@ -422,15 +298,15 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-38",
+    "id": "k-n3-038",
     "character": "取",
     "onyomi": ["シュ"],
-    "kunyomi": ["と(る)"],
+    "kunyomi": ["と.る"],
     "meaning": ["take", "fetch"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-39",
+    "id": "k-n3-039",
     "character": "都",
     "onyomi": ["ト", "ツ"],
     "kunyomi": ["みやこ"],
@@ -438,15 +314,15 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-40",
+    "id": "k-n3-040",
     "character": "和",
     "onyomi": ["ワ", "オ"],
-    "kunyomi": ["やわ(らぐ)", "なご(む)"],
+    "kunyomi": ["やわ.らぐ", "なご.む"],
     "meaning": ["harmony", "Japanese style", "peace"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-41",
+    "id": "k-n3-041",
     "character": "機",
     "onyomi": ["キ"],
     "kunyomi": ["はた"],
@@ -454,79 +330,79 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-42",
+    "id": "k-n3-042",
     "character": "平",
     "onyomi": ["ヘイ", "ビョウ"],
-    "kunyomi": ["たい(ら)", "ひら"],
+    "kunyomi": ["たい.ら", "ひら"],
     "meaning": ["even", "flat", "peace"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-43",
+    "id": "k-n3-043",
     "character": "加",
     "onyomi": ["カ"],
-    "kunyomi": ["くわ(える)"],
+    "kunyomi": ["くわ.える"],
     "meaning": ["add", "addition", "increase", "join"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-44",
+    "id": "k-n3-044",
     "character": "受",
     "onyomi": ["ジュ"],
-    "kunyomi": ["う(ける)"],
+    "kunyomi": ["う.ける"],
     "meaning": ["accept", "undergo", "answer (phone)", "take"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-45",
+    "id": "k-n3-045",
     "character": "続",
     "onyomi": ["ゾク"],
-    "kunyomi": ["つづ(く)"],
+    "kunyomi": ["つづ.く"],
     "meaning": ["continue", "series", "sequel"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-46",
+    "id": "k-n3-046",
     "character": "進",
     "onyomi": ["シン"],
-    "kunyomi": ["すす(む)"],
+    "kunyomi": ["すす.む"],
     "meaning": ["advance", "proceed"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-47",
+    "id": "k-n3-047",
     "character": "数",
     "onyomi": ["スウ"],
-    "kunyomi": ["かず", "かぞ(える)"],
+    "kunyomi": ["かず", "かぞ.える"],
     "meaning": ["number", "strength", "fate", "law", "figures"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-48",
+    "id": "k-n3-048",
     "character": "記",
     "onyomi": ["キ"],
-    "kunyomi": ["しる(す)"],
+    "kunyomi": ["しる.す"],
     "meaning": ["scribe", "account", "narrative"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-49",
+    "id": "k-n3-049",
     "character": "初",
     "onyomi": ["ショ"],
-    "kunyomi": ["はじ(め)", "はつ"],
+    "kunyomi": ["はじ.め", "はつ"],
     "meaning": ["first time", "beginning"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-50",
+    "id": "k-n3-050",
     "character": "指",
     "onyomi": ["シ"],
-    "kunyomi": ["ゆび", "さ(す)"],
+    "kunyomi": ["ゆび", "さ.す"],
     "meaning": ["finger", "point to", "indicate"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-51",
+    "id": "k-n3-051",
     "character": "権",
     "onyomi": ["ケン"],
     "kunyomi": [],
@@ -534,47 +410,47 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-52",
+    "id": "k-n3-052",
     "character": "支",
     "onyomi": ["シ"],
-    "kunyomi": ["ささ(える)"],
+    "kunyomi": ["ささ.える"],
     "meaning": ["branch", "support", "sustain"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-53",
+    "id": "k-n3-053",
     "character": "産",
     "onyomi": ["サン"],
-    "kunyomi": ["う(む)", "む(す)"],
+    "kunyomi": ["う.む", "む.す"],
     "meaning": ["products", "bear", "give birth"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-54",
+    "id": "k-n3-054",
     "character": "点",
     "onyomi": ["テン"],
-    "kunyomi": ["つ(ける)"],
+    "kunyomi": ["つ.ける"],
     "meaning": ["spot", "point", "mark"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-55",
+    "id": "k-n3-055",
     "character": "報",
     "onyomi": ["ホウ"],
-    "kunyomi": ["むく(いる)"],
+    "kunyomi": ["むく.いる"],
     "meaning": ["report", "news", "reward"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-56",
+    "id": "k-n3-056",
     "character": "済",
     "onyomi": ["サイ", "セイ"],
-    "kunyomi": ["す(む)"],
+    "kunyomi": ["す.む"],
     "meaning": ["settle", "relieve", "finish"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-57",
+    "id": "k-n3-057",
     "character": "活",
     "onyomi": ["カツ"],
     "kunyomi": [],
@@ -582,7 +458,7 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-58",
+    "id": "k-n3-058",
     "character": "原",
     "onyomi": ["ゲン"],
     "kunyomi": ["はら"],
@@ -590,7 +466,7 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-59",
+    "id": "k-n3-059",
     "character": "共",
     "onyomi": ["キョウ"],
     "kunyomi": ["とも"],
@@ -598,31 +474,31 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-60",
+    "id": "k-n3-060",
     "character": "得",
     "onyomi": ["トク"],
-    "kunyomi": ["え(る)"],
+    "kunyomi": ["え.る"],
     "meaning": ["gain", "get", "find", "earn", "acquire", "can", "may", "able to", "profit"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-61",
+    "id": "k-n3-061",
     "character": "解",
     "onyomi": ["カイ", "ゲ"],
-    "kunyomi": ["と(く)", "ほど(く)"],
+    "kunyomi": ["と.く", "ほど.く"],
     "meaning": ["unravel", "explanation"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-62",
+    "id": "k-n3-062",
     "character": "交",
     "onyomi": ["コウ"],
-    "kunyomi": ["まじ(わる)", "ま(ぜる)", "か(わす)"],
+    "kunyomi": ["まじ.わる", "ま.ぜる", "か.わす"],
     "meaning": ["mingle", "mixing", "association", "coming & going"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-63",
+    "id": "k-n3-063",
     "character": "資",
     "onyomi": ["シ"],
     "kunyomi": [],
@@ -630,23 +506,23 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-64",
+    "id": "k-n3-064",
     "character": "予",
     "onyomi": ["ヨ", "シャ"],
-    "kunyomi": ["あらかじ(め)"],
+    "kunyomi": ["あらかじ.め"],
     "meaning": ["beforehand", "previous", "myself", "I"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-65",
+    "id": "k-n3-065",
     "character": "向",
     "onyomi": ["コウ"],
-    "kunyomi": ["む(く)", "むか(い)"],
+    "kunyomi": ["む.く", "むか.い"],
     "meaning": ["facing", "beyond"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-66",
+    "id": "k-n3-066",
     "character": "際",
     "onyomi": ["サイ"],
     "kunyomi": ["きわ"],
@@ -654,15 +530,15 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-67",
+    "id": "k-n3-067",
     "character": "勝",
     "onyomi": ["ショウ"],
-    "kunyomi": ["か(つ)", "まさ(る)"],
+    "kunyomi": ["か.つ", "まさ.る"],
     "meaning": ["victory", "win"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-68",
+    "id": "k-n3-068",
     "character": "面",
     "onyomi": ["メン"],
     "kunyomi": ["おも", "おもて", "つら"],
@@ -670,23 +546,23 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-69",
+    "id": "k-n3-069",
     "character": "告",
     "onyomi": ["コク"],
-    "kunyomi": ["つ(げる)"],
+    "kunyomi": ["つ.げる"],
     "meaning": ["revelation", "inform"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-70",
+    "id": "k-n3-070",
     "character": "反",
     "onyomi": ["ハン"],
-    "kunyomi": ["そ(る)"],
+    "kunyomi": ["そ.る"],
     "meaning": ["anti-"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-71",
+    "id": "k-n3-071",
     "character": "判",
     "onyomi": ["ハン"],
     "kunyomi": [],
@@ -694,39 +570,39 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-72",
+    "id": "k-n3-072",
     "character": "認",
     "onyomi": ["ニン"],
-    "kunyomi": ["みと(める)", "したた(める)"],
+    "kunyomi": ["みと.める", "したた.める"],
     "meaning": ["acknowledge", "witness", "recognize"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-73",
+    "id": "k-n3-073",
     "character": "参",
     "onyomi": ["サン"],
-    "kunyomi": ["まい(る)"],
+    "kunyomi": ["まい.る"],
     "meaning": ["going", "coming", "participate"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-74",
+    "id": "k-n3-074",
     "character": "利",
     "onyomi": ["リ"],
-    "kunyomi": ["き(く)"],
+    "kunyomi": ["き.く"],
     "meaning": ["profit", "advantage", "benefit"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-75",
+    "id": "k-n3-075",
     "character": "組",
     "onyomi": ["ソ"],
-    "kunyomi": ["く(む)", "くみ"],
+    "kunyomi": ["く.む", "くみ"],
     "meaning": ["association", "assemble", "unite"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-76",
+    "id": "k-n3-076",
     "character": "信",
     "onyomi": ["シン"],
     "kunyomi": [],
@@ -734,15 +610,15 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-77",
+    "id": "k-n3-077",
     "character": "在",
     "onyomi": ["ザイ"],
-    "kunyomi": ["あ(る)"],
+    "kunyomi": ["あ.る"],
     "meaning": ["exist", "outskirts"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-78",
+    "id": "k-n3-078",
     "character": "件",
     "onyomi": ["ケン"],
     "kunyomi": ["くだん"],
@@ -750,7 +626,7 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-79",
+    "id": "k-n3-079",
     "character": "側",
     "onyomi": ["ソク"],
     "kunyomi": ["がわ", "そば"],
@@ -758,31 +634,31 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-80",
+    "id": "k-n3-080",
     "character": "任",
     "onyomi": ["ニン"],
-    "kunyomi": ["まか(せる)"],
+    "kunyomi": ["まか.せる"],
     "meaning": ["responsibility", "duty"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-81",
+    "id": "k-n3-081",
     "character": "引",
     "onyomi": ["イン"],
-    "kunyomi": ["ひ(く)"],
+    "kunyomi": ["ひ.く"],
     "meaning": ["pull", "tug", "jerk"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-82",
+    "id": "k-n3-082",
     "character": "求",
     "onyomi": ["キュウ"],
-    "kunyomi": ["もと(める)"],
+    "kunyomi": ["もと.める"],
     "meaning": ["request", "want", "demand"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-83",
+    "id": "k-n3-083",
     "character": "所",
     "onyomi": ["ショ"],
     "kunyomi": ["ところ"],
@@ -790,15 +666,15 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-84",
+    "id": "k-n3-084",
     "character": "次",
     "onyomi": ["ジ", "シ"],
-    "kunyomi": ["つ(ぐ)", "つぎ"],
+    "kunyomi": ["つ.ぐ", "つぎ"],
     "meaning": ["next", "order"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-85",
+    "id": "k-n3-085",
     "character": "昨",
     "onyomi": ["サク"],
     "kunyomi": [],
@@ -806,15 +682,15 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-86",
+    "id": "k-n3-086",
     "character": "論",
     "onyomi": ["ロン"],
-    "kunyomi": ["あげつら(う)"],
+    "kunyomi": ["あげつら.う"],
     "meaning": ["argument", "discourse"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-87",
+    "id": "k-n3-087",
     "character": "官",
     "onyomi": ["カン"],
     "kunyomi": [],
@@ -822,23 +698,23 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-88",
+    "id": "k-n3-088",
     "character": "増",
     "onyomi": ["ゾウ"],
-    "kunyomi": ["ま(す)", "ふ(える)"],
+    "kunyomi": ["ま.す", "ふ.える"],
     "meaning": ["increase", "add"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-89",
+    "id": "k-n3-089",
     "character": "係",
     "onyomi": ["ケイ"],
-    "kunyomi": ["かか(る)", "かかり"],
+    "kunyomi": ["かか.る", "かかり"],
     "meaning": ["person in charge", "connection"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-90",
+    "id": "k-n3-090",
     "character": "感",
     "onyomi": ["カン"],
     "kunyomi": [],
@@ -846,55 +722,55 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-91",
+    "id": "k-n3-091",
     "character": "情",
     "onyomi": ["ジョウ", "セイ"],
-    "kunyomi": ["なさ(け)"],
+    "kunyomi": ["なさ.け"],
     "meaning": ["feelings", "emotion", "passion"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-92",
+    "id": "k-n3-092",
     "character": "投",
     "onyomi": ["トウ"],
-    "kunyomi": ["な(げる)"],
+    "kunyomi": ["な.げる"],
     "meaning": ["throw", "discard"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-93",
+    "id": "k-n3-093",
     "character": "示",
     "onyomi": ["ジ", "シ"],
-    "kunyomi": ["しめ(す)"],
+    "kunyomi": ["しめ.す"],
     "meaning": ["show", "indicate", "display"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-94",
+    "id": "k-n3-094",
     "character": "変",
     "onyomi": ["ヘン"],
-    "kunyomi": ["か(わる)"],
+    "kunyomi": ["か.わる"],
     "meaning": ["unusual", "change", "strange"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-95",
+    "id": "k-n3-095",
     "character": "打",
     "onyomi": ["ダ"],
-    "kunyomi": ["う(つ)", "ぶ(つ)"],
+    "kunyomi": ["う.つ", "ぶ.つ"],
     "meaning": ["strike", "hit", "knock"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-96",
+    "id": "k-n3-096",
     "character": "直",
     "onyomi": ["チョク", "ジキ"],
-    "kunyomi": ["ただ(ちに)", "す(ぐ)"],
+    "kunyomi": ["ただ.ちに", "す.ぐ"],
     "meaning": ["straightaway", "honesty", "frankness", "fix", "repair"],
     jlptLevel: 3
 },
 {
-    "id": "k-n3-97",
+    "id": "k-n3-097",
     "character": "両",
     "onyomi": ["リョウ"],
     "kunyomi": [],
@@ -902,7 +778,7 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-98",
+    "id": "k-n3-098",
     "character": "式",
     "onyomi": ["シキ"],
     "kunyomi": [],
@@ -910,10 +786,10 @@ export const n3Kanji: Kanji[] = [{
     jlptLevel: 3
 },
 {
-    "id": "k-n3-99",
+    "id": "k-n3-099",
     "character": "確",
     "onyomi": ["カク"],
-    "kunyomi": ["たし(か)"],
+    "kunyomi": ["たし.か"],
     "meaning": ["assurance", "firm", "confirm"],
     jlptLevel: 3
 },
@@ -921,7 +797,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-100",
     "character": "果",
     "onyomi": ["カ"],
-    "kunyomi": ["は(たす)"],
+    "kunyomi": ["は.たす"],
     "meaning": ["fruit", "reward", "carry out", "achieve", "complete"],
     jlptLevel: 3
 },
@@ -937,7 +813,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-102",
     "character": "必",
     "onyomi": ["ヒツ"],
-    "kunyomi": ["かなら(ず)"],
+    "kunyomi": ["かなら.ず"],
     "meaning": ["invariably", "certain", "inevitable"],
     jlptLevel: 3
 },
@@ -961,7 +837,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-105",
     "character": "争",
     "onyomi": ["ソウ"],
-    "kunyomi": ["あらそ(う)"],
+    "kunyomi": ["あらそ.う"],
     "meaning": ["contend", "dispute", "argue"],
     jlptLevel: 3
 },
@@ -977,7 +853,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-107",
     "character": "能",
     "onyomi": ["ノウ"],
-    "kunyomi": ["あた(う)"],
+    "kunyomi": ["あた.う"],
     "meaning": ["ability", "talent", "skill", "capacity"],
     jlptLevel: 3
 },
@@ -993,7 +869,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-109",
     "character": "置",
     "onyomi": ["チ"],
-    "kunyomi": ["お(く)"],
+    "kunyomi": ["お.く"],
     "meaning": ["placement", "put", "set", "deposit", "leave behind"],
     jlptLevel: 3
 },
@@ -1001,7 +877,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-110",
     "character": "流",
     "onyomi": ["リュウ", "ル"],
-    "kunyomi": ["なが(れる)"],
+    "kunyomi": ["なが.れる"],
     "meaning": ["current", "flow"],
     jlptLevel: 3
 },
@@ -1017,7 +893,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-112",
     "character": "疑",
     "onyomi": ["ギ"],
-    "kunyomi": ["うたが(う)"],
+    "kunyomi": ["うたが.う"],
     "meaning": ["doubt", "distrust"],
     jlptLevel: 3
 },
@@ -1025,7 +901,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-113",
     "character": "過",
     "onyomi": ["カ"],
-    "kunyomi": ["す(ぎる)", "よぎ(る)"],
+    "kunyomi": ["す.ぎる", "よぎ.る"],
     "meaning": ["overdo", "exceed", "go beyond"],
     jlptLevel: 3
 },
@@ -1041,7 +917,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-115",
     "character": "放",
     "onyomi": ["ホウ"],
-    "kunyomi": ["はな(す)", "ほう(る)"],
+    "kunyomi": ["はな.す", "ほう.る"],
     "meaning": ["set free", "release"],
     jlptLevel: 3
 },
@@ -1081,7 +957,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-120",
     "character": "与",
     "onyomi": ["ヨ"],
-    "kunyomi": ["あた(える)", "あずか(る)"],
+    "kunyomi": ["あた.える", "あずか.る"],
     "meaning": ["give", "award"],
     jlptLevel: 3
 },
@@ -1089,7 +965,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-121",
     "character": "供",
     "onyomi": ["キョウ", "ク", "クウ"],
-    "kunyomi": ["そな(える)", "とも"],
+    "kunyomi": ["そな.える", "とも"],
     "meaning": ["submit", "offer", "present", "accompany"],
     jlptLevel: 3
 },
@@ -1105,7 +981,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-123",
     "character": "構",
     "onyomi": ["コウ"],
-    "kunyomi": ["かま(う)"],
+    "kunyomi": ["かま.う"],
     "meaning": ["posture", "build", "pretend"],
     jlptLevel: 3
 },
@@ -1113,7 +989,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-124",
     "character": "割",
     "onyomi": ["カツ"],
-    "kunyomi": ["わ(る)", "わり"],
+    "kunyomi": ["わ.る", "わり"],
     "meaning": ["proportion", "divide", "cut", "separate"],
     jlptLevel: 3
 },
@@ -1129,7 +1005,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-126",
     "character": "費",
     "onyomi": ["ヒ"],
-    "kunyomi": ["つい(やす)"],
+    "kunyomi": ["つい.やす"],
     "meaning": ["expense", "consume"],
     jlptLevel: 3
 },
@@ -1137,7 +1013,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-127",
     "character": "付",
     "onyomi": ["フ"],
-    "kunyomi": ["つ(ける)"],
+    "kunyomi": ["つ.ける"],
     "meaning": ["adhere", "attach", "refer to", "append"],
     jlptLevel: 3
 },
@@ -1145,7 +1021,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-128",
     "character": "由",
     "onyomi": ["ユ", "ユウ"],
-    "kunyomi": ["よし", "よ(る)"],
+    "kunyomi": ["よし", "よ.る"],
     "meaning": ["wherefore", "a reason"],
     jlptLevel: 3
 },
@@ -1153,7 +1029,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-129",
     "character": "説",
     "onyomi": ["セツ", "ゼイ"],
-    "kunyomi": ["と(く)"],
+    "kunyomi": ["と.く"],
     "meaning": ["opinion", "theory", "explanation"],
     jlptLevel: 3
 },
@@ -1161,7 +1037,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-130",
     "character": "難",
     "onyomi": ["ナン"],
-    "kunyomi": ["かた(い)", "むずか(しい)", "にく(い)"],
+    "kunyomi": ["かた.い", "むずか.しい", "にく.い"],
     "meaning": ["difficult", "trouble", "accident"],
     jlptLevel: 3
 },
@@ -1169,7 +1045,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-131",
     "character": "優",
     "onyomi": ["ユウ", "ウ"],
-    "kunyomi": ["やさ(しい)", "すぐ(れる)"],
+    "kunyomi": ["やさ.しい", "すぐ.れる"],
     "meaning": ["tenderness", "kind", "actor"],
     jlptLevel: 3
 },
@@ -1185,7 +1061,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-133",
     "character": "収",
     "onyomi": ["シュウ"],
-    "kunyomi": ["おさ(める)"],
+    "kunyomi": ["おさ.める"],
     "meaning": ["income", "obtain", "reap", "pay", "supply", "store"],
     jlptLevel: 3
 },
@@ -1193,7 +1069,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-134",
     "character": "断",
     "onyomi": ["ダン"],
-    "kunyomi": ["た(つ)", "ことわ(る)"],
+    "kunyomi": ["た.つ", "ことわ.る"],
     "meaning": ["severance", "decline", "refuse", "apologize"],
     jlptLevel: 3
 },
@@ -1209,7 +1085,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-136",
     "character": "違",
     "onyomi": ["イ"],
-    "kunyomi": ["ちが(う)", "たが(う)"],
+    "kunyomi": ["ちが.う", "たが.う"],
     "meaning": ["difference", "differ"],
     jlptLevel: 3
 },
@@ -1217,7 +1093,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-137",
     "character": "消",
     "onyomi": ["ショウ"],
-    "kunyomi": ["き(える)", "け(す)"],
+    "kunyomi": ["き.える", "け.す"],
     "meaning": ["extinguish", "turn off"],
     jlptLevel: 3
 },
@@ -1233,7 +1109,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-139",
     "character": "番",
     "onyomi": ["バン"],
-    "kunyomi": ["つが(い)"],
+    "kunyomi": ["つが.い"],
     "meaning": ["turn", "number in a series"],
     jlptLevel: 3
 },
@@ -1257,7 +1133,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-142",
     "character": "備",
     "onyomi": ["ビ"],
-    "kunyomi": ["そな(える)"],
+    "kunyomi": ["そな.える"],
     "meaning": ["equip", "provision", "preparation"],
     jlptLevel: 3
 },
@@ -1281,7 +1157,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-145",
     "character": "配",
     "onyomi": ["ハイ"],
-    "kunyomi": ["くば(る)"],
+    "kunyomi": ["くば.る"],
     "meaning": ["distribute", "spouse"],
     jlptLevel: 3
 },
@@ -1297,7 +1173,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-147",
     "character": "育",
     "onyomi": ["イク"],
-    "kunyomi": ["そだ(つ)", "はぐく(む)"],
+    "kunyomi": ["そだ.つ", "はぐく.む"],
     "meaning": ["bring up", "grow up", "raise"],
     jlptLevel: 3
 },
@@ -1313,7 +1189,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-149",
     "character": "訪",
     "onyomi": ["ホウ"],
-    "kunyomi": ["おとず(れる)", "たず(ねる)"],
+    "kunyomi": ["おとず.れる", "たず.ねる"],
     "meaning": ["call on", "visit"],
     jlptLevel: 3
 },
@@ -1321,7 +1197,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-150",
     "character": "乗",
     "onyomi": ["ジョウ", "ショウ"],
-    "kunyomi": ["の(る)"],
+    "kunyomi": ["の.る"],
     "meaning": ["ride"],
     jlptLevel: 3
 },
@@ -1329,7 +1205,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-151",
     "character": "残",
     "onyomi": ["ザン"],
-    "kunyomi": ["のこ(る)"],
+    "kunyomi": ["のこ.る"],
     "meaning": ["remainder", "balance"],
     jlptLevel: 3
 },
@@ -1337,7 +1213,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-152",
     "character": "想",
     "onyomi": ["ソウ", "ソ"],
-    "kunyomi": ["おも(う)"],
+    "kunyomi": ["おも.う"],
     "meaning": ["concept", "think", "idea"],
     jlptLevel: 3
 },
@@ -1353,7 +1229,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-154",
     "character": "助",
     "onyomi": ["ジョ"],
-    "kunyomi": ["たす(ける)"],
+    "kunyomi": ["たす.ける"],
     "meaning": ["help", "rescue", "assist"],
     jlptLevel: 3
 },
@@ -1361,7 +1237,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-155",
     "character": "労",
     "onyomi": ["ロウ"],
-    "kunyomi": ["ろう(する)", "いたわ(る)", "ねぎら(う)"],
+    "kunyomi": ["ろう.する", "いたわ.る", "ねぎら.う"],
     "meaning": ["labor", "thank for"],
     jlptLevel: 3
 },
@@ -1369,7 +1245,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-156",
     "character": "例",
     "onyomi": ["レイ"],
-    "kunyomi": ["たと(えば)"],
+    "kunyomi": ["たと.えば"],
     "meaning": ["example"],
     jlptLevel: 3
 },
@@ -1385,7 +1261,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-158",
     "character": "限",
     "onyomi": ["ゲン"],
-    "kunyomi": ["かぎ(る)"],
+    "kunyomi": ["かぎ.る"],
     "meaning": ["limit", "restrict"],
     jlptLevel: 3
 },
@@ -1393,7 +1269,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-159",
     "character": "追",
     "onyomi": ["ツイ"],
-    "kunyomi": ["お(う)"],
+    "kunyomi": ["お.う"],
     "meaning": ["chase", "drive away"],
     jlptLevel: 3
 },
@@ -1401,7 +1277,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-160",
     "character": "商",
     "onyomi": ["ショウ"],
-    "kunyomi": ["あきな(う)"],
+    "kunyomi": ["あきな.う"],
     "meaning": ["deal", "selling", "merchant"],
     jlptLevel: 3
 },
@@ -1417,7 +1293,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-162",
     "character": "伝",
     "onyomi": ["デン"],
-    "kunyomi": ["つた(わる)"],
+    "kunyomi": ["つた.わる"],
     "meaning": ["transmit", "go along", "walk along", "follow", "report", "communicate", "legend", "tradition"],
     jlptLevel: 3
 },
@@ -1425,7 +1301,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-163",
     "character": "働",
     "onyomi": ["ドウ"],
-    "kunyomi": ["はたら(く)"],
+    "kunyomi": ["はたら.く"],
     "meaning": ["work"],
     jlptLevel: 3
 },
@@ -1449,7 +1325,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-166",
     "character": "落",
     "onyomi": ["ラク"],
-    "kunyomi": ["お(ちる)"],
+    "kunyomi": ["お.ちる"],
     "meaning": ["fall", "drop"],
     jlptLevel: 3
 },
@@ -1457,7 +1333,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-167",
     "character": "好",
     "onyomi": ["コウ"],
-    "kunyomi": ["この(む)", "す(く)"],
+    "kunyomi": ["この.む", "す.く"],
     "meaning": ["fond", "pleasing", "like something"],
     jlptLevel: 3
 },
@@ -1465,7 +1341,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-168",
     "character": "退",
     "onyomi": ["タイ"],
-    "kunyomi": ["しりぞ(く)", "ひ(く)", "の(ける)", "ど(く)"],
+    "kunyomi": ["しりぞ.く", "ひ.く", "の.ける", "ど.く"],
     "meaning": ["retreat", "withdraw", "retire", "resign", "repel", "expel", "reject"],
     jlptLevel: 3
 },
@@ -1481,7 +1357,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-170",
     "character": "負",
     "onyomi": ["フ"],
-    "kunyomi": ["ま(ける)", "お(う)"],
+    "kunyomi": ["ま.ける", "お.う"],
     "meaning": ["defeat", "negative", "minus", "assume a responsibility"],
     jlptLevel: 3
 },
@@ -1489,7 +1365,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-171",
     "character": "渡",
     "onyomi": ["ト"],
-    "kunyomi": ["わた(る)"],
+    "kunyomi": ["わた.る"],
     "meaning": ["transit", "ferry", "cross"],
     jlptLevel: 3
 },
@@ -1497,7 +1373,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-172",
     "character": "失",
     "onyomi": ["シツ"],
-    "kunyomi": ["うしな(う)", "う(せる)"],
+    "kunyomi": ["うしな.う", "う.せる"],
     "meaning": ["lose", "error", "fault", "disadvantage", "loss"],
     jlptLevel: 3
 },
@@ -1505,7 +1381,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-173",
     "character": "差",
     "onyomi": ["サ"],
-    "kunyomi": ["さ(す)"],
+    "kunyomi": ["さ.す"],
     "meaning": ["distinction", "difference", "variation"],
     jlptLevel: 3
 },
@@ -1521,7 +1397,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-175",
     "character": "守",
     "onyomi": ["シュ", "ス"],
-    "kunyomi": ["まも(る)", "もり"],
+    "kunyomi": ["まも.る", "もり"],
     "meaning": ["guard", "protect", "obey"],
     jlptLevel: 3
 },
@@ -1529,7 +1405,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-176",
     "character": "若",
     "onyomi": ["ジャク"],
-    "kunyomi": ["わか(い)", "も(し)"],
+    "kunyomi": ["わか.い", "も.し"],
     "meaning": ["young"],
     jlptLevel: 3
 },
@@ -1545,7 +1421,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-178",
     "character": "美",
     "onyomi": ["ビ", "ミ"],
-    "kunyomi": ["うつく(しい)"],
+    "kunyomi": ["うつく.しい"],
     "meaning": ["beauty", "beautiful"],
     jlptLevel: 3
 },
@@ -1569,7 +1445,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-181",
     "character": "望",
     "onyomi": ["ボウ"],
-    "kunyomi": ["のぞ(む)", "もち"],
+    "kunyomi": ["のぞ.む", "もち"],
     "meaning": ["ambition", "full moon", "hope", "desire", "aspire to", "expect"],
     jlptLevel: 3
 },
@@ -1577,7 +1453,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-182",
     "character": "非",
     "onyomi": ["ヒ"],
-    "kunyomi": ["あら(ず)"],
+    "kunyomi": ["あら.ず"],
     "meaning": ["un-", "mistake", "negative"],
     jlptLevel: 3
 },
@@ -1585,7 +1461,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-183",
     "character": "観",
     "onyomi": ["カン"],
-    "kunyomi": ["み(る)"],
+    "kunyomi": ["み.る"],
     "meaning": ["outlook", "appearance", "condition"],
     jlptLevel: 3
 },
@@ -1617,7 +1493,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-187",
     "character": "深",
     "onyomi": ["シン"],
-    "kunyomi": ["ふか(い)"],
+    "kunyomi": ["ふか.い"],
     "meaning": ["deep", "heighten"],
     jlptLevel: 3
 },
@@ -1625,7 +1501,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-188",
     "character": "申",
     "onyomi": ["シン"],
-    "kunyomi": ["もう(す)", "さる"],
+    "kunyomi": ["もう.す", "さる"],
     "meaning": ["have the honor to"],
     jlptLevel: 3
 },
@@ -1657,7 +1533,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-192",
     "character": "識",
     "onyomi": ["シキ"],
-    "kunyomi": ["し(る)"],
+    "kunyomi": ["し.る"],
     "meaning": ["know"],
     jlptLevel: 3
 },
@@ -1665,7 +1541,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-193",
     "character": "呼",
     "onyomi": ["コ"],
-    "kunyomi": ["よ(ぶ)"],
+    "kunyomi": ["よ.ぶ"],
     "meaning": ["call", "invite"],
     jlptLevel: 3
 },
@@ -1681,7 +1557,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-195",
     "character": "良",
     "onyomi": ["リョウ"],
-    "kunyomi": ["よ(い)", "い(い)"],
+    "kunyomi": ["よ.い", "い.い"],
     "meaning": ["good"],
     jlptLevel: 3
 },
@@ -1713,7 +1589,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-199",
     "character": "満",
     "onyomi": ["マン"],
-    "kunyomi": ["み(ちる)"],
+    "kunyomi": ["み.ちる"],
     "meaning": ["full", "fullness", "enough", "satisfy"],
     jlptLevel: 3
 },
@@ -1721,7 +1597,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-200",
     "character": "敗",
     "onyomi": ["ハイ"],
-    "kunyomi": ["やぶ(れる)"],
+    "kunyomi": ["やぶ.れる"],
     "meaning": ["failure", "defeat"],
     jlptLevel: 3
 },
@@ -1737,7 +1613,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-202",
     "character": "突",
     "onyomi": ["トツ", "カ"],
-    "kunyomi": ["つ(く)"],
+    "kunyomi": ["つ.く"],
     "meaning": ["stab", "protruding", "thrust"],
     jlptLevel: 3
 },
@@ -1745,7 +1621,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-203",
     "character": "光",
     "onyomi": ["コウ"],
-    "kunyomi": ["ひか(る)", "ひかり"],
+    "kunyomi": ["ひか.る", "ひかり"],
     "meaning": ["ray", "light"],
     jlptLevel: 3
 },
@@ -1769,7 +1645,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-206",
     "character": "積",
     "onyomi": ["セキ"],
-    "kunyomi": ["つ(む)"],
+    "kunyomi": ["つ.む"],
     "meaning": ["volume", "contents", "pile up", "stack"],
     jlptLevel: 3
 },
@@ -1793,7 +1669,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-209",
     "character": "太",
     "onyomi": ["タイ", "タ"],
-    "kunyomi": ["ふと(い)"],
+    "kunyomi": ["ふと.い"],
     "meaning": ["plump", "thick", "big around"],
     jlptLevel: 3
 },
@@ -1825,7 +1701,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-213",
     "character": "登",
     "onyomi": ["トウ", "ト"],
-    "kunyomi": ["のぼ(る)", "あ(がる)"],
+    "kunyomi": ["のぼ.る", "あ.がる"],
     "meaning": ["ascend", "climb up"],
     jlptLevel: 3
 },
@@ -1833,7 +1709,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-214",
     "character": "易",
     "onyomi": ["エキ", "イ"],
-    "kunyomi": ["やさ(しい)", "やす(い)"],
+    "kunyomi": ["やさ.しい", "やす.い"],
     "meaning": ["easy", "ready to", "simple"],
     jlptLevel: 3
 },
@@ -1841,7 +1717,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-215",
     "character": "速",
     "onyomi": ["ソク"],
-    "kunyomi": ["はや(い)"],
+    "kunyomi": ["はや.い"],
     "meaning": ["quick", "fast"],
     jlptLevel: 3
 },
@@ -1857,7 +1733,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-217",
     "character": "飛",
     "onyomi": ["ヒ"],
-    "kunyomi": ["と(ぶ)"],
+    "kunyomi": ["と.ぶ"],
     "meaning": ["fly"],
     jlptLevel: 3
 },
@@ -1865,7 +1741,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-218",
     "character": "殺",
     "onyomi": ["サツ", "サイ"],
-    "kunyomi": ["ころ(す)"],
+    "kunyomi": ["ころ.す"],
     "meaning": ["kill", "murder"],
     jlptLevel: 3
 },
@@ -1889,7 +1765,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-221",
     "character": "座",
     "onyomi": ["ザ"],
-    "kunyomi": ["すわ(る)"],
+    "kunyomi": ["すわ.る"],
     "meaning": ["squat", "seat", "sit"],
     jlptLevel: 3
 },
@@ -1897,7 +1773,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-222",
     "character": "破",
     "onyomi": ["ハ"],
-    "kunyomi": ["やぶ(る)"],
+    "kunyomi": ["やぶ.る"],
     "meaning": ["rip", "tear", "break"],
     jlptLevel: 3
 },
@@ -1905,7 +1781,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-223",
     "character": "除",
     "onyomi": ["ジョ", "ジ"],
-    "kunyomi": ["のぞ(く)"],
+    "kunyomi": ["のぞ.く"],
     "meaning": ["exclude", "remove"],
     jlptLevel: 3
 },
@@ -1921,7 +1797,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-225",
     "character": "降",
     "onyomi": ["コウ", "ゴ"],
-    "kunyomi": ["お(りる)", "ふ(る)"],
+    "kunyomi": ["お.りる", "ふ.る"],
     "meaning": ["descend", "precipitate", "fall", "surrender"],
     jlptLevel: 3
 },
@@ -1929,7 +1805,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-226",
     "character": "責",
     "onyomi": ["セキ"],
-    "kunyomi": ["せ(める)"],
+    "kunyomi": ["せ.める"],
     "meaning": ["blame", "condemn"],
     jlptLevel: 3
 },
@@ -1937,7 +1813,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-227",
     "character": "捕",
     "onyomi": ["ホ"],
-    "kunyomi": ["と(らえる)", "つか(まえる)"],
+    "kunyomi": ["と.らえる", "つか.まえる"],
     "meaning": ["catch", "capture"],
     jlptLevel: 3
 },
@@ -1945,7 +1821,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-228",
     "character": "危",
     "onyomi": ["キ"],
-    "kunyomi": ["あぶ(ない)", "あや(うい)"],
+    "kunyomi": ["あぶ.ない", "あや.うい"],
     "meaning": ["dangerous", "fear", "uneasy"],
     jlptLevel: 3
 },
@@ -1953,7 +1829,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-229",
     "character": "給",
     "onyomi": ["キュウ"],
-    "kunyomi": ["たま(う)", "たも(う)"],
+    "kunyomi": ["たま.う", "たも.う"],
     "meaning": ["salary", "wage", "gift"],
     jlptLevel: 3
 },
@@ -1961,7 +1837,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-230",
     "character": "苦",
     "onyomi": ["ク"],
-    "kunyomi": ["くる(しい)", "にが(い)"],
+    "kunyomi": ["くる.しい", "にが.い"],
     "meaning": ["suffering", "bitter"],
     jlptLevel: 3
 },
@@ -1969,7 +1845,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-231",
     "character": "迎",
     "onyomi": ["ゲイ"],
-    "kunyomi": ["むか(える)"],
+    "kunyomi": ["むか.える"],
     "meaning": ["welcome", "meet", "greet"],
     jlptLevel: 3
 },
@@ -1985,7 +1861,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-233",
     "character": "具",
     "onyomi": ["グ"],
-    "kunyomi": ["そな(える)", "つぶさ(に)"],
+    "kunyomi": ["そな.える", "つぶさ.に"],
     "meaning": ["tool", "utensil"],
     jlptLevel: 3
 },
@@ -1993,7 +1869,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-234",
     "character": "辞",
     "onyomi": ["ジ"],
-    "kunyomi": ["や(める)"],
+    "kunyomi": ["や.める"],
     "meaning": ["resign", "word", "term"],
     jlptLevel: 3
 },
@@ -2001,7 +1877,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-235",
     "character": "因",
     "onyomi": ["イン"],
-    "kunyomi": ["よ(る)", "ちな(む)"],
+    "kunyomi": ["よ.る", "ちな.む"],
     "meaning": ["cause", "factor", "depend on"],
     jlptLevel: 3
 },
@@ -2017,7 +1893,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-237",
     "character": "愛",
     "onyomi": ["アイ"],
-    "kunyomi": ["いと(しい)", "まな"],
+    "kunyomi": ["いと.しい", "まな"],
     "meaning": ["love", "affection"],
     jlptLevel: 3
 },
@@ -2025,7 +1901,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-238",
     "character": "富",
     "onyomi": ["フ", "フウ"],
-    "kunyomi": ["と(む)", "とみ"],
+    "kunyomi": ["と.む", "とみ"],
     "meaning": ["wealth", "enrich", "abundant"],
     jlptLevel: 3
 },
@@ -2041,7 +1917,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-240",
     "character": "未",
     "onyomi": ["ミ", "ビ"],
-    "kunyomi": ["いま(だ)", "ま(だ)"],
+    "kunyomi": ["いま.だ", "ま.だ"],
     "meaning": ["un-", "not yet"],
     jlptLevel: 3
 },
@@ -2049,7 +1925,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-241",
     "character": "舞",
     "onyomi": ["ブ"],
-    "kunyomi": ["ま(う)", "まい"],
+    "kunyomi": ["ま.う", "まい"],
     "meaning": ["dance", "circle"],
     jlptLevel: 3
 },
@@ -2057,7 +1933,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-242",
     "character": "亡",
     "onyomi": ["ボウ", "モウ"],
-    "kunyomi": ["な(くなる)"],
+    "kunyomi": ["な.くなる"],
     "meaning": ["deceased", "dying"],
     jlptLevel: 3
 },
@@ -2065,7 +1941,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-243",
     "character": "冷",
     "onyomi": ["レイ"],
-    "kunyomi": ["つめ(たい)", "ひ(える)", "さ(める)"],
+    "kunyomi": ["つめ.たい", "ひ.える", "さ.める"],
     "meaning": ["cool", "cold", "chill"],
     jlptLevel: 3
 },
@@ -2073,7 +1949,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-244",
     "character": "適",
     "onyomi": ["テキ"],
-    "kunyomi": ["かな(u)"],
+    "kunyomi": ["かな.u"],
     "meaning": ["suitable", "occasional", "rare"],
     jlptLevel: 3
 },
@@ -2089,7 +1965,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-246",
     "character": "寄",
     "onyomi": ["キ"],
-    "kunyomi": ["よ(る)"],
+    "kunyomi": ["よ.る"],
     "meaning": ["draw near", "gather"],
     jlptLevel: 3
 },
@@ -2097,7 +1973,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-247",
     "character": "込",
     "onyomi": [],
-    "kunyomi": ["こ(む)"],
+    "kunyomi": ["こ.む"],
     "meaning": ["crowded", "mixture"],
     jlptLevel: 3
 },
@@ -2113,7 +1989,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-249",
     "character": "類",
     "onyomi": ["ルイ"],
-    "kunyomi": ["たぐ(い)"],
+    "kunyomi": ["たぐ.い"],
     "meaning": ["sort", "kind", "variety", "class", "genus"],
     jlptLevel: 3
 },
@@ -2121,7 +1997,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-250",
     "character": "余",
     "onyomi": ["ヨ"],
-    "kunyomi": ["あま(る)"],
+    "kunyomi": ["あま.る"],
     "meaning": ["too much", "surplus"],
     jlptLevel: 3
 },
@@ -2137,7 +2013,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-252",
     "character": "返",
     "onyomi": ["ヘン"],
-    "kunyomi": ["かえ(す)"],
+    "kunyomi": ["かえ.す"],
     "meaning": ["return", "answer"],
     jlptLevel: 3
 },
@@ -2161,7 +2037,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-255",
     "character": "熱",
     "onyomi": ["ネツ"],
-    "kunyomi": ["あつ(い)"],
+    "kunyomi": ["あつ.い"],
     "meaning": ["heat", "fever", "passion"],
     jlptLevel: 3
 },
@@ -2185,7 +2061,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-258",
     "character": "険",
     "onyomi": ["ケン"],
-    "kunyomi": ["けわ(しい)"],
+    "kunyomi": ["けわ.しい"],
     "meaning": ["precipitous", "inaccessible place"],
     jlptLevel: 3
 },
@@ -2193,7 +2069,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-259",
     "character": "頼",
     "onyomi": ["ライ"],
-    "kunyomi": ["たの(む)", "たよ(る)"],
+    "kunyomi": ["たの.む", "たよ.る"],
     "meaning": ["trust", "request"],
     jlptLevel: 3
 },
@@ -2201,7 +2077,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-260",
     "character": "覚",
     "onyomi": ["カク"],
-    "kunyomi": ["おぼ(える)", "さ(ます)"],
+    "kunyomi": ["おぼ.える", "さ.ます"],
     "meaning": ["memorize", "learn", "remember", "awake"],
     jlptLevel: 3
 },
@@ -2225,7 +2101,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-263",
     "character": "許",
     "onyomi": ["キョ"],
-    "kunyomi": ["ゆる(す)"],
+    "kunyomi": ["ゆる.す"],
     "meaning": ["permit", "approve"],
     jlptLevel: 3
 },
@@ -2233,7 +2109,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-264",
     "character": "抜",
     "onyomi": ["バツ"],
-    "kunyomi": ["ぬ(く)"],
+    "kunyomi": ["ぬ.く"],
     "meaning": ["slip out", "extract", "pull out", "remove"],
     jlptLevel: 3
 },
@@ -2241,7 +2117,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-265",
     "character": "便",
     "onyomi": ["ベン", "ビン"],
-    "kunyomi": ["たよ(り)"],
+    "kunyomi": ["たよ.り"],
     "meaning": ["convenience", "facility"],
     jlptLevel: 3
 },
@@ -2249,7 +2125,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-266",
     "character": "留",
     "onyomi": ["リュウ", "ル"],
-    "kunyomi": ["と(まる)", "とど(める)"],
+    "kunyomi": ["と.まる", "とど.める"],
     "meaning": ["detain", "fasten", "halt", "stop"],
     jlptLevel: 3
 },
@@ -2265,7 +2141,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-268",
     "character": "努",
     "onyomi": ["ド"],
-    "kunyomi": ["つと(める)"],
+    "kunyomi": ["つと.める"],
     "meaning": ["toil", "diligent", "as much as possible"],
     jlptLevel: 3
 },
@@ -2273,7 +2149,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-269",
     "character": "精",
     "onyomi": ["セイ", "ショウ"],
-    "kunyomi": ["しら(げる)"],
+    "kunyomi": ["しら.げる"],
     "meaning": ["refined", "ghost", "fairy", "energy"],
     jlptLevel: 3
 },
@@ -2281,7 +2157,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-270",
     "character": "散",
     "onyomi": ["サン"],
-    "kunyomi": ["ち(る)", "ばら(ける)"],
+    "kunyomi": ["ち.る", "ばら.ける"],
     "meaning": ["scatter", "disperse"],
     jlptLevel: 3
 },
@@ -2289,7 +2165,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-271",
     "character": "静",
     "onyomi": ["セイ", "ジョウ"],
-    "kunyomi": ["しず(か)"],
+    "kunyomi": ["しず.か"],
     "meaning": ["quiet"],
     jlptLevel: 3
 },
@@ -2305,7 +2181,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-273",
     "character": "喜",
     "onyomi": ["キ"],
-    "kunyomi": ["よろこ(ぶ)"],
+    "kunyomi": ["よろこ.ぶ"],
     "meaning": ["rejoice", "take pleasure in"],
     jlptLevel: 3
 },
@@ -2313,7 +2189,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-274",
     "character": "浮",
     "onyomi": ["フ"],
-    "kunyomi": ["う(かぶ)"],
+    "kunyomi": ["う.かぶ"],
     "meaning": ["float", "rise to surface"],
     jlptLevel: 3
 },
@@ -2321,7 +2197,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-275",
     "character": "絶",
     "onyomi": ["ゼツ"],
-    "kunyomi": ["た(える)"],
+    "kunyomi": ["た.える"],
     "meaning": ["discontinue", "unparalleled"],
     jlptLevel: 3
 },
@@ -2329,7 +2205,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-276",
     "character": "幸",
     "onyomi": ["コウ"],
-    "kunyomi": ["さいわ(い)", "さち", "しあわ(せ)"],
+    "kunyomi": ["さいわ.い", "さち", "しあわ.せ"],
     "meaning": ["happiness", "blessing", "fortune"],
     jlptLevel: 3
 },
@@ -2337,7 +2213,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-277",
     "character": "押",
     "onyomi": ["オウ"],
-    "kunyomi": ["お(す)"],
+    "kunyomi": ["お.す"],
     "meaning": ["push"],
     jlptLevel: 3
 },
@@ -2345,7 +2221,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-278",
     "character": "倒",
     "onyomi": ["トウ"],
-    "kunyomi": ["たお(れる)"],
+    "kunyomi": ["たお.れる"],
     "meaning": ["overthrow", "fall", "collapse"],
     jlptLevel: 3
 },
@@ -2353,7 +2229,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-279",
     "character": "等",
     "onyomi": ["トウ"],
-    "kunyomi": ["ひと(しい)", "など"],
+    "kunyomi": ["ひと.しい", "など"],
     "meaning": ["etc.", "and so forth"],
     jlptLevel: 3
 },
@@ -2361,7 +2237,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-280",
     "character": "老",
     "onyomi": ["ロウ"],
-    "kunyomi": ["お(いる)", "ふ(ける)"],
+    "kunyomi": ["お.いる", "ふ.ける"],
     "meaning": ["old"],
     jlptLevel: 3
 },
@@ -2369,7 +2245,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-281",
     "character": "曲",
     "onyomi": ["キョク"],
-    "kunyomi": ["ま(がる)"],
+    "kunyomi": ["ま.がる"],
     "meaning": ["bend", "music", "melody"],
     jlptLevel: 3
 },
@@ -2377,7 +2253,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-282",
     "character": "払",
     "onyomi": [],
-    "kunyomi": ["はら(う)"],
+    "kunyomi": ["はら.う"],
     "meaning": ["pay"],
     jlptLevel: 3
 },
@@ -2401,7 +2277,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-285",
     "character": "勤",
     "onyomi": ["キン", "ゴン"],
-    "kunyomi": ["つと(める)"],
+    "kunyomi": ["つと.める"],
     "meaning": ["diligence", "employed", "serve"],
     jlptLevel: 3
 },
@@ -2409,7 +2285,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-286",
     "character": "遅",
     "onyomi": ["チ"],
-    "kunyomi": ["おく(れる)", "おそ(い)"],
+    "kunyomi": ["おく.れる", "おそ.い"],
     "meaning": ["slow", "late", "back", "later"],
     jlptLevel: 3
 },
@@ -2417,7 +2293,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-287",
     "character": "居",
     "onyomi": ["キョ", "コ"],
-    "kunyomi": ["い(る)", "お(る)"],
+    "kunyomi": ["い.る", "お.る"],
     "meaning": ["reside", "to be", "exist"],
     jlptLevel: 3
 },
@@ -2425,7 +2301,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-288",
     "character": "雑",
     "onyomi": ["ザツ", "ゾウ"],
-    "kunyomi": ["まじ(る)"],
+    "kunyomi": ["まじ.る"],
     "meaning": ["miscellaneous"],
     jlptLevel: 3
 },
@@ -2433,7 +2309,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-289",
     "character": "招",
     "onyomi": ["ショウ"],
-    "kunyomi": ["まね(く)"],
+    "kunyomi": ["まね.く"],
     "meaning": ["invite", "summon", "engage"],
     jlptLevel: 3
 },
@@ -2441,7 +2317,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-290",
     "character": "困",
     "onyomi": ["コン"],
-    "kunyomi": ["こま(る)"],
+    "kunyomi": ["こま.る"],
     "meaning": ["quandary", "become distressed"],
     jlptLevel: 3
 },
@@ -2449,7 +2325,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-291",
     "character": "欠",
     "onyomi": ["ケツ", "ケン"],
-    "kunyomi": ["か(ける)"],
+    "kunyomi": ["か.ける"],
     "meaning": ["lack", "gap"],
     jlptLevel: 3
 },
@@ -2457,7 +2333,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-292",
     "character": "更",
     "onyomi": ["コウ"],
-    "kunyomi": ["さら(に)", "ふ(ける)"],
+    "kunyomi": ["さら.に", "ふ.ける"],
     "meaning": ["renew", "renovate", "again"],
     jlptLevel: 3
 },
@@ -2465,7 +2341,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-293",
     "character": "刻",
     "onyomi": ["コク"],
-    "kunyomi": ["きざ(む)"],
+    "kunyomi": ["きざ.む"],
     "meaning": ["engrave", "cut fine", "chop"],
     jlptLevel: 3
 },
@@ -2481,7 +2357,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-295",
     "character": "抱",
     "onyomi": ["ホウ"],
-    "kunyomi": ["だ(く)", "いだ(く)", "かか(える)"],
+    "kunyomi": ["だ.く", "いだ.く", "かか.える"],
     "meaning": ["embrace", "hug"],
     jlptLevel: 3
 },
@@ -2489,7 +2365,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-296",
     "character": "犯",
     "onyomi": ["ハン"],
-    "kunyomi": ["おか(す)"],
+    "kunyomi": ["おか.す"],
     "meaning": ["crime", "sin", "offense"],
     jlptLevel: 3
 },
@@ -2497,7 +2373,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-297",
     "character": "恐",
     "onyomi": ["キョウ"],
-    "kunyomi": ["おそ(れる)", "こわ(い)"],
+    "kunyomi": ["おそ.れる", "こわ.い"],
     "meaning": ["fear", "dread"],
     jlptLevel: 3
 },
@@ -2513,7 +2389,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-299",
     "character": "遠",
     "onyomi": ["エン", "オン"],
-    "kunyomi": ["とお(い)"],
+    "kunyomi": ["とお.い"],
     "meaning": ["distant", "far"],
     jlptLevel: 3
 },
@@ -2521,7 +2397,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-300",
     "character": "戻",
     "onyomi": ["レイ"],
-    "kunyomi": ["もど(る)"],
+    "kunyomi": ["もど.る"],
     "meaning": ["re-", "return", "revert"],
     jlptLevel: 3
 },
@@ -2529,7 +2405,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-301",
     "character": "願",
     "onyomi": ["ガン"],
-    "kunyomi": ["ねが(う)"],
+    "kunyomi": ["ねが.う"],
     "meaning": ["petition", "request", "wish"],
     jlptLevel: 3
 },
@@ -2545,7 +2421,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-303",
     "character": "越",
     "onyomi": ["エツ"],
-    "kunyomi": ["こ(す)"],
+    "kunyomi": ["こ.す"],
     "meaning": ["surpass", "cross over", "move to", "exceed"],
     jlptLevel: 3
 },
@@ -2553,7 +2429,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-304",
     "character": "欲",
     "onyomi": ["ヨク"],
-    "kunyomi": ["ほ(しい)"],
+    "kunyomi": ["ほ.しい"],
     "meaning": ["longing", "greed", "passion"],
     jlptLevel: 3
 },
@@ -2561,7 +2437,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-305",
     "character": "痛",
     "onyomi": ["ツウ"],
-    "kunyomi": ["いた(い)"],
+    "kunyomi": ["いた.い"],
     "meaning": ["pain", "hurt", "damage", "bruise"],
     jlptLevel: 3
 },
@@ -2569,7 +2445,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-306",
     "character": "笑",
     "onyomi": ["ショウ"],
-    "kunyomi": ["わら(う)", "え(む)"],
+    "kunyomi": ["わら.う", "え.む"],
     "meaning": ["laugh"],
     jlptLevel: 3
 },
@@ -2577,7 +2453,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-307",
     "character": "互",
     "onyomi": ["ゴ"],
-    "kunyomi": ["たが(い)", "かたみ(に)"],
+    "kunyomi": ["たが.い", "かたみ.に"],
     "meaning": ["mutually", "reciprocally", "together"],
     jlptLevel: 3
 },
@@ -2593,7 +2469,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-309",
     "character": "似",
     "onyomi": ["ジ", "ネ"],
-    "kunyomi": ["に(る)"],
+    "kunyomi": ["に.る"],
     "meaning": ["becoming", "resemble", "imitate"],
     jlptLevel: 3
 },
@@ -2609,7 +2485,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-311",
     "character": "探",
     "onyomi": ["タン"],
-    "kunyomi": ["さぐ(る)", "さが(す)"],
+    "kunyomi": ["さぐ.る", "さが.す"],
     "meaning": ["search", "look for"],
     jlptLevel: 3
 },
@@ -2617,7 +2493,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-312",
     "character": "逃",
     "onyomi": ["トウ"],
-    "kunyomi": ["に(げる)", "のが(す)"],
+    "kunyomi": ["に.げる", "のが.す"],
     "meaning": ["escape", "flee"],
     jlptLevel: 3
 },
@@ -2625,7 +2501,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-313",
     "character": "遊",
     "onyomi": ["ユウ"],
-    "kunyomi": ["あそ(ぶ)"],
+    "kunyomi": ["あそ.ぶ"],
     "meaning": ["play"],
     jlptLevel: 3
 },
@@ -2633,7 +2509,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-314",
     "character": "迷",
     "onyomi": ["メイ"],
-    "kunyomi": ["まよ(う)"],
+    "kunyomi": ["まよ.う"],
     "meaning": ["astray", "be perplexed", "in doubt", "lost"],
     jlptLevel: 3
 },
@@ -2657,7 +2533,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-317",
     "character": "閉",
     "onyomi": ["ヘイ"],
-    "kunyomi": ["と(じる)", "し(める)"],
+    "kunyomi": ["と.じる", "し.める"],
     "meaning": ["closed", "shut"],
     jlptLevel: 3
 },
@@ -2673,7 +2549,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-319",
     "character": "折",
     "onyomi": ["セツ", "シャク"],
-    "kunyomi": ["お(る)", "おり"],
+    "kunyomi": ["お.る", "おり"],
     "meaning": ["fold", "break", "fracture"],
     jlptLevel: 3
 },
@@ -2689,7 +2565,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-321",
     "character": "暮",
     "onyomi": ["ボ"],
-    "kunyomi": ["く(らす)"],
+    "kunyomi": ["く.らす"],
     "meaning": ["evening", "livelihood"],
     jlptLevel: 3
 },
@@ -2705,7 +2581,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-323",
     "character": "悲",
     "onyomi": ["ヒ"],
-    "kunyomi": ["かな(しい)"],
+    "kunyomi": ["かな.しい"],
     "meaning": ["grieve", "sad"],
     jlptLevel: 3
 },
@@ -2713,7 +2589,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-324",
     "character": "晴",
     "onyomi": ["セイ"],
-    "kunyomi": ["は(れる)"],
+    "kunyomi": ["は.れる"],
     "meaning": ["clear up"],
     jlptLevel: 3
 },
@@ -2721,7 +2597,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-325",
     "character": "掛",
     "onyomi": ["ケイ"],
-    "kunyomi": ["か(ける)"],
+    "kunyomi": ["か.ける"],
     "meaning": ["hang", "suspend"],
     jlptLevel: 3
 },
@@ -2729,7 +2605,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-326",
     "character": "到",
     "onyomi": ["トウ"],
-    "kunyomi": ["いた(る)"],
+    "kunyomi": ["いた.る"],
     "meaning": ["arrival", "proceed", "reach"],
     jlptLevel: 3
 },
@@ -2737,7 +2613,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-327",
     "character": "寝",
     "onyomi": ["シン"],
-    "kunyomi": ["ね(る)"],
+    "kunyomi": ["ね.る"],
     "meaning": ["lie down", "sleep", "rest"],
     jlptLevel: 3
 },
@@ -2745,7 +2621,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-328",
     "character": "暗",
     "onyomi": ["アン"],
-    "kunyomi": ["くら(い)"],
+    "kunyomi": ["くら.い"],
     "meaning": ["darkness", "disappear", "shade", "informal"],
     jlptLevel: 3
 },
@@ -2753,7 +2629,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-329",
     "character": "盗",
     "onyomi": ["トウ"],
-    "kunyomi": ["ぬす(む)"],
+    "kunyomi": ["ぬす.む"],
     "meaning": ["steal", "rob"],
     jlptLevel: 3
 },
@@ -2761,7 +2637,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-330",
     "character": "吸",
     "onyomi": ["キュウ"],
-    "kunyomi": ["す(う)"],
+    "kunyomi": ["す.う"],
     "meaning": ["suck", "inhale"],
     jlptLevel: 3
 },
@@ -2793,7 +2669,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-334",
     "character": "忘",
     "onyomi": ["ボウ"],
-    "kunyomi": ["わす(れる)"],
+    "kunyomi": ["わす.れる"],
     "meaning": ["forget"],
     jlptLevel: 3
 },
@@ -2809,7 +2685,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-336",
     "character": "吹",
     "onyomi": ["スイ"],
-    "kunyomi": ["ふ(く)"],
+    "kunyomi": ["ふ.く"],
     "meaning": ["blow", "breathe", "puff"],
     jlptLevel: 3
 },
@@ -2825,7 +2701,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-338",
     "character": "誤",
     "onyomi": ["ゴ"],
-    "kunyomi": ["あやま(る)"],
+    "kunyomi": ["あやま.る"],
     "meaning": ["mistake"],
     jlptLevel: 3
 },
@@ -2833,7 +2709,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-339",
     "character": "洗",
     "onyomi": ["セン"],
-    "kunyomi": ["あら(う)"],
+    "kunyomi": ["あら.う"],
     "meaning": ["wash"],
     jlptLevel: 3
 },
@@ -2841,7 +2717,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-340",
     "character": "慣",
     "onyomi": ["カン"],
-    "kunyomi": ["な(れる)"],
+    "kunyomi": ["な.れる"],
     "meaning": ["accustomed", "get used to"],
     jlptLevel: 3
 },
@@ -2873,7 +2749,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-344",
     "character": "貧",
     "onyomi": ["ヒン", "ビン"],
-    "kunyomi": ["まず(しい)"],
+    "kunyomi": ["まず.しい"],
     "meaning": ["poverty", "poor"],
     jlptLevel: 3
 },
@@ -2881,7 +2757,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-345",
     "character": "怒",
     "onyomi": ["ド"],
-    "kunyomi": ["いか(る)", "おこ(る)"],
+    "kunyomi": ["いか.る", "おこ.る"],
     "meaning": ["angry", "be offended"],
     jlptLevel: 3
 },
@@ -2889,7 +2765,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-346",
     "character": "泳",
     "onyomi": ["エイ"],
-    "kunyomi": ["およ(ぐ)"],
+    "kunyomi": ["およ.ぐ"],
     "meaning": ["swim"],
     jlptLevel: 3
 },
@@ -2913,7 +2789,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-349",
     "character": "疲",
     "onyomi": ["ヒ"],
-    "kunyomi": ["つか(れる)"],
+    "kunyomi": ["つか.れる"],
     "meaning": ["exhausted", "tire"],
     jlptLevel: 3
 },
@@ -2929,7 +2805,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-351",
     "character": "鳴",
     "onyomi": ["メイ"],
-    "kunyomi": ["な(く)", "な(る)"],
+    "kunyomi": ["な.く", "な.る"],
     "meaning": ["chirp", "cry", "bark"],
     jlptLevel: 3
 },
@@ -2945,7 +2821,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-353",
     "character": "煙",
     "onyomi": ["エン"],
-    "kunyomi": ["けむ(る)", "けむり"],
+    "kunyomi": ["けむ.る", "けむり"],
     "meaning": ["smoke"],
     jlptLevel: 3
 },
@@ -2953,7 +2829,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-354",
     "character": "眠",
     "onyomi": ["ミン"],
-    "kunyomi": ["ねむ(る)"],
+    "kunyomi": ["ねむ.る"],
     "meaning": ["sleep"],
     jlptLevel: 3
 },
@@ -2961,7 +2837,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-355",
     "character": "怖",
     "onyomi": ["フ"],
-    "kunyomi": ["こわ(い)", "お(じる)"],
+    "kunyomi": ["こわ.い", "お.じる"],
     "meaning": ["dreadful", "fearful"],
     jlptLevel: 3
 },
@@ -2977,7 +2853,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-357",
     "character": "頂",
     "onyomi": ["チョウ"],
-    "kunyomi": ["いただ(く)"],
+    "kunyomi": ["いただ.く"],
     "meaning": ["receive", "top", "summit", "peak"],
     jlptLevel: 3
 },
@@ -3001,7 +2877,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-360",
     "character": "寒",
     "onyomi": ["カン"],
-    "kunyomi": ["さむ(い)"],
+    "kunyomi": ["さむ.い"],
     "meaning": ["cold"],
     jlptLevel: 3
 },
@@ -3017,7 +2893,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-362",
     "character": "忙",
     "onyomi": ["ボウ", "モウ"],
-    "kunyomi": ["いそが(しい)"],
+    "kunyomi": ["いそが.しい"],
     "meaning": ["busy", "occupied"],
     jlptLevel: 3
 },
@@ -3041,7 +2917,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-365",
     "character": "恥",
     "onyomi": ["チ"],
-    "kunyomi": ["はじ", "は(ずかしい)"],
+    "kunyomi": ["はじ", "は.ずかしい"],
     "meaning": ["shame", "dishonor"],
     jlptLevel: 3
 },
@@ -3057,7 +2933,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-367",
     "character": "偉",
     "onyomi": ["イ"],
-    "kunyomi": ["えら(い)"],
+    "kunyomi": ["えら.い"],
     "meaning": ["admirable", "greatness"],
     jlptLevel: 3
 },
@@ -3073,7 +2949,7 @@ export const n3Kanji: Kanji[] = [{
     "id": "k-n3-369",
     "character": "幾",
     "onyomi": ["キ"],
-    "kunyomi": ["いく(つ)"],
+    "kunyomi": ["いく.つ"],
     "meaning": ["how many", "how much", "some"],
     jlptLevel: 3
 },

@@ -9,6 +9,7 @@ import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
 import type { SRSRating, Kanji, Vocabulary } from '../types';
 import reviewRacoon from '../assets/reviewracoon.png';
+import freetime from '../assets/freetime.png';
 
 export function ReviewPage() {
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ export function ReviewPage() {
 
     // Load cards for review
     const startReview = useCallback(() => {
+        console.log(dueCards)
         const cardsToReview = dueCards.map(srsCard => {
             const isKanji = srsCard.cardType === 'kanji';
             const data = isKanji
@@ -67,7 +69,15 @@ export function ReviewPage() {
     if (dueCards.length === 0 && !isReviewing) {
         return (
             <div className="page container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-                <div style={{ fontSize: '4rem', marginBottom: 'var(--space-6)' }}>✨</div>
+                <img
+                    src={freetime}
+                    alt="Overview Logo"
+                    style={{
+                        height: '150px',
+                        borderRadius: 'var(--radius-md)',
+                        objectFit: 'cover'
+                    }}
+                />
                 <h1 className="text-2xl font-bold" style={{ marginBottom: 'var(--space-2)' }}>
                     All caught up!
                 </h1>
