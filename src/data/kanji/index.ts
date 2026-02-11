@@ -1,10 +1,14 @@
 // Kanji data index - exports all JLPT levels
 import type { Kanji } from '../../types';
 import { n5Kanji } from './n5';
+import { n4Kanji } from './n4';
+import { n3Kanji } from './n3';
 
 // Combined kanji from all levels
 export const allKanji: Kanji[] = [
     ...n5Kanji,
+    ...n4Kanji,
+    ...n3Kanji,
     // Additional levels will be added here as they are created
 ];
 
@@ -32,10 +36,12 @@ export function searchKanji(query: string): Kanji[] {
 }
 
 // Export individual level data
-export { n5Kanji };
+export { n5Kanji, n3Kanji };
 
 // Stats
 export const kanjiStats = {
     n5: n5Kanji.length,
-    total: allKanji.length,
+    n4: n4Kanji.length,
+    n3: n3Kanji.length,
+    total: n5Kanji.length + n4Kanji.length + n3Kanji.length
 };

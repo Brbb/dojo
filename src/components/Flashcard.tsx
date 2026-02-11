@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import type { Kanji, Vocabulary, Mnemonic } from '../types';
+import { ReadingDisplay } from './ReadingDisplay';
 
 interface FlashcardProps {
     card: Kanji | Vocabulary;
@@ -78,14 +79,15 @@ export function Flashcard({ card, type, mnemonic, onFlip }: FlashcardProps) {
                                 <div className="reading-row">
                                     <span className="reading-label">Kun'yomi</span>
                                     <span className="reading-value japanese">
-                                        {kanjiCard.kunyomi.join('、')}
+                                        {kanjiCard.kunyomi.map((r, i) => (
+                                            <Fragment key={i}>
+                                                <ReadingDisplay reading={r} />
+                                                {i < kanjiCard.kunyomi.length - 1 && '、'}
+                                            </Fragment>
+                                        ))}
                                     </span>
                                 </div>
                             )}
-                            <div className="reading-row">
-                                <span className="reading-label">Strokes</span>
-                                <span className="reading-value">{kanjiCard.strokeCount}</span>
-                            </div>
                         </div>
                     )}
 
