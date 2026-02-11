@@ -71,3 +71,24 @@ export default defineConfig([
   },
 ])
 ```
+
+## iOS Distribution
+This project uses [Capacitor](https://capacitorjs.com/) for iOS distribution.
+
+### Prerequisites
+- Xcode installed on macOS.
+- CocoaPods (`sudo gem install cocoapods`).
+
+### Build and Sync
+To build the web app and sync it with the native iOS project:
+```bash
+npm run cap:sync
+```
+
+### Open in Xcode
+To open the project in Xcode for signing and archiving:
+```bash
+npm run cap:open
+```
+
+For detailed distribution steps, see [.agent/workflows/ios-distribution.md](.agent/workflows/ios-distribution.md).

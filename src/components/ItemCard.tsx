@@ -1,4 +1,6 @@
+import { Fragment } from 'react';
 import type { Kanji, Vocabulary, CardType, Mnemonic } from '../types';
+import { ReadingDisplay } from './ReadingDisplay';
 
 interface ItemCardProps {
     type: CardType;
@@ -46,7 +48,14 @@ export function ItemCard({ type, item, mnemonic, compact = false }: ItemCardProp
                         {isKanji && kanjiItem && (
                             <div className="text-xs text-text-tertiary" style={{ display: 'flex', gap: 'var(--space-3)', justifyContent: 'flex-end' }}>
                                 {kanjiItem.onyomi.length > 0 && <span>On: {kanjiItem.onyomi.join(', ')}</span>}
-                                {kanjiItem.kunyomi.length > 0 && <span>Kun: {kanjiItem.kunyomi.join(', ')}</span>}
+                                {kanjiItem.kunyomi.length > 0 && (
+                                    <span>Kun: {kanjiItem.kunyomi.map((r, i) => (
+                                        <Fragment key={i}>
+                                            <ReadingDisplay reading={r} />
+                                            {i < kanjiItem.kunyomi.length - 1 && ', '}
+                                        </Fragment>
+                                    ))}</span>
+                                )}
                             </div>
                         )}
 
@@ -169,7 +178,12 @@ export function ItemCard({ type, item, mnemonic, compact = false }: ItemCardProp
                         <div>
                             <h3 className="text-secondary text-xs uppercase tracking-wider mb-2">Kun'yomi</h3>
                             <div className="font-japanese text-lg">
-                                {kanjiItem.kunyomi.join('、') || '-'}
+                                {kanjiItem.kunyomi.length > 0 ? kanjiItem.kunyomi.map((r, i) => (
+                                    <Fragment key={i}>
+                                        <ReadingDisplay reading={r} />
+                                        {i < kanjiItem.kunyomi.length - 1 && '、'}
+                                    </Fragment>
+                                )) : '-'}
                             </div>
                         </div>
                     </div>
@@ -230,13 +244,6 @@ export function ItemCard({ type, item, mnemonic, compact = false }: ItemCardProp
                                 </div>
                             ))}
                         </div>
-                    </div>
-                )}
-
-                {/* Strokes (Kanji Only) */}
-                {isKanji && kanjiItem && (
-                    <div className="text-sm text-tertiary text-center mt-2">
-                        Stroke Count: {kanjiItem.strokeCount}
                     </div>
                 )}
 

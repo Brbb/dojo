@@ -15,7 +15,6 @@ export interface Kanji {
     kunyomi: string[];
     meaning: string[];
     jlptLevel: JLPTLevel;
-    strokeCount: number;
     examples?: KanjiExample[];
 }
 
