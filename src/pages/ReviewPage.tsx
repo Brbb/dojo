@@ -167,6 +167,7 @@ export function ReviewPage() {
 
             {/* Mnemonic Editor (Always visible, toggleable) */}
             <MnemonicEditor
+                key={current.card.id}
                 cardId={current.card.id}
                 initialText={getMnemonic(current.card.id)?.text || ''}
                 onSave={handleSaveMnemonic}

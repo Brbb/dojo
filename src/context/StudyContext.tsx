@@ -4,7 +4,7 @@ import type {
     UserProgress, AppSettings, Mnemonic
 } from '../types';
 import { loadState, saveState } from '../utils/storage';
-import { calculateNextReview, createSRSCard, getDueCards, calculateStats } from '../utils/srs';
+import { calculateNextReview, createSRSCard, getDueCards, calculateStats, getCardStatus, type CardStatus } from '../utils/srs';
 import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
 
@@ -56,7 +56,7 @@ function studyReducer(state: AppState, action: Action): AppState {
             }
 
             const updatedCard = calculateNextReview(card, rating);
-            const isNewCard = card.repetitions === 0;
+            const isFirstEverReview = card.lastReview === null;
 
             // Update streak
             const today = new Date().toISOString().split('T')[0];
@@ -81,8 +81,8 @@ function studyReducer(state: AppState, action: Action): AppState {
                 },
                 progress: {
                     ...state.progress,
-                    cardsLearned: state.progress.cardsLearned + (isNewCard && rating !== 'again' ? 1 : 0),
-                    cardsReviewed: state.progress.cardsReviewed + 1,
+                    cardsLearned: state.progress.cardsLearned + (isFirstEverReview && rating !== 'again' ? 1 : 0),
+                    cardsReviewed: state.progress.cardsReviewed + (isFirstEverReview ? 0 : 1),
                     currentStreak,
                     longestStreak,
                     lastStudyDate,
@@ -161,6 +161,7 @@ interface StudyContextType {
     getSRSCard: (cardId: string) => SRSCard | null;
     getDueCards: () => SRSCard[];
     getStats: () => ReturnType<typeof calculateStats>;
+    getCardsByStatus: () => Record<CardStatus, SRSCard[]>;
     getNewKanji: (levels: JLPTLevel[], count: number) => typeof allKanji;
     getNewVocabulary: (levels: JLPTLevel[], count: number) => typeof allVocabulary;
 }
@@ -214,6 +215,19 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         return calculateStats(state.srsCards);
     };
 
+    const getCardsByStatus = (): Record<CardStatus, SRSCard[]> => {
+        const grouped: Record<CardStatus, SRSCard[]> = {
+            new: [],
+            learning: [],
+            review: [],
+            mastered: [],
+        };
+        Object.values(state.srsCards).forEach(card => {
+            grouped[getCardStatus(card)].push(card);
+        });
+        return grouped;
+    };
+
     const getNewKanji = (levels: JLPTLevel[], count: number) => {
         const studied = new Set(Object.keys(state.srsCards));
         return allKanji
@@ -236,6 +250,7 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         addToReview,
         resetProgress,
         getMnemonic,
+        getCardsByStatus,
         getSRSCard,
         getDueCards: getDueCardsHelper,
         getStats,

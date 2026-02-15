@@ -1,12 +1,42 @@
+import { useState } from 'react';
 import { useStudy } from '../context/StudyContext';
 import { ProgressRing, ProgressBar } from '../components/Progress';
 import { allKanji, kanjiStats } from '../data/kanji';
 import { allVocabulary, vocabularyStats } from '../data/vocabulary';
+import { ChevronDown, ChevronRight } from 'lucide-react';
+import type { CardStatus } from '../utils/srs';
+import type { SRSCard } from '../types';
+
+const STATUS_CONFIG: { key: CardStatus; label: string; color: string }[] = [
+    { key: 'new', label: 'New', color: 'var(--color-info)' },
+    { key: 'learning', label: 'Learning', color: 'var(--color-warning)' },
+    { key: 'review', label: 'Review', color: 'var(--color-primary-light)' },
+    { key: 'mastered', label: 'Mastered', color: 'var(--color-success)' },
+];
+
+function getCardDisplayInfo(srsCard: SRSCard): { label: string; sublabel: string } | null {
+    if (srsCard.cardType === 'kanji') {
+        const kanji = allKanji.find(k => k.id === srsCard.cardId);
+        if (!kanji) return null;
+        return { label: kanji.character, sublabel: kanji.meaning.join(', ') };
+    } else {
+        const vocab = allVocabulary.find(v => v.id === srsCard.cardId);
+        if (!vocab) return null;
+        return { label: vocab.word, sublabel: vocab.meaning.join(', ') };
+    }
+}
 
 export function ProgressPage() {
-    const { state, getStats } = useStudy();
+    const { state, getStats, getCardsByStatus } = useStudy();
     const stats = getStats();
     const { progress } = state;
+    const cardsByStatus = getCardsByStatus();
+
+    const [expandedStatus, setExpandedStatus] = useState<CardStatus | null>(null);
+
+    const toggleStatus = (status: CardStatus) => {
+        setExpandedStatus(prev => prev === status ? null : status);
+    };
 
     const totalContent = allKanji.length + allVocabulary.length;
     const overallProgress = totalContent > 0 ? (stats.total / totalContent) * 100 : 0;
@@ -72,26 +102,91 @@ export function ProgressPage() {
                 </div>
             </section>
 
-            {/* Card Status Breakdown */}
+            {/* Card Status Breakdown — Expandable */}
             <section style={{ marginBottom: 'var(--space-6)' }}>
                 <h2 className="text-lg font-semibold" style={{ marginBottom: 'var(--space-4)' }}>Card Status</h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'var(--space-3)' }}>
-                    <div className="stat-card">
-                        <div className="stat-value" style={{ color: 'var(--color-info)' }}>{stats.new}</div>
-                        <div className="stat-label">New</div>
-                    </div>
-                    <div className="stat-card">
-                        <div className="stat-value" style={{ color: 'var(--color-warning)' }}>{stats.learning}</div>
-                        <div className="stat-label">Learning</div>
-                    </div>
-                    <div className="stat-card">
-                        <div className="stat-value" style={{ color: 'var(--color-primary-light)' }}>{stats.review}</div>
-                        <div className="stat-label">Review</div>
-                    </div>
-                    <div className="stat-card">
-                        <div className="stat-value" style={{ color: 'var(--color-success)' }}>{stats.mastered}</div>
-                        <div className="stat-label">Mastered</div>
-                    </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+                    {STATUS_CONFIG.map(({ key, label, color }) => {
+                        const cards = cardsByStatus[key];
+                        const isExpanded = expandedStatus === key;
+                        return (
+                            <div key={key} className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                                <button
+                                    onClick={() => toggleStatus(key)}
+                                    style={{
+                                        width: '100%',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'space-between',
+                                        padding: 'var(--space-4)',
+                                        background: 'none',
+                                        border: 'none',
+                                        cursor: 'pointer',
+                                        color: 'inherit',
+                                        font: 'inherit',
+                                    }}
+                                >
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
+                                        {isExpanded
+                                            ? <ChevronDown size={18} style={{ color: 'var(--color-text-secondary)' }} />
+                                            : <ChevronRight size={18} style={{ color: 'var(--color-text-secondary)' }} />
+                                        }
+                                        <span className="font-medium">{label}</span>
+                                    </div>
+                                    <span className="text-lg font-bold" style={{ color }}>{cards.length}</span>
+                                </button>
+                                {isExpanded && cards.length > 0 && (
+                                    <div style={{
+                                        borderTop: '1px solid var(--color-border)',
+                                        maxHeight: '240px',
+                                        overflowY: 'auto',
+                                    }}>
+                                        {cards.map(srsCard => {
+                                            const info = getCardDisplayInfo(srsCard);
+                                            if (!info) return null;
+                                            return (
+                                                <div
+                                                    key={srsCard.cardId}
+                                                    style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        gap: 'var(--space-3)',
+                                                        padding: 'var(--space-3) var(--space-4)',
+                                                        borderBottom: '1px solid var(--color-border)',
+                                                    }}
+                                                >
+                                                    <span style={{
+                                                        fontSize: srsCard.cardType === 'kanji' ? '1.4rem' : '1rem',
+                                                        fontWeight: 600,
+                                                        minWidth: '2.5rem',
+                                                        textAlign: 'center',
+                                                    }}>
+                                                        {info.label}
+                                                    </span>
+                                                    <span className="text-sm text-secondary" style={{
+                                                        overflow: 'hidden',
+                                                        textOverflow: 'ellipsis',
+                                                        whiteSpace: 'nowrap',
+                                                    }}>
+                                                        {info.sublabel}
+                                                    </span>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                                {isExpanded && cards.length === 0 && (
+                                    <div style={{
+                                        borderTop: '1px solid var(--color-border)',
+                                        padding: 'var(--space-4)',
+                                        textAlign: 'center',
+                                    }}>
+                                        <span className="text-sm text-tertiary">No cards in this category</span>
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </section>
 
