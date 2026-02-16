@@ -1,9 +1,13 @@
 // Vocabulary data index - exports all JLPT levels
 import type { Vocabulary } from '../../types';
+import { n3Vocabulary } from './n3';
+import { n4Vocabulary } from './n4';
 import { n5Vocabulary } from './n5';
 
 // Combined vocabulary from all levels
 export const allVocabulary: Vocabulary[] = [
+    ...n3Vocabulary,
+    ...n4Vocabulary,
     ...n5Vocabulary,
 ];
 
@@ -30,10 +34,12 @@ export function searchVocabulary(query: string): Vocabulary[] {
 }
 
 // Export individual level data
-export { n5Vocabulary };
+export { n5Vocabulary, n4Vocabulary, n3Vocabulary };
 
 // Stats
 export const vocabularyStats = {
     n5: n5Vocabulary.length,
+    n4: n4Vocabulary.length,
+    n3: n3Vocabulary.length,
     total: allVocabulary.length,
 };

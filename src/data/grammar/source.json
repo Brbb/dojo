@@ -1,0 +1,958 @@
+{
+    "jlpt_n3_grammar_by_topic": [
+        {
+            "topic": "Causes, Relations, and Changes",
+            "description": "Explaining reasons, proportional developments, and evolving states.",
+            "grammar_points": [
+                {
+                    "point": "のせい",
+                    "meaning": "Because of (bad result)",
+                    "example_jp": "お酒を飲みすぎたせいで頭が痛い。",
+                    "example_en": "My head hurts because I drank too much alcohol."
+                },
+                {
+                    "point": "のおかげ",
+                    "meaning": "Thanks to (good result)",
+                    "example_jp": "ゲームのおかげで日本語がうまくなった。",
+                    "example_en": "My Japanese improved thanks to games."
+                },
+                {
+                    "point": "をきっかけに",
+                    "meaning": "Since/Starting from the time...",
+                    "example_jp": "京都旅行をきっかけに日本に興味を持った。",
+                    "example_en": "I became interested in Japan starting from my trip to Kyoto."
+                },
+                {
+                    "point": "て以来",
+                    "meaning": "Ever since",
+                    "example_jp": "日本に来て以来、毎日日本語の勉強をしている。",
+                    "example_en": "Ever since coming to Japan, I study Japanese every day."
+                },
+                {
+                    "point": "によって",
+                    "meaning": "Due to / Because of",
+                    "example_jp": "スマートフォンによって人々の生活は変化した。",
+                    "example_en": "People's lives changed due to smartphones."
+                },
+                {
+                    "point": "つつ",
+                    "meaning": "While / At the same time",
+                    "example_jp": "学校に通いつつ、夜はバイトをしている。",
+                    "example_en": "While attending school, I work a part-time job at night."
+                },
+                {
+                    "point": "とともに",
+                    "meaning": "Along with / Simultaneously",
+                    "example_jp": "天気が悪くなるとともに頭が痛くなる。",
+                    "example_en": "My head starts to hurt as the weather gets worse."
+                },
+                {
+                    "point": "くらい",
+                    "meaning": "To the same extent / degree",
+                    "example_jp": "あなたくらい日本語がうまくなりたい。",
+                    "example_en": "I want to become as good at Japanese as you are."
+                },
+                {
+                    "point": "ほど",
+                    "meaning": "To the same extent (more formal)",
+                    "example_jp": "動けなくなるほどお酒を飲んだ。",
+                    "example_en": "I drank to the extent that I couldn't move."
+                },
+                {
+                    "point": "つつある",
+                    "meaning": "In the process of / Steadily",
+                    "example_jp": "葉っぱが赤くなりつつある。",
+                    "example_en": "The leaves are steadily turning red."
+                },
+                {
+                    "point": "ば～ほど",
+                    "meaning": "The more... the more...",
+                    "example_jp": "勉強すればするほど成績がよくなる。",
+                    "example_en": "The more you study, the better your grades become."
+                },
+                {
+                    "point": "にしたがって",
+                    "meaning": "As... then gradually...",
+                    "example_jp": "年を取るにしたがって体力もなくなった。",
+                    "example_en": "As I get older, my physical strength has gradually decreased."
+                },
+                {
+                    "point": "ために",
+                    "meaning": "Because of; as a result of",
+                    "example_jp": "健康のために、毎日走っている。",
+                    "example_en": "I run every day for the sake of my health."
+                },
+                {
+                    "point": "につれて",
+                    "meaning": "As; in proportion to",
+                    "example_jp": "時間が経つにつれて、悲しみも薄れる。",
+                    "example_en": "As time passes, sadness also fades."
+                },
+                {
+                    "point": "一方だ",
+                    "meaning": "More and more; continue to",
+                    "example_jp": "ガソリン代は上がる一方だ。",
+                    "example_en": "Gasoline prices just keep going up."
+                },
+                {
+                    "point": "結果",
+                    "meaning": "As a result of; after",
+                    "example_jp": "相談した結果、中止に決まった。",
+                    "example_en": "As a result of our talk, we decided to cancel."
+                },
+                {
+                    "point": "結局",
+                    "meaning": "After all; in the end",
+                    "example_jp": "色々悩んだが、結局買わなかった。",
+                    "example_en": "I worried a lot, but in the end, I didn't buy it."
+                },
+                {
+                    "point": "ことから",
+                    "meaning": "From the fact that",
+                    "example_jp": "声が似ていることから、兄弟だと分かった。",
+                    "example_en": "I knew they were brothers from the fact their voices were similar."
+                },
+                {
+                    "point": "そのために",
+                    "meaning": "Hence; for that reason",
+                    "example_jp": "雪が降った。そのために電車が遅れた。",
+                    "example_en": "It snowed. Because of that, the train was late."
+                }
+            ]
+        },
+        {
+            "topic": "Instructions, Advice, and Social Rules",
+            "description": "Directing behavior, giving suggestions, and expressing requirements.",
+            "grammar_points": [
+                {
+                    "point": "べきだ",
+                    "meaning": "Should / Ought to",
+                    "example_jp": "日本にいるなら納豆は食べるべきだ。",
+                    "example_en": "If you are in Japan, you should eat natto."
+                },
+                {
+                    "point": "べきではない",
+                    "meaning": "Should not do",
+                    "example_jp": "そんなひどいことを言うべきではない。",
+                    "example_en": "You should not say such a terrible thing."
+                },
+                {
+                    "point": "ように",
+                    "meaning": "Please do (Instruction)",
+                    "example_jp": "明日は絶対に遅刻しないように。",
+                    "example_en": "Ensure that you are absolutely not late tomorrow."
+                },
+                {
+                    "point": "ことになっている",
+                    "meaning": "It is a rule / scheduled",
+                    "example_jp": "キャンプ場では炭はここに捨てることになっている。",
+                    "example_en": "At the campsite, it is the rule to throw charcoal away here."
+                },
+                {
+                    "point": "こと",
+                    "meaning": "(Must) do",
+                    "example_jp": "休む時は連絡すること。",
+                    "example_en": "When absent, you must contact us."
+                },
+                {
+                    "point": "てごらん",
+                    "meaning": "(Please) try to",
+                    "example_jp": "これを食べてみ（て）ごらん。",
+                    "example_en": "Try eating this."
+                },
+                {
+                    "point": "わけにはいかない",
+                    "meaning": "Must not; cannot afford to",
+                    "example_jp": "大事な会議だから、休むわけにはいかない。",
+                    "example_en": "It's an important meeting, so I cannot afford to miss it."
+                },
+                {
+                    "point": "ないと",
+                    "meaning": "Must do; unless",
+                    "example_jp": "早く帰らないと。",
+                    "example_en": "I must return home early."
+                }
+            ]
+        },
+        {
+            "topic": "Time, Timing, and Sequences",
+            "description": "Marking specific moments, durations, and chronological order.",
+            "grammar_points": [
+                {
+                    "point": "にあたって",
+                    "meaning": "On the occasion of / When",
+                    "example_jp": "契約するにあたってサインをした。",
+                    "example_en": "I signed upon entering into the contract."
+                },
+                {
+                    "point": "に際して",
+                    "meaning": "At the time of / When",
+                    "example_jp": "入学に際してテストを受けます。",
+                    "example_en": "I will take a test at the time of admission."
+                },
+                {
+                    "point": "に先立ち",
+                    "meaning": "Prior to / Before",
+                    "example_jp": "旅行に先立って着替えの準備をする。",
+                    "example_en": "I prepare a change of clothes prior to the trip."
+                },
+                {
+                    "point": "たばかり",
+                    "meaning": "Just finished doing",
+                    "example_jp": "昼食を食べたばかりなのにお腹が減る。",
+                    "example_en": "Even though I just ate lunch, I am hungry."
+                },
+                {
+                    "point": "たびに",
+                    "meaning": "Every time / whenever",
+                    "example_jp": "買い物のたびに息子がついてくる。",
+                    "example_en": "Every time I go shopping, my son follows me."
+                },
+                {
+                    "point": "おきに",
+                    "meaning": "At intervals of",
+                    "example_jp": "1時間おきに見回りをする。",
+                    "example_en": "I do patrols at one-hour intervals."
+                },
+                {
+                    "point": "の間（に）",
+                    "meaning": "During / While",
+                    "example_jp": "昼食を食べている間に休憩します。",
+                    "example_en": "I take a break while eating lunch."
+                },
+                {
+                    "point": "うちに",
+                    "meaning": "While; before",
+                    "example_jp": "若いうちに、色々経験したい。",
+                    "example_en": "While I am young, I want to experience many things."
+                },
+                {
+                    "point": "最中に",
+                    "meaning": "While; during",
+                    "example_jp": "会議の最中に電話が鳴った。",
+                    "example_en": "The phone rang in the middle of the meeting."
+                },
+                {
+                    "point": "次第",
+                    "meaning": "As soon as",
+                    "example_jp": "会議で決まり次第、やります。",
+                    "example_en": "I will do it as soon as it is decided in the meeting."
+                },
+                {
+                    "point": "た途端",
+                    "meaning": "As soon as; just as",
+                    "example_jp": "窓を開けた途端、風が入ってきた。",
+                    "example_en": "The moment I opened the window, the wind came in."
+                },
+                {
+                    "point": "てはじめて",
+                    "meaning": "Not until; only after",
+                    "example_jp": "病気になってはじめて、健康の大切さを知った。",
+                    "example_en": "Only after getting sick did I know the importance of health."
+                },
+                {
+                    "point": "てからでないと",
+                    "meaning": "Must first do; not until",
+                    "example_jp": "物を見てからでないと買えない。",
+                    "example_en": "I can't buy it until I have seen the actual item."
+                },
+                {
+                    "point": "ぶりに",
+                    "meaning": "For the first time in",
+                    "example_jp": "10年ぶりに日本へ行った。",
+                    "example_en": "I went to Japan for the first time in 10 years."
+                },
+                {
+                    "point": "中（ちゅう）",
+                    "meaning": "Currently; during",
+                    "example_jp": "会議中ですので、少々お待ちください。",
+                    "example_en": "We are in the middle of a meeting, so please wait a moment."
+                },
+                {
+                    "point": "途中で",
+                    "meaning": "On the way; in middle",
+                    "example_jp": "学校へ行く途中で雨が降ってきた。",
+                    "example_en": "It started raining on the way to school."
+                },
+                {
+                    "point": "ついでに",
+                    "meaning": "While; on the way",
+                    "example_jp": "散歩のついでに、手紙を出してきた。",
+                    "example_en": "While taking a walk, I mailed the letter."
+                },
+                {
+                    "point": "たて",
+                    "meaning": "Just done; freshly done",
+                    "example_jp": "焼きたてのパンは美味しい。",
+                    "example_en": "Freshly baked bread is delicious."
+                },
+                {
+                    "point": "きり",
+                    "meaning": "Only; just; since",
+                    "example_jp": "二人きりで話したい。",
+                    "example_en": "I want to talk just between the two of us."
+                },
+                {
+                    "point": "上で",
+                    "meaning": "Upon; after; when",
+                    "example_jp": "内容を確かめた上で、サインしてください。",
+                    "example_en": "Please sign after confirming the content."
+                }
+            ]
+        },
+        {
+            "topic": "Opinions, States, and Certainty",
+            "description": "Expressing convictions, limitations, and nuances of belief.",
+            "grammar_points": [
+                {
+                    "point": "に基づいて",
+                    "meaning": "Based on",
+                    "example_jp": "会社のルールに基づいて仕事をしている。",
+                    "example_en": "I am working based on the company rules."
+                },
+                {
+                    "point": "を中心に",
+                    "meaning": "Centred on / Focusing on",
+                    "example_jp": "この曲は若者を中心に人気がある。",
+                    "example_en": "This song is popular, focusing on young people."
+                },
+                {
+                    "point": "という",
+                    "meaning": "Called / Named",
+                    "example_jp": "土浦市という町を知っていますか。",
+                    "example_en": "Do you know a town called Tsuchiura City?"
+                },
+                {
+                    "point": "に対して",
+                    "meaning": "Towards / Regarding",
+                    "example_jp": "先生に対して敬語を使います。",
+                    "example_en": "Use polite language towards the teacher."
+                },
+                {
+                    "point": "に関して",
+                    "meaning": "Regarding / About",
+                    "example_jp": "この問題に関して質問はありますか。",
+                    "example_en": "Do you have any questions regarding this problem?"
+                },
+                {
+                    "point": "わけではない",
+                    "meaning": "Not necessarily / Doesn't mean",
+                    "example_jp": "たくさん食べるからといって好きになったわけではない。",
+                    "example_en": "Just because I eat a lot doesn't mean I like it."
+                },
+                {
+                    "point": "わけがない",
+                    "meaning": "No way that... (Impossible)",
+                    "example_jp": "彼女が彼を好きになるわけがない。",
+                    "example_en": "There is no way she would fall in love with him."
+                },
+                {
+                    "point": "に違いない",
+                    "meaning": "Without a doubt / Surely",
+                    "example_jp": "あの2人は付き合ってるに違いない。",
+                    "example_en": "Those two are definitely dating."
+                },
+                {
+                    "point": "ということだ",
+                    "meaning": "I heard that / It means",
+                    "example_jp": "今日の授業は午後からということだ。",
+                    "example_en": "I heard that today's class starts in the afternoon."
+                },
+                {
+                    "point": "といっても",
+                    "meaning": "Although I say",
+                    "example_jp": "日本語が話せるといっても、少しだけだ。",
+                    "example_en": "Although I say I can speak Japanese, it's only a little."
+                },
+                {
+                    "point": "というのは",
+                    "meaning": "This means; because",
+                    "example_jp": "「禁煙」というのは、タバコを吸うなという意味だ。",
+                    "example_en": "\"Kinen\" means \"do not smoke.\""
+                },
+                {
+                    "point": "と言えば",
+                    "meaning": "Speaking of; if it were",
+                    "example_jp": "日本の食べ物と言えば、寿司だ。",
+                    "example_en": "Speaking of Japanese food, it's sushi."
+                },
+                {
+                    "point": "とは限らない",
+                    "meaning": "Not necessarily so",
+                    "example_jp": "高いものがいいとは限らない。",
+                    "example_en": "Expensive things aren't necessarily good."
+                },
+                {
+                    "point": "ような気がする",
+                    "meaning": "Have a feeling that",
+                    "example_jp": "誰かに見られているような気がする。",
+                    "example_en": "I have a feeling that someone is watching me."
+                },
+                {
+                    "point": "ように見える",
+                    "meaning": "To look; to seem",
+                    "example_jp": "彼は幸せそうに見える。",
+                    "example_en": "He looks happy."
+                }
+            ]
+        },
+        {
+            "topic": "Possibility, Limitation, and Difficulty",
+            "description": "Describing barriers, risks, and degrees of ability.",
+            "grammar_points": [
+                {
+                    "point": "ようがない",
+                    "meaning": "No way to / No method",
+                    "example_jp": "彼には説明のしようがない。",
+                    "example_en": "There is no way to explain it to him."
+                },
+                {
+                    "point": "がたい",
+                    "meaning": "Difficult to (psychologically)",
+                    "example_jp": "あの人の行動は本当に理解しがたい。",
+                    "example_en": "That person's behaviour is truly difficult to understand."
+                },
+                {
+                    "point": "ことはない",
+                    "meaning": "No need to / no necessity",
+                    "example_jp": "そんなに心配することはないよ。",
+                    "example_en": "There is no need to worry that much."
+                },
+                {
+                    "point": "きれない",
+                    "meaning": "Cannot finish / Unable to",
+                    "example_jp": "こんなにいっぱい食べきれないよ。",
+                    "example_en": "I can't finish eating this much."
+                },
+                {
+                    "point": "かねない",
+                    "meaning": "Might happen (negative result)",
+                    "example_jp": "そのやり方では失敗しかねない。",
+                    "example_en": "With that method, you might fail."
+                },
+                {
+                    "point": "だらけ",
+                    "meaning": "Full of / Covered in (bad)",
+                    "example_jp": "今日のテストは漢字だらけの問題だった。",
+                    "example_en": "Today's test was a problem full of Kanji."
+                },
+                {
+                    "point": "っぱなし",
+                    "meaning": "Leaving something on/in use",
+                    "example_jp": "テレビをつけっぱなしで寝てしまった。",
+                    "example_en": "I fell asleep leaving the TV on."
+                },
+                {
+                    "point": "あまりに",
+                    "meaning": "Too much; excessively",
+                    "example_jp": "嬉しさのあまり、泣いてしまった。",
+                    "example_en": "I cried out of sheer happiness."
+                },
+                {
+                    "point": "とても～ない",
+                    "meaning": "Cannot possibly be",
+                    "example_jp": "そんな難しい本、とても読めない。",
+                    "example_en": "I couldn't possibly read such a difficult book."
+                },
+                {
+                    "point": "切る",
+                    "meaning": "To do completely",
+                    "example_jp": "最後まで走り切った。",
+                    "example_en": "I ran completely to the end."
+                }
+            ]
+        },
+        {
+            "topic": "Hypotheticals and Conditions",
+            "description": "Suppose and 'even if' scenarios.",
+            "grammar_points": [
+                {
+                    "point": "たとえ～ても",
+                    "meaning": "Even if...",
+                    "example_jp": "たとえ生まれ変わっても性格は変わらないだろう。",
+                    "example_en": "Even if I were reborn, my personality wouldn't change."
+                },
+                {
+                    "point": "としたら",
+                    "meaning": "If we assume / Suppose",
+                    "example_jp": "大金持ちになったとしたら仕事はしない。",
+                    "example_en": "If I became very rich, I wouldn't work."
+                },
+                {
+                    "point": "ばいい",
+                    "meaning": "Should; can; it’d be good if",
+                    "example_jp": "どうすればいいですか。",
+                    "example_en": "What should I do?"
+                },
+                {
+                    "point": "ばよかった",
+                    "meaning": "Should have; would have been better",
+                    "example_jp": "もっと勉強すればよかった。",
+                    "example_en": "I should have studied more."
+                },
+                {
+                    "point": "ば～のに",
+                    "meaning": "Would have; if only",
+                    "example_jp": "安ければ買うのに。",
+                    "example_en": "If it were cheap, I would buy it."
+                },
+                {
+                    "point": "もしも～たら",
+                    "meaning": "If; supposing",
+                    "example_jp": "もしも一億円あったら、どうしますか。",
+                    "example_en": "If you had 100 million yen, what would you do?"
+                },
+                {
+                    "point": "いくら～ても",
+                    "meaning": "No matter how",
+                    "example_jp": "いくら高くても買います。",
+                    "example_en": "No matter how expensive it is, I will buy it."
+                },
+                {
+                    "point": "どんなに～ても",
+                    "meaning": "No matter how (much)",
+                    "example_jp": "どんなに練習しても、うまくならない。",
+                    "example_en": "No matter how much I practice, I don't get better."
+                },
+                {
+                    "point": "さえ～ば",
+                    "meaning": "If only; as long as",
+                    "example_jp": "薬を飲みさえすれば、治ります。",
+                    "example_en": "As long as you take your medicine, you will get better."
+                },
+                {
+                    "point": "といい / たらいい",
+                    "meaning": "It would be nice if",
+                    "example_jp": "明日、晴れるといいですね。",
+                    "example_en": "I hope it's sunny tomorrow."
+                }
+            ]
+        },
+        {
+            "topic": "Choices and Comparisons",
+            "description": "Evaluating alternatives and relative states.",
+            "grammar_points": [
+                {
+                    "point": "しかない",
+                    "meaning": "No choice but to",
+                    "example_jp": "合格するには勉強するしかない。",
+                    "example_en": "To pass, there is no choice but to study."
+                },
+                {
+                    "point": "ほか（は）ない",
+                    "meaning": "No choice but to (Formal)",
+                    "example_jp": "コロナが続くと店を閉めるほかない。",
+                    "example_en": "If Corona continues, we have no choice but to close the shop."
+                },
+                {
+                    "point": "はもとより",
+                    "meaning": "Of course... but also",
+                    "example_jp": "コンビニはもとよりスーパーもありません。",
+                    "example_en": "There are no supermarkets, let alone convenience stores."
+                },
+                {
+                    "point": "ばかりか",
+                    "meaning": "Not only... but also",
+                    "example_jp": "あの学生は遅刻したばかりか寝ている。",
+                    "example_en": "That student not only was late but is also sleeping."
+                },
+                {
+                    "point": "の代わりに",
+                    "meaning": "Instead of",
+                    "example_jp": "バイクの代わりにこの車を使ってください。",
+                    "example_en": "Please use this car instead of the bike."
+                },
+                {
+                    "point": "どころか",
+                    "meaning": "Far from / On the contrary",
+                    "example_jp": "結婚どころか付き合ってもいない。",
+                    "example_en": "Far from being married, they aren't even dating."
+                },
+                {
+                    "point": "に比べて",
+                    "meaning": "Compared to",
+                    "example_jp": "今年は去年に比べて雨が多かった。",
+                    "example_en": "Compared to last year, there was more rain this year."
+                },
+                {
+                    "point": "に反して",
+                    "meaning": "Against; contrary to",
+                    "example_jp": "予想に反して、テストは簡単だった。",
+                    "example_en": "Contrary to expectations, the test was easy."
+                },
+                {
+                    "point": "わりに",
+                    "meaning": "Considering; for",
+                    "example_jp": "彼は年齢の割に、若く見える。",
+                    "example_en": "He looks young for his age."
+                },
+                {
+                    "point": "にしては",
+                    "meaning": "For; considering",
+                    "example_jp": "初めてにしては、上手にできた。",
+                    "example_en": "For a first time, you did it well."
+                },
+                {
+                    "point": "というより",
+                    "meaning": "Rather than",
+                    "example_jp": "友達というより、家族みたいだ。",
+                    "example_en": "Rather than a friend, they are like family."
+                },
+                {
+                    "point": "むしろ",
+                    "meaning": "Rather; instead",
+                    "example_jp": "涼しいというより、むしろ寒い。",
+                    "example_en": "It's not so much cool as it is rather cold."
+                },
+                {
+                    "point": "よりも",
+                    "meaning": "In comparison to",
+                    "example_jp": "昨日よりも今日の方が暑い。",
+                    "example_en": "Today is hotter than yesterday."
+                }
+            ]
+        },
+        {
+            "topic": "Emphasis, Modifiers, and Adverbs",
+            "description": "Adding intensity or specific nuance to a sentence.",
+            "grammar_points": [
+                {
+                    "point": "こそ",
+                    "meaning": "Precisely; definitely; for sure",
+                    "example_jp": "来年こそ合格したい。",
+                    "example_en": "Next year for sure, I want to pass."
+                },
+                {
+                    "point": "さえ",
+                    "meaning": "Even; not even",
+                    "example_jp": "名前さえ書けない。",
+                    "example_en": "I can't even write my name."
+                },
+                {
+                    "point": "ばかりでなく",
+                    "meaning": "Not only... but also",
+                    "example_jp": "あの学生は遅刻したばかりか寝ている。",
+                    "example_en": "That student not only was late but is also sleeping."
+                },
+                {
+                    "point": "だけでなく",
+                    "meaning": "Not only… but also",
+                    "example_jp": "日本語だけでなく英語も話せる。",
+                    "example_en": "I can speak English as well as Japanese."
+                },
+                {
+                    "point": "一体",
+                    "meaning": "Emphasis; what on earth",
+                    "example_jp": "一体、何が起きたんですか。",
+                    "example_en": "What on earth happened?"
+                },
+                {
+                    "point": "決して～ない",
+                    "meaning": "Never; by no means",
+                    "example_jp": "秘密は決して言わない。",
+                    "example_en": "I will never tell the secret."
+                },
+                {
+                    "point": "めったに～ない",
+                    "meaning": "Hardly; rarely",
+                    "example_jp": "めったに料理をしない。",
+                    "example_en": "I hardly ever cook."
+                },
+                {
+                    "point": "まさか",
+                    "meaning": "There's no way",
+                    "example_jp": "まさか、彼が犯人じゃないだろう。",
+                    "example_en": "No way, he couldn't be the criminal."
+                },
+                {
+                    "point": "どうしても",
+                    "meaning": "No matter what; at any cost",
+                    "example_jp": "どうしても日本に行きたい。",
+                    "example_en": "I want to go to Japan no matter what."
+                },
+                {
+                    "point": "ついに",
+                    "meaning": "Finally; at last",
+                    "example_jp": "ついに、念願の車を買った。",
+                    "example_en": "Finally, I bought my dream car."
+                },
+                {
+                    "point": "数量 + は",
+                    "meaning": "At least",
+                    "example_jp": "100人は集まるだろう。",
+                    "example_en": "At least 100 people will probably gather."
+                },
+                {
+                    "point": "せいぜい",
+                    "meaning": "At the most; at best",
+                    "example_jp": "参加者はせいぜい10人だろう。",
+                    "example_en": "There will be 10 participants at the most."
+                }
+            ]
+        },
+        {
+            "topic": "Conjunctions and Connectives",
+            "description": "Linking clauses and ideas logically.",
+            "grammar_points": [
+                {
+                    "point": "だけど",
+                    "meaning": "But; however; although",
+                    "example_jp": "頑張った。だけど、負けた。",
+                    "example_en": "I tried hard. But, I lost."
+                },
+                {
+                    "point": "ところが",
+                    "meaning": "Even so; however",
+                    "example_jp": "予報は晴れだった。ところが雨が降った。",
+                    "example_en": "The forecast was sunny. However, it rained."
+                },
+                {
+                    "point": "ところで",
+                    "meaning": "By the way",
+                    "example_jp": "ところで、来週の予定は？",
+                    "example_en": "By the way, what's your schedule for next week?"
+                },
+                {
+                    "point": "それとも",
+                    "meaning": "Or; or else",
+                    "example_jp": "コーヒーにしますか、それとも紅茶ですか。",
+                    "example_en": "Would you like coffee, or tea?"
+                },
+                {
+                    "point": "すなわち",
+                    "meaning": "In other words; namely",
+                    "example_jp": "日本の首都、すなわち東京。",
+                    "example_en": "The capital of Japan, namely, Tokyo."
+                },
+                {
+                    "point": "つまり",
+                    "meaning": "In other words; in summary",
+                    "example_jp": "父の弟、つまり叔父です。",
+                    "example_en": "My father's younger brother, in other words, my uncle."
+                },
+                {
+                    "point": "なぜなら",
+                    "meaning": "Because; the reason is",
+                    "example_jp": "欠席した。なぜなら病気だったからだ。",
+                    "example_en": "I was absent. The reason is because I was sick."
+                },
+                {
+                    "point": "さて",
+                    "meaning": "Well; now; then",
+                    "example_jp": "さて、次の問題に行きましょう。",
+                    "example_en": "Now, let's move to the next question."
+                },
+                {
+                    "point": "さらに",
+                    "meaning": "Furthermore; again",
+                    "example_jp": "さらに詳しく説明してください。",
+                    "example_en": "Please explain in even further detail."
+                }
+            ]
+        },
+        {
+            "topic": "Emotional States and Compulsions",
+            "description": "Internal feelings and uncontrollable reactions.",
+            "grammar_points": [
+                {
+                    "point": "ずにはいられない",
+                    "meaning": "Cannot help but do",
+                    "example_jp": "甘いものを食べずにはいられない。",
+                    "example_en": "I cannot help but eat sweet things."
+                },
+                {
+                    "point": "てしょうがない",
+                    "meaning": "Very / Can't help but",
+                    "example_jp": "あの映画が見たくてしょうがない。",
+                    "example_en": "I want to see that movie so much I can't help it."
+                },
+                {
+                    "point": "たものだ",
+                    "meaning": "Used to do",
+                    "example_jp": "子供の頃、よくここで遊んだものだ。",
+                    "example_en": "I used to play here a lot when I was a child."
+                }
+            ]
+        },
+        {
+            "topic": "Suffixes, Attributes, and Noun-related Grammar",
+            "description": "Modifying nouns and describing tendencies or traits.",
+            "grammar_points": [
+                {
+                    "point": "的",
+                    "meaning": "Change noun into adj/adv",
+                    "example_jp": "日本的なデザインですね。",
+                    "example_en": "It's a Japanese-style design, isn't it?"
+                },
+                {
+                    "point": "っぽい",
+                    "meaning": "-ish; seems like",
+                    "example_jp": "彼は子供っぽい。",
+                    "example_en": "He is childish."
+                },
+                {
+                    "point": "だらけ",
+                    "meaning": "Full of / covered in",
+                    "example_jp": "今日のテストは漢字だらけの問題だった。",
+                    "example_en": "Today's test was a problem full of Kanji."
+                },
+                {
+                    "point": "がち",
+                    "meaning": "Tend to; often",
+                    "example_jp": "休みは家で寝ていがちだ。",
+                    "example_en": "On my days off, I tend to just sleep at home."
+                },
+                {
+                    "point": "気味",
+                    "meaning": "-like; tending to",
+                    "example_jp": "風邪気味で、喉が痛い。",
+                    "example_en": "I have a slight cold and my throat hurts."
+                },
+                {
+                    "point": "向き",
+                    "meaning": "Suitable for",
+                    "example_jp": "この仕事は彼女向きだ。",
+                    "example_en": "This job is suitable for her."
+                },
+                {
+                    "point": "向け",
+                    "meaning": "Intended for",
+                    "example_jp": "これは子供向けの映画です。",
+                    "example_en": "This is a movie intended for children."
+                },
+                {
+                    "point": "ごと",
+                    "meaning": "Each; every; at intervals",
+                    "example_jp": "5分ごとに電車が来る。",
+                    "example_en": "The train comes every 5 minutes."
+                },
+                {
+                    "point": "ずつ",
+                    "meaning": "Apiece; each; at a time",
+                    "example_jp": "一つずつ取ってください。",
+                    "example_en": "Please take them one at a time."
+                }
+            ]
+        },
+        {
+            "topic": "Verbal Suffixes and Action Nuances",
+            "description": "Modifying how an action is performed or finished.",
+            "grammar_points": [
+                {
+                    "point": "上げる",
+                    "meaning": "To finish doing",
+                    "example_jp": "レポートを書き上げた。",
+                    "example_en": "I finished writing the report."
+                },
+                {
+                    "point": "合う",
+                    "meaning": "Do something together",
+                    "example_jp": "困った時は助け合おう。",
+                    "example_en": "Let's help each other when in trouble."
+                },
+                {
+                    "point": "かける",
+                    "meaning": "Half-; not yet finished",
+                    "example_jp": "読みかけの本が机にある。",
+                    "example_en": "The book I'm halfway through is on the desk."
+                },
+                {
+                    "point": "込める",
+                    "meaning": "Filled with; full of",
+                    "example_jp": "愛を込めて、手紙を書いた。",
+                    "example_en": "I wrote a letter filled with love."
+                },
+                {
+                    "point": "込む",
+                    "meaning": "Long time; inside",
+                    "example_jp": "彼女は考え込んでいる。",
+                    "example_en": "She is lost in thought."
+                },
+                {
+                    "point": "直す",
+                    "meaning": "To do again; to do over",
+                    "example_jp": "書き直してください。",
+                    "example_en": "Please rewrite it."
+                },
+                {
+                    "point": "通す",
+                    "meaning": "To do until the end",
+                    "example_jp": "四年間、学校を休みなく通い通した。",
+                    "example_en": "I went to school for four years without a single absence."
+                },
+                {
+                    "point": "切る",
+                    "meaning": "To do completely",
+                    "example_jp": "最後まで走り切った。",
+                    "example_en": "I ran completely to the end."
+                },
+                {
+                    "point": "ふりをする",
+                    "meaning": "To pretend",
+                    "example_jp": "寝ているふりをした。",
+                    "example_en": "I pretended to be asleep."
+                }
+            ]
+        },
+        {
+            "topic": "Miscellaneous Phrases and Informal Markers",
+            "description": "Social markers, confirmations, and general N3 expressions.",
+            "grammar_points": [
+                {
+                    "point": "っけ",
+                    "meaning": "Suffix to confirm memory",
+                    "example_jp": "彼の名前は何だっけ？",
+                    "example_en": "What was his name again?"
+                },
+                {
+                    "point": "んだって",
+                    "meaning": "I hear that",
+                    "example_jp": "明日は雨なんだって。",
+                    "example_en": "I heard it's raining tomorrow."
+                },
+                {
+                    "point": "のでしょうか",
+                    "meaning": "Polite question",
+                    "example_jp": "これはどう使うのでしょうか。",
+                    "example_en": "How should I use this? [Polite]"
+                },
+                {
+                    "point": "か何か",
+                    "meaning": "Or something",
+                    "example_jp": "お茶か何か飲みませんか。",
+                    "example_en": "Would you like some tea or something?"
+                },
+                {
+                    "point": "別として",
+                    "meaning": "Aside from; except for",
+                    "example_jp": "値段は別として、デザインが気に入った。",
+                    "example_en": "Setting aside the price, I liked the design."
+                },
+                {
+                    "point": "ついでに",
+                    "meaning": "While; on the way",
+                    "example_jp": "散歩のついでに、手紙を出してきた。",
+                    "example_en": "While taking a walk, I mailed the letter."
+                },
+                {
+                    "point": "わざと",
+                    "meaning": "On purpose; intentionally",
+                    "example_jp": "わざと負けた。",
+                    "example_en": "I lost on purpose."
+                },
+                {
+                    "point": "わざわざ",
+                    "meaning": "Go to the trouble of",
+                    "example_jp": "わざわざ来てくれてありがとう。",
+                    "example_en": "Thank you for going out of your way to come."
+                },
+                {
+                    "point": "つい",
+                    "meaning": "Accidentally; by mistake",
+                    "example_jp": "つい、嘘をついてしまった。",
+                    "example_en": "I accidentally told a lie."
+                }
+            ]
+        }
+    ]
+}

@@ -33,7 +33,7 @@ export interface Vocabulary {
     examples?: VocabularyExample[];
 }
 
-export type CardType = 'kanji' | 'vocabulary';
+export type CardType = 'kanji' | 'vocabulary' | 'grammar';
 
 export interface Card {
     type: CardType;
@@ -92,6 +92,7 @@ export interface AppSettings {
 export interface AppState {
     srsCards: Record<string, SRSCard>;
     mnemonics: Record<string, Mnemonic>;
+    grammarProgress: Record<string, boolean>; // topicId_pointId -> studied
     progress: UserProgress;
     settings: AppSettings;
     sessions: StudySession[];

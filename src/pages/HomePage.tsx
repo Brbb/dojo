@@ -24,6 +24,7 @@ const LibraryIcon = ({ size = 24, color = 'currentColor' }: { size?: number, col
 import overviewLogo from '../assets/Overview_logo.png';
 import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
+import { grammarStats } from '../data/grammar/grammar';
 
 export function HomePage() {
     const { state, getStats, getDueCards } = useStudy();
@@ -152,6 +153,17 @@ export function HomePage() {
                             <div className="mode-content">
                                 <div className="mode-title" style={{ color: 'chocolate' }}>Study Vocabulary</div>
                                 <div className="mode-subtitle">{totalVocab} words available</div>
+                            </div>
+                            <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
+                        </div>
+                    </Link>
+
+                    <Link to="/study?mode=grammar" style={{ textDecoration: 'none' }}>
+                        <div className="mode-card">
+                            <div className="mode-icon" style={{ fontFamily: 'var(--font-japanese)' }}>文</div>
+                            <div className="mode-content">
+                                <div className="mode-title" style={{ color: 'chocolate' }}>Grammar Reference</div>
+                                <div className="mode-subtitle">{grammarStats.totalPoints} grammar points available</div>
                             </div>
                             <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
                         </div>

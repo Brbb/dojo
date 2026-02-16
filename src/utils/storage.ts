@@ -25,6 +25,7 @@ const defaultSettings: AppSettings = {
 const defaultState: AppState = {
     srsCards: {},
     mnemonics: {},
+    grammarProgress: {},
     progress: defaultProgress,
     settings: defaultSettings,
     sessions: [],
@@ -42,6 +43,7 @@ export function loadState(): AppState {
                 ...parsed,
                 progress: { ...defaultProgress, ...parsed.progress },
                 settings: { ...defaultSettings, ...parsed.settings },
+                grammarProgress: parsed.grammarProgress || {},
             };
         }
     } catch (error) {

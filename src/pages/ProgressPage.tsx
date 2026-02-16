@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useStudy } from '../context/StudyContext';
 import { ProgressRing, ProgressBar } from '../components/Progress';
-import { allKanji, kanjiStats } from '../data/kanji';
-import { allVocabulary, vocabularyStats } from '../data/vocabulary';
+import { allKanji } from '../data/kanji';
+import { allVocabulary } from '../data/vocabulary';
+import { grammarTopics, grammarStats } from '../data/grammar/grammar';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import type { CardStatus } from '../utils/srs';
 import type { SRSCard } from '../types';
@@ -29,31 +30,44 @@ function getCardDisplayInfo(srsCard: SRSCard): { label: string; sublabel: string
 export function ProgressPage() {
     const { state, getStats, getCardsByStatus } = useStudy();
     const stats = getStats();
-    const { progress } = state;
+    const { progress, grammarProgress } = state;
     const cardsByStatus = getCardsByStatus();
 
     const [expandedStatus, setExpandedStatus] = useState<CardStatus | null>(null);
+    const [progressMode, setProgressMode] = useState<'kanji' | 'vocabulary' | 'grammar'>('kanji');
 
     const toggleStatus = (status: CardStatus) => {
         setExpandedStatus(prev => prev === status ? null : status);
     };
 
-    const totalContent = allKanji.length + allVocabulary.length;
+    const totalContent = allKanji.length + allVocabulary.length + grammarStats.totalPoints;
     const overallProgress = totalContent > 0 ? (stats.total / totalContent) * 100 : 0;
 
-    // Calculate level-specific progress
+    // Calculate level-specific progress based on selected mode
     const levelProgress = [5, 4, 3, 2, 1].map(level => {
-        const levelKanji = allKanji.filter(k => k.jlptLevel === level).length;
-        const levelVocab = allVocabulary.filter(v => v.jlptLevel === level).length;
-        const total = levelKanji + levelVocab;
+        let total = 0;
+        let studied = 0;
 
-        const studied = Object.values(state.srsCards).filter(card => {
-            const isKanji = card.cardType === 'kanji';
-            const data = isKanji
-                ? allKanji.find(k => k.id === card.cardId)
-                : allVocabulary.find(v => v.id === card.cardId);
-            return data?.jlptLevel === level;
-        }).length;
+        if (progressMode === 'kanji') {
+            total = allKanji.filter(k => k.jlptLevel === level).length;
+            studied = Object.values(state.srsCards).filter(card => {
+                if (card.cardType !== 'kanji') return false;
+                const data = allKanji.find(k => k.id === card.cardId);
+                return data?.jlptLevel === level;
+            }).length;
+        } else if (progressMode === 'vocabulary') {
+            total = allVocabulary.filter(v => v.jlptLevel === level).length;
+            studied = Object.values(state.srsCards).filter(card => {
+                if (card.cardType !== 'vocabulary') return false;
+                const data = allVocabulary.find(v => v.id === card.cardId);
+                return data?.jlptLevel === level;
+            }).length;
+        } else if (progressMode === 'grammar') {
+            const levelTopics = grammarTopics.filter(t => t.level === level);
+            const levelPoints = levelTopics.flatMap(t => t.grammarPoints);
+            total = levelPoints.length;
+            studied = levelPoints.filter(p => grammarProgress && grammarProgress[p.id]).length;
+        }
 
         return {
             level,
@@ -190,32 +204,39 @@ export function ProgressPage() {
                 </div>
             </section>
 
-            {/* Content Overview */}
-            <section style={{ marginBottom: 'var(--space-6)' }}>
-                <h2 className="text-lg font-semibold" style={{ marginBottom: 'var(--space-4)' }}>Content</h2>
-                <div className="card" style={{ marginBottom: 'var(--space-3)' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-2)' }}>
-                        <span className="font-medium">漢字 Kanji</span>
-                        <span className="text-secondary">{kanjiStats.total} available</span>
-                    </div>
-                    <ProgressBar
-                        progress={(Object.values(state.srsCards).filter(c => c.cardType === 'kanji').length / kanjiStats.total) * 100}
-                    />
-                </div>
-                <div className="card">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-2)' }}>
-                        <span className="font-medium">単語 Vocabulary</span>
-                        <span className="text-secondary">{vocabularyStats.total} available</span>
-                    </div>
-                    <ProgressBar
-                        progress={(Object.values(state.srsCards).filter(c => c.cardType === 'vocabulary').length / vocabularyStats.total) * 100}
-                    />
-                </div>
-            </section>
-
-            {/* JLPT Level Progress */}
+            {/* JLPT Level Progress with Tabs */}
             <section>
-                <h2 className="text-lg font-semibold" style={{ marginBottom: 'var(--space-4)' }}>By JLPT Level</h2>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-4)' }}>
+                    <h2 className="text-lg font-semibold">Progress</h2>
+                    <div className="button-group" style={{
+                        display: 'flex',
+                        background: 'var(--color-bg-secondary)',
+                        padding: 'var(--space-1)',
+                        borderRadius: 'var(--radius-lg)',
+                        border: '1px solid var(--color-border)'
+                    }}>
+                        {(['kanji', 'vocabulary', 'grammar'] as const).map(mode => (
+                            <button
+                                key={mode}
+                                onClick={() => setProgressMode(mode)}
+                                style={{
+                                    padding: 'var(--space-1) var(--space-4)',
+                                    borderRadius: 'var(--radius-md)',
+                                    border: 'none',
+                                    background: progressMode === mode ? 'var(--color-primary)' : 'transparent',
+                                    color: progressMode === mode ? 'white' : 'var(--color-text-secondary)',
+                                    cursor: 'pointer',
+                                    fontSize: 'var(--text-xs)',
+                                    fontWeight: 600,
+                                    textTransform: 'capitalize',
+                                    transition: 'all 0.2s ease',
+                                }}
+                            >
+                                {mode}
+                            </button>
+                        ))}
+                    </div>
+                </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
                     {levelProgress.map(({ level, total, studied, progress: prog }) => (
                         <div key={level} className="card" style={{ padding: 'var(--space-4)' }}>

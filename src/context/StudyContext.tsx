@@ -16,12 +16,14 @@ type Action =
     | { type: 'UPDATE_SETTINGS'; payload: Partial<AppSettings> }
     | { type: 'UPDATE_PROGRESS'; payload: Partial<UserProgress> }
     | { type: 'ADD_TO_REVIEW'; payload: { cardId: string; cardType: CardType } }
+    | { type: 'TOGGLE_GRAMMAR_STUDIED'; payload: { pointId: string } }
     | { type: 'RESET_PROGRESS' };
 
 // Initial state
 const initialState: AppState = {
     srsCards: {},
     mnemonics: {},
+    grammarProgress: {},
     progress: {
         cardsLearned: 0,
         cardsReviewed: 0,
@@ -45,14 +47,23 @@ const initialState: AppState = {
 function studyReducer(state: AppState, action: Action): AppState {
     switch (action.type) {
         case 'LOAD_STATE':
-            return action.payload;
+            return {
+                ...initialState,
+                ...action.payload,
+                // Ensure nested objects are also merged/initialized
+                progress: { ...initialState.progress, ...action.payload.progress },
+                settings: { ...initialState.settings, ...action.payload.settings },
+                grammarProgress: action.payload.grammarProgress || {},
+            };
 
         case 'RATE_CARD': {
             const { cardId, cardType, rating } = action.payload;
+            if (cardType === 'grammar') return state;
+
             let card = state.srsCards[cardId];
 
             if (!card) {
-                card = createSRSCard(cardId, cardType);
+                card = createSRSCard(cardId, cardType as 'kanji' | 'vocabulary');
             }
 
             const updatedCard = calculateNextReview(card, rating);
@@ -126,13 +137,28 @@ function studyReducer(state: AppState, action: Action): AppState {
                 // Already in review
                 return state;
             }
-            const card = createSRSCard(cardId, cardType);
+            if (cardType === 'grammar') return state;
+            const card = createSRSCard(cardId, cardType as 'kanji' | 'vocabulary');
             return {
                 ...state,
                 srsCards: {
                     ...state.srsCards,
                     [cardId]: card,
                 },
+            };
+        }
+
+        case 'TOGGLE_GRAMMAR_STUDIED': {
+            const { pointId } = action.payload;
+            const updatedGrammarProgress = { ...state.grammarProgress };
+            if (updatedGrammarProgress[pointId]) {
+                delete updatedGrammarProgress[pointId];
+            } else {
+                updatedGrammarProgress[pointId] = true;
+            }
+            return {
+                ...state,
+                grammarProgress: updatedGrammarProgress,
             };
         }
 
@@ -155,6 +181,7 @@ interface StudyContextType {
     saveMnemonic: (cardId: string, cardType: CardType, text: string) => void;
     updateSettings: (settings: Partial<AppSettings>) => void;
     addToReview: (cardId: string, cardType: CardType) => void;
+    toggleGrammarStudied: (pointId: string) => void;
     resetProgress: () => void;
     // Helpers
     getMnemonic: (cardId: string) => Mnemonic | null;
@@ -192,6 +219,10 @@ export function StudyProvider({ children }: { children: ReactNode }) {
 
     const addToReview = (cardId: string, cardType: CardType) => {
         dispatch({ type: 'ADD_TO_REVIEW', payload: { cardId, cardType } });
+    };
+
+    const toggleGrammarStudied = (pointId: string) => {
+        dispatch({ type: 'TOGGLE_GRAMMAR_STUDIED', payload: { pointId } });
     };
 
     const resetProgress = () => {
@@ -248,6 +279,7 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         saveMnemonic,
         updateSettings,
         addToReview,
+        toggleGrammarStudied,
         resetProgress,
         getMnemonic,
         getCardsByStatus,
