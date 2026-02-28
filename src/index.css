@@ -257,6 +257,7 @@ body {
   flex: 1;
   padding-top: var(--space-6);
   padding-bottom: calc(var(--nav-height) + var(--space-6) + var(--safe-bottom));
+  overflow-x: hidden;
 }
 
 .flex {

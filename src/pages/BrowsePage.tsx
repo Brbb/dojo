@@ -102,7 +102,7 @@ export function BrowsePage() {
             {/* Results Grid/List */}
             {tab === 'kanji' ? (
                 // Kanji Grid - 5 columns
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '0.75rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(60px, 1fr))', gap: '0.75rem' }}>
                     {filteredItems.map((item) => {
                         const k = item as Kanji;
                         return (
