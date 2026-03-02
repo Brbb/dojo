@@ -168,6 +168,17 @@ export function HomePage() {
                             <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
                         </div>
                     </Link>
+
+                    <Link to="/read" style={{ textDecoration: 'none' }}>
+                        <div className="mode-card">
+                            <div className="mode-icon" style={{ fontFamily: 'var(--font-japanese)' }}>読</div>
+                            <div className="mode-content">
+                                <div className="mode-title" style={{ color: 'chocolate' }}>Daily Reading</div>
+                                <div className="mode-subtitle">Today's text passage</div>
+                            </div>
+                            <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
+                        </div>
+                    </Link>
                 </div>
             </section>
 

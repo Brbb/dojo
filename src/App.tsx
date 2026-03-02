@@ -7,6 +7,7 @@ import { ReviewPage } from './pages/ReviewPage';
 import { ProgressPage } from './pages/ProgressPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { BrowsePage } from './pages/BrowsePage';
+import { ReadPage } from './pages/ReadPage';
 import './index.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/browse" element={<BrowsePage />} />
+            <Route path="/read" element={<ReadPage />} />
           </Routes>
           <Navigation />
         </div>

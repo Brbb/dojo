@@ -260,6 +260,12 @@ body {
   overflow-x: hidden;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .flex {
   display: flex;
 }
@@ -1156,4 +1162,10 @@ body {
 ::selection {
   background: var(--color-primary);
   color: white;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
