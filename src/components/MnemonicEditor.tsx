@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 
 interface MnemonicEditorProps {
@@ -7,10 +7,16 @@ interface MnemonicEditorProps {
     onSave: (text: string) => void;
 }
 
-export function MnemonicEditor({ initialText = '', onSave }: MnemonicEditorProps) {
+export function MnemonicEditor({ cardId, initialText = '', onSave }: MnemonicEditorProps) {
     const [isEditing, setIsEditing] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const [text, setText] = useState(initialText);
+
+    useEffect(() => {
+        setText(initialText);
+        setIsEditing(false);
+        setIsVisible(false);
+    }, [cardId, initialText]);
 
     const handleSave = () => {
         onSave(text);

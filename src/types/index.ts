@@ -89,6 +89,18 @@ export interface AppSettings {
     selectedLevels: JLPTLevel[];
 }
 
+export interface CustomCard {
+    id: string;
+    type: 'kanji' | 'vocabulary';
+    word: string;
+    reading?: string; // Main reading or vocab reading
+    onReading?: string;
+    kunReading?: string;
+    meaning: string[];
+    jlptLevel?: JLPTLevel;
+    createdAt: number;
+}
+
 export interface AppState {
     srsCards: Record<string, SRSCard>;
     mnemonics: Record<string, Mnemonic>;
@@ -96,4 +108,5 @@ export interface AppState {
     progress: UserProgress;
     settings: AppSettings;
     sessions: StudySession[];
+    customCards: CustomCard[];
 }

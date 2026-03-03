@@ -13,7 +13,7 @@ import freetime from '../assets/freetime.png';
 
 export function ReviewPage() {
     const navigate = useNavigate();
-    const { getDueCards, rateCard, saveMnemonic, getMnemonic } = useStudy();
+    const { state, getDueCards, rateCard, saveMnemonic, getMnemonic } = useStudy();
 
     const [isReviewing, setIsReviewing] = useState(false);
     const [reviewCards, setReviewCards] = useState<{ card: Kanji | Vocabulary; type: 'kanji' | 'vocabulary' }[]>([]);
@@ -26,16 +26,36 @@ export function ReviewPage() {
 
     // Load cards for review
     const startReview = useCallback(() => {
-        console.log(dueCards)
         const cardsToReview = dueCards.map(srsCard => {
             const isKanji = srsCard.cardType === 'kanji';
-            const data = isKanji
+
+            // Try standard library first
+            let data = isKanji
                 ? allKanji.find(k => k.id === srsCard.cardId)
                 : allVocabulary.find(v => v.id === srsCard.cardId);
 
+            // If not found, try custom cards
+            if (!data) {
+                const custom = state.customCards.find(c => c.id === srsCard.cardId);
+                if (custom) {
+                    // Map CustomCard to a shape compatible with Kanji/Vocabulary for the UI
+                    data = {
+                        id: custom.id,
+                        word: custom.word,
+                        character: custom.word,
+                        reading: custom.reading || '',
+                        meaning: custom.meaning,
+                        jlptLevel: custom.jlptLevel || 5,
+                        onyomi: custom.onReading ? custom.onReading.split(/[、,]\s*/).filter(Boolean) : [],
+                        kunyomi: custom.kunReading ? custom.kunReading.split(/[、,]\s*/).filter(Boolean) : [],
+                        partOfSpeech: 'Custom'
+                    } as any;
+                }
+            }
+
             if (!data) return null;
             return { card: data, type: srsCard.cardType as 'kanji' | 'vocabulary' };
-        }).filter(Boolean) as { card: Kanji | Vocabulary; type: 'kanji' | 'vocabulary' }[];
+        }).filter(Boolean) as { card: any; type: 'kanji' | 'vocabulary' }[];
 
         if (cardsToReview.length === 0) {
             return;

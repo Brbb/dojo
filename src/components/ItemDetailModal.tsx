@@ -1,5 +1,6 @@
 import { ItemCard } from './ItemCard';
 import type { Kanji, Vocabulary, CardType } from '../types';
+import { useStudy } from '../context/StudyContext';
 
 interface ItemDetailModalProps {
     type: CardType;
@@ -8,12 +9,20 @@ interface ItemDetailModalProps {
 }
 
 export function ItemDetailModal({ type, item, onClose }: ItemDetailModalProps) {
+    const { state, addToReview } = useStudy();
+
     if (!item) return null;
+
+    const isAlreadyInReview = !!state.srsCards[item.id];
 
     const handleOverlayClick = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget) {
             onClose();
         }
+    };
+
+    const handleAddToReview = () => {
+        addToReview(item.id, type);
     };
 
     return (
@@ -44,7 +53,9 @@ export function ItemDetailModal({ type, item, onClose }: ItemDetailModalProps) {
                     maxHeight: '85vh',
                     overflowY: 'auto',
                     boxShadow: 'var(--shadow-xl)',
-                    position: 'relative'
+                    position: 'relative',
+                    display: 'flex',
+                    flexDirection: 'column'
                 }}
             >
                 {/* Header */}
@@ -52,7 +63,11 @@ export function ItemDetailModal({ type, item, onClose }: ItemDetailModalProps) {
                     padding: '1rem',
                     display: 'flex',
                     justifyContent: 'flex-end',
-                    borderBottom: '1px solid var(--color-bg-tertiary)'
+                    borderBottom: '1px solid var(--color-bg-tertiary)',
+                    position: 'sticky',
+                    top: 0,
+                    backgroundColor: 'var(--color-bg-card)',
+                    zIndex: 1
                 }}>
                     <button
                         onClick={onClose}
@@ -69,7 +84,27 @@ export function ItemDetailModal({ type, item, onClose }: ItemDetailModalProps) {
                 </div>
 
                 {/* Content */}
-                <ItemCard type={type} item={item} />
+                <div style={{ overflowY: 'auto', flex: 1 }}>
+                    <ItemCard type={type} item={item} />
+                </div>
+
+                {/* Footer Actions */}
+                <div style={{
+                    padding: '1.5rem',
+                    borderTop: '1px solid var(--color-bg-tertiary)',
+                    backgroundColor: 'var(--color-bg-card)',
+                    position: 'sticky',
+                    bottom: 0
+                }}>
+                    <button
+                        className={`btn ${isAlreadyInReview ? 'btn-secondary' : 'btn-primary'} w-full`}
+                        onClick={handleAddToReview}
+                        disabled={isAlreadyInReview}
+                        style={{ width: '100%' }}
+                    >
+                        {isAlreadyInReview ? 'Already in Review' : 'Add to Review'}
+                    </button>
+                </div>
             </div>
         </div>
     );

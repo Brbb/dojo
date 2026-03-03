@@ -8,6 +8,7 @@ import { ProgressPage } from './pages/ProgressPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { BrowsePage } from './pages/BrowsePage';
 import { ReadPage } from './pages/ReadPage';
+import { CustomCardPage } from './pages/CustomCardPage';
 import './index.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/browse" element={<BrowsePage />} />
             <Route path="/read" element={<ReadPage />} />
+            <Route path="/custom-cards" element={<CustomCardPage />} />
           </Routes>
           <Navigation />
         </div>

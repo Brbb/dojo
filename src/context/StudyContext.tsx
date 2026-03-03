@@ -1,7 +1,7 @@
 import { createContext, useContext, useReducer, useEffect, type ReactNode } from 'react';
 import type {
     AppState, SRSCard, SRSRating, JLPTLevel, CardType,
-    UserProgress, AppSettings, Mnemonic
+    UserProgress, AppSettings, Mnemonic, CustomCard
 } from '../types';
 import { loadState, saveState } from '../utils/storage';
 import { calculateNextReview, createSRSCard, getDueCards, calculateStats, getCardStatus, type CardStatus } from '../utils/srs';
@@ -16,6 +16,8 @@ type Action =
     | { type: 'UPDATE_SETTINGS'; payload: Partial<AppSettings> }
     | { type: 'UPDATE_PROGRESS'; payload: Partial<UserProgress> }
     | { type: 'ADD_TO_REVIEW'; payload: { cardId: string; cardType: CardType } }
+    | { type: 'ADD_CUSTOM_CARD'; payload: { card: CustomCard } }
+    | { type: 'DELETE_CUSTOM_CARD'; payload: { id: string } }
     | { type: 'TOGGLE_GRAMMAR_STUDIED'; payload: { pointId: string } }
     | { type: 'RESET_PROGRESS' };
 
@@ -41,6 +43,7 @@ const initialState: AppState = {
         selectedLevels: [5],
     },
     sessions: [],
+    customCards: [],
 };
 
 // Reducer
@@ -148,6 +151,28 @@ function studyReducer(state: AppState, action: Action): AppState {
             };
         }
 
+        case 'ADD_CUSTOM_CARD': {
+            return {
+                ...state,
+                customCards: [action.payload.card, ...state.customCards],
+            };
+        }
+
+        case 'DELETE_CUSTOM_CARD': {
+            const { id } = action.payload;
+            const updatedSRSCards = { ...state.srsCards };
+            delete updatedSRSCards[id];
+
+            return {
+                ...state,
+                customCards: state.customCards.filter(c => c.id !== id),
+                srsCards: updatedSRSCards,
+                mnemonics: Object.fromEntries(
+                    Object.entries(state.mnemonics).filter(([cardId]) => cardId !== id)
+                )
+            };
+        }
+
         case 'TOGGLE_GRAMMAR_STUDIED': {
             const { pointId } = action.payload;
             const updatedGrammarProgress = { ...state.grammarProgress };
@@ -181,6 +206,8 @@ interface StudyContextType {
     saveMnemonic: (cardId: string, cardType: CardType, text: string) => void;
     updateSettings: (settings: Partial<AppSettings>) => void;
     addToReview: (cardId: string, cardType: CardType) => void;
+    addCustomCard: (card: CustomCard) => void;
+    deleteCustomCard: (id: string) => void;
     toggleGrammarStudied: (pointId: string) => void;
     resetProgress: () => void;
     // Helpers
@@ -219,6 +246,14 @@ export function StudyProvider({ children }: { children: ReactNode }) {
 
     const addToReview = (cardId: string, cardType: CardType) => {
         dispatch({ type: 'ADD_TO_REVIEW', payload: { cardId, cardType } });
+    };
+
+    const addCustomCard = (card: CustomCard) => {
+        dispatch({ type: 'ADD_CUSTOM_CARD', payload: { card } });
+    };
+
+    const deleteCustomCard = (id: string) => {
+        dispatch({ type: 'DELETE_CUSTOM_CARD', payload: { id } });
     };
 
     const toggleGrammarStudied = (pointId: string) => {
@@ -279,6 +314,8 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         saveMnemonic,
         updateSettings,
         addToReview,
+        addCustomCard,
+        deleteCustomCard,
         toggleGrammarStudied,
         resetProgress,
         getMnemonic,

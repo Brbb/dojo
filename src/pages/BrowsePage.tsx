@@ -115,7 +115,9 @@ export function BrowsePage() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
-                                    justifyContent: 'center'
+                                    justifyContent: 'center',
+                                    borderLeft: `3.5px solid var(--color-n${k.jlptLevel})`,
+                                    paddingLeft: 'calc(0.5rem - 1.75px)' // Adjust padding to center character
                                 }}
                                 onClick={() => setSelectedItem({ type: 'kanji', item: k })}
                             >
@@ -140,7 +142,9 @@ export function BrowsePage() {
                                     width: '100%',
                                     marginBottom: '0',
                                     gap: 'var(--space-4)',
-                                    textAlign: 'left'
+                                    textAlign: 'left',
+                                    borderLeft: `4px solid var(--color-n${v.jlptLevel})`,
+                                    paddingLeft: 'calc(var(--space-4) - 2px)'
                                 }}
                                 onClick={() => setSelectedItem({ type: 'vocabulary', item: v })}
                             >

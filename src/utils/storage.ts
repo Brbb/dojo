@@ -29,6 +29,7 @@ const defaultState: AppState = {
     progress: defaultProgress,
     settings: defaultSettings,
     sessions: [],
+    customCards: [],
 };
 
 // Load state from localStorage
@@ -44,6 +45,7 @@ export function loadState(): AppState {
                 progress: { ...defaultProgress, ...parsed.progress },
                 settings: { ...defaultSettings, ...parsed.settings },
                 grammarProgress: parsed.grammarProgress || {},
+                customCards: parsed.customCards || [],
             };
         }
     } catch (error) {

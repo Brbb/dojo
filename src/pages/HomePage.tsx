@@ -2,6 +2,7 @@ import { useStudy } from '../context/StudyContext';
 import { ProgressRing } from '../components/Progress';
 import { ActivityHeatmap } from '../components/ActivityHeatmap';
 import { Link } from 'react-router-dom';
+import { PlusCircle } from 'lucide-react';
 import readyRaccoon from '../assets/ReadyRaccoon.png';
 
 const LibraryIcon = ({ size = 24, color = 'currentColor' }: { size?: number, color?: string }) => (
@@ -195,6 +196,19 @@ export function HomePage() {
                         <div className="mode-content">
                             <div className="mode-title" style={{ color: 'chocolate' }}>Browse Library</div>
                             <div className="mode-subtitle">{totalContent} items available</div>
+                        </div>
+                        <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
+                    </div>
+                </Link>
+
+                <Link to="/custom-cards" style={{ textDecoration: 'none' }}>
+                    <div className="mode-card">
+                        <div className="mode-icon" style={{ backgroundColor: 'var(--color-bg-tertiary)', color: 'var(--color-text-secondary)' }}>
+                            <PlusCircle size={24} />
+                        </div>
+                        <div className="mode-content">
+                            <div className="mode-title" style={{ color: 'chocolate' }}>Custom Items</div>
+                            <div className="mode-subtitle">Manage your own kanji or vocabulary</div>
                         </div>
                         <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
                     </div>
