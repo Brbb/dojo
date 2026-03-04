@@ -29,6 +29,19 @@ export function CustomCardPage() {
     const [loadingJisho, setLoadingJisho] = useState(false);
     const [showDuplicateModal, setShowDuplicateModal] = useState<{ id: string, type: CardType } | null>(null);
     const [success, setSuccess] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const filteredCards = useMemo(() => {
+        if (!searchQuery) return state.customCards;
+        const q = searchQuery.toLowerCase();
+        return state.customCards.filter(card =>
+            card.word.toLowerCase().includes(q) ||
+            card.meaning.some(m => m.toLowerCase().includes(q)) ||
+            (card.reading && card.reading.toLowerCase().includes(q)) ||
+            (card.onReading && card.onReading.toLowerCase().includes(q)) ||
+            (card.kunReading && card.kunReading.toLowerCase().includes(q))
+        );
+    }, [state.customCards, searchQuery]);
 
     // Duplicate detection
     const duplicate = useMemo(() => {
@@ -221,14 +234,36 @@ export function CustomCardPage() {
                         <Plus size={20} /> Add New Item
                     </button>
 
+                    {state.customCards.length > 0 && (
+                        <input
+                            type="text"
+                            placeholder="Search custom items..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            style={{
+                                padding: 'var(--space-3)',
+                                borderRadius: 'var(--radius-md)',
+                                border: '1px solid var(--color-bg-tertiary)',
+                                backgroundColor: 'var(--color-bg-secondary)',
+                                color: 'var(--color-text-primary)',
+                                fontSize: '0.95rem',
+                                width: '100%'
+                            }}
+                        />
+                    )}
+
                     {state.customCards.length === 0 ? (
                         <div style={{ textAlign: 'center', padding: '4rem 1rem', color: 'var(--color-text-tertiary)' }}>
                             <Library size={48} style={{ margin: '0 auto 1rem', opacity: 0.5 }} />
                             <p>No custom items added yet.</p>
                         </div>
+                    ) : filteredCards.length === 0 ? (
+                        <div style={{ textAlign: 'center', padding: '2rem 1rem', color: 'var(--color-text-tertiary)' }}>
+                            <p>No items matching "{searchQuery}"</p>
+                        </div>
                     ) : (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
-                            {[...state.customCards].map(card => (
+                            {filteredCards.map(card => (
                                 <div key={card.id} className="card" style={{ padding: 'var(--space-3)', display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
                                     <div style={{
                                         width: '48px',
@@ -244,14 +279,25 @@ export function CustomCardPage() {
                                     }}>
                                         {card.word.slice(0, 1)}
                                     </div>
-                                    <div style={{ flex: 1 }}>
+                                    <div style={{ flex: 1, minWidth: 0 }}>
                                         <div className="font-bold">{card.word}</div>
-                                        <div className="text-sm text-secondary">
-                                            {card.type === 'kanji'
-                                                ? (card.onReading || card.kunReading || card.reading)
-                                                : card.reading}
-                                        </div>
-                                        <div className="text-xs text-tertiary uppercase tracking-wider">{card.type}</div>
+                                        {card.type === 'kanji' ? (
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
+                                                {card.onReading && (
+                                                    <div className="text-sm" style={{ color: 'var(--color-primary)' }}>
+                                                        <span className="text-xs text-tertiary" style={{ marginRight: '4px' }}>ON</span>{card.onReading}
+                                                    </div>
+                                                )}
+                                                {card.kunReading && (
+                                                    <div className="text-sm" style={{ color: 'var(--color-accent)' }}>
+                                                        <span className="text-xs text-tertiary" style={{ marginRight: '4px' }}>KUN</span>{card.kunReading}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ) : (
+                                            <div className="text-sm text-secondary">{card.reading}</div>
+                                        )}
+                                        <div className="text-xs text-tertiary" style={{ marginTop: '2px' }}>{card.meaning.join(', ')}</div>
                                     </div>
                                     <button
                                         onClick={(e) => handleDelete(card.id, e)}
@@ -479,7 +525,6 @@ export function CustomCardPage() {
                     <button
                         type="submit"
                         className={`btn ${duplicate ? 'btn-secondary' : 'btn-primary'}`}
-                        disabled={!!duplicate && !showDuplicateModal}
                         style={{ marginTop: 'var(--space-2)', padding: '1rem', border: duplicate ? '1px dashed var(--color-primary)' : '' }}
                     >
                         {duplicate ? <AlertCircle size={20} style={{ marginRight: '8px' }} /> : <Plus size={20} style={{ marginRight: '8px' }} />}

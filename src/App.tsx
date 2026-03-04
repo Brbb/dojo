@@ -8,7 +8,7 @@ import { ProgressPage } from './pages/ProgressPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { BrowsePage } from './pages/BrowsePage';
 import { ReadPage } from './pages/ReadPage';
-import { CustomCardPage } from './pages/CustomCardPage';
+import { CustomCardPage } from './pages/CustomCardPage.tsx';
 import './index.css';
 
 function App() {

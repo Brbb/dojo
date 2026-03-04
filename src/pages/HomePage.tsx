@@ -188,31 +188,33 @@ export function HomePage() {
                 <h2 className="text-lg font-semibold" style={{ marginBottom: 'var(--space-4)' }}>
                     Reference
                 </h2>
-                <Link to="/browse" style={{ textDecoration: 'none' }}>
-                    <div className="mode-card">
-                        <div className="mode-icon" style={{ backgroundColor: 'var(--color-bg-tertiary)', color: 'var(--color-text-secondary)' }}>
-                            <LibraryIcon size={24} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+                    <Link to="/browse" style={{ textDecoration: 'none' }}>
+                        <div className="mode-card">
+                            <div className="mode-icon" style={{ backgroundColor: 'var(--color-bg-tertiary)', color: 'var(--color-text-secondary)' }}>
+                                <LibraryIcon size={24} />
+                            </div>
+                            <div className="mode-content">
+                                <div className="mode-title" style={{ color: 'chocolate' }}>Browse Library</div>
+                                <div className="mode-subtitle">{totalContent} items available</div>
+                            </div>
+                            <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
                         </div>
-                        <div className="mode-content">
-                            <div className="mode-title" style={{ color: 'chocolate' }}>Browse Library</div>
-                            <div className="mode-subtitle">{totalContent} items available</div>
-                        </div>
-                        <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
-                    </div>
-                </Link>
+                    </Link>
 
-                <Link to="/custom-cards" style={{ textDecoration: 'none' }}>
-                    <div className="mode-card">
-                        <div className="mode-icon" style={{ backgroundColor: 'var(--color-bg-tertiary)', color: 'var(--color-text-secondary)' }}>
-                            <PlusCircle size={24} />
+                    <Link to="/custom-cards" style={{ textDecoration: 'none' }}>
+                        <div className="mode-card">
+                            <div className="mode-icon" style={{ backgroundColor: 'var(--color-bg-tertiary)', color: 'var(--color-text-secondary)' }}>
+                                <PlusCircle size={24} />
+                            </div>
+                            <div className="mode-content">
+                                <div className="mode-title" style={{ color: 'chocolate' }}>Custom Items</div>
+                                <div className="mode-subtitle">Manage your own kanji or vocabulary</div>
+                            </div>
+                            <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
                         </div>
-                        <div className="mode-content">
-                            <div className="mode-title" style={{ color: 'chocolate' }}>Custom Items</div>
-                            <div className="mode-subtitle">Manage your own kanji or vocabulary</div>
-                        </div>
-                        <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
             </section>
 
         </div>
