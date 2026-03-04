@@ -189,7 +189,13 @@ export function StudyPage() {
             <div className="page container center">
                 <div style={{ width: '100%', maxWidth: '500px' }}>
                     <div style={{ marginBottom: 'var(--space-4)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <button onClick={() => setIsStudying(false)} className="text-secondary">Exit</button>
+                        <button
+                            onClick={() => setIsStudying(false)}
+                            className="btn btn-secondary"
+                            style={{ padding: 'var(--space-2) var(--space-4)', fontSize: 'var(--text-sm)' }}
+                        >
+                            ← Exit
+                        </button>
                         <div className="text-sm font-medium">
                             {currentIndex + 1} / {cards.length}
                         </div>
