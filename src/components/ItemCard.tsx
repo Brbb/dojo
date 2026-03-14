@@ -34,12 +34,28 @@ export function ItemCard({ type, item, mnemonic, compact = false }: ItemCardProp
                     </div>
 
                     <div style={{ flex: 1, textAlign: 'right', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)', alignItems: 'flex-end' }}>
-                        <span
-                            className={`jlpt-badge jlpt-n${item.jlptLevel}`}
-                            style={{ fontSize: '0.75rem', fontWeight: 'bold' }}
-                        >
-                            N{item.jlptLevel}
-                        </span>
+                        <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
+                            <span
+                                className={`jlpt-badge jlpt-n${item.jlptLevel}`}
+                                style={{ fontSize: '0.75rem', fontWeight: 'bold' }}
+                            >
+                                N{item.jlptLevel}
+                            </span>
+                            {isKanji && kanjiItem && kanjiItem.frequency && kanjiItem.frequency < 9999 && (
+                                <span
+                                    className="jlpt-badge"
+                                    style={{
+                                        fontSize: '0.75rem',
+                                        fontWeight: 'bold',
+                                        backgroundColor: 'var(--color-bg-tertiary)',
+                                        color: 'var(--color-text-secondary)',
+                                        border: '1px solid var(--color-border)'
+                                    }}
+                                >
+                                    #{kanjiItem.frequency}
+                                </span>
+                            )}
+                        </div>
 
                         <div className="text-lg font-bold text-primary" style={{ lineHeight: 1.2 }}>
                             {item.meaning.join(', ')}
@@ -143,19 +159,38 @@ export function ItemCard({ type, item, mnemonic, compact = false }: ItemCardProp
                     {isKanji ? kanjiItem?.character : vocabItem?.word}
                 </div>
 
-                <span
-                    style={{
-                        display: 'inline-block',
-                        padding: '0.25rem 0.75rem',
-                        borderRadius: '9999px',
-                        fontSize: '0.875rem',
-                        fontWeight: 'bold',
-                        backgroundColor: `var(--color-n${item.jlptLevel})`,
-                        color: 'white'
-                    }}
-                >
-                    N{item.jlptLevel}
-                </span>
+                <div style={{ display: 'flex', gap: 'var(--space-2)', justifyContent: 'center', flexWrap: 'wrap' }}>
+                    <span
+                        style={{
+                            display: 'inline-block',
+                            padding: '0.25rem 0.75rem',
+                            borderRadius: '9999px',
+                            fontSize: '0.875rem',
+                            fontWeight: 'bold',
+                            backgroundColor: `var(--color-n${item.jlptLevel})`,
+                            color: 'white'
+                        }}
+                    >
+                        N{item.jlptLevel}
+                    </span>
+                    {isKanji && kanjiItem && kanjiItem.frequency && kanjiItem.frequency < 9999 && (
+                        <span
+                            style={{
+                                display: 'inline-block',
+                                padding: '0.25rem 0.75rem',
+                                borderRadius: '9999px',
+                                fontSize: '0.875rem',
+                                fontWeight: 'bold',
+                                backgroundColor: 'var(--color-bg-secondary)',
+                                color: 'var(--color-text-secondary)',
+                                border: '1px solid var(--color-border)'
+                            }}
+                            title="Frequency Rank"
+                        >
+                            Most Common #{kanjiItem.frequency}
+                        </span>
+                    )}
+                </div>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

@@ -162,7 +162,12 @@ export function addSession(session: StudySession): void {
 
 // Export data for backup
 export function exportData(): string {
-    return JSON.stringify(loadState(), null, 2);
+    // Un-escape Unicode sequences so Japanese characters (kanji, katakana, hiragana)
+    // are preserved as readable UTF-8 in the exported file
+    const json = JSON.stringify(loadState(), null, 2);
+    return json.replace(/\\u[\da-fA-F]{4}/g, (match) => {
+        return String.fromCodePoint(parseInt(match.replace('\\u', ''), 16));
+    });
 }
 
 // Import data from backup

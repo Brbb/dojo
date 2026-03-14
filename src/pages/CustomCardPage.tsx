@@ -156,6 +156,9 @@ export function CustomCardPage() {
         }
 
         const newId = `custom_${Date.now()}`;
+        const foundKanji = type === 'kanji' ? allKanji.find(k => k.character === word) : null;
+        const freq = foundKanji?.frequency;
+
         const newCard: CustomCard = {
             id: newId,
             type: type as 'kanji' | 'vocabulary',
@@ -164,6 +167,7 @@ export function CustomCardPage() {
             onReading: type === 'kanji' ? onReading : undefined,
             kunReading: type === 'kanji' ? kunReading : undefined,
             meaning: meaning.split(',').map(s => s.trim()),
+            frequency: freq,
             createdAt: Date.now()
         };
 

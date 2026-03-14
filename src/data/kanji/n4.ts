@@ -16,6 +16,7 @@ export const n4Kanji: Kanji[] = [
             "meet"
         ],
         "jlptLevel": 4,
+        frequency: 4,
         "examples": []
     },
     {
@@ -33,6 +34,7 @@ export const n4Kanji: Kanji[] = [
             "equal"
         ],
         "jlptLevel": 4,
+        frequency: 15,
         "examples": []
     },
     {
@@ -53,6 +55,7 @@ export const n4Kanji: Kanji[] = [
             "possibly"
         ],
         "jlptLevel": 4,
+        frequency: 18,
         "examples": []
     },
     {
@@ -69,6 +72,7 @@ export const n4Kanji: Kanji[] = [
             "oneself"
         ],
         "jlptLevel": 4,
+        frequency: 19,
         "examples": []
     },
     {
@@ -88,6 +92,7 @@ export const n4Kanji: Kanji[] = [
             "shrine"
         ],
         "jlptLevel": 4,
+        frequency: 21,
         "examples": []
     },
     {
@@ -105,6 +110,7 @@ export const n4Kanji: Kanji[] = [
             "start from"
         ],
         "jlptLevel": 4,
+        frequency: 32,
         "examples": []
     },
     {
@@ -121,6 +127,7 @@ export const n4Kanji: Kanji[] = [
             "person"
         ],
         "jlptLevel": 4,
+        frequency: 38,
         "examples": []
     },
     {
@@ -136,6 +143,7 @@ export const n4Kanji: Kanji[] = [
             "earth"
         ],
         "jlptLevel": 4,
+        frequency: 40,
         "examples": []
     },
     {
@@ -154,6 +162,7 @@ export const n4Kanji: Kanji[] = [
             "performance"
         ],
         "jlptLevel": 4,
+        frequency: 43,
         "examples": []
     },
     {
@@ -171,6 +180,7 @@ export const n4Kanji: Kanji[] = [
             "alternative"
         ],
         "jlptLevel": 4,
+        frequency: 46,
         "examples": []
     },
     {
@@ -187,6 +197,7 @@ export const n4Kanji: Kanji[] = [
             "new"
         ],
         "jlptLevel": 4,
+        frequency: 51,
         "examples": []
     },
     {
@@ -203,6 +214,7 @@ export const n4Kanji: Kanji[] = [
             "place"
         ],
         "jlptLevel": 4,
+        frequency: 52,
         "examples": []
     },
     {
@@ -219,6 +231,7 @@ export const n4Kanji: Kanji[] = [
             "the one in charge"
         ],
         "jlptLevel": 4,
+        frequency: 54,
         "examples": []
     },
     {
@@ -235,6 +248,7 @@ export const n4Kanji: Kanji[] = [
             "rise"
         ],
         "jlptLevel": 4,
+        frequency: 58,
         "examples": []
     },
     {
@@ -253,6 +267,7 @@ export const n4Kanji: Kanji[] = [
             "unseal"
         ],
         "jlptLevel": 4,
+        frequency: 59,
         "examples": []
     },
     {
@@ -268,6 +283,7 @@ export const n4Kanji: Kanji[] = [
             "hand"
         ],
         "jlptLevel": 4,
+        frequency: 60,
         "examples": []
     },
     {
@@ -289,6 +305,7 @@ export const n4Kanji: Kanji[] = [
             "exert"
         ],
         "jlptLevel": 4,
+        frequency: 62,
         "examples": []
     },
     {
@@ -306,6 +323,7 @@ export const n4Kanji: Kanji[] = [
             "problem"
         ],
         "jlptLevel": 4,
+        frequency: 64,
         "examples": []
     },
     {
@@ -325,6 +343,7 @@ export const n4Kanji: Kanji[] = [
             "period"
         ],
         "jlptLevel": 4,
+        frequency: 66,
         "examples": []
     },
     {
@@ -342,6 +361,7 @@ export const n4Kanji: Kanji[] = [
             "light"
         ],
         "jlptLevel": 4,
+        frequency: 67,
         "examples": []
     },
     {
@@ -359,6 +379,7 @@ export const n4Kanji: Kanji[] = [
             "change"
         ],
         "jlptLevel": 4,
+        frequency: 73,
         "examples": []
     },
     {
@@ -376,6 +397,7 @@ export const n4Kanji: Kanji[] = [
             "capital"
         ],
         "jlptLevel": 4,
+        frequency: 74,
         "examples": []
     },
     {
@@ -396,6 +418,7 @@ export const n4Kanji: Kanji[] = [
             "experience"
         ],
         "jlptLevel": 4,
+        frequency: 76,
         "examples": []
     },
     {
@@ -415,6 +438,7 @@ export const n4Kanji: Kanji[] = [
             "commute"
         ],
         "jlptLevel": 4,
+        frequency: 80,
         "examples": []
     },
     {
@@ -433,6 +457,7 @@ export const n4Kanji: Kanji[] = [
             "word"
         ],
         "jlptLevel": 4,
+        frequency: 83,
         "examples": []
     },
     {
@@ -450,6 +475,7 @@ export const n4Kanji: Kanji[] = [
             "truth"
         ],
         "jlptLevel": 4,
+        frequency: 86,
         "examples": []
     },
     {
@@ -468,6 +494,7 @@ export const n4Kanji: Kanji[] = [
             "reality"
         ],
         "jlptLevel": 4,
+        frequency: 88,
         "examples": []
     },
     {
@@ -484,6 +511,7 @@ export const n4Kanji: Kanji[] = [
             "rice paddy"
         ],
         "jlptLevel": 4,
+        frequency: 90,
         "examples": []
     },
     {
@@ -504,6 +532,7 @@ export const n4Kanji: Kanji[] = [
             "principal"
         ],
         "jlptLevel": 4,
+        frequency: 95,
         "examples": []
     },
     {
@@ -518,6 +547,7 @@ export const n4Kanji: Kanji[] = [
             "subject"
         ],
         "jlptLevel": 4,
+        frequency: 96,
         "examples": []
     },
     {
@@ -535,6 +565,7 @@ export const n4Kanji: Kanji[] = [
             "thought"
         ],
         "jlptLevel": 4,
+        frequency: 99,
         "examples": []
     },
     {
@@ -551,6 +582,7 @@ export const n4Kanji: Kanji[] = [
             "bad"
         ],
         "jlptLevel": 4,
+        frequency: 101,
         "examples": []
     },
     {
@@ -570,6 +602,7 @@ export const n4Kanji: Kanji[] = [
             "build"
         ],
         "jlptLevel": 4,
+        frequency: 103,
         "examples": []
     },
     {
@@ -589,6 +622,7 @@ export const n4Kanji: Kanji[] = [
             "employ"
         ],
         "jlptLevel": 4,
+        frequency: 107,
         "examples": []
     },
     {
@@ -609,6 +643,7 @@ export const n4Kanji: Kanji[] = [
             "counter for occurrences"
         ],
         "jlptLevel": 4,
+        frequency: 110,
         "examples": []
     },
     {
@@ -625,6 +660,7 @@ export const n4Kanji: Kanji[] = [
             "strong"
         ],
         "jlptLevel": 4,
+        frequency: 112,
         "examples": []
     },
     {
@@ -641,6 +677,7 @@ export const n4Kanji: Kanji[] = [
             "governmental"
         ],
         "jlptLevel": 4,
+        frequency: 118,
         "examples": []
     },
     {
@@ -657,6 +694,7 @@ export const n4Kanji: Kanji[] = [
             "have"
         ],
         "jlptLevel": 4,
+        frequency: 119,
         "examples": []
     },
     {
@@ -675,6 +713,7 @@ export const n4Kanji: Kanji[] = [
             "civilian life"
         ],
         "jlptLevel": 4,
+        frequency: 120,
         "examples": []
     },
     {
@@ -693,6 +732,7 @@ export const n4Kanji: Kanji[] = [
             "compared with"
         ],
         "jlptLevel": 4,
+        frequency: 126,
         "examples": []
     },
     {
@@ -708,6 +748,7 @@ export const n4Kanji: Kanji[] = [
             "think"
         ],
         "jlptLevel": 4,
+        frequency: 132,
         "examples": []
     },
     {
@@ -729,6 +770,7 @@ export const n4Kanji: Kanji[] = [
             "expert"
         ],
         "jlptLevel": 4,
+        frequency: 133,
         "examples": []
     },
     {
@@ -748,6 +790,7 @@ export const n4Kanji: Kanji[] = [
             "public"
         ],
         "jlptLevel": 4,
+        frequency: 135,
         "examples": []
     },
     {
@@ -765,6 +808,7 @@ export const n4Kanji: Kanji[] = [
             "much"
         ],
         "jlptLevel": 4,
+        frequency: 139,
         "examples": []
     },
     {
@@ -784,6 +828,7 @@ export const n4Kanji: Kanji[] = [
             "righteous"
         ],
         "jlptLevel": 4,
+        frequency: 143,
         "examples": []
     },
     {
@@ -801,6 +846,7 @@ export const n4Kanji: Kanji[] = [
             "cheap"
         ],
         "jlptLevel": 4,
+        frequency: 144,
         "examples": []
     },
     {
@@ -817,6 +863,7 @@ export const n4Kanji: Kanji[] = [
             "school"
         ],
         "jlptLevel": 4,
+        frequency: 150,
         "examples": []
     },
     {
@@ -834,6 +881,7 @@ export const n4Kanji: Kanji[] = [
             "spirit"
         ],
         "jlptLevel": 4,
+        frequency: 157,
         "examples": []
     },
     {
@@ -848,6 +896,7 @@ export const n4Kanji: Kanji[] = [
             "boundary"
         ],
         "jlptLevel": 4,
+        frequency: 158,
         "examples": []
     },
     {
@@ -866,6 +915,7 @@ export const n4Kanji: Kanji[] = [
             "doctrine"
         ],
         "jlptLevel": 4,
+        frequency: 166,
         "examples": []
     },
     {
@@ -885,6 +935,7 @@ export const n4Kanji: Kanji[] = [
             "art"
         ],
         "jlptLevel": 4,
+        frequency: 190,
         "examples": []
     },
     {
@@ -903,6 +954,7 @@ export const n4Kanji: Kanji[] = [
             "origin"
         ],
         "jlptLevel": 4,
+        frequency: 192,
         "examples": []
     },
     {
@@ -923,6 +975,7 @@ export const n4Kanji: Kanji[] = [
             "respect"
         ],
         "jlptLevel": 4,
+        frequency: 193,
         "examples": []
     },
     {
@@ -941,6 +994,7 @@ export const n4Kanji: Kanji[] = [
             "tantamount"
         ],
         "jlptLevel": 4,
+        frequency: 194,
         "examples": []
     },
     {
@@ -957,6 +1011,7 @@ export const n4Kanji: Kanji[] = [
             "think over"
         ],
         "jlptLevel": 4,
+        frequency: 196,
         "examples": []
     },
     {
@@ -974,6 +1029,7 @@ export const n4Kanji: Kanji[] = [
             "picture"
         ],
         "jlptLevel": 4,
+        frequency: 199,
         "examples": []
     },
     {
@@ -990,6 +1046,7 @@ export const n4Kanji: Kanji[] = [
             "ocean"
         ],
         "jlptLevel": 4,
+        frequency: 200,
         "examples": []
     },
     {
@@ -1005,6 +1062,7 @@ export const n4Kanji: Kanji[] = [
             "sell"
         ],
         "jlptLevel": 4,
+        frequency: 202,
         "examples": []
     },
     {
@@ -1021,6 +1079,7 @@ export const n4Kanji: Kanji[] = [
             "wisdom"
         ],
         "jlptLevel": 4,
+        frequency: 205,
         "examples": []
     },
     {
@@ -1040,6 +1099,7 @@ export const n4Kanji: Kanji[] = [
             "course"
         ],
         "jlptLevel": 4,
+        frequency: 207,
         "examples": []
     },
     {
@@ -1056,6 +1116,7 @@ export const n4Kanji: Kanji[] = [
             "meet"
         ],
         "jlptLevel": 4,
+        frequency: 210,
         "examples": []
     },
     {
@@ -1074,6 +1135,7 @@ export const n4Kanji: Kanji[] = [
             "diverge"
         ],
         "jlptLevel": 4,
+        frequency: 214,
         "examples": []
     },
     {
@@ -1092,6 +1154,7 @@ export const n4Kanji: Kanji[] = [
             "matter"
         ],
         "jlptLevel": 4,
+        frequency: 215,
         "examples": []
     },
     {
@@ -1110,6 +1173,7 @@ export const n4Kanji: Kanji[] = [
             "ambassador"
         ],
         "jlptLevel": 4,
+        frequency: 219,
         "examples": []
     },
     {
@@ -1128,6 +1192,7 @@ export const n4Kanji: Kanji[] = [
             "article"
         ],
         "jlptLevel": 4,
+        frequency: 225,
         "examples": []
     },
     {
@@ -1146,6 +1211,7 @@ export const n4Kanji: Kanji[] = [
             "measure"
         ],
         "jlptLevel": 4,
+        frequency: 228,
         "examples": []
     },
     {
@@ -1162,6 +1228,7 @@ export const n4Kanji: Kanji[] = [
             "die"
         ],
         "jlptLevel": 4,
+        frequency: 229,
         "examples": []
     },
     {
@@ -1175,6 +1242,7 @@ export const n4Kanji: Kanji[] = [
             "special"
         ],
         "jlptLevel": 4,
+        frequency: 234,
         "examples": []
     },
     {
@@ -1193,6 +1261,7 @@ export const n4Kanji: Kanji[] = [
             "me"
         ],
         "jlptLevel": 4,
+        frequency: 242,
         "examples": []
     },
     {
@@ -1209,6 +1278,7 @@ export const n4Kanji: Kanji[] = [
             "begin"
         ],
         "jlptLevel": 4,
+        frequency: 244,
         "examples": []
     },
     {
@@ -1224,6 +1294,7 @@ export const n4Kanji: Kanji[] = [
             "morning"
         ],
         "jlptLevel": 4,
+        frequency: 248,
         "examples": []
     },
     {
@@ -1243,6 +1314,7 @@ export const n4Kanji: Kanji[] = [
             "transport"
         ],
         "jlptLevel": 4,
+        frequency: 255,
         "examples": []
     },
     {
@@ -1259,6 +1331,7 @@ export const n4Kanji: Kanji[] = [
             "finish"
         ],
         "jlptLevel": 4,
+        frequency: 256,
         "examples": []
     },
     {
@@ -1277,6 +1350,7 @@ export const n4Kanji: Kanji[] = [
             "counter for machines and vehicles"
         ],
         "jlptLevel": 4,
+        frequency: 262,
         "examples": []
     },
     {
@@ -1294,6 +1368,7 @@ export const n4Kanji: Kanji[] = [
             "spacious"
         ],
         "jlptLevel": 4,
+        frequency: 263,
         "examples": []
     },
     {
@@ -1313,6 +1388,7 @@ export const n4Kanji: Kanji[] = [
             "inhabit"
         ],
         "jlptLevel": 4,
+        frequency: 270,
         "examples": []
     },
     {
@@ -1334,6 +1410,7 @@ export const n4Kanji: Kanji[] = [
             "not"
         ],
         "jlptLevel": 4,
+        frequency: 274,
         "examples": []
     },
     {
@@ -1352,6 +1429,7 @@ export const n4Kanji: Kanji[] = [
             "Buddhist sect"
         ],
         "jlptLevel": 4,
+        frequency: 279,
         "examples": []
     },
     {
@@ -1371,6 +1449,7 @@ export const n4Kanji: Kanji[] = [
             "happen"
         ],
         "jlptLevel": 4,
+        frequency: 282,
         "examples": []
     },
     {
@@ -1386,6 +1465,7 @@ export const n4Kanji: Kanji[] = [
             "mouth"
         ],
         "jlptLevel": 4,
+        frequency: 284,
         "examples": []
     },
     {
@@ -1403,6 +1483,7 @@ export const n4Kanji: Kanji[] = [
             "little"
         ],
         "jlptLevel": 4,
+        frequency: 287,
         "examples": []
     },
     {
@@ -1421,6 +1502,7 @@ export const n4Kanji: Kanji[] = [
             "street"
         ],
         "jlptLevel": 4,
+        frequency: 292,
         "examples": []
     },
     {
@@ -1435,6 +1517,7 @@ export const n4Kanji: Kanji[] = [
             "materials"
         ],
         "jlptLevel": 4,
+        frequency: 295,
         "examples": []
     },
     {
@@ -1451,6 +1534,7 @@ export const n4Kanji: Kanji[] = [
             "construction"
         ],
         "jlptLevel": 4,
+        frequency: 299,
         "examples": []
     },
     {
@@ -1467,6 +1551,7 @@ export const n4Kanji: Kanji[] = [
             "build"
         ],
         "jlptLevel": 4,
+        frequency: 300,
         "examples": []
     },
     {
@@ -1490,6 +1575,7 @@ export const n4Kanji: Kanji[] = [
             "vacuum"
         ],
         "jlptLevel": 4,
+        frequency: 304,
         "examples": []
     },
     {
@@ -1508,6 +1594,7 @@ export const n4Kanji: Kanji[] = [
             "steep"
         ],
         "jlptLevel": 4,
+        frequency: 309,
         "examples": []
     },
     {
@@ -1527,6 +1614,7 @@ export const n4Kanji: Kanji[] = [
             "halt"
         ],
         "jlptLevel": 4,
+        frequency: 310,
         "examples": []
     },
     {
@@ -1543,6 +1631,7 @@ export const n4Kanji: Kanji[] = [
             "send"
         ],
         "jlptLevel": 4,
+        frequency: 311,
         "examples": []
     },
     {
@@ -1561,6 +1650,7 @@ export const n4Kanji: Kanji[] = [
             "be sharp"
         ],
         "jlptLevel": 4,
+        frequency: 324,
         "examples": []
     },
     {
@@ -1578,6 +1668,7 @@ export const n4Kanji: Kanji[] = [
             "change"
         ],
         "jlptLevel": 4,
+        frequency: 327,
         "examples": []
     },
     {
@@ -1595,6 +1686,7 @@ export const n4Kanji: Kanji[] = [
             "sharpen"
         ],
         "jlptLevel": 4,
+        frequency: 336,
         "examples": []
     },
     {
@@ -1613,6 +1705,7 @@ export const n4Kanji: Kanji[] = [
             "be sufficient"
         ],
         "jlptLevel": 4,
+        frequency: 343,
         "examples": []
     },
     {
@@ -1627,6 +1720,7 @@ export const n4Kanji: Kanji[] = [
             "study"
         ],
         "jlptLevel": 4,
+        frequency: 368,
         "examples": []
     },
     {
@@ -1645,6 +1739,7 @@ export const n4Kanji: Kanji[] = [
             "ease"
         ],
         "jlptLevel": 4,
+        frequency: 373,
         "examples": []
     },
     {
@@ -1663,6 +1758,7 @@ export const n4Kanji: Kanji[] = [
             "rouse"
         ],
         "jlptLevel": 4,
+        frequency: 374,
         "examples": []
     },
     {
@@ -1681,6 +1777,7 @@ export const n4Kanji: Kanji[] = [
             "counter for suits of clothing"
         ],
         "jlptLevel": 4,
+        frequency: 376,
         "examples": []
     },
     {
@@ -1697,6 +1794,7 @@ export const n4Kanji: Kanji[] = [
             "shop"
         ],
         "jlptLevel": 4,
+        frequency: 378,
         "examples": []
     },
     {
@@ -1713,6 +1811,7 @@ export const n4Kanji: Kanji[] = [
             "sick"
         ],
         "jlptLevel": 4,
+        frequency: 384,
         "examples": []
     },
     {
@@ -1733,6 +1832,7 @@ export const n4Kanji: Kanji[] = [
             "temperament"
         ],
         "jlptLevel": 4,
+        frequency: 389,
         "examples": []
     },
     {
@@ -1749,6 +1849,7 @@ export const n4Kanji: Kanji[] = [
             "depend on"
         ],
         "jlptLevel": 4,
+        frequency: 391,
         "examples": []
     },
     {
@@ -1768,6 +1869,7 @@ export const n4Kanji: Kanji[] = [
             "experiment"
         ],
         "jlptLevel": 4,
+        frequency: 392,
         "examples": []
     },
     {
@@ -1782,6 +1884,7 @@ export const n4Kanji: Kanji[] = [
             "family"
         ],
         "jlptLevel": 4,
+        frequency: 393,
         "examples": []
     },
     {
@@ -1795,6 +1898,7 @@ export const n4Kanji: Kanji[] = [
             "silver"
         ],
         "jlptLevel": 4,
+        frequency: 395,
         "examples": []
     },
     {
@@ -1812,6 +1916,7 @@ export const n4Kanji: Kanji[] = [
             "fast"
         ],
         "jlptLevel": 4,
+        frequency: 402,
         "examples": []
     },
     {
@@ -1830,6 +1935,7 @@ export const n4Kanji: Kanji[] = [
             "projection"
         ],
         "jlptLevel": 4,
+        frequency: 404,
         "examples": []
     },
     {
@@ -1849,6 +1955,7 @@ export const n4Kanji: Kanji[] = [
             "familiarity"
         ],
         "jlptLevel": 4,
+        frequency: 406,
         "examples": []
     },
     {
@@ -1864,6 +1971,7 @@ export const n4Kanji: Kanji[] = [
             "testing"
         ],
         "jlptLevel": 4,
+        frequency: 410,
         "examples": []
     },
     {
@@ -1880,6 +1988,7 @@ export const n4Kanji: Kanji[] = [
             "outstanding"
         ],
         "jlptLevel": 4,
+        frequency: 430,
         "examples": []
     },
     {
@@ -1894,6 +2003,7 @@ export const n4Kanji: Kanji[] = [
             "medicine"
         ],
         "jlptLevel": 4,
+        frequency: 437,
         "examples": []
     },
     {
@@ -1910,6 +2020,7 @@ export const n4Kanji: Kanji[] = [
             "serve"
         ],
         "jlptLevel": 4,
+        frequency: 439,
         "examples": []
     },
     {
@@ -1931,6 +2042,7 @@ export const n4Kanji: Kanji[] = [
             "eliminate"
         ],
         "jlptLevel": 4,
+        frequency: 440,
         "examples": []
     },
     {
@@ -1947,6 +2059,7 @@ export const n4Kanji: Kanji[] = [
             "taste"
         ],
         "jlptLevel": 4,
+        frequency: 442,
         "examples": []
     },
     {
@@ -1964,6 +2077,7 @@ export const n4Kanji: Kanji[] = [
             "describe"
         ],
         "jlptLevel": 4,
+        frequency: 453,
         "examples": []
     },
     {
@@ -1979,6 +2093,7 @@ export const n4Kanji: Kanji[] = [
             "word"
         ],
         "jlptLevel": 4,
+        frequency: 485,
         "examples": []
     },
     {
@@ -1995,6 +2110,7 @@ export const n4Kanji: Kanji[] = [
             "answer"
         ],
         "jlptLevel": 4,
+        frequency: 486,
         "examples": []
     },
     {
@@ -2012,6 +2128,7 @@ export const n4Kanji: Kanji[] = [
             "evening"
         ],
         "jlptLevel": 4,
+        frequency: 487,
         "examples": []
     },
     {
@@ -2029,6 +2146,7 @@ export const n4Kanji: Kanji[] = [
             "noise"
         ],
         "jlptLevel": 4,
+        frequency: 491,
         "examples": []
     },
     {
@@ -2050,6 +2168,7 @@ export const n4Kanji: Kanji[] = [
             "concentrate on"
         ],
         "jlptLevel": 4,
+        frequency: 497,
         "examples": []
     },
     {
@@ -2069,6 +2188,7 @@ export const n4Kanji: Kanji[] = [
             "result in"
         ],
         "jlptLevel": 4,
+        frequency: 504,
         "examples": []
     },
     {
@@ -2084,6 +2204,7 @@ export const n4Kanji: Kanji[] = [
             "old"
         ],
         "jlptLevel": 4,
+        frequency: 509,
         "examples": []
     },
     {
@@ -2101,6 +2222,7 @@ export const n4Kanji: Kanji[] = [
             "sing"
         ],
         "jlptLevel": 4,
+        frequency: 519,
         "examples": []
     },
     {
@@ -2116,6 +2238,7 @@ export const n4Kanji: Kanji[] = [
             "buy"
         ],
         "jlptLevel": 4,
+        frequency: 520,
         "examples": []
     },
     {
@@ -2133,6 +2256,7 @@ export const n4Kanji: Kanji[] = [
             "wrong"
         ],
         "jlptLevel": 4,
+        frequency: 530,
         "examples": []
     },
     {
@@ -2152,6 +2276,7 @@ export const n4Kanji: Kanji[] = [
             "extraordinary"
         ],
         "jlptLevel": 4,
+        frequency: 539,
         "examples": []
     },
     {
@@ -2165,6 +2290,7 @@ export const n4Kanji: Kanji[] = [
             "week"
         ],
         "jlptLevel": 4,
+        frequency: 540,
         "examples": []
     },
     {
@@ -2184,6 +2310,7 @@ export const n4Kanji: Kanji[] = [
             "cellar"
         ],
         "jlptLevel": 4,
+        frequency: 550,
         "examples": []
     },
     {
@@ -2202,6 +2329,7 @@ export const n4Kanji: Kanji[] = [
             "counter for steps"
         ],
         "jlptLevel": 4,
+        frequency: 554,
         "examples": []
     },
     {
@@ -2222,6 +2350,7 @@ export const n4Kanji: Kanji[] = [
             "manner"
         ],
         "jlptLevel": 4,
+        frequency: 558,
         "examples": []
     },
     {
@@ -2237,6 +2366,7 @@ export const n4Kanji: Kanji[] = [
             "paper"
         ],
         "jlptLevel": 4,
+        frequency: 559,
         "examples": []
     },
     {
@@ -2252,6 +2382,7 @@ export const n4Kanji: Kanji[] = [
             "black"
         ],
         "jlptLevel": 4,
+        frequency: 573,
         "examples": []
     },
     {
@@ -2268,6 +2399,7 @@ export const n4Kanji: Kanji[] = [
             "flower"
         ],
         "jlptLevel": 4,
+        frequency: 578,
         "examples": []
     },
     {
@@ -2283,6 +2415,7 @@ export const n4Kanji: Kanji[] = [
             "spring"
         ],
         "jlptLevel": 4,
+        frequency: 579,
         "examples": []
     },
     {
@@ -2299,6 +2432,7 @@ export const n4Kanji: Kanji[] = [
             "red"
         ],
         "jlptLevel": 4,
+        frequency: 584,
         "examples": []
     },
     {
@@ -2315,6 +2449,7 @@ export const n4Kanji: Kanji[] = [
             "blue"
         ],
         "jlptLevel": 4,
+        frequency: 589,
         "examples": []
     },
     {
@@ -2333,6 +2468,7 @@ export const n4Kanji: Kanji[] = [
             "palace"
         ],
         "jlptLevel": 4,
+        frequency: 613,
         "examples": []
     },
     {
@@ -2352,6 +2488,7 @@ export const n4Kanji: Kanji[] = [
             "seller"
         ],
         "jlptLevel": 4,
+        frequency: 616,
         "examples": []
     },
     {
@@ -2368,6 +2505,7 @@ export const n4Kanji: Kanji[] = [
             "color"
         ],
         "jlptLevel": 4,
+        frequency: 621,
         "examples": []
     },
     {
@@ -2383,6 +2521,7 @@ export const n4Kanji: Kanji[] = [
             "run"
         ],
         "jlptLevel": 4,
+        frequency: 626,
         "examples": []
     },
     {
@@ -2399,6 +2538,7 @@ export const n4Kanji: Kanji[] = [
             "fall"
         ],
         "jlptLevel": 4,
+        frequency: 635,
         "examples": []
     },
     {
@@ -2415,6 +2555,7 @@ export const n4Kanji: Kanji[] = [
             "summer"
         ],
         "jlptLevel": 4,
+        frequency: 659,
         "examples": []
     },
     {
@@ -2430,6 +2571,7 @@ export const n4Kanji: Kanji[] = [
             "learn"
         ],
         "jlptLevel": 4,
+        frequency: 706,
         "examples": []
     },
     {
@@ -2443,6 +2585,7 @@ export const n4Kanji: Kanji[] = [
             "station"
         ],
         "jlptLevel": 4,
+        frequency: 724,
         "examples": []
     },
     {
@@ -2459,6 +2602,7 @@ export const n4Kanji: Kanji[] = [
             "Western style"
         ],
         "jlptLevel": 4,
+        frequency: 763,
         "examples": []
     },
     {
@@ -2475,6 +2619,7 @@ export const n4Kanji: Kanji[] = [
             "travel"
         ],
         "jlptLevel": 4,
+        frequency: 783,
         "examples": []
     },
     {
@@ -2490,6 +2635,7 @@ export const n4Kanji: Kanji[] = [
             "obey"
         ],
         "jlptLevel": 4,
+        frequency: 873,
         "examples": []
     },
     {
@@ -2503,6 +2649,7 @@ export const n4Kanji: Kanji[] = [
             "evening"
         ],
         "jlptLevel": 4,
+        frequency: 924,
         "examples": []
     },
     {
@@ -2519,6 +2666,7 @@ export const n4Kanji: Kanji[] = [
             "rent"
         ],
         "jlptLevel": 4,
+        frequency: 932,
         "examples": []
     },
     {
@@ -2532,6 +2680,7 @@ export const n4Kanji: Kanji[] = [
             "weekday"
         ],
         "jlptLevel": 4,
+        frequency: 940,
         "examples": []
     },
     {
@@ -2547,6 +2696,7 @@ export const n4Kanji: Kanji[] = [
             "drink"
         ],
         "jlptLevel": 4,
+        frequency: 969,
         "examples": []
     },
     {
@@ -2560,6 +2710,7 @@ export const n4Kanji: Kanji[] = [
             "meat"
         ],
         "jlptLevel": 4,
+        frequency: 986,
         "examples": []
     },
     {
@@ -2576,6 +2727,7 @@ export const n4Kanji: Kanji[] = [
             "lend"
         ],
         "jlptLevel": 4,
+        frequency: 995,
         "examples": []
     },
     {
@@ -2590,6 +2742,7 @@ export const n4Kanji: Kanji[] = [
             "hall"
         ],
         "jlptLevel": 4,
+        frequency: 1010,
         "examples": []
     },
     {
@@ -2606,6 +2759,7 @@ export const n4Kanji: Kanji[] = [
             "chicken"
         ],
         "jlptLevel": 4,
+        frequency: 1043,
         "examples": []
     },
     {
@@ -2622,6 +2776,7 @@ export const n4Kanji: Kanji[] = [
             "rice"
         ],
         "jlptLevel": 4,
+        frequency: 1046,
         "examples": []
     },
     {
@@ -2639,6 +2794,7 @@ export const n4Kanji: Kanji[] = [
             "effort"
         ],
         "jlptLevel": 4,
+        frequency: 1066,
         "examples": []
     },
     {
@@ -2654,6 +2810,7 @@ export const n4Kanji: Kanji[] = [
             "winter"
         ],
         "jlptLevel": 4,
+        frequency: 1090,
         "examples": []
     },
     {
@@ -2670,6 +2827,7 @@ export const n4Kanji: Kanji[] = [
             "noon"
         ],
         "jlptLevel": 4,
+        frequency: 1115,
         "examples": []
     },
     {
@@ -2684,6 +2842,7 @@ export const n4Kanji: Kanji[] = [
             "tea"
         ],
         "jlptLevel": 4,
+        frequency: 1116,
         "examples": []
     },
     {
@@ -2701,6 +2860,7 @@ export const n4Kanji: Kanji[] = [
             "younger brother"
         ],
         "jlptLevel": 4,
+        frequency: 1161,
         "examples": []
     },
     {
@@ -2716,6 +2876,7 @@ export const n4Kanji: Kanji[] = [
             "cow"
         ],
         "jlptLevel": 4,
+        frequency: 1202,
         "examples": []
     },
     {
@@ -2732,6 +2893,7 @@ export const n4Kanji: Kanji[] = [
             "fish"
         ],
         "jlptLevel": 4,
+        frequency: 1208,
         "examples": []
     },
     {
@@ -2748,6 +2910,7 @@ export const n4Kanji: Kanji[] = [
             "elder brother"
         ],
         "jlptLevel": 4,
+        frequency: 1219,
         "examples": []
     },
     {
@@ -2763,6 +2926,7 @@ export const n4Kanji: Kanji[] = [
             "dog"
         ],
         "jlptLevel": 4,
+        frequency: 1326,
         "examples": []
     },
     {
@@ -2778,6 +2942,7 @@ export const n4Kanji: Kanji[] = [
             "younger sister"
         ],
         "jlptLevel": 4,
+        frequency: 1446,
         "examples": []
     },
     {
@@ -2793,6 +2958,7 @@ export const n4Kanji: Kanji[] = [
             "elder sister"
         ],
         "jlptLevel": 4,
+        frequency: 1473,
         "examples": []
     },
     {
@@ -2806,6 +2972,7 @@ export const n4Kanji: Kanji[] = [
             "China"
         ],
         "jlptLevel": 4,
+        frequency: 1487,
         "examples": []
     }
 ];

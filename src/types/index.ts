@@ -15,6 +15,7 @@ export interface Kanji {
     kunyomi: string[];
     meaning: string[];
     jlptLevel: JLPTLevel;
+    frequency: number; // Kanjidic2 frequency rank (1=most common, 9999=unranked)
     examples?: KanjiExample[];
 }
 
@@ -98,6 +99,7 @@ export interface CustomCard {
     kunReading?: string;
     meaning: string[];
     jlptLevel?: JLPTLevel;
+    frequency?: number; // Kanjidic2 frequency rank (1=most common, 9999=unranked)
     createdAt: number;
 }
 

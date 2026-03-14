@@ -11,7 +11,7 @@ export function SettingsPage() {
 
     const handleExport = () => {
         const data = exportData();
-        const blob = new Blob([data], { type: 'application/json' });
+        const blob = new Blob([data], { type: 'application/json;charset=utf-8' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;

@@ -57,9 +57,23 @@ export function Flashcard({ card, type, mnemonic, onFlip }: FlashcardProps) {
 
                 {/* Back of card */}
                 <div className="flashcard-face flashcard-back">
-                    <span className={`jlpt-badge jlpt-n${card.jlptLevel}`}>
-                        N{card.jlptLevel}
-                    </span>
+                    <div style={{ display: 'flex', gap: 'var(--space-2)', alignItems: 'center' }}>
+                        <span className={`jlpt-badge jlpt-n${card.jlptLevel}`}>
+                            N{card.jlptLevel}
+                        </span>
+                        {isKanji && kanjiCard.frequency && kanjiCard.frequency < 9999 && (
+                            <span
+                                className="jlpt-badge"
+                                style={{
+                                    backgroundColor: 'var(--color-bg-secondary)',
+                                    color: 'var(--color-text-secondary)',
+                                    border: '1px solid var(--color-border)'
+                                }}
+                            >
+                                Frequency: #{kanjiCard.frequency}
+                            </span>
+                        )}
+                    </div>
 
                     <div className="flashcard-meaning">
                         {card.meaning.join(', ')}
