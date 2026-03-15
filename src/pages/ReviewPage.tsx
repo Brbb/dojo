@@ -48,6 +48,7 @@ export function ReviewPage() {
                         jlptLevel: custom.jlptLevel || 5,
                         onyomi: custom.onReading ? custom.onReading.split(/[、,]\s*/).filter(Boolean) : [],
                         kunyomi: custom.kunReading ? custom.kunReading.split(/[、,]\s*/).filter(Boolean) : [],
+                        frequency: custom.frequency,
                         partOfSpeech: 'Custom'
                     } as any;
                 }

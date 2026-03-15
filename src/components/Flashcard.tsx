@@ -70,7 +70,7 @@ export function Flashcard({ card, type, mnemonic, onFlip }: FlashcardProps) {
                                     border: '1px solid var(--color-border)'
                                 }}
                             >
-                                Frequency: #{kanjiCard.frequency}
+                                #{kanjiCard.frequency}
                             </span>
                         )}
                     </div>

@@ -187,7 +187,7 @@ export function ItemCard({ type, item, mnemonic, compact = false }: ItemCardProp
                             }}
                             title="Frequency Rank"
                         >
-                            Most Common #{kanjiItem.frequency}
+                            #{kanjiItem.frequency}
                         </span>
                     )}
                 </div>

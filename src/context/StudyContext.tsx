@@ -298,6 +298,13 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         const studied = new Set(Object.keys(state.srsCards));
         return allKanji
             .filter(k => levels.includes(k.jlptLevel) && !studied.has(k.id))
+            .sort((a, b) => {
+                // Same logic as BrowsePage: N5 first, then within level by frequency
+                if (a.jlptLevel !== b.jlptLevel) {
+                    return b.jlptLevel - a.jlptLevel;
+                }
+                return (a.frequency || 9999) - (b.frequency || 9999);
+            })
             .slice(0, count);
     };
 
@@ -305,6 +312,10 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         const studied = new Set(Object.keys(state.srsCards));
         return allVocabulary
             .filter(v => levels.includes(v.jlptLevel) && !studied.has(v.id))
+            .sort((a, b) => {
+                // Same logic as Kanji: N5 first
+                return b.jlptLevel - a.jlptLevel;
+            })
             .slice(0, count);
     };
 

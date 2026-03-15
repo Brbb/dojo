@@ -27,7 +27,25 @@ export function BrowsePage() {
             items = items.filter(item => item.jlptLevel === levelFilter);
         }
 
-        return items;
+        // 3. Sort logic: Level first (N5, N4, N3...), then Frequency
+        return [...items].sort((a, b) => {
+            // Primary sort: JLPT Level (Descending: 5, 4, 3, 2, 1)
+            if (b.jlptLevel !== a.jlptLevel) {
+                return b.jlptLevel - a.jlptLevel;
+            }
+
+            // Secondary sort: Frequency for Kanji
+            if (tab === 'kanji') {
+                const aFreq = (a as Kanji).frequency || 9999;
+                const bFreq = (b as Kanji).frequency || 9999;
+                return aFreq - bFreq;
+            }
+
+            // Secondary sort for Vocabulary: Alphabetical by reading
+            const aReading = (a as Vocabulary).reading || '';
+            const bReading = (b as Vocabulary).reading || '';
+            return aReading.localeCompare(bReading, 'ja');
+        });
     }, [tab, levelFilter, searchQuery]);
 
     const levels: JLPTLevel[] = [5, 4, 3, 2, 1];
