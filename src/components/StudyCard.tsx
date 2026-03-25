@@ -8,9 +8,10 @@ interface StudyCardProps {
     mnemonic?: Mnemonic | null;
     mode?: 'study' | 'review'; // 'study' = always revealed, 'review' = click to reveal
     onFlip?: (isFlipped: boolean) => void; // Optional callback for review mode
+    onNavigate?: (type: CardType, item: Kanji | Vocabulary) => void;
 }
 
-export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip }: StudyCardProps) {
+export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip, onNavigate }: StudyCardProps) {
     const [isRevealed, setIsRevealed] = useState(mode === 'study');
 
     // Reset state when card changes
@@ -35,7 +36,7 @@ export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip }: Stud
         return (
             <div className="flashcard-container static">
                 <div className="flashcard-face card">
-                    <ItemCard type={type} item={card} mnemonic={mnemonic} compact={false} />
+                    <ItemCard type={type} item={card} mnemonic={mnemonic} compact={false} onNavigate={onNavigate} />
                 </div>
             </div>
         );
@@ -70,6 +71,7 @@ export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip }: Stud
                         item={card}
                         mnemonic={mnemonic}
                         compact={true}
+                        onNavigate={onNavigate}
                     />
                 </div>
             </div>

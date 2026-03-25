@@ -199,6 +199,7 @@ export function BrowsePage() {
                     type={selectedItem.type}
                     item={selectedItem.item}
                     onClose={() => setSelectedItem(null)}
+                    onNavigate={(type, item) => setSelectedItem({ type, item })}
                 />
             )}
         </div>

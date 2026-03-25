@@ -9,8 +9,9 @@ import {
     RefreshCcw, Scroll, Clock, Brain, Flame, GitBranch, GitCompare,
     Sparkles, CheckCircle2, Circle, MoreHorizontal
 } from 'lucide-react';
+import { ItemDetailModal } from '../components/ItemDetailModal';
 import { grammarTopics, type GrammarTopic } from '../data/grammar/grammar';
-import type { Kanji, Vocabulary, JLPTLevel, SRSRating } from '../types';
+import type { Kanji, Vocabulary, JLPTLevel, SRSRating, CardType } from '../types';
 
 type StudyMode = 'kanji' | 'vocabulary' | 'grammar';
 
@@ -40,6 +41,7 @@ export function StudyPage() {
     const [isStudying, setIsStudying] = useState(false);
     const [sessionComplete, setSessionComplete] = useState(false);
     const [selectedGrammarTopic, setSelectedGrammarTopic] = useState<GrammarTopic | null>(null);
+    const [peekItem, setPeekItem] = useState<{ type: CardType, item: Kanji | Vocabulary } | null>(null);
 
     const startSession = useCallback(() => {
         let newCards: (Kanji | Vocabulary)[] = [];
@@ -204,7 +206,11 @@ export function StudyPage() {
                     <ProgressBar progress={((currentIndex + 1) / cards.length) * 100} />
 
                     <div style={{ marginTop: 'var(--space-8)' }}>
-                        <StudyCard card={currentCard} type={mode as 'kanji' | 'vocabulary'} />
+                        <StudyCard
+                            card={currentCard}
+                            type={mode as 'kanji' | 'vocabulary'}
+                            onNavigate={(type, item) => setPeekItem({ type, item })}
+                        />
                     </div>
 
                     <div style={{ marginTop: 'var(--space-6)' }}>
@@ -281,6 +287,15 @@ export function StudyPage() {
                     Start Studying
                 </button>
             </div>
+
+            {peekItem && (
+                <ItemDetailModal
+                    type={peekItem.type}
+                    item={peekItem.item}
+                    onClose={() => setPeekItem(null)}
+                    onNavigate={(type, item) => setPeekItem({ type, item })}
+                />
+            )}
         </div>
     );
 }

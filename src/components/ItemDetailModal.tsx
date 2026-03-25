@@ -6,9 +6,10 @@ interface ItemDetailModalProps {
     type: CardType;
     item: Kanji | Vocabulary | null;
     onClose: () => void;
+    onNavigate?: (type: CardType, item: Kanji | Vocabulary) => void;
 }
 
-export function ItemDetailModal({ type, item, onClose }: ItemDetailModalProps) {
+export function ItemDetailModal({ type, item, onClose, onNavigate }: ItemDetailModalProps) {
     const { state, addToReview } = useStudy();
 
     if (!item) return null;
@@ -85,7 +86,7 @@ export function ItemDetailModal({ type, item, onClose }: ItemDetailModalProps) {
 
                 {/* Content */}
                 <div style={{ overflowY: 'auto', flex: 1 }}>
-                    <ItemCard type={type} item={item} />
+                    <ItemCard type={type} item={item} onNavigate={onNavigate} />
                 </div>
 
                 {/* Footer Actions */}

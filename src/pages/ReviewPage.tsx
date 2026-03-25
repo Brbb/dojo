@@ -7,7 +7,8 @@ import { ProgressBar } from '../components/Progress';
 import { MnemonicEditor } from '../components/MnemonicEditor';
 import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
-import type { SRSRating, Kanji, Vocabulary } from '../types';
+import { ItemDetailModal } from '../components/ItemDetailModal';
+import type { SRSRating, Kanji, Vocabulary, CardType } from '../types';
 import reviewRacoon from '../assets/reviewracoon.png';
 import freetime from '../assets/freetime.png';
 
@@ -19,6 +20,7 @@ export function ReviewPage() {
     const [reviewCards, setReviewCards] = useState<{ card: Kanji | Vocabulary; type: 'kanji' | 'vocabulary' }[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [sessionComplete, setSessionComplete] = useState(false);
+    const [peekItem, setPeekItem] = useState<{ type: CardType, item: Kanji | Vocabulary } | null>(null);
 
     // const { key: flashcardKey, reset: resetFlashcard } = useFlashcardReset();
 
@@ -178,6 +180,7 @@ export function ReviewPage() {
                     type={current.type}
                     mnemonic={getMnemonic(current.card.id)}
                     mode="review"
+                    onNavigate={(type, item) => setPeekItem({ type, item })}
                 />
 
                 {/* Rating Buttons (Always visible) */}
@@ -193,6 +196,15 @@ export function ReviewPage() {
                 initialText={getMnemonic(current.card.id)?.text || ''}
                 onSave={handleSaveMnemonic}
             />
+
+            {peekItem && (
+                <ItemDetailModal
+                    type={peekItem.type}
+                    item={peekItem.item}
+                    onClose={() => setPeekItem(null)}
+                    onNavigate={(type, item) => setPeekItem({ type, item })}
+                />
+            )}
         </div>
     );
 }
