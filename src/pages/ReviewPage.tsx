@@ -21,10 +21,17 @@ export function ReviewPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [sessionComplete, setSessionComplete] = useState(false);
     const [peekItem, setPeekItem] = useState<{ type: CardType, item: Kanji | Vocabulary } | null>(null);
+    const [reviewKanji, setReviewKanji] = useState(true);
+    const [reviewVocab, setReviewVocab] = useState(true);
 
     // const { key: flashcardKey, reset: resetFlashcard } = useFlashcardReset();
 
-    const dueCards = getDueCards();
+    const dueCards = getDueCards().filter(c => {
+        if (reviewKanji && reviewVocab) return true;
+        if (reviewKanji) return c.cardType === 'kanji';
+        if (reviewVocab) return c.cardType === 'vocabulary';
+        return false;
+    });
 
     // Load cards for review
     const startReview = useCallback(() => {
@@ -129,14 +136,68 @@ export function ReviewPage() {
     // Review selection screen
     if (!isReviewing) {
         return (
-            <div className="page container">
+            <div className="page container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100%' }}>
                 <header style={{ marginBottom: 'var(--space-8)' }}>
                     <h1 className="text-2xl font-bold">Review</h1>
                     <p className="text-secondary">There {dueCards.length > 1 ? "are" : "is"} <span className="text-l font-bold" style={{ color: 'var(--color-primary-light)', marginBottom: 'var(--space-2)' }}>{dueCards.length} </span>{dueCards.length > 1 ? "cards" : "card"} due
                     </p>
                 </header>
-                <img src={reviewRacoon} alt="Review Raccoon" style={{ width: '100%', height: 'auto', marginBottom: 'var(--space-2)', borderRadius: '50%' }} />
-                <button className="btn btn-primary btn-lg" style={{ width: '100%' }} onClick={startReview}>
+
+                <img src={reviewRacoon} alt="Review Raccoon" style={{ width: '100%', height: 'auto', marginBottom: 'var(--space-4)', borderRadius: '50%', flex: '0 0 auto' }} />
+
+                {/* Spacer to push buttons to bottom */}
+                <div style={{ flex: 1 }} />
+
+                {/* Type Filters */}
+                <div style={{
+                    display: 'flex',
+                    gap: 'var(--space-3)',
+                    marginBottom: 'var(--space-3)',
+                }}>
+                    <button
+                        onClick={() => setReviewKanji(!reviewKanji)}
+                        style={{
+                            flex: 1,
+                            padding: 'var(--space-3) var(--space-4)',
+                            borderRadius: 'var(--radius-lg)',
+                            border: `2px solid ${reviewKanji ? 'var(--color-primary)' : 'var(--color-bg-tertiary)'}`,
+                            background: reviewKanji ? 'var(--color-primary)' : 'var(--color-bg-secondary)',
+                            color: reviewKanji ? 'white' : 'var(--color-text-secondary)',
+                            fontWeight: 600,
+                            fontSize: 'var(--text-sm)',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease',
+                            opacity: reviewKanji ? 1 : 0.6,
+                        }}
+                    >
+                        漢字 Kanji
+                    </button>
+                    <button
+                        onClick={() => setReviewVocab(!reviewVocab)}
+                        style={{
+                            flex: 1,
+                            padding: 'var(--space-3) var(--space-4)',
+                            borderRadius: 'var(--radius-lg)',
+                            border: `2px solid ${reviewVocab ? 'var(--color-primary)' : 'var(--color-bg-tertiary)'}`,
+                            background: reviewVocab ? 'var(--color-primary)' : 'var(--color-bg-secondary)',
+                            color: reviewVocab ? 'white' : 'var(--color-text-secondary)',
+                            fontWeight: 600,
+                            fontSize: 'var(--text-sm)',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease',
+                            opacity: reviewVocab ? 1 : 0.6,
+                        }}
+                    >
+                        辞書 Vocab
+                    </button>
+                </div>
+
+                <button
+                    className="btn btn-primary btn-lg"
+                    style={{ width: '100%' }}
+                    onClick={startReview}
+                    disabled={dueCards.length === 0 || (!reviewKanji && !reviewVocab)}
+                >
                     Start Review
                 </button>
             </div>
