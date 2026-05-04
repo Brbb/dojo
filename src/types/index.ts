@@ -30,7 +30,7 @@ export interface Vocabulary {
     reading: string;
     meaning: string[];
     jlptLevel: JLPTLevel;
-    partOfSpeech: string;
+    partOfSpeech?: string;
     examples?: VocabularyExample[];
 }
 

@@ -1,576 +1,669 @@
 import type { Vocabulary } from '../../types';
 
-
 export const n4Vocabulary: Vocabulary[] = [
-    { id: 'v-n4-0001', word: 'あ', reading: 'a', meaning: ['Ah', 'oh'], jlptLevel: 4, partOfSpeech: 'expression' }, //
-    { id: 'v-n4-0002', word: 'ああ', reading: 'aa', meaning: ['ah', 'yes'], jlptLevel: 4, partOfSpeech: 'adverb' }, //
-    { id: 'v-n4-0003', word: 'アフリカ', reading: 'afurika', meaning: ['Africa'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0004', word: '上がる', reading: 'あがる', meaning: ['to rise'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0005', word: '挨拶', reading: 'あいさつ', meaning: ['to greet'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0006', word: '味', reading: 'あじ', meaning: ['flavor', 'taste', 'uniqueness', 'attractiveness', 'experience'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0007', word: 'アジア', reading: 'ajia', meaning: ['Asia'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0008', word: '赤ちゃん', reading: 'あかちゃん', meaning: ['baby', 'infant'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0009', word: '赤ん坊', reading: 'あかんぼう', meaning: ['baby', 'infant'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0010', word: 'アクセサリー', reading: 'akusesarii', meaning: ['accessory'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0011', word: 'アメリカ', reading: 'amerika', meaning: ['America'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0012', word: 'アナウンサー', reading: 'anaunsaa', meaning: ['announcer'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0013', word: 'あんな', reading: 'anna', meaning: ['such'], jlptLevel: 4, partOfSpeech: 'pre-noun adjectival' }, //
-    { id: 'v-n4-0014', word: '案内', reading: 'あんない', meaning: ['to guide'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0015', word: '安心', reading: 'あんしん', meaning: ['peace of mind'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, //
-    { id: 'v-n4-0016', word: '安全', reading: 'あんぜん', meaning: ['safety', 'security'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, //
-    { id: 'v-n4-0017', word: 'アルバイト', reading: 'arubaito', meaning: ['part-time job'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0018', word: 'アルコール', reading: 'arukooru', meaning: ['alcohol'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0019', word: '浅い', reading: 'あさい', meaning: ['shallow'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, //
-    { id: 'v-n4-0020', word: '遊び', reading: 'あそび', meaning: ['playing'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0021', word: '集まる', reading: 'あつまる', meaning: ['to gather', 'to collect', 'to assemble'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0022', word: '集める', reading: 'あつめる', meaning: ['to collect', 'to assemble', 'to gather'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0023', word: '謝る', reading: 'あやまる', meaning: ['to apologize'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0024', word: '倍', reading: 'ばい', meaning: ['double'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0025', word: '番組', reading: 'ばんぐみ', meaning: ['program (e.g. TV)'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0026', word: '場所', reading: 'ばしょ', meaning: ['place'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0027', word: 'ベル', reading: 'beru', meaning: ['bell'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0028', word: '美術館', reading: 'びじゅつかん', meaning: ['art gallery', 'art museum'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0029', word: 'びっくり', reading: 'bikkuri', meaning: ['to be surprised'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0030', word: 'ビル', reading: 'biru', meaning: ['building'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0031', word: '僕', reading: 'ぼく', meaning: ['I (used by males)'], jlptLevel: 4, partOfSpeech: 'pronoun' }, //
-    { id: 'v-n4-0032', word: '貿易', reading: 'ぼうえき', meaning: ['trade'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0033', word: '部長', reading: 'ぶちょう', meaning: ['manager', 'head of a section or department'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0034', word: 'ぶどう', reading: 'budou', meaning: ['grapes'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0035', word: '文学', reading: 'ぶんがく', meaning: ['literature'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0036', word: '文化', reading: 'ぶんか', meaning: ['culture'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0037', word: '文法', reading: 'ぶんぽう', meaning: ['grammar'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0038', word: 'ちゃん', reading: 'chan', meaning: ['suffix for familiar female person'], jlptLevel: 4, partOfSpeech: 'suffix' }, //
-    { id: 'v-n4-0039', word: 'チェック', reading: 'chekku', meaning: ['to check'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0040', word: '血', reading: 'ち', meaning: ['blood'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0041', word: '力', reading: 'ちから', meaning: ['energy', 'force', 'strength', 'might', 'power'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0042', word: '地理', reading: 'ちり', meaning: ['geography'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0043', word: '中学校', reading: 'ちゅうがっこう', meaning: ['junior high school', 'middle school'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0044', word: '注意', reading: 'ちゅうい', meaning: ['caution'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0045', word: '注射', reading: 'ちゅうしゃ', meaning: ['injection'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0046', word: '駐車場', reading: 'ちゅうしゃじょう', meaning: ['parking lot'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0047', word: '大分', reading: 'だいぶ', meaning: ['considerably', 'greatly', 'a lot'], jlptLevel: 4, partOfSpeech: 'adverb' }, //
-    { id: 'v-n4-0048', word: '大学生', reading: 'だいがくせい', meaning: ['university student', 'college student'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0049', word: '大事', reading: 'だいじ', meaning: ['important', 'serious', 'crucial'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, //
-    { id: 'v-n4-0050', word: '大体', reading: 'だいたい', meaning: ['roughly'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0051', word: '暖房', reading: 'だんぼう', meaning: ['heating'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0052', word: '男性', reading: 'だんせい', meaning: ['man', 'male'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0053', word: 'できるだけ', reading: 'dekiru dake', meaning: ['as much as possible'], jlptLevel: 4, partOfSpeech: 'adverb' }, //
-    { id: 'v-n4-0054', word: '電報', reading: 'でんぽう', meaning: ['telegram'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0055', word: '電灯', reading: 'でんとう', meaning: ['electric light'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0056', word: 'どんどん', reading: 'dondon', meaning: ['rapidly', 'more and more'], jlptLevel: 4, partOfSpeech: 'adverb' }, //
-    { id: 'v-n4-0057', word: '泥棒', reading: 'どろぼう', meaning: ['thief'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0058', word: '動物園', reading: 'どうぶつえん', meaning: ['zoo', 'zoological gardens'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0059', word: '道具', reading: 'どうぐ', meaning: ['tool'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0060', word: '枝', reading: 'えだ', meaning: ['branch'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0061', word: '遠慮', reading: 'えんりょ', meaning: ['reserve', 'refraining'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0062', word: '選ぶ', reading: 'えらぶ', meaning: ['to choose'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0063', word: 'エスカレーター', reading: 'esukareetaa', meaning: ['escalator'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0064', word: 'ファックス', reading: 'fakkusu', meaning: ['fax'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0065', word: '不便', reading: 'ふべん', meaning: ['inconvenience'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, //
-    { id: 'v-n4-0066', word: '増える', reading: 'ふえる', meaning: ['to increase'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0067', word: '深い', reading: 'ふかい', meaning: ['deep'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, //
-    { id: 'v-n4-0068', word: '復習', reading: 'ふくしゅう', meaning: ['review (of learned material)', 'revision'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0069', word: '複雑', reading: 'ふくざつ', meaning: ['complexity', 'complication'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, //
-    { id: 'v-n4-0070', word: '踏む', reading: 'ふむ', meaning: ['to step on'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0071', word: '船', reading: 'ふね', meaning: ['ship'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0072', word: '降り出す', reading: 'ふりだす', meaning: ['to start to rain'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0073', word: '布団', reading: 'ふとん', meaning: ['Japanese bedding', 'futon'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0074', word: '太る', reading: 'ふとる', meaning: ['to become fat'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0075', word: '普通', reading: 'ふつう', meaning: ['usually'], jlptLevel: 4, partOfSpeech: 'adverb' }, //
-    { id: 'v-n4-0076', word: 'ガラス', reading: 'garasu', meaning: ['a glass'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0077', word: 'ガソリン', reading: 'gasorin', meaning: ['gasoline', 'petrol'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0078', word: 'ガソリンスタンド', reading: 'gasorin sutando', meaning: ['petrol station'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0079', word: 'ガス', reading: 'gasu', meaning: ['petrol'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0080', word: '原因', reading: 'げんいん', meaning: ['cause'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0081', word: '下宿', reading: 'げしゅく', meaning: ['lodging'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0082', word: '技術', reading: 'ぎじゅつ', meaning: ['art', 'technology', 'skill'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0083', word: 'ごちそう', reading: 'gochisou', meaning: ['a feast'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0084', word: 'ごみ', reading: 'gomi', meaning: ['rubbish'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0085', word: 'ご覧になる', reading: 'ごらんになる', meaning: ['to see'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0086', word: 'ご主人', reading: 'ごしゅじん', meaning: ['your husband', 'her husband'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0087', word: 'ご存じ', reading: 'ごぞんじ', meaning: ['knowing'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0088', word: '具合', reading: 'ぐあい', meaning: ['condition', 'health'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0089', word: '葉', reading: 'は', meaning: ['leaves', 'leaf'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0090', word: '拝見', reading: 'はいけん', meaning: ['seeing', 'looking at'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0091', word: '歯医者', reading: 'はいしゃ', meaning: ['dentist'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0092', word: 'はっきり', reading: 'hakkiri', meaning: ['clearly'], jlptLevel: 4, partOfSpeech: 'adverb' }, //
-    { id: 'v-n4-0093', word: '運ぶ', reading: 'はこぶ', meaning: ['to carry'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0094', word: '花見', reading: 'はなみ', meaning: ['cherry blossom viewing', 'flower viewing'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0095', word: 'ハンドバッグ', reading: 'handobaggu', meaning: ['handbag'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0096', word: '反対', reading: 'はんたい', meaning: ['opposition'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, //
-    { id: 'v-n4-0097', word: '払う', reading: 'はらう', meaning: ['to pay'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0098', word: '発音', reading: 'はつおん', meaning: ['pronunciation'], jlptLevel: 4, partOfSpeech: 'verb' }, //
-    { id: 'v-n4-0099', word: '林', reading: 'はやし', meaning: ['woods', 'forest'], jlptLevel: 4, partOfSpeech: 'noun' }, //
-    { id: 'v-n4-0100', word: '恥ずかしい', reading: 'はずかしい', meaning: ['embarrassed'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, //
-    { id: 'v-n4-0101', word: '変', reading: 'へん', meaning: ['strange', 'peculiar', 'weird'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [1]
-    { id: 'v-n4-0102', word: '返事', reading: 'へんじ', meaning: ['reply', 'answer', 'response'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0103', word: '火', reading: 'ひ', meaning: ['fire'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0104', word: '酷い', reading: 'ひどい', meaning: ['terrible', 'awful'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [1]
-    { id: 'v-n4-0105', word: '冷える', reading: 'ひえる', meaning: ['to grow cold'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0106', word: '髭', reading: 'ひげ', meaning: ['beard'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0107', word: '非常に', reading: 'ひじょうに', meaning: ['extremely'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [1]
-    { id: 'v-n4-0108', word: '光', reading: 'ひかり', meaning: ['light'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0109', word: '光る', reading: 'ひかる', meaning: ['to shine'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0110', word: '引き出し', reading: 'ひきだし', meaning: ['drawer'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0111', word: '引き出す', reading: 'ひきだす', meaning: ['to withdraw'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0112', word: '引っ越す', reading: 'ひっこす', meaning: ['to move house'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0113', word: '飛行場', reading: 'ひこうじょう', meaning: ['airfield', 'airport'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0114', word: '開く', reading: 'ひらく', meaning: ['to open', 'to undo', 'to unseal', 'to unpack'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0115', word: '拾う', reading: 'ひろう', meaning: ['to pick up'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0116', word: '昼間', reading: 'ひるま', meaning: ['daytime', 'during the day'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0117', word: '昼休み', reading: 'ひるやすみ', meaning: ['lunch break', 'noon recess', 'noon rest period'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0118', word: '久しぶり', reading: 'ひさしぶり', meaning: ['after a long time'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [3]
-    { id: 'v-n4-0119', word: '褒める', reading: 'ほめる', meaning: ['to praise'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0120', word: '翻訳', reading: 'ほんやく', meaning: ['translation'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0121', word: '星', reading: 'ほし', meaning: ['star'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0122', word: 'ほとんど', reading: 'hotondo', meaning: ['mostly'], jlptLevel: 4, partOfSpeech: 'adverbial-noun' }, // [3]
-    { id: 'v-n4-0123', word: '法律', reading: 'ほうりつ', meaning: ['law'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0124', word: '放送', reading: 'ほうそう', meaning: ['to broadcast'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0125', word: '一度', reading: 'いちど', meaning: ['once', 'one time', 'on one occasion'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0126', word: '以外', reading: 'いがい', meaning: ['with the exception of', 'excepting'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0127', word: '医学', reading: 'いがく', meaning: ['medical science', 'medicine'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0128', word: 'いじめる', reading: 'ijimeru', meaning: ['to tease'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0129', word: '以上', reading: 'いじょう', meaning: ['... and more', '... and upwards'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0130', word: '以下', reading: 'いか', meaning: ['not exceeding'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0131', word: '意見', reading: 'いけん', meaning: ['opinion', 'view', 'comment'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0132', word: '生き物', reading: 'いきもの', meaning: ['living thing'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0133', word: '生きる', reading: 'いきる', meaning: ['to live'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0134', word: '以内', reading: 'いない', meaning: ['within'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0135', word: '田舎', reading: 'いなか', meaning: ['countryside'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0136', word: '祈る', reading: 'いのる', meaning: ['to pray'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0137', word: 'いっぱい', reading: 'ippai', meaning: ['full'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [4]
-    { id: 'v-n4-0138', word: '色んな', reading: 'いろんな', meaning: ['various'], jlptLevel: 4, partOfSpeech: 'pre-noun adjectival' }, // [4]
-    { id: 'v-n4-0139', word: '石', reading: 'いし', meaning: ['stone'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0140', word: '急ぐ', reading: 'いそぐ', meaning: ['to hurry', 'to rush', 'to hasten', 'to make something happen sooner'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0141', word: '一生懸命', reading: 'いっしょうけんめい', meaning: ['very hard', 'with utmost effort'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [5]
-    { id: 'v-n4-0142', word: '頂く', reading: 'いただく', meaning: ['(humble) to receive'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0143', word: '致す', reading: 'いたす', meaning: ['(humble) to do'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0144', word: '糸', reading: 'いと', meaning: ['thread'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0145', word: 'ジャム', reading: 'jamu', meaning: ['jam'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0146', word: '字', reading: 'じ', meaning: ['character'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0147', word: '時代', reading: 'じだい', meaning: ['period'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0148', word: '事故', reading: 'じこ', meaning: ['accident'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0149', word: '事務所', reading: 'じむしょ', meaning: ['office'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0150', word: '神社', reading: 'じんじゃ', meaning: ['Shinto shrine'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0151', word: '人口', reading: 'じんこう', meaning: ['population'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0152', word: '人生', reading: 'じんせい', meaning: ['human life'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0153', word: '地震', reading: 'じしん', meaning: ['earthquake'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0154', word: '辞典', reading: 'じてん', meaning: ['dictionary'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0155', word: '自由', reading: 'じゆう', meaning: ['freedom'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [6]
-    { id: 'v-n4-0156', word: '女性', reading: 'じょせい', meaning: ['woman', 'female'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0157', word: '準備', reading: 'じゅんび', meaning: ['to prepare'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0158', word: '十分', reading: 'じゅうぶん', meaning: ['enough', 'sufficient', 'plenty', 'adequate', 'satisfactory'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [6]
-    { id: 'v-n4-0159', word: '柔道', reading: 'じゅうどう', meaning: ['judo'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0160', word: '住所', reading: 'じゅうしょ', meaning: ['address'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0161', word: 'カーテン', reading: 'kaaten', meaning: ['curtain'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0162', word: '壁', reading: 'かべ', meaning: ['wall'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0163', word: '課長', reading: 'かちょう', meaning: ['section manager', 'section chief'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0164', word: '帰り', reading: 'かえり', meaning: ['return', 'coming back'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0165', word: '変える', reading: 'かえる', meaning: ['to change', 'to transform'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0166', word: '科学', reading: 'かがく', meaning: ['science'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0167', word: '鏡', reading: 'かがみ', meaning: ['mirror'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0168', word: '海岸', reading: 'かいがん', meaning: ['coast'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0169', word: '会議', reading: 'かいぎ', meaning: ['meeting', 'conference', 'session', 'assembly'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0170', word: '会議室', reading: 'かいぎしつ', meaning: ['conference room', 'conference hall', 'council room'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0171', word: '会場', reading: 'かいじょう', meaning: ['assembly hall', 'meeting place', 'venue', 'grounds'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0172', word: '会話', reading: 'かいわ', meaning: ['conversation'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0173', word: '火事', reading: 'かじ', meaning: ['fire'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0174', word: '格好', reading: 'かっこう', meaning: ['appearance'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0175', word: '構う', reading: 'かまう', meaning: ['to mind'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0176', word: '髪', reading: 'かみ', meaning: ['hair'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0177', word: '噛む', reading: 'かむ', meaning: ['to bite', 'to chew'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0178', word: '家内', reading: 'かない', meaning: ['(my) wife', 'inside the home', "one's family"], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0179', word: '必ず', reading: 'かならず', meaning: ['always', 'certainly'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [8]
-    { id: 'v-n4-0180', word: '悲しい', reading: 'かなしい', meaning: ['sad'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [8]
-    { id: 'v-n4-0181', word: '考える', reading: 'かんがえる', meaning: ['to think'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0182', word: '看護婦', reading: 'かんごふ', meaning: ['female nurse'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0183', word: '関係', reading: 'かんけい', meaning: ['relationship'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0184', word: '彼女', reading: 'かのじょ', meaning: ['she', 'her'], jlptLevel: 4, partOfSpeech: 'pronoun' }, // [8]
-    { id: 'v-n4-0185', word: '簡単', reading: 'かんたん', meaning: ['simple', 'easy'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [8]
-    { id: 'v-n4-0186', word: '彼', reading: 'かれ', meaning: ['he', 'him', 'his'], jlptLevel: 4, partOfSpeech: 'pronoun' }, // [8]
-    { id: 'v-n4-0187', word: '彼ら', reading: 'かれら', meaning: ['they', 'them'], jlptLevel: 4, partOfSpeech: 'pronoun' }, // [8]
-    { id: 'v-n4-0188', word: '形', reading: 'かたち', meaning: ['shape'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0189', word: '片付ける', reading: 'かたづける', meaning: ['to tidy up'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0190', word: '硬い', reading: 'かたい', meaning: ['hard'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [9]
-    { id: 'v-n4-0191', word: '勝つ', reading: 'かつ', meaning: ['to win'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0192', word: '乾く', reading: 'かわく', meaning: ['to get dry'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0193', word: '代わり', reading: 'かわり', meaning: ['instead', 'in place'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0194', word: '変わる', reading: 'かわる', meaning: ['to change'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0195', word: '通う', reading: 'かよう', meaning: ['to commute'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0196', word: '飾る', reading: 'かざる', meaning: ['to decorate'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0197', word: '毛', reading: 'け', meaning: ['hair or fur'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0198', word: 'ケーキ', reading: 'keeki', meaning: ['cake'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0199', word: '怪我', reading: 'けが', meaning: ['to injure'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0200', word: '計画', reading: 'けいかく', meaning: ['to plan'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0201', word: '経験', reading: 'けいけん', meaning: ['to experience'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0202', word: '警察', reading: 'けいさつ', meaning: ['police'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0203', word: '経済', reading: 'けいざい', meaning: ['finance', 'economy'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0204', word: '見物', reading: 'けんぶつ', meaning: ['sightseeing', 'visit'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0205', word: '喧嘩', reading: 'けんか', meaning: ['to quarrel'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0206', word: '研究', reading: 'けんきゅう', meaning: ['research'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0207', word: '研究室', reading: 'けんきゅうしつ', meaning: ['laboratory'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0208', word: '消しゴム', reading: 'けしごむ', meaning: ['eraser'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0209', word: '景色', reading: 'けしき', meaning: ['scenery'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0210', word: '気', reading: 'き', meaning: ['spirit'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0211', word: '厳しい', reading: 'きびしい', meaning: ['strict'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [2]
-    { id: 'v-n4-0212', word: '気分', reading: 'きぶん', meaning: ['feeling', 'mood'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0213', word: '機会', reading: 'きかい', meaning: ['chance', 'opportunity'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0214', word: '危険', reading: 'きけん', meaning: ['danger'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [2]
-    { id: 'v-n4-0215', word: '聞こえる', reading: 'きこえる', meaning: ['to be heard', 'to be audible', 'to be said'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0216', word: '決まる', reading: 'きまる', meaning: ['to be decided'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0217', word: '決める', reading: 'きめる', meaning: ['to decide'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0218', word: '君', reading: 'きみ', meaning: ['You'], jlptLevel: 4, partOfSpeech: 'pronoun' }, // [2]
-    { id: 'v-n4-0219', word: '気持ち', reading: 'きもち', meaning: ['feeling'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0220', word: '着物', reading: 'きもの', meaning: ['kimono', 'Japanese traditional clothing'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0221', word: '近所', reading: 'きんじょ', meaning: ['neighbourhood'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0222', word: '絹', reading: 'きぬ', meaning: ['silk'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0223', word: '季節', reading: 'きせつ', meaning: ['season'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0224', word: '汽車', reading: 'きしゃ', meaning: ['train'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0225', word: '規則', reading: 'きそく', meaning: ['rule'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0226', word: '子', reading: 'こ', meaning: ['child'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0227', word: '心', reading: 'こころ', meaning: ['heart'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0228', word: '国際', reading: 'こくさい', meaning: ['international'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0229', word: '細かい', reading: 'こまかい', meaning: ['small', 'fine'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [4]
-    { id: 'v-n4-0230', word: '米', reading: 'こめ', meaning: ['rice'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0231', word: '込む', reading: 'こむ', meaning: ['to be crowded'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0232', word: '今度', reading: 'こんど', meaning: ['this time', 'next time'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0233', word: 'この間', reading: 'このあいだ', meaning: ['the other day', 'recently'], jlptLevel: 4, partOfSpeech: 'adverbial-noun' }, // [4]
-    { id: 'v-n4-0234', word: 'このごろ', reading: 'このごろ', meaning: ['these days', 'nowadays'], jlptLevel: 4, partOfSpeech: 'adverbial-noun' }, // [4]
-    { id: 'v-n4-0235', word: 'コンピュータ', reading: 'konpyuuta', meaning: ['computer'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0236', word: 'コンサート', reading: 'konsaato', meaning: ['concert'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0237', word: '今夜', reading: 'こんや', meaning: ['this evening', 'tonight'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0238', word: 'これから', reading: 'これから', meaning: ['after this'], jlptLevel: 4, partOfSpeech: 'conjunction' }, // [5]
-    { id: 'v-n4-0239', word: '故障', reading: 'こしょう', meaning: ['to break-down'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0240', word: '答え', reading: 'こたえ', meaning: ['response'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0241', word: '小鳥', reading: 'ことり', meaning: ['small bird'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0242', word: 'こう', reading: 'こう', meaning: ['this way'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [5]
-    { id: 'v-n4-0243', word: '校長', reading: 'こうちょう', meaning: ['principal', 'headmaster'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0244', word: '講堂', reading: 'こうどう', meaning: ['auditorium'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0245', word: '郊外', reading: 'こうがい', meaning: ['suburb', 'residential area on the outskirt of a city'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0246', word: '講義', reading: 'こうぎ', meaning: ['lecture'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0247', word: '工業', reading: 'こうぎょう', meaning: ['industry'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0248', word: '工場', reading: 'こうじょう', meaning: ['factory'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0249', word: '高校', reading: 'こうこう', meaning: ['senior high school', 'high school'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0250', word: '高校生', reading: 'こうこうせい', meaning: ['high school student'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0251', word: '公務員', reading: 'こうむいん', meaning: ['government worker'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0252', word: '高等学校', reading: 'こうとうがっこう', meaning: ['high school'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0253', word: '交通', reading: 'こうつう', meaning: ['traffic'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0254', word: '怖い', reading: 'こわい', meaning: ['frightening'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [6]
-    { id: 'v-n4-0255', word: '壊れる', reading: 'こわれる', meaning: ['to be broken'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0256', word: '壊す', reading: 'こわす', meaning: ['to break'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0257', word: '首', reading: 'くび', meaning: ['neck'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0258', word: '下さる', reading: 'くださる', meaning: ['to give (respectful)'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0259', word: '雲', reading: 'くも', meaning: ['cloud'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0260', word: '君', reading: 'くん', meaning: ['suffix for familiar young male'], jlptLevel: 4, partOfSpeech: 'suffix' }, // [6]
-    { id: 'v-n4-0261', word: '比べる', reading: 'くらべる', meaning: ['to compare'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0262', word: '暮れる', reading: 'くれる', meaning: ['to get dark'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0263', word: '草', reading: 'くさ', meaning: ['grass'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0264', word: '空気', reading: 'くうき', meaning: ['air'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0265', word: '空港', reading: 'くうこう', meaning: ['airport'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0266', word: '客', reading: 'きゃく', meaning: ['guest', 'customer'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0267', word: '教育', reading: 'きょういく', meaning: ['education'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0268', word: '教会', reading: 'きょうかい', meaning: ['church', 'congregation'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0269', word: '興味', reading: 'きょうみ', meaning: ['interest', 'curiosity'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0270', word: '競争', reading: 'きょうそう', meaning: ['competition'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0271', word: '急', reading: 'きゅう', meaning: ['sudden', 'abrupt', 'unexpected'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [7]
-    { id: 'v-n4-0272', word: '急行', reading: 'きゅうこう', meaning: ['hurrying', 'rushing', 'hastening'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0273', word: '間違える', reading: 'まちがえる', meaning: ['to make a mistake'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0274', word: '参る', reading: 'まいる', meaning: ['to go', 'to come (humble)'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0275', word: '負ける', reading: 'まける', meaning: ['to lose'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0276', word: '漫画', reading: 'まんが', meaning: ['comic'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0277', word: '間に合う', reading: 'まにあう', meaning: ['to be in time (for)'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0278', word: '真ん中', reading: 'まんなか', meaning: ['middle', 'centre'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0279', word: '周り', reading: 'まわり', meaning: ['around'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0280', word: '回る', reading: 'まわる', meaning: ['to go around'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0281', word: 'まず', reading: 'まず', meaning: ['first of all'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [9]
-    { id: 'v-n4-0282', word: '召し上がる', reading: 'めしあがる', meaning: ['to eat', 'to drink'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0283', word: '珍しい', reading: 'めずらしい', meaning: ['unusual', 'rare'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [9]
-    { id: 'v-n4-0284', word: '見える', reading: 'みえる', meaning: ['to be seen', 'to be in sight', 'to look', 'to seem'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0285', word: '港', reading: 'みなと', meaning: ['harbour'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0286', word: '味噌', reading: 'みそ', meaning: ['fermented condiment made from soybeans'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0287', word: '見つかる', reading: 'みつかる', meaning: ['to be found', 'to be discovered'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0288', word: '見つける', reading: 'みつける', meaning: ['to discover', 'to find', 'to come across'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0289', word: '都', reading: 'みやこ', meaning: ['capital'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0290', word: '湖', reading: 'みずうみ', meaning: ['lake'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0291', word: '戻る', reading: 'もどる', meaning: ['to turn back'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0292', word: '木綿', reading: 'もめん', meaning: ['cotton (material)'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0293', word: '森', reading: 'もり', meaning: ['forest'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0294', word: 'もし', reading: 'もし', meaning: ['if', 'in case', 'supposing'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [10]
-    { id: 'v-n4-0295', word: '申し上げる', reading: 'もうしあげる', meaning: ['to say', 'to offer'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0296', word: '申す', reading: 'もうす', meaning: ['to be called', 'to say'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0297', word: 'もうすぐ', reading: 'もうすぐ', meaning: ['soon'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [10]
-    { id: 'v-n4-0298', word: '迎える', reading: 'むかえる', meaning: ['to go out to meet'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0299', word: '昔', reading: 'むかし', meaning: ['olden days', 'former'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0300', word: '向かう', reading: 'むかう', meaning: ['to head towards'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0301', word: '無理', reading: 'むり', meaning: ['impossible'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [1]
-    { id: 'v-n4-0302', word: '虫', reading: 'むし', meaning: ['insect'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0303', word: '息子', reading: 'むすこ', meaning: ['son'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0304', word: '娘', reading: 'むすめ', meaning: ['daughter'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0305', word: '投げる', reading: 'なげる', meaning: ['to throw or cast away'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0306', word: '泣く', reading: 'なく', meaning: ['to weep'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0307', word: '無くなる', reading: 'なくなる', meaning: ['to disappear', 'to get lost'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0308', word: '亡くなる', reading: 'なくなる', meaning: ['to die'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0309', word: '生', reading: 'なま', meaning: ['raw'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0310', word: '直る', reading: 'なおる', meaning: ['to be fixed', 'to be repaired'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0311', word: '治る', reading: 'なおる', meaning: ['to be cured', 'to heal'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0312', word: '慣れる', reading: 'なれる', meaning: ['to get used to'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0313', word: '鳴る', reading: 'なる', meaning: ['to sound'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0314', word: 'なるほど', reading: 'naruhodo', meaning: ['now I understand'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [2]
-    { id: 'v-n4-0315', word: '寝坊', reading: 'ねぼう', meaning: ['sleeping in late', 'oversleeping'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0316', word: '値段', reading: 'ねだん', meaning: ['price', 'cost'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0317', word: '眠い', reading: 'ねむい', meaning: ['sleepy'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [4]
-    { id: 'v-n4-0318', word: '眠る', reading: 'ねむる', meaning: ['to sleep'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0319', word: '熱', reading: 'ねつ', meaning: ['fever'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0320', word: '苦い', reading: 'にがい', meaning: ['bitter'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [4]
-    { id: 'v-n4-0321', word: '逃げる', reading: 'にげる', meaning: ['to escape'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0322', word: '二階建て', reading: 'にかいだて', meaning: ['two-storied building'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0323', word: '人形', reading: 'にんぎょう', meaning: ['doll'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0324', word: '匂い', reading: 'におい', meaning: ['a smell'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0325', word: '似る', reading: 'にる', meaning: ['to be similar'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0326', word: '喉', reading: 'のど', meaning: ['throat'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0327', word: '残る', reading: 'のこる', meaning: ['to remain'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0328', word: '乗り換える', reading: 'のりかえる', meaning: ['to change between buses or trains'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0329', word: '乗り物', reading: 'のりもの', meaning: ['vehicle'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0330', word: '濡れる', reading: 'ぬれる', meaning: ['to get wet'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0331', word: '塗る', reading: 'ぬる', meaning: ['to paint', 'to plaster'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0332', word: '盗む', reading: 'ぬすむ', meaning: ['to steal'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0333', word: '入学', reading: 'にゅうがく', meaning: ['entry to school or university', 'enrollment'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0334', word: '入院', reading: 'にゅういん', meaning: ['hospitalization'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0335', word: '落ちる', reading: 'おちる', meaning: ['to fall or drop'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0336', word: '踊り', reading: 'おどり', meaning: ['a dance'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0337', word: '驚く', reading: 'おどろく', meaning: ['to be surprised'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0338', word: '踊る', reading: 'おどる', meaning: ['to dance'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0339', word: 'お出でになる', reading: 'おいでになる', meaning: ['to be (respectful)'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0340', word: 'お祝い', reading: 'おいわい', meaning: ['congratulation'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0341', word: 'お嬢さん', reading: 'おじょうさん', meaning: ["another's daughter"], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0342', word: '可笑しい', reading: 'おかしい', meaning: ['strange or funny'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [6]
-    { id: 'v-n4-0343', word: '行う', reading: 'おこなう', meaning: ['to perform', 'to do', 'to carry out'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0344', word: '怒る', reading: 'おこる', meaning: ['to be angry'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0345', word: '起こす', reading: 'おこす', meaning: ['to wake'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0346', word: '億', reading: 'おく', meaning: ['one hundred million'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0347', word: '屋上', reading: 'おくじょう', meaning: ['rooftop'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0348', word: '遅れる', reading: 'おくれる', meaning: ['to be late'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0349', word: '贈り物', reading: 'おくりもの', meaning: ['present', 'gift'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0350', word: '送る', reading: 'おくる', meaning: ['to send'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0351', word: 'お祭り', reading: 'おまつり', meaning: ['festival'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0352', word: 'お見舞い', reading: 'おみまい', meaning: ['visiting ill or distressed people'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0353', word: 'お土産', reading: 'おみやげ', meaning: ['souvenir'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0354', word: 'おもちゃ', reading: 'omocha', meaning: ['toy'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0355', word: '思い出す', reading: 'おもいだす', meaning: ['to remember'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0356', word: '表', reading: 'おもて', meaning: ['the front'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0357', word: 'オートバイ', reading: 'ootobai', meaning: ['motorcycle'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0358', word: 'お礼', reading: 'おれい', meaning: ['thanks'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0359', word: '折れる', reading: 'おれる', meaning: ['to break', 'to be broken'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0360', word: '下りる', reading: 'おりる', meaning: ['to get off'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0361', word: '折る', reading: 'おる', meaning: ['to break or to fold'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0362', word: '押し入れ', reading: 'おしいれ', meaning: ['closet'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0363', word: '仰る', reading: 'おっしゃる', meaning: ['to say (respectful)'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0364', word: 'お宅', reading: 'おたく', meaning: ['your home'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0365', word: '音', reading: 'おと', meaning: ['sound', 'note'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0366', word: '落とす', reading: 'おとす', meaning: ['to drop'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0367', word: 'お釣り', reading: 'おつり', meaning: ['change (for a purchase)'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0368', word: '夫', reading: 'おっと', meaning: ['husband'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0369', word: '終わり', reading: 'おわり', meaning: ['the end'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0370', word: '親', reading: 'おや', meaning: ['parents'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0371', word: '泳ぎ方', reading: 'およぎかた', meaning: ['way of swimming'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0372', word: 'パート', reading: 'paato', meaning: ['part', 'part time'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0373', word: 'パソコン', reading: 'pasokon', meaning: ['personal computer'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0374', word: 'ピアノ', reading: 'piano', meaning: ['piano'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0375', word: 'プレゼント', reading: 'purezento', meaning: ['present', 'gift'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0376', word: '冷房', reading: 'れいぼう', meaning: ['air conditioning'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0377', word: 'レジ', reading: 'reji', meaning: ['cashier'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0378', word: '歴史', reading: 'れきし', meaning: ['history'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0379', word: '連絡', reading: 'れんらく', meaning: ['to contact', 'to get in touch'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0380', word: 'レポート', reading: 'repooto', meaning: ['report'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0381', word: '利用', reading: 'りよう', meaning: ['use', 'utilization', 'application'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0382', word: '理由', reading: 'りゆう', meaning: ['reason'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0383', word: '留守', reading: 'るす', meaning: ['absence'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0384', word: '旅館', reading: 'りょかん', meaning: ['traditional inn', 'Japanese-style lodging'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0385', word: '両方', reading: 'りょうほう', meaning: ['both sides'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0386', word: '寂しい', reading: 'さびしい', meaning: ['lonely'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [10]
-    { id: 'v-n4-0387', word: '下がる', reading: 'さがる', meaning: ['to get down'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0388', word: '探す', reading: 'さがす', meaning: ['to look for'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0389', word: '下げる', reading: 'さげる', meaning: ['to lower'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0390', word: '最後', reading: 'さいご', meaning: ['end', 'last'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0391', word: '最近', reading: 'さいきん', meaning: ['recently'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [10]
-    { id: 'v-n4-0392', word: '最初', reading: 'さいしょ', meaning: ['beginning', 'first'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0393', word: '坂', reading: 'さか', meaning: ['slope', 'hill'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0394', word: '盛ん', reading: 'さかん', meaning: ['popularity', 'prosperous'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [10]
-    { id: 'v-n4-0395', word: '昨夜', reading: 'さくや', meaning: ['last night'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0396', word: 'サンダル', reading: 'sandaru', meaning: ['sandal'], jlptLevel: 4, partOfSpeech: 'noun' }, // [11]
-    { id: 'v-n4-0397', word: 'サンドイッチ', reading: 'sandoicchi', meaning: ['sandwich'], jlptLevel: 4, partOfSpeech: 'noun' }, // [11]
-    { id: 'v-n4-0398', word: '産業', reading: 'さんぎょう', meaning: ['industry'], jlptLevel: 4, partOfSpeech: 'noun' }, // [11]
-    { id: 'v-n4-0399', word: 'サラダ', reading: 'sarada', meaning: ['salad'], jlptLevel: 4, partOfSpeech: 'noun' }, // [11]
-    { id: 'v-n4-0400', word: '再来月', reading: 'さらいげつ', meaning: ['month after next'], jlptLevel: 4, partOfSpeech: 'noun' }, // [11]
-    { id: 'v-n4-0401', word: '再来週', reading: 'さらいしゅう', meaning: ['week after next'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0402', word: '差し上げる', reading: 'さしあげる', meaning: ['to give'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0403', word: '騒ぐ', reading: 'さわぐ', meaning: ['to make noise', 'to be excited'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0404', word: '触る', reading: 'さわる', meaning: ['to touch'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0405', word: '生物', reading: 'せいぶつ', meaning: ['living thing'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0406', word: '政治', reading: 'せいじ', meaning: ['politics'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0407', word: '生活', reading: 'せいかつ', meaning: ['to live'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0408', word: '生命', reading: 'せいめい', meaning: ['life'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0409', word: '生産', reading: 'せいさん', meaning: ['production'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0410', word: '西洋', reading: 'せいよう', meaning: ['the west', 'Western countries'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0411', word: '世界', reading: 'せかい', meaning: ['the world'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0412', word: '席', reading: 'せき', meaning: ['seat'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0413', word: '線', reading: 'せん', meaning: ['line'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0414', word: '背中', reading: 'せなか', meaning: ['back (of body)'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0415', word: '先輩', reading: 'せんぱい', meaning: ['senior'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0416', word: '戦争', reading: 'せんそう', meaning: ['war'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0417', word: '説明', reading: 'せつめい', meaning: ['explanation'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0418', word: '社長', reading: 'しゃちょう', meaning: ['company president', 'manager', 'director'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0419', word: '社会', reading: 'しゃかい', meaning: ['society', 'public', 'community', 'the world'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0420', word: '市', reading: 'し', meaning: ['city'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0421', word: '試合', reading: 'しあい', meaning: ['match', 'game'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0422', word: '叱る', reading: 'しかる', meaning: ['to scold'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0423', word: '仕方', reading: 'しかた', meaning: ['way', 'method'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0424', word: '試験', reading: 'しけん', meaning: ['examination'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0425', word: 'しっかり', reading: 'shikkari', meaning: ['firmly', 'steadily'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [3]
-    { id: 'v-n4-0426', word: '島', reading: 'しま', meaning: ['island'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0427', word: '市民', reading: 'しみん', meaning: ['citizen'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0428', word: '品物', reading: 'しなもの', meaning: ['goods', 'article', 'thing'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0429', word: '新聞社', reading: 'しんぶんしゃ', meaning: ['newspaper company'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0430', word: '親切', reading: 'しんせつ', meaning: ['kindness'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [3]
-    { id: 'v-n4-0431', word: '失敗', reading: 'しっぱい', meaning: ['failure'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0432', word: '調べる', reading: 'しらべる', meaning: ['to investigate'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3, 10]
-    { id: 'v-n4-0433', word: '知らせる', reading: 'しらせる', meaning: ['to notify'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0434', word: '下着', reading: 'したぎ', meaning: ['underwear'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0435', word: '食料品', reading: 'しょくりょうひん', meaning: ['food', 'groceries'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0436', word: '小学校', reading: 'しょうがっこう', meaning: ['elementary school'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0437', word: '生じる', reading: 'しょうじる', meaning: ['to produce'], jlptLevel: 4, partOfSpeech: 'verb' }, // [10]
-    { id: 'v-n4-0438', word: '紹介', reading: 'しょうかい', meaning: ['introduction'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0439', word: '将来', reading: 'しょうらい', meaning: ['future'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0440', word: '小説', reading: 'しょうせつ', meaning: ['novel'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0441', word: '趣味', reading: 'しゅみ', meaning: ['hobby', 'pastime', 'preference'], jlptLevel: 4, partOfSpeech: 'noun' }, // [10]
-    { id: 'v-n4-0442', word: '習慣', reading: 'しゅうかん', meaning: ['habit', 'custom', 'cultural practice'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0443', word: '祖母', reading: 'そぼ', meaning: ['grandmother'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0444', word: '育てる', reading: 'そだてる', meaning: ['to rear', 'to bring up'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0445', word: '祖父', reading: 'そふ', meaning: ['grandfather'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0446', word: 'ソフト', reading: 'sofuto', meaning: ['soft'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0447', word: 'そんな', reading: 'sonna', meaning: ['that sort of'], jlptLevel: 4, partOfSpeech: 'pre-noun adjectival' }, // [4]
-    { id: 'v-n4-0448', word: 'それで', reading: 'sore de', meaning: ['because of that'], jlptLevel: 4, partOfSpeech: 'conjunction' }, // [4]
-    { id: 'v-n4-0449', word: 'それほど', reading: 'sore hodo', meaning: ['to that extent'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [4]
-    { id: 'v-n4-0450', word: 'そろそろ', reading: 'sorosoro', meaning: ['gradually', 'soon'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [4]
-    { id: 'v-n4-0451', word: '卒業', reading: 'そつぎょう', meaning: ['graduation'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0452', word: '相談', reading: 'そうだん', meaning: ['to discuss'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0453', word: '素晴らしい', reading: 'すばらしい', meaning: ['wonderful'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [5]
-    { id: 'v-n4-0454', word: '滑る', reading: 'すべる', meaning: ['to slide', 'to slip'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0455', word: '凄い', reading: 'すごい', meaning: ['terrific'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [5]
-    { id: 'v-n4-0456', word: '水道', reading: 'すいどう', meaning: ['water supply'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0457', word: '水泳', reading: 'すいえい', meaning: ['swimming'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0458', word: 'すっかり', reading: 'すっかり', meaning: ['completely'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [5]
-    { id: 'v-n4-0459', word: '空く', reading: 'すく', meaning: ['to be hungry'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0460', word: 'スクリーン', reading: 'sukuriin', meaning: ['screen'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0461', word: '隅', reading: 'すみ', meaning: ['corner', 'nook'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0462', word: '済む', reading: 'すむ', meaning: ['to finish'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0463', word: '砂', reading: 'すな', meaning: ['sand'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0464', word: 'すり', reading: 'suri', meaning: ['pickpocket'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0465', word: 'スーツケース', reading: 'sustsukeesu', meaning: ['suitcase'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0466', word: '進む', reading: 'すすむ', meaning: ['to make progress'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0467', word: 'ステーキ', reading: 'suteeki', meaning: ['steak'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0468', word: 'ステレオ', reading: 'sutereo', meaning: ['stereo'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0469', word: '捨てる', reading: 'すてる', meaning: ['to throw away'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0470', word: '数学', reading: 'すうがく', meaning: ['mathematics', 'arithmetic'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0471', word: 'スーツ', reading: 'suutsu', meaning: ['suit'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0472', word: '正しい', reading: 'ただしい', meaning: ['right', 'correct'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [6]
-    { id: 'v-n4-0473', word: '退院', reading: 'たいいん', meaning: ['leaving hospital', 'discharge from hospital'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0474', word: '台風', reading: 'たいふう', meaning: ['typhoon'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0475', word: 'タイプ', reading: 'taipu', meaning: ['type', 'style'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0476', word: 'たいてい', reading: 'taitei', meaning: ['usually'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [7]
-    { id: 'v-n4-0477', word: 'たまに', reading: 'tamani', meaning: ['occasionally'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [7]
-    { id: 'v-n4-0478', word: '棚', reading: 'たな', meaning: ['shelves'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0479', word: '誕生', reading: 'たんじょう', meaning: ['birth'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0480', word: '楽しみ', reading: 'たのしみ', meaning: ['looking forward to'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [7]
-    { id: 'v-n4-0481', word: '倒れる', reading: 'たおれる', meaning: ['to fall (over, down)'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0482', word: '足りる', reading: 'たりる', meaning: ['to be sufficient', 'to be enough'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0483', word: '足す', reading: 'たす', meaning: ['to add (numbers / something)'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0484', word: '畳', reading: 'たたみ', meaning: ['Japanese straw mat'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0485', word: '建てる', reading: 'たてる', meaning: ['to build'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0486', word: '尋ねる', reading: 'たずねる', meaning: ['to ask'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0487', word: '訪ねる', reading: 'たずねる', meaning: ['to visit'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0488', word: '手袋', reading: 'てぶくろ', meaning: ['glove'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0489', word: '丁寧', reading: 'ていねい', meaning: ['polite'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [8]
-    { id: 'v-n4-0490', word: 'テキスト', reading: 'tekisuto', meaning: ['text', 'textbook'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0491', word: '適当', reading: 'てきとう', meaning: ['suitable'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [8]
-    { id: 'v-n4-0492', word: '点', reading: 'てん', meaning: ['point', 'dot'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0493', word: '店員', reading: 'てんいん', meaning: ['employee (of a store)', 'shop assistant', 'clerk'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0494', word: 'テニス', reading: 'tenisu', meaning: ['tennis'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0495', word: '天気予報', reading: 'てんきよほう', meaning: ['weather forecast'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0496', word: '展覧会', reading: 'てんらんかい', meaning: ['exhibition'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0497', word: '寺', reading: 'てら', meaning: ['temple'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0498', word: '手伝う', reading: 'てつだう', meaning: ['to help', 'to assist', 'to aid'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0499', word: '途中', reading: 'とちゅう', meaning: ['on the way'], jlptLevel: 4, partOfSpeech: 'noun' }, // [9]
-    { id: 'v-n4-0500', word: '届ける', reading: 'とどける', meaning: ['to send'], jlptLevel: 4, partOfSpeech: 'verb' }, // [9]
-    { id: 'v-n4-0501', word: '特急', reading: 'とっきゅう', meaning: ['limited express (train, faster than an express)'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0502', word: '床屋', reading: 'とこや', meaning: ['barber'], jlptLevel: 4, partOfSpeech: 'noun' }, // [1]
-    { id: 'v-n4-0503', word: '特別', reading: 'とくべつ', meaning: ['special', 'particular', 'extraordinary', 'exceptional'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [1]
-    { id: 'v-n4-0504', word: '特に', reading: 'とくに', meaning: ['particularly', 'especially', 'in particular', 'expressly'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [1]
-    { id: 'v-n4-0505', word: '泊まる', reading: 'とまる', meaning: ['to stay at'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1]
-    { id: 'v-n4-0506', word: '止める', reading: 'とめる', meaning: ['to stop something'], jlptLevel: 4, partOfSpeech: 'verb' }, // [1, 2]
-    { id: 'v-n4-0507', word: '遠く', reading: 'とおく', meaning: ['distant'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0508', word: '通る', reading: 'とおる', meaning: ['to go through'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0509', word: '取り替える', reading: 'とりかえる', meaning: ['to exchange', 'to swap', 'to replace'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0510', word: '到頭', reading: 'とうとう', meaning: ['finally', 'after all'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [2]
-    { id: 'v-n4-0511', word: '続ける', reading: 'つづける', meaning: ['to continue', 'to keep up', 'to keep on'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0512', word: '続く', reading: 'つづく', meaning: ['to continue'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2]
-    { id: 'v-n4-0513', word: '都合', reading: 'つごう', meaning: ['convenience'], jlptLevel: 4, partOfSpeech: 'noun' }, // [2]
-    { id: 'v-n4-0514', word: '捕まえる', reading: 'つかまえる', meaning: ['to catch'], jlptLevel: 4, partOfSpeech: 'verb' }, // [2, 3]
-    { id: 'v-n4-0515', word: '漬ける', reading: 'つける', meaning: ['to soak', 'to pickle'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0516', word: '月', reading: 'つき', meaning: ['moon'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0517', word: '付く', reading: 'つく', meaning: ['to be attached'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0518', word: '妻', reading: 'つま', meaning: ['(humble) wife'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3]
-    { id: 'v-n4-0519', word: '連れる', reading: 'つれる', meaning: ['to take (someone) with one'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0520', word: '釣る', reading: 'つる', meaning: ['to fish'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0521', word: '伝える', reading: 'つたえる', meaning: ['to report', 'to tell'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0522', word: '包む', reading: 'つつむ', meaning: ['to wrap'], jlptLevel: 4, partOfSpeech: 'verb' }, // [3]
-    { id: 'v-n4-0523', word: '腕', reading: 'うで', meaning: ['arm'], jlptLevel: 4, partOfSpeech: 'noun' }, // [3, 4]
-    { id: 'v-n4-0524', word: '植える', reading: 'うえる', meaning: ['to plant', 'to grow'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0525', word: '動く', reading: 'うごく', meaning: ['to move'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0526', word: '伺う', reading: 'うかがう', meaning: ['to visit'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0527', word: '受ける', reading: 'うける', meaning: ['to take a lesson or test'], jlptLevel: 4, partOfSpeech: 'verb' }, // [4]
-    { id: 'v-n4-0528', word: '受付', reading: 'うけつけ', meaning: ['reception (desk)', 'information desk'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0529', word: '生まれ', reading: 'うまれ', meaning: ['birth'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0530', word: '運転手', reading: 'うんてんしゅ', meaning: ['driver', 'chauffeur'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0531', word: '裏', reading: 'うら', meaning: ['reverse side'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0532', word: '嬉しい', reading: 'うれしい', meaning: ['happy'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [4]
-    { id: 'v-n4-0533', word: '売り場', reading: 'うりば', meaning: ['selling area'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4]
-    { id: 'v-n4-0534', word: '嘘', reading: 'うそ', meaning: ['a lie'], jlptLevel: 4, partOfSpeech: 'noun' }, // [4, 5]
-    { id: 'v-n4-0535', word: '打つ', reading: 'うつ', meaning: ['to hit'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0536', word: '美しい', reading: 'うつくしい', meaning: ['beautiful'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [5]
-    { id: 'v-n4-0537', word: '移る', reading: 'うつる', meaning: ['to move house or transfer'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0538', word: '写す', reading: 'うつす', meaning: ['to copy or photograph'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0539', word: 'ワープロ', reading: 'waapuro', meaning: ['word processor'], jlptLevel: 4, partOfSpeech: 'noun' }, // [5]
-    { id: 'v-n4-0540', word: '別れる', reading: 'わかれる', meaning: ['to separate'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0541', word: '沸かす', reading: 'わかす', meaning: ['to boil', 'to heat'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0542', word: '沸く', reading: 'わく', meaning: ['to boil'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5]
-    { id: 'v-n4-0543', word: '笑う', reading: 'わらう', meaning: ['to laugh', 'to smile'], jlptLevel: 4, partOfSpeech: 'verb' }, // [5, 6]
-    { id: 'v-n4-0544', word: '割れる', reading: 'われる', meaning: ['to break'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0545', word: '割合', reading: 'わりあい', meaning: ['rate', 'ratio'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0546', word: '忘れ物', reading: 'わすれもの', meaning: ['lost article'], jlptLevel: 4, partOfSpeech: 'noun' }, // [6]
-    { id: 'v-n4-0547', word: '焼ける', reading: 'やける', meaning: ['to burn', 'to be roasted'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0548', word: '焼く', reading: 'やく', meaning: ['to bake', 'to grill'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0549', word: '役に立つ', reading: 'やくにたつ', meaning: ['to be helpful'], jlptLevel: 4, partOfSpeech: 'expression' }, // [6]
-    { id: 'v-n4-0550', word: '約束', reading: 'やくそく', meaning: ['promise'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0551', word: '止む', reading: 'やむ', meaning: ['to stop'], jlptLevel: 4, partOfSpeech: 'verb' }, // [6]
-    { id: 'v-n4-0552', word: 'やっぱり', reading: 'yappari', meaning: ['as I thought'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [6, 7]
-    { id: 'v-n4-0553', word: '優しい', reading: 'やさしい', meaning: ['kind'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [7]
-    { id: 'v-n4-0554', word: '痩せる', reading: 'やせる', meaning: ['to become thin'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0555', word: '柔らかい', reading: 'やわらかい', meaning: ['soft'], jlptLevel: 4, partOfSpeech: 'i-adjective' }, // [7]
-    { id: 'v-n4-0556', word: '汚れる', reading: 'よごれる', meaning: ['to get dirty'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0557', word: '喜ぶ', reading: 'よろこぶ', meaning: ['to be delighted'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0558', word: '寄る', reading: 'よる', meaning: ['to visit', 'to drop by'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0559', word: '予習', reading: 'よしゅう', meaning: ['preparation for a lesson'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0560', word: '予定', reading: 'よてい', meaning: ['plan'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7]
-    { id: 'v-n4-0561', word: '用', reading: 'よう', meaning: ['business', 'task', 'errand', 'use', 'purpose'], jlptLevel: 4, partOfSpeech: 'noun' }, // [7]
-    { id: 'v-n4-0562', word: '用意', reading: 'ようい', meaning: ['preparation', 'arrangements', 'provision', 'getting ready'], jlptLevel: 4, partOfSpeech: 'verb' }, // [7, 8]
-    { id: 'v-n4-0563', word: '用事', reading: 'ようじ', meaning: ['tasks', 'things to do', 'errand', 'business (to take care of)'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0564', word: '予約', reading: 'よやく', meaning: ['reservation'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0565', word: '湯', reading: 'ゆ', meaning: ['hot water'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0566', word: '指', reading: 'ゆび', meaning: ['finger'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0567', word: '指輪', reading: 'ゆびわ', meaning: ['finger ring'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0568', word: '夢', reading: 'ゆめ', meaning: ['dream'], jlptLevel: 4, partOfSpeech: 'noun' }, // [8]
-    { id: 'v-n4-0569', word: '揺れる', reading: 'ゆれる', meaning: ['to shake'], jlptLevel: 4, partOfSpeech: 'verb' }, // [8]
-    { id: 'v-n4-0570', word: '残念', reading: 'ざんねん', meaning: ['regrettable', 'unfortunate'], jlptLevel: 4, partOfSpeech: 'na-adjective' }, // [8]
-    { id: 'v-n4-0571', word: '全然', reading: 'ぜんぜん', meaning: ['not entirely (used in a negative sentence)'], jlptLevel: 4, partOfSpeech: 'adverb' }, // [8]
+    { id: 'v-n4-0001', word: '踏む', reading: 'ふむ', meaning: ['to step on', 'to tread on'], jlptLevel: 4 },
+    { id: 'v-n4-0002', word: '～区', reading: '～く', meaning: ['~ district', '~ ward', '~ borough'], jlptLevel: 4 },
+    { id: 'v-n4-0003', word: 'すっと', reading: 'すっと', meaning: ['straight', 'quickly'], jlptLevel: 4 },
+    { id: 'v-n4-0004', word: '盗む', reading: 'ぬすむ', meaning: ['to steal', 'to rob'], jlptLevel: 4 },
+    { id: 'v-n4-0005', word: '大抵', reading: 'たいてい', meaning: ['generally', 'usually'], jlptLevel: 4 },
+    { id: 'v-n4-0006', word: 'とうとう', reading: 'とうとう', meaning: ['finally', 'at last'], jlptLevel: 4 },
+    { id: 'v-n4-0007', word: 'ガソリン', reading: 'ガソリン', meaning: ['gasoline', 'petrol'], jlptLevel: 4 },
+    { id: 'v-n4-0008', word: '鳴る', reading: 'なる', meaning: ['to sound', 'to ring (v.i.)'], jlptLevel: 4 },
+    { id: 'v-n4-0009', word: 'しっかり', reading: 'しっかり', meaning: ['firmly', 'steady'], jlptLevel: 4 },
+    { id: 'v-n4-0010', word: '生きる', reading: 'いきる', meaning: ['to live'], jlptLevel: 4 },
+    { id: 'v-n4-0011', word: '苦い', reading: 'にがい', meaning: ['bitter'], jlptLevel: 4 },
+    { id: 'v-n4-0012', word: '沸く', reading: 'わく', meaning: ['to boil', 'to grow hot'], jlptLevel: 4 },
+    { id: 'v-n4-0013', word: '意見', reading: 'いけん', meaning: ['opinion', 'view', 'idea'], jlptLevel: 4 },
+    { id: 'v-n4-0014', word: 'やはり', reading: 'やはり', meaning: ['as I thought', 'absolutely'], jlptLevel: 4 },
+    { id: 'v-n4-0015', word: '漫画', reading: 'まんが', meaning: ['comic (book)', 'cartoon'], jlptLevel: 4 },
+    { id: 'v-n4-0016', word: 'ステレオ', reading: 'ステレオ', meaning: ['stereo'], jlptLevel: 4 },
+    { id: 'v-n4-0017', word: '医学', reading: 'いがく', meaning: ['medical science'], jlptLevel: 4 },
+    { id: 'v-n4-0018', word: 'テキスト', reading: 'テキスト', meaning: ['text', 'text book'], jlptLevel: 4 },
+    { id: 'v-n4-0019', word: '～月', reading: '～つき', meaning: ['month'], jlptLevel: 4 },
+    { id: 'v-n4-0020', word: '折る', reading: 'おる', meaning: ['to snap', 'to break', 'to bend'], jlptLevel: 4 },
+    { id: 'v-n4-0021', word: '～会', reading: '～かい', meaning: ['~ meeting'], jlptLevel: 4 },
+    { id: 'v-n4-0022', word: 'うかがう', reading: 'うかがう', meaning: ['to ask'], jlptLevel: 4 },
+    { id: 'v-n4-0023', word: '聞こえる', reading: 'きこえる', meaning: ['to be heard', 'to be audible'], jlptLevel: 4 },
+    { id: 'v-n4-0024', word: '僕', reading: 'ぼく', meaning: ['I (used by men towards those of equal or lower status)'], jlptLevel: 4 },
+    { id: 'v-n4-0025', word: '必ず', reading: 'かならず', meaning: ['surely', 'certainly'], jlptLevel: 4 },
+    { id: 'v-n4-0026', word: '壊す', reading: 'こわす', meaning: ['to break', 'to break down'], jlptLevel: 4 },
+    { id: 'v-n4-0027', word: '怒る', reading: 'おこる', meaning: ['to get angry', 'to scold angrily'], jlptLevel: 4 },
+    { id: 'v-n4-0028', word: '床屋', reading: 'とこや', meaning: ['barber\'s (shop)'], jlptLevel: 4 },
+    { id: 'v-n4-0029', word: 'オートバイ', reading: 'オートバイ', meaning: ['motorcycle (lit: auto-bi(ke))'], jlptLevel: 4 },
+    { id: 'v-n4-0030', word: '運動', reading: 'うんどうする', meaning: ['exercise'], jlptLevel: 4 },
+    { id: 'v-n4-0031', word: '止む', reading: 'やむ', meaning: ['to cease', 'to stop'], jlptLevel: 4 },
+    { id: 'v-n4-0032', word: 'もし', reading: 'もし', meaning: ['if'], jlptLevel: 4 },
+    { id: 'v-n4-0033', word: '表', reading: 'おもて', meaning: ['surface', 'front', 'outside'], jlptLevel: 4 },
+    { id: 'v-n4-0034', word: '大学生', reading: 'だいがくせい', meaning: ['college student', 'university student'], jlptLevel: 4 },
+    { id: 'v-n4-0035', word: '運転手', reading: 'うんてんしゅ', meaning: ['driver (by occupation)'], jlptLevel: 4 },
+    { id: 'v-n4-0036', word: '予習', reading: 'よしゅう', meaning: ['preparation of lessons (for class)'], jlptLevel: 4 },
+    { id: 'v-n4-0037', word: '心配', reading: 'しんぱいする', meaning: ['worry', 'concern'], jlptLevel: 4 },
+    { id: 'v-n4-0038', word: '別', reading: 'べつ', meaning: ['distinction', 'different'], jlptLevel: 4 },
+    { id: 'v-n4-0039', word: '非常に', reading: 'ひじょうに', meaning: ['extremely', 'very'], jlptLevel: 4 },
+    { id: 'v-n4-0040', word: 'お宅', reading: 'おたく', meaning: ['(someone else\'s) house', 'home -- polite word for 家 (いえ) --'], jlptLevel: 4 },
+    { id: 'v-n4-0041', word: '柔らかい', reading: 'やわらかい', meaning: ['soft (in reference to texture)', 'tender'], jlptLevel: 4 },
+    { id: 'v-n4-0042', word: '拾う', reading: 'ひろう', meaning: ['to pick up (something)', 'to find'], jlptLevel: 4 },
+    { id: 'v-n4-0043', word: '～ございます', reading: '～ございます', meaning: ['to be (polite)', 'to exist'], jlptLevel: 4 },
+    { id: 'v-n4-0044', word: '気', reading: 'き', meaning: ['spirit', 'mood'], jlptLevel: 4 },
+    { id: 'v-n4-0045', word: '比べる', reading: 'くらべる', meaning: ['to compare'], jlptLevel: 4 },
+    { id: 'v-n4-0046', word: 'ほとんど', reading: 'ほとんど', meaning: ['mostly', 'almost'], jlptLevel: 4 },
+    { id: 'v-n4-0047', word: 'つもり', reading: 'つもり', meaning: ['intention', 'plan'], jlptLevel: 4 },
+    { id: 'v-n4-0048', word: '郊外', reading: 'こうがい', meaning: ['suburb', 'outskirts'], jlptLevel: 4 },
+    { id: 'v-n4-0049', word: 'だめ', reading: 'だめ', meaning: ['useless', 'no good', 'hopeless'], jlptLevel: 4 },
+    { id: 'v-n4-0050', word: '売り場', reading: 'うりば', meaning: ['place where things are sold'], jlptLevel: 4 },
+    { id: 'v-n4-0051', word: '正月', reading: 'しょうがつ', meaning: ['New Year', 'New Year\'s Day'], jlptLevel: 4 },
+    { id: 'v-n4-0052', word: '規則', reading: 'きそく', meaning: ['rule', 'regulation'], jlptLevel: 4 },
+    { id: 'v-n4-0053', word: 'うん', reading: 'うん', meaning: ['yes (informal)', 'all right (ok)'], jlptLevel: 4 },
+    { id: 'v-n4-0054', word: '発音', reading: 'はつおん', meaning: ['pronunciation'], jlptLevel: 4 },
+    { id: 'v-n4-0055', word: '焼く', reading: 'やく', meaning: ['to bake', 'to grill'], jlptLevel: 4 },
+    { id: 'v-n4-0056', word: '屋上', reading: 'おくじょう', meaning: ['rooftop'], jlptLevel: 4 },
+    { id: 'v-n4-0057', word: '失礼', reading: 'しつれい', meaning: ['discourtesy', 'impoliteness', 'Excuse me'], jlptLevel: 4 },
+    { id: 'v-n4-0058', word: 'ごみ', reading: 'ごみ', meaning: ['trash', 'garbage'], jlptLevel: 4 },
+    { id: 'v-n4-0059', word: 'アフリカ', reading: 'アフリカ', meaning: ['Africa'], jlptLevel: 4 },
+    { id: 'v-n4-0060', word: '点', reading: 'てん', meaning: ['mark', 'score', 'grade', 'point', 'dot'], jlptLevel: 4 },
+    { id: 'v-n4-0061', word: '一生懸命', reading: 'いっしょうけんめい', meaning: ['very hard (as in "to work hard")', 'with utmost effort'], jlptLevel: 4 },
+    { id: 'v-n4-0062', word: '今度', reading: 'こんど', meaning: ['now', 'this time', 'near future', 'one of these days', 'next time'], jlptLevel: 4 },
+    { id: 'v-n4-0063', word: '機会', reading: 'きかい', meaning: ['chance', 'opportunity'], jlptLevel: 4 },
+    { id: 'v-n4-0064', word: '建てる', reading: 'たてる', meaning: ['to build'], jlptLevel: 4 },
+    { id: 'v-n4-0065', word: '複雑', reading: 'ふくざつ', meaning: ['complexity', 'complication'], jlptLevel: 4 },
+    { id: 'v-n4-0066', word: '彼', reading: 'かれ', meaning: ['he', 'boyfriend'], jlptLevel: 4 },
+    { id: 'v-n4-0067', word: 'いらっしゃる', reading: 'いらっしゃる', meaning: ['-- honorific expression for いく', 'くる', 'and いる --'], jlptLevel: 4 },
+    { id: 'v-n4-0068', word: '布団', reading: 'ふとん', meaning: ['futon'], jlptLevel: 4 },
+    { id: 'v-n4-0069', word: '大事', reading: 'だいじ', meaning: ['important', 'valuable', 'serious matter'], jlptLevel: 4 },
+    { id: 'v-n4-0070', word: '贈り物', reading: 'おくりもの', meaning: ['a gift', 'a present'], jlptLevel: 4 },
+    { id: 'v-n4-0071', word: '泥棒', reading: 'どろぼう', meaning: ['thief', 'burglar'], jlptLevel: 4 },
+    { id: 'v-n4-0072', word: '～製', reading: '～せい', meaning: ['made in ~'], jlptLevel: 4 },
+    { id: 'v-n4-0073', word: '注意', reading: 'ちゅうい', meaning: ['caution', 'attention'], jlptLevel: 4 },
+    { id: 'v-n4-0074', word: '台風', reading: 'たいふう', meaning: ['typhoon'], jlptLevel: 4 },
+    { id: 'v-n4-0075', word: '日', reading: 'ひ', meaning: ['sun', 'sunshine', 'day'], jlptLevel: 4 },
+    { id: 'v-n4-0076', word: '～軒', reading: '～けん', meaning: ['counter for houses'], jlptLevel: 4 },
+    { id: 'v-n4-0077', word: 'そう', reading: 'そう', meaning: ['really', '(is that) so', 'yes', 'right'], jlptLevel: 4 },
+    { id: 'v-n4-0078', word: '通る', reading: 'とおる', meaning: ['to pass (by)', 'to go through'], jlptLevel: 4 },
+    { id: 'v-n4-0079', word: '過ぎる', reading: 'すぎる', meaning: ['to exceed', 'to go beyond'], jlptLevel: 4 },
+    { id: 'v-n4-0080', word: 'レポート', reading: 'レポート', meaning: ['report'], jlptLevel: 4 },
+    { id: 'v-n4-0081', word: '葉', reading: 'は', meaning: ['leaf'], jlptLevel: 4 },
+    { id: 'v-n4-0082', word: '必要', reading: 'ひつよう', meaning: ['necessary'], jlptLevel: 4 },
+    { id: 'v-n4-0083', word: '課長', reading: 'かちょう', meaning: ['section manager'], jlptLevel: 4 },
+    { id: 'v-n4-0084', word: '地震', reading: 'じしん', meaning: ['earthquake'], jlptLevel: 4 },
+    { id: 'v-n4-0085', word: 'すると', reading: 'すると', meaning: ['and', 'then'], jlptLevel: 4 },
+    { id: 'v-n4-0086', word: '止める', reading: 'やめる', meaning: ['to end', 'to stop'], jlptLevel: 4 },
+    { id: 'v-n4-0087', word: 'ガラス', reading: 'ガラス', meaning: ['glass', 'pane'], jlptLevel: 4 },
+    { id: 'v-n4-0088', word: '～学部', reading: '～がくぶ', meaning: ['department of a university'], jlptLevel: 4 },
+    { id: 'v-n4-0089', word: '厳しい', reading: 'きびしい', meaning: ['hard', 'rigorous', 'strict'], jlptLevel: 4 },
+    { id: 'v-n4-0090', word: 'エスカレーター', reading: 'エスカレーター', meaning: ['escalator'], jlptLevel: 4 },
+    { id: 'v-n4-0091', word: '人口', reading: 'じんこう', meaning: ['population'], jlptLevel: 4 },
+    { id: 'v-n4-0092', word: '月', reading: 'つき', meaning: ['moon'], jlptLevel: 4 },
+    { id: 'v-n4-0093', word: '絹', reading: 'きぬ', meaning: ['silk'], jlptLevel: 4 },
+    { id: 'v-n4-0094', word: 'ちっとも', reading: 'ちっとも', meaning: ['not at all (neg. verb)'], jlptLevel: 4 },
+    { id: 'v-n4-0095', word: '深い', reading: 'ふかい', meaning: ['deep', 'profound'], jlptLevel: 4 },
+    { id: 'v-n4-0096', word: '壊れる', reading: 'こわれる', meaning: ['to be broken', 'to break'], jlptLevel: 4 },
+    { id: 'v-n4-0097', word: '揺れる', reading: 'ゆれる', meaning: ['to shake', 'to sway'], jlptLevel: 4 },
+    { id: 'v-n4-0098', word: '落る', reading: 'おちる', meaning: ['to fall', 'to drop'], jlptLevel: 4 },
+    { id: 'v-n4-0099', word: 'できるだけ', reading: 'できるだけ', meaning: ['if at all possible', 'as much as possible'], jlptLevel: 4 },
+    { id: 'v-n4-0100', word: '悲しい', reading: 'かなしい', meaning: ['sad', 'sorrowful'], jlptLevel: 4 },
+    { id: 'v-n4-0101', word: '中学校', reading: 'ちゅうがっこう', meaning: ['junior high school pupil'], jlptLevel: 4 },
+    { id: 'v-n4-0102', word: 'ガス', reading: 'ガス', meaning: ['gas'], jlptLevel: 4 },
+    { id: 'v-n4-0103', word: '祈る', reading: 'いのる', meaning: ['to pray', 'to wish'], jlptLevel: 4 },
+    { id: 'v-n4-0104', word: '盛ん', reading: 'さかん', meaning: ['prosperous', 'active', 'thriving'], jlptLevel: 4 },
+    { id: 'v-n4-0105', word: 'アルバイト', reading: 'アルバイト', meaning: ['part-time job'], jlptLevel: 4 },
+    { id: 'v-n4-0106', word: '起こす', reading: 'おこす', meaning: ['to wake (someone) up'], jlptLevel: 4 },
+    { id: 'v-n4-0107', word: '致す', reading: 'いたす', meaning: ['-- extra-modest expression for する --'], jlptLevel: 4 },
+    { id: 'v-n4-0108', word: '噛む', reading: 'かむ', meaning: ['to bite', 'to chew'], jlptLevel: 4 },
+    { id: 'v-n4-0109', word: '赤ちゃん', reading: 'あかちゃん', meaning: ['baby', 'infant'], jlptLevel: 4 },
+    { id: 'v-n4-0110', word: '浅い', reading: 'あさい', meaning: ['shallow', 'superficial'], jlptLevel: 4 },
+    { id: 'v-n4-0111', word: '嘘', reading: 'うそ', meaning: ['lie'], jlptLevel: 4 },
+    { id: 'v-n4-0112', word: '小説', reading: 'しょうせつ', meaning: ['novel'], jlptLevel: 4 },
+    { id: 'v-n4-0113', word: '親', reading: 'おや', meaning: ['a parent'], jlptLevel: 4 },
+    { id: 'v-n4-0114', word: 'それに', reading: 'それに', meaning: ['moreover', 'besides'], jlptLevel: 4 },
+    { id: 'v-n4-0115', word: '西洋', reading: 'せいよう', meaning: ['the West', 'Western countries'], jlptLevel: 4 },
+    { id: 'v-n4-0116', word: '思う', reading: 'おもう', meaning: ['to think', 'to feel'], jlptLevel: 4 },
+    { id: 'v-n4-0117', word: 'パート (タイム)', reading: 'パート (タイム)', meaning: ['part time (esp. female part time employees)'], jlptLevel: 4 },
+    { id: 'v-n4-0118', word: '時代', reading: 'じだい', meaning: ['age', 'period', 'epoch', 'era'], jlptLevel: 4 },
+    { id: 'v-n4-0119', word: '申し上げる', reading: 'もうしあげる', meaning: ['(humble)to say', 'to tell'], jlptLevel: 4 },
+    { id: 'v-n4-0120', word: '～式', reading: '～しき', meaning: ['~ ceremony', '~ style'], jlptLevel: 4 },
+    { id: 'v-n4-0121', word: '出席', reading: 'しゅっせきする', meaning: ['attendance'], jlptLevel: 4 },
+    { id: 'v-n4-0122', word: '～家', reading: '～か', meaning: ['person who is specialized in ~'], jlptLevel: 4 },
+    { id: 'v-n4-0123', word: '迎える', reading: 'むかえる', meaning: ['to welcome', 'to meet', 'to greet'], jlptLevel: 4 },
+    { id: 'v-n4-0124', word: '触る', reading: 'さわる', meaning: ['to touch', 'to feel'], jlptLevel: 4 },
+    { id: 'v-n4-0125', word: '建て', reading: '～だて', meaning: ['~ storied', 'separate housing'], jlptLevel: 4 },
+    { id: 'v-n4-0126', word: '社長', reading: 'しゃちょう', meaning: ['president of a company'], jlptLevel: 4 },
+    { id: 'v-n4-0127', word: '動物園', reading: 'どうぶつえん', meaning: ['zoo'], jlptLevel: 4 },
+    { id: 'v-n4-0128', word: '捕まえる', reading: 'つかまえる', meaning: ['to catch', 'to arrest'], jlptLevel: 4 },
+    { id: 'v-n4-0129', word: '季節', reading: 'きせつ', meaning: ['season (in reference to weather)'], jlptLevel: 4 },
+    { id: 'v-n4-0130', word: '寄る', reading: 'よる', meaning: ['to stop by'], jlptLevel: 4 },
+    { id: 'v-n4-0131', word: '決まる', reading: 'きまる', meaning: ['to be set', 'fixed (v.i.)'], jlptLevel: 4 },
+    { id: 'v-n4-0132', word: '開く', reading: 'ひらく', meaning: ['to open', 'to hold (an event)'], jlptLevel: 4 },
+    { id: 'v-n4-0133', word: '逃げる', reading: 'にげる', meaning: ['to escape', 'to run away'], jlptLevel: 4 },
+    { id: 'v-n4-0134', word: 'だから', reading: 'だから', meaning: ['so', 'therefore'], jlptLevel: 4 },
+    { id: 'v-n4-0135', word: '残念', reading: 'ざんねん', meaning: ['regret', 'regrettable'], jlptLevel: 4 },
+    { id: 'v-n4-0136', word: '畳', reading: 'たたみ', meaning: ['tatami mat (Japanese straw mat)'], jlptLevel: 4 },
+    { id: 'v-n4-0137', word: '丁寧', reading: 'ていねい', meaning: ['polite', 'courteous', 'careful'], jlptLevel: 4 },
+    { id: 'v-n4-0138', word: '地理', reading: 'ちり', meaning: ['geography'], jlptLevel: 4 },
+    { id: 'v-n4-0139', word: 'さっき', reading: 'さっき', meaning: ['a little while ago'], jlptLevel: 4 },
+    { id: 'v-n4-0140', word: '怖い', reading: 'こわい', meaning: ['scary', 'frightening'], jlptLevel: 4 },
+    { id: 'v-n4-0141', word: '包む', reading: 'つつむ', meaning: ['to wrap', 'to cover'], jlptLevel: 4 },
+    { id: 'v-n4-0142', word: 'なるべく', reading: 'なるべく', meaning: ['if possible', 'as much as possible'], jlptLevel: 4 },
+    { id: 'v-n4-0143', word: '無理', reading: 'むり', meaning: ['unreasonable', 'impossible'], jlptLevel: 4 },
+    { id: 'v-n4-0144', word: 'サンドイッチ', reading: 'サンドイッチ', meaning: ['sandwich'], jlptLevel: 4 },
+    { id: 'v-n4-0145', word: '会議室', reading: 'かいぎしつ', meaning: ['conference room'], jlptLevel: 4 },
+    { id: 'v-n4-0146', word: '品物', reading: 'しなもの', meaning: ['goods'], jlptLevel: 4 },
+    { id: 'v-n4-0147', word: '人形', reading: 'にんぎょう', meaning: ['doll', 'figure'], jlptLevel: 4 },
+    { id: 'v-n4-0148', word: '利用', reading: 'りよう', meaning: ['use', 'utilization'], jlptLevel: 4 },
+    { id: 'v-n4-0149', word: '飾る', reading: 'かざる', meaning: ['to decorate', 'to adorn'], jlptLevel: 4 },
+    { id: 'v-n4-0150', word: '止める', reading: 'とめる', meaning: ['to stop (something)'], jlptLevel: 4 },
+    { id: 'v-n4-0151', word: '恥ずかしい', reading: 'はずかしい', meaning: ['ashamed', 'embarrassed'], jlptLevel: 4 },
+    { id: 'v-n4-0152', word: 'いくら～ても', reading: 'いくら～ても', meaning: ['however much one may ~'], jlptLevel: 4 },
+    { id: 'v-n4-0153', word: '用事', reading: 'ようじ', meaning: ['business to take care of', 'tasks', 'errands'], jlptLevel: 4 },
+    { id: 'v-n4-0154', word: 'ビル', reading: 'ビル', meaning: ['(abbr.) building'], jlptLevel: 4 },
+    { id: 'v-n4-0155', word: 'けんかする', reading: 'けんかする', meaning: ['quarrel'], jlptLevel: 4 },
+    { id: 'v-n4-0156', word: '頑張る', reading: 'がんばる', meaning: ['to try one\'s best', 'to try hard', 'to persist'], jlptLevel: 4 },
+    { id: 'v-n4-0157', word: '投げる', reading: 'なげる', meaning: ['to pitch', 'to cast away'], jlptLevel: 4 },
+    { id: 'v-n4-0158', word: '故障', reading: 'こしょうする', meaning: ['breakdown'], jlptLevel: 4 },
+    { id: 'v-n4-0159', word: '力', reading: 'ちから', meaning: ['strength', 'power'], jlptLevel: 4 },
+    { id: 'v-n4-0160', word: '受ける', reading: 'うける', meaning: ['to take (an examination', 'interview', 'etc.)', 'to receive'], jlptLevel: 4 },
+    { id: 'v-n4-0161', word: '気分', reading: 'きぶん', meaning: ['feeling', 'mood'], jlptLevel: 4 },
+    { id: 'v-n4-0162', word: '間違える', reading: 'まちがえる', meaning: ['to make a mistake'], jlptLevel: 4 },
+    { id: 'v-n4-0163', word: 'そんな', reading: 'そんな', meaning: ['such', 'like that', 'that sort of'], jlptLevel: 4 },
+    { id: 'v-n4-0164', word: '星', reading: 'ほし', meaning: ['star'], jlptLevel: 4 },
+    { id: 'v-n4-0165', word: '場合', reading: 'ばあい', meaning: ['case', 'situation'], jlptLevel: 4 },
+    { id: 'v-n4-0166', word: 'やっと', reading: 'やっと', meaning: ['at last', 'finally'], jlptLevel: 4 },
+    { id: 'v-n4-0167', word: '足りる', reading: 'たりる', meaning: ['to be sufficient', 'to be enough'], jlptLevel: 4 },
+    { id: 'v-n4-0168', word: '行う', reading: 'おこなう', meaning: ['to carry out', 'to conduct (typically used in written language)'], jlptLevel: 4 },
+    { id: 'v-n4-0169', word: 'ぶどう', reading: 'ぶどう', meaning: ['grapes'], jlptLevel: 4 },
+    { id: 'v-n4-0170', word: '無くなる', reading: 'なくなる', meaning: ['to disappear', 'to get lost'], jlptLevel: 4 },
+    { id: 'v-n4-0171', word: '準備', reading: 'じゅんびする', meaning: ['prepare'], jlptLevel: 4 },
+    { id: 'v-n4-0172', word: '世界', reading: 'せかい', meaning: ['world'], jlptLevel: 4 },
+    { id: 'v-n4-0173', word: '住所', reading: 'じゅうしょ', meaning: ['address', 'place of residence'], jlptLevel: 4 },
+    { id: 'v-n4-0174', word: '再来月', reading: 'さらいげつ', meaning: ['the month after next'], jlptLevel: 4 },
+    { id: 'v-n4-0175', word: '林', reading: 'はやし', meaning: ['woods', 'forest'], jlptLevel: 4 },
+    { id: 'v-n4-0176', word: '倍', reading: 'ばい', meaning: ['double'], jlptLevel: 4 },
+    { id: 'v-n4-0177', word: '痩せる', reading: 'やせる', meaning: ['to lose weight'], jlptLevel: 4 },
+    { id: 'v-n4-0178', word: '線', reading: 'せん', meaning: ['line', 'wire'], jlptLevel: 4 },
+    { id: 'v-n4-0179', word: '戦争', reading: 'せんそう', meaning: ['war'], jlptLevel: 4 },
+    { id: 'v-n4-0180', word: '決める', reading: 'きめる', meaning: ['to decide (v.t.)'], jlptLevel: 4 },
+    { id: 'v-n4-0181', word: '調べる', reading: 'しらべる', meaning: ['to check', 'to look up', 'to inquire', 'to search'], jlptLevel: 4 },
+    { id: 'v-n4-0182', word: '寝坊', reading: 'ねぼう', meaning: ['sleeping in late'], jlptLevel: 4 },
+    { id: 'v-n4-0183', word: 'パパ', reading: 'パパ', meaning: ['papa', 'daddy'], jlptLevel: 4 },
+    { id: 'v-n4-0184', word: '光る', reading: 'ひかる', meaning: ['to shine', 'to glitter'], jlptLevel: 4 },
+    { id: 'v-n4-0185', word: '夫', reading: 'おっと', meaning: ['husband'], jlptLevel: 4 },
+    { id: 'v-n4-0186', word: '雲', reading: 'くも', meaning: ['cloud'], jlptLevel: 4 },
+    { id: 'v-n4-0187', word: '坂', reading: 'さか', meaning: ['slope', 'hill'], jlptLevel: 4 },
+    { id: 'v-n4-0188', word: '～(て) しまう', reading: '～(て) しまう', meaning: ['to end up ~'], jlptLevel: 4 },
+    { id: 'v-n4-0189', word: '飛行場', reading: 'ひこうじょう', meaning: ['airport'], jlptLevel: 4 },
+    { id: 'v-n4-0190', word: '柔道', reading: 'じゅうどう', meaning: ['judo'], jlptLevel: 4 },
+    { id: 'v-n4-0191', word: '決して', reading: 'けっして', meaning: ['never'], jlptLevel: 4 },
+    { id: 'v-n4-0192', word: '事務所', reading: 'じむしょ', meaning: ['office'], jlptLevel: 4 },
+    { id: 'v-n4-0193', word: '連絡', reading: 'れんらく', meaning: ['communication', 'contact', 'connection'], jlptLevel: 4 },
+    { id: 'v-n4-0194', word: '小学校', reading: 'しょうがっこう', meaning: ['elementary school'], jlptLevel: 4 },
+    { id: 'v-n4-0195', word: '客', reading: 'きゃく', meaning: ['guest', 'customer'], jlptLevel: 4 },
+    { id: 'v-n4-0196', word: '昔', reading: 'むかし', meaning: ['old days', 'past'], jlptLevel: 4 },
+    { id: 'v-n4-0197', word: '美しい', reading: 'うつくしい', meaning: ['beautiful', 'lovely'], jlptLevel: 4 },
+    { id: 'v-n4-0198', word: '捨てる', reading: 'すてる', meaning: ['throw away (trash)', 'dump', 'discard'], jlptLevel: 4 },
+    { id: 'v-n4-0199', word: 'なさる', reading: 'なさる', meaning: ['-- honorific expression for する --'], jlptLevel: 4 },
+    { id: 'v-n4-0200', word: '事', reading: 'こと', meaning: ['thing(s)', 'matter(s)', 'fact'], jlptLevel: 4 },
+    { id: 'v-n4-0201', word: 'どんどん', reading: 'どんどん', meaning: ['quickly and steadily', 'at a rapid pace'], jlptLevel: 4 },
+    { id: 'v-n4-0202', word: '試合', reading: 'しあい', meaning: ['match', 'game', 'competition'], jlptLevel: 4 },
+    { id: 'v-n4-0203', word: '適当', reading: 'てきとう', meaning: ['fitness', 'suitability'], jlptLevel: 4 },
+    { id: 'v-n4-0204', word: '素晴らしい', reading: 'すばらしい', meaning: ['wonderful', 'terrific'], jlptLevel: 4 },
+    { id: 'v-n4-0205', word: '美術館', reading: 'びじゅつかん', meaning: ['art gallery', 'art museum'], jlptLevel: 4 },
+    { id: 'v-n4-0206', word: '文法', reading: 'ぶんぽう', meaning: ['grammar'], jlptLevel: 4 },
+    { id: 'v-n4-0207', word: '終わり', reading: 'おわり', meaning: ['end'], jlptLevel: 4 },
+    { id: 'v-n4-0208', word: '壁', reading: 'かべ', meaning: ['wall'], jlptLevel: 4 },
+    { id: 'v-n4-0209', word: '一度', reading: 'いちど', meaning: ['once', 'one time'], jlptLevel: 4 },
+    { id: 'v-n4-0210', word: 'お礼', reading: 'おれい', meaning: ['expression of gratitude', 'thanking', 'gift of appreciation', 'bow'], jlptLevel: 4 },
+    { id: 'v-n4-0211', word: '親切', reading: 'しんせつ', meaning: ['kindness'], jlptLevel: 4 },
+    { id: 'v-n4-0212', word: '知らせる', reading: 'しらせる', meaning: ['to notify'], jlptLevel: 4 },
+    { id: 'v-n4-0213', word: '歯医者', reading: 'はいしゃ', meaning: ['dentist'], jlptLevel: 4 },
+    { id: 'v-n4-0214', word: '熱心', reading: 'ねっしん', meaning: ['enthusiasm'], jlptLevel: 4 },
+    { id: 'v-n4-0215', word: '始める', reading: 'はじめる', meaning: ['to start', 'to begin'], jlptLevel: 4 },
+    { id: 'v-n4-0216', word: 'もらう', reading: 'もらう', meaning: ['to receive'], jlptLevel: 4 },
+    { id: 'v-n4-0217', word: '泣く', reading: 'なく', meaning: ['to cry'], jlptLevel: 4 },
+    { id: 'v-n4-0218', word: '治る', reading: 'なおる', meaning: ['to get better', 'to recover from illness (v.i.)'], jlptLevel: 4 },
+    { id: 'v-n4-0219', word: '熱', reading: 'ねつ', meaning: ['fever', 'temperature'], jlptLevel: 4 },
+    { id: 'v-n4-0220', word: 'お祭り', reading: 'おまつり', meaning: ['festival'], jlptLevel: 4 },
+    { id: 'v-n4-0221', word: '水道', reading: 'すいどう', meaning: ['water service', 'water line'], jlptLevel: 4 },
+    { id: 'v-n4-0222', word: '匂い', reading: 'におい', meaning: ['odor', 'smell'], jlptLevel: 4 },
+    { id: 'v-n4-0223', word: 'ベル', reading: 'ベル', meaning: ['bell'], jlptLevel: 4 },
+    { id: 'v-n4-0224', word: '赤ん坊', reading: 'あかんぼう', meaning: ['baby'], jlptLevel: 4 },
+    { id: 'v-n4-0225', word: 'おかしい', reading: 'おかしい', meaning: ['strange', 'odd', 'funny'], jlptLevel: 4 },
+    { id: 'v-n4-0226', word: '事故', reading: 'じこ', meaning: ['accident'], jlptLevel: 4 },
+    { id: 'v-n4-0227', word: '変', reading: 'へん', meaning: ['strange', 'odd'], jlptLevel: 4 },
+    { id: 'v-n4-0228', word: '辞典', reading: 'じてん', meaning: ['encyclopedia', 'reference book'], jlptLevel: 4 },
+    { id: 'v-n4-0229', word: '残る', reading: 'のこる', meaning: ['to remain (v.i.)', 'to be left'], jlptLevel: 4 },
+    { id: 'v-n4-0230', word: '立てる', reading: 'たてる', meaning: ['to stand (something) up', 'to erect (something)'], jlptLevel: 4 },
+    { id: 'v-n4-0231', word: 'くれる', reading: 'くれる', meaning: ['to give', 'to do for'], jlptLevel: 4 },
+    { id: 'v-n4-0232', word: '～員', reading: '～いん', meaning: ['member of ~'], jlptLevel: 4 },
+    { id: 'v-n4-0233', word: '原因', reading: 'げんいん', meaning: ['cause', 'origin', 'source'], jlptLevel: 4 },
+    { id: 'v-n4-0234', word: '驚く', reading: 'おどろく', meaning: ['to be surprised', 'to be astonished'], jlptLevel: 4 },
+    { id: 'v-n4-0235', word: 'いただく', reading: '頂く', meaning: ['-- extra-modest expression for たべる and のむ', 'humble expression for もらう --'], jlptLevel: 4 },
+    { id: 'v-n4-0236', word: '祖母', reading: 'そぼ', meaning: ['grandmother'], jlptLevel: 4 },
+    { id: 'v-n4-0237', word: '場所', reading: 'ばしょ', meaning: ['place', 'location'], jlptLevel: 4 },
+    { id: 'v-n4-0238', word: '答', reading: 'こたえ', meaning: ['answer', 'response'], jlptLevel: 4 },
+    { id: 'v-n4-0239', word: 'もちろん', reading: 'もちろん', meaning: ['certainly', 'of course'], jlptLevel: 4 },
+    { id: 'v-n4-0240', word: '漬ける', reading: 'つける', meaning: ['to soak', 'to moisten', 'to pickle'], jlptLevel: 4 },
+    { id: 'v-n4-0241', word: '受付', reading: 'うけつけ', meaning: ['reception(ist) desk'], jlptLevel: 4 },
+    { id: 'v-n4-0242', word: '内', reading: 'うち', meaning: ['within', 'inside'], jlptLevel: 4 },
+    { id: 'v-n4-0243', word: 'スクリーン', reading: 'スクリーン', meaning: ['screen'], jlptLevel: 4 },
+    { id: 'v-n4-0244', word: '増える', reading: 'ふえる', meaning: ['to increase', 'to multiply'], jlptLevel: 4 },
+    { id: 'v-n4-0245', word: 'または', reading: 'または', meaning: ['or', 'otherwise'], jlptLevel: 4 },
+    { id: 'v-n4-0246', word: 'けがする', reading: 'けがする', meaning: ['injury (to animate object)', 'hurt'], jlptLevel: 4 },
+    { id: 'v-n4-0247', word: '以下', reading: 'いか', meaning: ['less than', 'below'], jlptLevel: 4 },
+    { id: 'v-n4-0248', word: '選ぶ', reading: 'えらぶ', meaning: ['to choose', 'to select'], jlptLevel: 4 },
+    { id: 'v-n4-0249', word: '～ばかり', reading: '～ばかり', meaning: ['just did ~', 'only'], jlptLevel: 4 },
+    { id: 'v-n4-0250', word: '心', reading: 'こころ', meaning: ['heart', 'mind'], jlptLevel: 4 },
+    { id: 'v-n4-0251', word: '～だす', reading: '～だす', meaning: ['to start doing ~'], jlptLevel: 4 },
+    { id: 'v-n4-0252', word: 'サラダ', reading: 'サラダ', meaning: ['salad'], jlptLevel: 4 },
+    { id: 'v-n4-0253', word: '届ける', reading: 'とどける', meaning: ['to deliver (v.t.)'], jlptLevel: 4 },
+    { id: 'v-n4-0254', word: '挨拶', reading: 'あいさつする', meaning: ['greet(ing)'], jlptLevel: 4 },
+    { id: 'v-n4-0255', word: '景色', reading: 'けしき', meaning: ['scenery', 'landscape'], jlptLevel: 4 },
+    { id: 'v-n4-0256', word: '確か', reading: 'たしか', meaning: ['if I remember correctly', 'certain', 'definite'], jlptLevel: 4 },
+    { id: 'v-n4-0257', word: 'ステーキ', reading: 'ステーキ', meaning: ['steak'], jlptLevel: 4 },
+    { id: 'v-n4-0258', word: '食料品', reading: 'しょくりょうひん', meaning: ['foodstuff', 'groceries'], jlptLevel: 4 },
+    { id: 'v-n4-0259', word: '森', reading: 'もり', meaning: ['forest'], jlptLevel: 4 },
+    { id: 'v-n4-0260', word: '以内', reading: 'いない', meaning: ['within', 'less (no more) than'], jlptLevel: 4 },
+    { id: 'v-n4-0261', word: '予定', reading: 'よてい', meaning: ['plans', 'arrangement', 'schedule'], jlptLevel: 4 },
+    { id: 'v-n4-0262', word: 'オーバー', reading: 'オーバー', meaning: ['overcoat', 'over', 'exceeding', 'exaggeration'], jlptLevel: 4 },
+    { id: 'v-n4-0263', word: '乾く', reading: 'かわく', meaning: ['to get dry'], jlptLevel: 4 },
+    { id: 'v-n4-0264', word: '石', reading: 'いし', meaning: ['stone'], jlptLevel: 4 },
+    { id: 'v-n4-0265', word: '思い出す', reading: 'おもいだす', meaning: ['to recall', 'to remember'], jlptLevel: 4 },
+    { id: 'v-n4-0266', word: '踊る', reading: 'おどる', meaning: ['to dance'], jlptLevel: 4 },
+    { id: 'v-n4-0267', word: '細かい', reading: 'こまかい', meaning: ['small', 'fine', 'minute'], jlptLevel: 4 },
+    { id: 'v-n4-0268', word: '塗る', reading: 'ぬる', meaning: ['to paint', 'to plaster'], jlptLevel: 4 },
+    { id: 'v-n4-0269', word: 'ご主人', reading: 'ごしゅじん', meaning: ['(your', 'her) husband'], jlptLevel: 4 },
+    { id: 'v-n4-0270', word: '珍しい', reading: 'めずらしい', meaning: ['unusual', 'rare'], jlptLevel: 4 },
+    { id: 'v-n4-0271', word: '用', reading: 'よう', meaning: ['errand', 'task', 'business (to take care of)'], jlptLevel: 4 },
+    { id: 'v-n4-0272', word: '公務員', reading: 'こうむいん', meaning: ['government worker', 'public servant'], jlptLevel: 4 },
+    { id: 'v-n4-0273', word: 'お嬢さん', reading: 'おじょうさん', meaning: ['(someone\'s) daughter (polite)'], jlptLevel: 4 },
+    { id: 'v-n4-0274', word: '用意', reading: 'ようい', meaning: ['preparation'], jlptLevel: 4 },
+    { id: 'v-n4-0275', word: '探す', reading: 'さがす', meaning: ['to search', 'to seek', 'to look for'], jlptLevel: 4 },
+    { id: 'v-n4-0276', word: '形', reading: 'かたち', meaning: ['shape'], jlptLevel: 4 },
+    { id: 'v-n4-0277', word: '運転', reading: 'うんてんする', meaning: ['driving'], jlptLevel: 4 },
+    { id: 'v-n4-0278', word: 'すっかり', reading: 'すっかり', meaning: ['all', 'completely'], jlptLevel: 4 },
+    { id: 'v-n4-0279', word: 'アナウンサー', reading: 'アナウンサー', meaning: ['announcer'], jlptLevel: 4 },
+    { id: 'v-n4-0280', word: 'お土産', reading: 'おみやげ', meaning: ['souvenir'], jlptLevel: 4 },
+    { id: 'v-n4-0281', word: '消しゴム', reading: 'けしゴム', meaning: ['eraser'], jlptLevel: 4 },
+    { id: 'v-n4-0282', word: '旅館', reading: 'りょかん', meaning: ['a Japanese inn'], jlptLevel: 4 },
+    { id: 'v-n4-0283', word: '海岸', reading: 'かいがん', meaning: ['coast', 'seashore'], jlptLevel: 4 },
+    { id: 'v-n4-0284', word: '寂しい', reading: 'さびしい', meaning: ['lonely', 'lonesome'], jlptLevel: 4 },
+    { id: 'v-n4-0285', word: '火', reading: 'ひ', meaning: ['fire'], jlptLevel: 4 },
+    { id: 'v-n4-0286', word: '育てる', reading: 'そだてる', meaning: ['to raise (v.t.)', 'to bring up'], jlptLevel: 4 },
+    { id: 'v-n4-0287', word: '味噌', reading: 'みそ', meaning: ['miso', 'bean paste'], jlptLevel: 4 },
+    { id: 'v-n4-0288', word: 'お祝い', reading: 'おいわい', meaning: ['congratulation', 'celebration'], jlptLevel: 4 },
+    { id: 'v-n4-0289', word: '乗り物', reading: 'のりもの', meaning: ['vehicle'], jlptLevel: 4 },
+    { id: 'v-n4-0290', word: '案内', reading: 'あんないする', meaning: ['information', 'guidance'], jlptLevel: 4 },
+    { id: 'v-n4-0291', word: '通う', reading: 'かよう', meaning: ['to go back and forth', 'to commute'], jlptLevel: 4 },
+    { id: 'v-n4-0292', word: '連れる', reading: 'つれる', meaning: ['to lead', 'to take (a person)'], jlptLevel: 4 },
+    { id: 'v-n4-0293', word: '技術', reading: 'ぎじゅつ', meaning: ['technique', 'technology', 'skill'], jlptLevel: 4 },
+    { id: 'v-n4-0294', word: '小鳥', reading: 'ことり', meaning: ['small bird'], jlptLevel: 4 },
+    { id: 'v-n4-0295', word: '下宿', reading: 'げしゅく', meaning: ['lodging', 'boarding house'], jlptLevel: 4 },
+    { id: 'v-n4-0296', word: 'ジャム', reading: 'ジャム', meaning: ['jam'], jlptLevel: 4 },
+    { id: 'v-n4-0297', word: '招待', reading: 'しょうたいする', meaning: ['invitation'], jlptLevel: 4 },
+    { id: 'v-n4-0298', word: '鏡', reading: 'かがみ', meaning: ['mirror'], jlptLevel: 4 },
+    { id: 'v-n4-0299', word: 'はず', reading: 'はず', meaning: ['it should be so'], jlptLevel: 4 },
+    { id: 'v-n4-0300', word: '法律', reading: 'ほうりつ', meaning: ['law'], jlptLevel: 4 },
+    { id: 'v-n4-0301', word: '進む', reading: 'すすむ', meaning: ['to advance', 'to proceed'], jlptLevel: 4 },
+    { id: 'v-n4-0302', word: '楽む', reading: 'たのしむ', meaning: ['to enjoy'], jlptLevel: 4 },
+    { id: 'v-n4-0303', word: '貿易', reading: 'ぼうえき', meaning: ['trade'], jlptLevel: 4 },
+    { id: 'v-n4-0304', word: '反対', reading: 'はんたい', meaning: ['oppose', 'opposition', 'resistance'], jlptLevel: 4 },
+    { id: 'v-n4-0305', word: 'おる', reading: 'おる', meaning: ['-- extra-modest expression for いる --'], jlptLevel: 4 },
+    { id: 'v-n4-0306', word: '申す', reading: 'もうす', meaning: ['-- extra-modest (humble) expression for 言う (いう) --'], jlptLevel: 4 },
+    { id: 'v-n4-0307', word: '試験', reading: 'しけん', meaning: ['an exam'], jlptLevel: 4 },
+    { id: 'v-n4-0308', word: '真面目', reading: 'まじめ', meaning: ['diligent', 'serious'], jlptLevel: 4 },
+    { id: 'v-n4-0309', word: '店員', reading: 'てんいん', meaning: ['clerk', 'shop-employee'], jlptLevel: 4 },
+    { id: 'v-n4-0310', word: '泊まる', reading: 'とまる', meaning: ['to stay (over night) (v.i.)'], jlptLevel: 4 },
+    { id: 'v-n4-0311', word: 'よろしい', reading: 'よろしい', meaning: ['(hon.) good', 'OK', 'all right'], jlptLevel: 4 },
+    { id: 'v-n4-0312', word: '今夜', reading: 'こんや', meaning: ['this evening', 'tonight'], jlptLevel: 4 },
+    { id: 'v-n4-0313', word: 'おつり', reading: 'おつり', meaning: ['change', 'balance of money returned to the purchaser'], jlptLevel: 4 },
+    { id: 'v-n4-0314', word: 'チェックする', reading: 'チェックする', meaning: ['check'], jlptLevel: 4 },
+    { id: 'v-n4-0315', word: '会話', reading: 'かいわ', meaning: ['conversation'], jlptLevel: 4 },
+    { id: 'v-n4-0316', word: '空気', reading: 'くうき', meaning: ['air', 'atmosphere'], jlptLevel: 4 },
+    { id: 'v-n4-0317', word: '交通', reading: 'こうつう', meaning: ['traffic', 'transportation'], jlptLevel: 4 },
+    { id: 'v-n4-0318', word: 'ワープロ', reading: 'ワープロ', meaning: ['word processor'], jlptLevel: 4 },
+    { id: 'v-n4-0319', word: '喜ぶ', reading: 'よろこぶ', meaning: ['to rejoice', 'to be delighted', 'to be glad'], jlptLevel: 4 },
+    { id: 'v-n4-0320', word: '急行', reading: 'きゅうこう', meaning: ['express train or bus'], jlptLevel: 4 },
+    { id: 'v-n4-0321', word: '皆', reading: 'みな', meaning: ['everyone'], jlptLevel: 4 },
+    { id: 'v-n4-0322', word: '味', reading: 'あじ', meaning: ['flavor', 'taste'], jlptLevel: 4 },
+    { id: 'v-n4-0323', word: '空港', reading: 'くうこう', meaning: ['airport'], jlptLevel: 4 },
+    { id: 'v-n4-0324', word: '手袋', reading: 'てぶくろ', meaning: ['glove(s)'], jlptLevel: 4 },
+    { id: 'v-n4-0325', word: '校長', reading: 'こうちょう', meaning: ['principal', 'headmaster'], jlptLevel: 4 },
+    { id: 'v-n4-0326', word: 'ごちそう', reading: 'ごちそう', meaning: ['feast', 'treating (someone)'], jlptLevel: 4 },
+    { id: 'v-n4-0327', word: '踊り', reading: 'おどり', meaning: ['dance'], jlptLevel: 4 },
+    { id: 'v-n4-0328', word: '興味', reading: 'きょうみ', meaning: ['interest (in something)'], jlptLevel: 4 },
+    { id: 'v-n4-0329', word: '引っ越す', reading: 'ひっこす', meaning: ['to move to a new place of residence'], jlptLevel: 4 },
+    { id: 'v-n4-0330', word: '冷房', reading: 'れいぼう', meaning: ['cooling', 'air conditioning'], jlptLevel: 4 },
+    { id: 'v-n4-0331', word: '都合', reading: 'つごう', meaning: ['circumstances', 'convenience'], jlptLevel: 4 },
+    { id: 'v-n4-0332', word: '遠慮', reading: 'えんりょする', meaning: ['restraint', 'reserve', 'hesitate'], jlptLevel: 4 },
+    { id: 'v-n4-0333', word: '亡くなる', reading: 'なくなる', meaning: ['to pass away'], jlptLevel: 4 },
+    { id: 'v-n4-0334', word: '科学', reading: 'かがく', meaning: ['science'], jlptLevel: 4 },
+    { id: 'v-n4-0335', word: 'はっきり', reading: 'はっきり', meaning: ['clearly', 'distinctly'], jlptLevel: 4 },
+    { id: 'v-n4-0336', word: '差し上げる', reading: 'さしあげる', meaning: ['-- humble expression for あげる --'], jlptLevel: 4 },
+    { id: 'v-n4-0337', word: '気持ち', reading: 'きもち', meaning: ['feeling', 'sensation', 'mood'], jlptLevel: 4 },
+    { id: 'v-n4-0338', word: '祖父', reading: 'そふ', meaning: ['grandfather'], jlptLevel: 4 },
+    { id: 'v-n4-0339', word: '港', reading: 'みなと', meaning: ['harbor', 'port'], jlptLevel: 4 },
+    { id: 'v-n4-0340', word: '予約', reading: 'よやく', meaning: ['reservation'], jlptLevel: 4 },
+    { id: 'v-n4-0341', word: '凄い', reading: 'すごい', meaning: ['terrific', 'great'], jlptLevel: 4 },
+    { id: 'v-n4-0342', word: '入学', reading: 'にゅうがくする', meaning: ['entry to school or university'], jlptLevel: 4 },
+    { id: 'v-n4-0343', word: '片付ける', reading: 'かたづける', meaning: ['to (clean) tidy up (v.t.)', 'to put away'], jlptLevel: 4 },
+    { id: 'v-n4-0344', word: '写す', reading: 'うつす', meaning: ['to copy (v.t.)', 'to photograph'], jlptLevel: 4 },
+    { id: 'v-n4-0345', word: 'パソコン', reading: 'パソコン', meaning: ['(personal) computer'], jlptLevel: 4 },
+    { id: 'v-n4-0346', word: '部長', reading: 'ぶちょう', meaning: ['department (division) manager'], jlptLevel: 4 },
+    { id: 'v-n4-0347', word: '火事', reading: 'かじ', meaning: ['fire'], jlptLevel: 4 },
+    { id: 'v-n4-0348', word: '足す', reading: 'たす', meaning: ['to add (numbers)'], jlptLevel: 4 },
+    { id: 'v-n4-0349', word: '教会', reading: 'きょうかい', meaning: ['church'], jlptLevel: 4 },
+    { id: 'v-n4-0350', word: '彼ら', reading: 'かれら', meaning: ['they (usually male)'], jlptLevel: 4 },
+    { id: 'v-n4-0351', word: '一杯', reading: 'いっぱい', meaning: ['full', 'to the utmost'], jlptLevel: 4 },
+    { id: 'v-n4-0352', word: 'アメリカ', reading: 'アメリカ', meaning: ['America', 'U.S.A.'], jlptLevel: 4 },
+    { id: 'v-n4-0353', word: '男性', reading: 'だんせい', meaning: ['man', 'male'], jlptLevel: 4 },
+    { id: 'v-n4-0354', word: '理由', reading: 'りゆう', meaning: ['reason'], jlptLevel: 4 },
+    { id: 'v-n4-0355', word: '生産', reading: 'せいさんする', meaning: ['production', 'to produce'], jlptLevel: 4 },
+    { id: 'v-n4-0356', word: '着物', reading: 'きもの', meaning: ['kimono', 'Japanese traditional dress'], jlptLevel: 4 },
+    { id: 'v-n4-0357', word: 'おもちゃ', reading: 'おもちゃ', meaning: ['a toy'], jlptLevel: 4 },
+    { id: 'v-n4-0358', word: '暮れる', reading: 'くれる', meaning: ['to get dark', 'to come to an end'], jlptLevel: 4 },
+    { id: 'v-n4-0359', word: '釣る', reading: 'つる', meaning: ['to fish'], jlptLevel: 4 },
+    { id: 'v-n4-0360', word: '～ちゃん', reading: '～ちゃん', meaning: ['suffix for familiar (female) person'], jlptLevel: 4 },
+    { id: 'v-n4-0361', word: '打つ', reading: 'うつ', meaning: ['to hit', 'to strike'], jlptLevel: 4 },
+    { id: 'v-n4-0362', word: 'あんな', reading: 'あんな', meaning: ['such', 'like that'], jlptLevel: 4 },
+    { id: 'v-n4-0363', word: '謝る', reading: 'あやまる', meaning: ['to apologize'], jlptLevel: 4 },
+    { id: 'v-n4-0364', word: '昼間', reading: 'ひるま', meaning: ['daytime', 'during the day'], jlptLevel: 4 },
+    { id: 'v-n4-0365', word: '教育', reading: 'きょういく', meaning: ['education'], jlptLevel: 4 },
+    { id: 'v-n4-0366', word: '女性', reading: 'じょせい', meaning: ['woman'], jlptLevel: 4 },
+    { id: 'v-n4-0367', word: '米', reading: 'こめ', meaning: ['uncooked rice'], jlptLevel: 4 },
+    { id: 'v-n4-0368', word: '邪魔', reading: 'じゃま', meaning: ['hindrance', 'intrusion'], jlptLevel: 4 },
+    { id: 'v-n4-0369', word: '国際', reading: 'こくさい', meaning: ['international'], jlptLevel: 4 },
+    { id: 'v-n4-0370', word: '隅', reading: 'すみ', meaning: ['corner'], jlptLevel: 4 },
+    { id: 'v-n4-0371', word: '伺う', reading: 'うかがう', meaning: ['humble form of 行く (いく)', '聞く (きく) and 来る (くる)'], jlptLevel: 4 },
+    { id: 'v-n4-0372', word: '再来週', reading: 'さらいしゅう', meaning: ['the week after next'], jlptLevel: 4 },
+    { id: 'v-n4-0373', word: '夢', reading: 'ゆめ', meaning: ['a dream'], jlptLevel: 4 },
+    { id: 'v-n4-0374', word: '喉', reading: 'のど', meaning: ['throat'], jlptLevel: 4 },
+    { id: 'v-n4-0375', word: '最近', reading: 'さいきん', meaning: ['recently', 'nowadays', 'in recent years', 'most recent', 'latest'], jlptLevel: 4 },
+    { id: 'v-n4-0376', word: '周り', reading: 'まわり', meaning: ['surroundings'], jlptLevel: 4 },
+    { id: 'v-n4-0377', word: '歴史', reading: 'れきし', meaning: ['history'], jlptLevel: 4 },
+    { id: 'v-n4-0378', word: '不便', reading: 'ふべん', meaning: ['inconvenience'], jlptLevel: 4 },
+    { id: 'v-n4-0379', word: '血', reading: 'ち', meaning: ['blood'], jlptLevel: 4 },
+    { id: 'v-n4-0380', word: '～続ける', reading: '～つづける', meaning: ['to continue doing ~'], jlptLevel: 4 },
+    { id: 'v-n4-0381', word: '毛', reading: 'け', meaning: ['hair', 'fur'], jlptLevel: 4 },
+    { id: 'v-n4-0382', word: 'ひどい', reading: 'ひどい', meaning: ['terrible', 'awful', 'unfair', 'cruel'], jlptLevel: 4 },
+    { id: 'v-n4-0383', word: '例えば', reading: 'たとえば', meaning: ['for example', 'e.g.'], jlptLevel: 4 },
+    { id: 'v-n4-0384', word: '中々', reading: 'なかなか', meaning: ['very', 'considerably', 'quite'], jlptLevel: 4 },
+    { id: 'v-n4-0385', word: '随分', reading: 'ずいぶん', meaning: ['extremely'], jlptLevel: 4 },
+    { id: 'v-n4-0386', word: '～やすい', reading: '～やすい', meaning: ['easy to do ~'], jlptLevel: 4 },
+    { id: 'v-n4-0387', word: '押し入れ', reading: 'おしいれ', meaning: ['closet'], jlptLevel: 4 },
+    { id: 'v-n4-0388', word: '電灯', reading: 'でんとう', meaning: ['electric light'], jlptLevel: 4 },
+    { id: 'v-n4-0389', word: '叱る', reading: 'しかる', meaning: ['to scold'], jlptLevel: 4 },
+    { id: 'v-n4-0390', word: 'サンダル', reading: 'サンダル', meaning: ['sandal'], jlptLevel: 4 },
+    { id: 'v-n4-0391', word: 'びっくりする', reading: 'びっくりする', meaning: ['to be surprised'], jlptLevel: 4 },
+    { id: 'v-n4-0392', word: 'うまい', reading: 'うまい', meaning: ['delicious', 'skillful', 'fortunate'], jlptLevel: 4 },
+    { id: 'v-n4-0393', word: '変える', reading: 'かえる', meaning: ['to change', 'to alter', 'to vary'], jlptLevel: 4 },
+    { id: 'v-n4-0394', word: '講堂', reading: 'こうどう', meaning: ['auditorium'], jlptLevel: 4 },
+    { id: 'v-n4-0395', word: '子', reading: 'こ', meaning: ['child'], jlptLevel: 4 },
+    { id: 'v-n4-0396', word: '沸かす', reading: 'わかす', meaning: ['to boil'], jlptLevel: 4 },
+    { id: 'v-n4-0397', word: 'レジ', reading: 'レジ', meaning: ['register'], jlptLevel: 4 },
+    { id: 'v-n4-0398', word: 'しばらく', reading: 'しばらく', meaning: ['little while'], jlptLevel: 4 },
+    { id: 'v-n4-0399', word: '特に', reading: 'とくに', meaning: ['particularly'], jlptLevel: 4 },
+    { id: 'v-n4-0400', word: '空く', reading: 'あく', meaning: ['to open', 'to become empty (vacant)'], jlptLevel: 4 },
+    { id: 'v-n4-0401', word: '計画', reading: 'けいかくする', meaning: ['plan', 'project', 'schedule'], jlptLevel: 4 },
+    { id: 'v-n4-0402', word: '通り', reading: 'とおり', meaning: ['~ Street', '~ Avenue'], jlptLevel: 4 },
+    { id: 'v-n4-0403', word: '下着', reading: 'したぎ', meaning: ['underwear'], jlptLevel: 4 },
+    { id: 'v-n4-0404', word: '経済', reading: 'けいざい', meaning: ['economics', 'finance', 'economy'], jlptLevel: 4 },
+    { id: 'v-n4-0405', word: 'こう', reading: 'こう', meaning: ['like this', 'this way'], jlptLevel: 4 },
+    { id: 'v-n4-0406', word: '是非', reading: 'ぜひ', meaning: ['certainly', 'by all means', 'without fail'], jlptLevel: 4 },
+    { id: 'v-n4-0407', word: '裏', reading: 'うら', meaning: ['reverse side', 'back'], jlptLevel: 4 },
+    { id: 'v-n4-0408', word: '為', reading: 'ため', meaning: ['good', 'advantage', 'in order to'], jlptLevel: 4 },
+    { id: 'v-n4-0409', word: 'おいでになる', reading: 'おいでになる', meaning: ['(hon.) to be'], jlptLevel: 4 },
+    { id: 'v-n4-0410', word: '変わる', reading: 'かわる', meaning: ['to change (v.i.)', 'to be transformed', 'to vary'], jlptLevel: 4 },
+    { id: 'v-n4-0411', word: '以外', reading: 'いがい', meaning: ['other than', 'with the exception of', 'excepting'], jlptLevel: 4 },
+    { id: 'v-n4-0412', word: '済む', reading: 'すむ', meaning: ['to finish', 'to end'], jlptLevel: 4 },
+    { id: 'v-n4-0413', word: 'ハンバーグ', reading: 'ハンバーグ', meaning: ['hamburger steak'], jlptLevel: 4 },
+    { id: 'v-n4-0414', word: '市', reading: 'し', meaning: ['city'], jlptLevel: 4 },
+    { id: 'v-n4-0415', word: '引き出し', reading: 'ひきだし', meaning: ['drawer'], jlptLevel: 4 },
+    { id: 'v-n4-0416', word: '遊び', reading: 'あそび', meaning: ['play'], jlptLevel: 4 },
+    { id: 'v-n4-0417', word: '支度', reading: 'したくする', meaning: ['preparation'], jlptLevel: 4 },
+    { id: 'v-n4-0418', word: '～始める', reading: '～はじめる', meaning: ['to start doing ~'], jlptLevel: 4 },
+    { id: 'v-n4-0419', word: '見える', reading: 'みえる', meaning: ['to be visible', '-- polite verb meaning 来る (くる) --'], jlptLevel: 4 },
+    { id: 'v-n4-0420', word: '十分', reading: 'じゅうぶん', meaning: ['enough'], jlptLevel: 4 },
+    { id: 'v-n4-0421', word: '音', reading: 'おと', meaning: ['sound', 'note'], jlptLevel: 4 },
+    { id: 'v-n4-0422', word: 'きっと', reading: 'きっと', meaning: ['surely', 'definitely', 'undoubtedly', 'certainly'], jlptLevel: 4 },
+    { id: 'v-n4-0423', word: 'まず', reading: 'まず', meaning: ['first (of all)', 'to start with'], jlptLevel: 4 },
+    { id: 'v-n4-0424', word: '遠く', reading: 'とおく', meaning: ['far away', 'distant'], jlptLevel: 4 },
+    { id: 'v-n4-0425', word: '大体', reading: 'だいたい', meaning: ['approximately', 'in most cases', 'in general', 'to begin with (same as もともと)'], jlptLevel: 4 },
+    { id: 'v-n4-0426', word: '折れる', reading: 'おれる', meaning: ['to break', 'to be folded', 'to give in', 'to turn (a corner)'], jlptLevel: 4 },
+    { id: 'v-n4-0427', word: '正しい', reading: 'ただしい', meaning: ['correct'], jlptLevel: 4 },
+    { id: 'v-n4-0428', word: '輸入', reading: 'ゆにゅう', meaning: ['import'], jlptLevel: 4 },
+    { id: 'v-n4-0429', word: '返事', reading: 'へんじ', meaning: ['reply', 'answer'], jlptLevel: 4 },
+    { id: 'v-n4-0430', word: '都', reading: 'と', meaning: ['metropolitan'], jlptLevel: 4 },
+    { id: 'v-n4-0431', word: '産業', reading: 'さんぎょう', meaning: ['industry'], jlptLevel: 4 },
+    { id: 'v-n4-0432', word: '伝える', reading: 'つたえる', meaning: ['to convey (a message)', 'to tell', 'to report'], jlptLevel: 4 },
+    { id: 'v-n4-0433', word: 'お金持ち', reading: 'かねもち', meaning: ['rich person'], jlptLevel: 4 },
+    { id: 'v-n4-0434', word: '説明', reading: 'せつめい', meaning: ['explanation'], jlptLevel: 4 },
+    { id: 'v-n4-0435', word: '島', reading: 'しま', meaning: ['island'], jlptLevel: 4 },
+    { id: 'v-n4-0436', word: '道具', reading: 'どうぐ', meaning: ['tool'], jlptLevel: 4 },
+    { id: 'v-n4-0437', word: '滑る', reading: 'すべる', meaning: ['to slide', 'to slip'], jlptLevel: 4 },
+    { id: 'v-n4-0438', word: 'それほど', reading: 'それほど', meaning: ['to that degree', 'extent'], jlptLevel: 4 },
+    { id: 'v-n4-0439', word: '以上', reading: 'いじょう', meaning: ['more than', 'this is all'], jlptLevel: 4 },
+    { id: 'v-n4-0440', word: '～まま', reading: '～まま', meaning: ['as it is'], jlptLevel: 4 },
+    { id: 'v-n4-0441', word: '特急', reading: 'とっきゅう', meaning: ['limited express (train faster than an express)'], jlptLevel: 4 },
+    { id: 'v-n4-0442', word: 'プレゼント', reading: 'プレゼント', meaning: ['present', 'gift'], jlptLevel: 4 },
+    { id: 'v-n4-0443', word: '～(に) よると', reading: '～(に) よると', meaning: ['according to ~'], jlptLevel: 4 },
+    { id: 'v-n4-0444', word: '妻', reading: 'つま', meaning: ['wife (humble)'], jlptLevel: 4 },
+    { id: 'v-n4-0445', word: '帰り', reading: 'かえり', meaning: ['return', 'coming back'], jlptLevel: 4 },
+    { id: 'v-n4-0446', word: '具合', reading: 'ぐあい', meaning: ['condition', 'state', 'health'], jlptLevel: 4 },
+    { id: 'v-n4-0447', word: '堅', reading: 'かたい', meaning: ['solid', 'hard', 'firm'], jlptLevel: 4 },
+    { id: 'v-n4-0448', word: '駐車場', reading: 'ちゅうしゃじょう', meaning: ['parking lot'], jlptLevel: 4 },
+    { id: 'v-n4-0449', word: 'スーツ', reading: 'スーツ', meaning: ['suit'], jlptLevel: 4 },
+    { id: 'v-n4-0450', word: '危険', reading: 'きけん', meaning: ['danger', 'risk', 'hazard'], jlptLevel: 4 },
+    { id: 'v-n4-0451', word: '髪', reading: 'かみ', meaning: ['hair'], jlptLevel: 4 },
+    { id: 'v-n4-0452', word: '天気予報', reading: 'てんきよほう', meaning: ['weather forecast'], jlptLevel: 4 },
+    { id: 'v-n4-0453', word: '彼女', reading: 'かのじょ', meaning: ['girlfriend', 'she'], jlptLevel: 4 },
+    { id: 'v-n4-0454', word: '間', reading: 'あいだ', meaning: ['space', 'interval'], jlptLevel: 4 },
+    { id: 'v-n4-0455', word: '卒業', reading: 'そつぎょう', meaning: ['graduation'], jlptLevel: 4 },
+    { id: 'v-n4-0456', word: 'それで', reading: 'それで', meaning: ['and (conj.)', 'thereupon', 'because of that'], jlptLevel: 4 },
+    { id: 'v-n4-0457', word: '枝', reading: 'えだ', meaning: ['branch', 'twig'], jlptLevel: 4 },
+    { id: 'v-n4-0458', word: '専門', reading: 'せんもん', meaning: ['major', 'speciality'], jlptLevel: 4 },
+    { id: 'v-n4-0459', word: 'そろそろ', reading: 'そろそろ', meaning: ['gradually', 'soon'], jlptLevel: 4 },
+    { id: 'v-n4-0460', word: '送る', reading: 'おくる', meaning: ['to send', 'to dispatch'], jlptLevel: 4 },
+    { id: 'v-n4-0461', word: 'あげる', reading: 'あげる', meaning: ['to give'], jlptLevel: 4 },
+    { id: 'v-n4-0462', word: '騒ぐ', reading: 'さわぐ', meaning: ['to make noise', 'to clamor'], jlptLevel: 4 },
+    { id: 'v-n4-0463', word: '尋ねる', reading: 'たずねる', meaning: ['to inquire (same as 質問する)'], jlptLevel: 4 },
+    { id: 'v-n4-0464', word: '放送', reading: 'ほうそうする', meaning: ['broadcasting'], jlptLevel: 4 },
+    { id: 'v-n4-0465', word: '政治', reading: 'せいじ', meaning: ['politics'], jlptLevel: 4 },
+    { id: 'v-n4-0466', word: '市民', reading: 'しみん', meaning: ['citizen'], jlptLevel: 4 },
+    { id: 'v-n4-0467', word: 'ファックス', reading: 'ファックス', meaning: ['fax'], jlptLevel: 4 },
+    { id: 'v-n4-0468', word: '負ける', reading: 'まける', meaning: ['to lose (a game) (v.i.)', 'to be defeated'], jlptLevel: 4 },
+    { id: 'v-n4-0469', word: '指輪', reading: 'ゆびわ', meaning: ['(finger) ring'], jlptLevel: 4 },
+    { id: 'v-n4-0470', word: '田舎', reading: 'いなか', meaning: ['rural', 'countryside'], jlptLevel: 4 },
+    { id: 'v-n4-0471', word: '見つける', reading: 'みつける', meaning: ['to discover', 'to find (v.t.)'], jlptLevel: 4 },
+    { id: 'v-n4-0472', word: '高校生', reading: 'こうこうせい', meaning: ['high school student'], jlptLevel: 4 },
+    { id: 'v-n4-0473', word: '講義', reading: 'こうぎ', meaning: ['a lecture'], jlptLevel: 4 },
+    { id: 'v-n4-0474', word: 'そんなに', reading: 'そんなに', meaning: ['so much', 'like that'], jlptLevel: 4 },
+    { id: 'v-n4-0475', word: '昼休み', reading: 'ひるやすみ', meaning: ['lunch break', 'noon recess'], jlptLevel: 4 },
+    { id: 'v-n4-0476', word: '忘れ物', reading: 'わすれもの', meaning: ['lost article', 'something forgotten'], jlptLevel: 4 },
+    { id: 'v-n4-0477', word: '下りる', reading: 'おりる', meaning: ['to get down', 'to go', 'come down'], jlptLevel: 4 },
+    { id: 'v-n4-0478', word: '腕', reading: 'うで', meaning: ['arm (in reference to body)'], jlptLevel: 4 },
+    { id: 'v-n4-0479', word: '訳', reading: 'わけ', meaning: ['reason', 'explanation'], jlptLevel: 4 },
+    { id: 'v-n4-0480', word: '承知', reading: 'しょうちする', meaning: ['consent', 'acceptance'], jlptLevel: 4 },
+    { id: 'v-n4-0481', word: '日記', reading: 'にっき', meaning: ['diary', 'journal'], jlptLevel: 4 },
+    { id: 'v-n4-0482', word: '高校', reading: 'こうこう', meaning: ['high school', 'senior high school'], jlptLevel: 4 },
+    { id: 'v-n4-0483', word: '似る', reading: 'にる', meaning: ['to resemble', 'to be similar'], jlptLevel: 4 },
+    { id: 'v-n4-0484', word: '～おわる', reading: '～おわる', meaning: ['to finish doing ~'], jlptLevel: 4 },
+    { id: 'v-n4-0485', word: '暖房', reading: 'だんぼう', meaning: ['heating'], jlptLevel: 4 },
+    { id: 'v-n4-0486', word: '留守', reading: 'るす', meaning: ['absence', 'not at home'], jlptLevel: 4 },
+    { id: 'v-n4-0487', word: '割合', reading: 'わりあい', meaning: ['rate', 'ratio', 'percentage'], jlptLevel: 4 },
+    { id: 'v-n4-0488', word: '寺', reading: 'てら', meaning: ['Buddhist temple'], jlptLevel: 4 },
+    { id: 'v-n4-0489', word: '慣れる', reading: 'なれる', meaning: ['to grow accustomed to'], jlptLevel: 4 },
+    { id: 'v-n4-0490', word: '普通', reading: 'ふつう', meaning: ['common', 'usual'], jlptLevel: 4 },
+    { id: 'v-n4-0491', word: '手伝う', reading: 'てつだう', meaning: ['to help'], jlptLevel: 4 },
+    { id: 'v-n4-0492', word: 'なるほど', reading: 'なるほど', meaning: ['I see', 'I now understand'], jlptLevel: 4 },
+    { id: 'v-n4-0493', word: 'くださる', reading: 'くださる', meaning: ['(hon.) to give', 'to confer'], jlptLevel: 4 },
+    { id: 'v-n4-0494', word: '息子', reading: 'むすこ', meaning: ['(humble) son'], jlptLevel: 4 },
+    { id: 'v-n4-0495', word: 'お子さん', reading: 'おこさん', meaning: ['(someone else\'s) child (polite)'], jlptLevel: 4 },
+    { id: 'v-n4-0496', word: '会場', reading: 'かいじょう', meaning: ['venue', 'meeting place'], jlptLevel: 4 },
+    { id: 'v-n4-0497', word: '笑う', reading: 'わらう', meaning: ['to laugh', 'to smile'], jlptLevel: 4 },
+    { id: 'v-n4-0498', word: '運ぶ', reading: 'はこぶ', meaning: ['to transport', 'to carry'], jlptLevel: 4 },
+    { id: 'v-n4-0499', word: '文学', reading: 'ぶんがく', meaning: ['literature'], jlptLevel: 4 },
+    { id: 'v-n4-0500', word: '光', reading: 'ひかり', meaning: ['light'], jlptLevel: 4 },
+    { id: 'v-n4-0501', word: 'お見舞い', reading: 'おみまい', meaning: ['calling on someone who is ill', 'visit'], jlptLevel: 4 },
+    { id: 'v-n4-0502', word: '席', reading: 'せき', meaning: ['a seat'], jlptLevel: 4 },
+    { id: 'v-n4-0503', word: '～様', reading: '～さま', meaning: ['Mr.', 'Mrs.', 'Ms.'], jlptLevel: 4 },
+    { id: 'v-n4-0504', word: 'ご存じ', reading: 'ごぞんじ', meaning: ['knowing', 'acquaintance'], jlptLevel: 4 },
+    { id: 'v-n4-0505', word: '下る', reading: 'さがる', meaning: ['to descend', 'to drop', 'to fall'], jlptLevel: 4 },
+    { id: 'v-n4-0506', word: '字', reading: 'じ', meaning: ['letter', 'character'], jlptLevel: 4 },
+    { id: 'v-n4-0507', word: 'アジア', reading: 'アジア', meaning: ['Asia'], jlptLevel: 4 },
+    { id: 'v-n4-0508', word: '褒める', reading: 'ほめる', meaning: ['to praise', 'to say nice things'], jlptLevel: 4 },
+    { id: 'v-n4-0509', word: '空く', reading: 'すく', meaning: ['to be empty (in reference to people)', 'to be less crowded'], jlptLevel: 4 },
+    { id: 'v-n4-0510', word: 'あ', reading: 'あ', meaning: ['Ah'], jlptLevel: 4 },
+    { id: 'v-n4-0511', word: '最も', reading: 'もっとも', meaning: ['most'], jlptLevel: 4 },
+    { id: 'v-n4-0512', word: '合う', reading: 'あう', meaning: ['to fit', 'to match'], jlptLevel: 4 },
+    { id: 'v-n4-0513', word: '～代', reading: '～だい', meaning: ['~ age', 'period'], jlptLevel: 4 },
+    { id: 'v-n4-0514', word: '最後', reading: 'さいご', meaning: ['last', 'end'], jlptLevel: 4 },
+    { id: 'v-n4-0515', word: '値段', reading: 'ねだん', meaning: ['price'], jlptLevel: 4 },
+    { id: 'v-n4-0516', word: '退院', reading: 'たいいんする', meaning: ['leaving hospital'], jlptLevel: 4 },
+    { id: 'v-n4-0517', word: '展覧会', reading: 'てんらんかい', meaning: ['exhibition'], jlptLevel: 4 },
+    { id: 'v-n4-0518', word: '久しぶり', reading: 'ひさしぶり', meaning: ['it has been a long time', 'for the first time in a long time'], jlptLevel: 4 },
+    { id: 'v-n4-0519', word: 'カーテン', reading: 'カーテン', meaning: ['curtain'], jlptLevel: 4 },
+    { id: 'v-n4-0520', word: '汽車', reading: 'きしゃ', meaning: ['train (steam)'], jlptLevel: 4 },
+    { id: 'v-n4-0521', word: '遅れる', reading: 'おくれる', meaning: ['to (be) become late'], jlptLevel: 4 },
+    { id: 'v-n4-0522', word: '見つかる', reading: 'みつかる', meaning: ['to be found (v.i.)', 'to be discovered'], jlptLevel: 4 },
+    { id: 'v-n4-0523', word: '召し上がる', reading: 'めしあがる', meaning: ['-- honorific form of 食べる (たべる) and 飲む (のむ) --'], jlptLevel: 4 },
+    { id: 'v-n4-0524', word: '太る', reading: 'ふとる', meaning: ['to gain weight'], jlptLevel: 4 },
+    { id: 'v-n4-0525', word: '注射', reading: 'ちゅうしゃ', meaning: ['injection'], jlptLevel: 4 },
+    { id: 'v-n4-0526', word: '様', reading: 'よう', meaning: ['way', 'manner', 'kind'], jlptLevel: 4 },
+    { id: 'v-n4-0527', word: '～おき', reading: '～おき', meaning: ['after every ~'], jlptLevel: 4 },
+    { id: 'v-n4-0528', word: '最初', reading: 'さいしょ', meaning: ['beginning', 'first'], jlptLevel: 4 },
+    { id: 'v-n4-0529', word: '御～', reading: 'ご～', meaning: ['honorable ~'], jlptLevel: 4 },
+    { id: 'v-n4-0530', word: '安心', reading: 'あんしん', meaning: ['peace of mind', 'relief'], jlptLevel: 4 },
+    { id: 'v-n4-0531', word: '直る', reading: 'なおる', meaning: ['to be fixed'], jlptLevel: 4 },
+    { id: 'v-n4-0532', word: '集める', reading: 'あつめる', meaning: ['to collect', 'to gather (v.t.)', 'to assemble'], jlptLevel: 4 },
+    { id: 'v-n4-0533', word: '直す', reading: 'なおす', meaning: ['to correct (v.t.)', 'to fix'], jlptLevel: 4 },
+    { id: 'v-n4-0534', word: '続く', reading: 'つづく', meaning: ['to be continued'], jlptLevel: 4 },
+    { id: 'v-n4-0535', word: '先輩', reading: 'せんぱい', meaning: ['senior members of a group'], jlptLevel: 4 },
+    { id: 'v-n4-0536', word: '約束', reading: 'やくそく', meaning: ['arrangement', 'appointment', 'promise'], jlptLevel: 4 },
+    { id: 'v-n4-0537', word: '世話', reading: 'せわする', meaning: ['looking after', 'to look after'], jlptLevel: 4 },
+    { id: 'v-n4-0538', word: '近所', reading: 'きんじょ', meaning: ['neighborhood'], jlptLevel: 4 },
+    { id: 'v-n4-0539', word: '将来', reading: 'しょうらい', meaning: ['(in the) future', 'prospects'], jlptLevel: 4 },
+    { id: 'v-n4-0540', word: '億', reading: 'おく', meaning: ['hundred million'], jlptLevel: 4 },
+    { id: 'v-n4-0541', word: '数学', reading: 'すうがく', meaning: ['mathematics'], jlptLevel: 4 },
+    { id: 'v-n4-0542', word: '文化', reading: 'ぶんか', meaning: ['culture'], jlptLevel: 4 },
+    { id: 'v-n4-0543', word: '払う', reading: 'はらう', meaning: ['to pay'], jlptLevel: 4 },
+    { id: 'v-n4-0544', word: '習慣', reading: 'しゅうかん', meaning: ['custom (in reference to culture)'], jlptLevel: 4 },
+    { id: 'v-n4-0545', word: '焼ける', reading: 'やける', meaning: ['to burn', 'to be roasted'], jlptLevel: 4 },
+    { id: 'v-n4-0546', word: '君', reading: 'きみ', meaning: ['you (informal for men)'], jlptLevel: 4 },
+    { id: 'v-n4-0547', word: '冷える', reading: 'ひえる', meaning: ['to grow cold', 'to cool down'], jlptLevel: 4 },
+    { id: 'v-n4-0548', word: '点く', reading: 'つく', meaning: ['to be started', 'to be switched on'], jlptLevel: 4 },
+    { id: 'v-n4-0549', word: 'この間', reading: 'このあいだ', meaning: ['the other day', 'recently'], jlptLevel: 4 },
+    { id: 'v-n4-0550', word: '格好', reading: 'かっこう', meaning: ['appearance', 'manner', 'shape', 'form', 'posture'], jlptLevel: 4 },
+    { id: 'v-n4-0551', word: '続ける', reading: 'つづける', meaning: ['to continue', 'to keep up'], jlptLevel: 4 },
+    { id: 'v-n4-0552', word: '落す', reading: 'おとす', meaning: ['to drop', 'to lose'], jlptLevel: 4 },
+    { id: 'v-n4-0553', word: '明日', reading: 'あす', meaning: ['tomorrow'], jlptLevel: 4 },
+    { id: 'v-n4-0554', word: '出発', reading: 'しゅっぱつする', meaning: ['departure'], jlptLevel: 4 },
+    { id: 'v-n4-0555', word: '拝見', reading: 'はいけんする', meaning: ['(humble) (polite) seeing', 'look at'], jlptLevel: 4 },
+    { id: 'v-n4-0556', word: '割れる', reading: 'われる', meaning: ['to break'], jlptLevel: 4 },
+    { id: 'v-n4-0557', word: '背中', reading: 'せなか', meaning: ['back (of body)'], jlptLevel: 4 },
+    { id: 'v-n4-0558', word: '新聞社', reading: 'しんぶんしゃ', meaning: ['newspaper company'], jlptLevel: 4 },
+    { id: 'v-n4-0559', word: 'いじめる', reading: 'いじめる', meaning: ['to bully', 'to torment'], jlptLevel: 4 },
+    { id: 'v-n4-0560', word: '回る', reading: 'まわる', meaning: ['to go around', 'to revolve'], jlptLevel: 4 },
+    { id: 'v-n4-0561', word: '～君', reading: '～くん', meaning: ['Mr. (junior) ~', 'master ~'], jlptLevel: 4 },
+    { id: 'v-n4-0562', word: 'おっしゃる', reading: 'おっしゃる', meaning: ['-- honorific expression for いう --'], jlptLevel: 4 },
+    { id: 'v-n4-0563', word: '眠い', reading: 'ねむい', meaning: ['sleepy', 'drowsy'], jlptLevel: 4 },
+    { id: 'v-n4-0564', word: '濡れる', reading: 'ぬれる', meaning: ['to get wet'], jlptLevel: 4 },
+    { id: 'v-n4-0565', word: '倒れる', reading: 'たおれる', meaning: ['to collapse', 'to break down'], jlptLevel: 4 },
+    { id: 'v-n4-0566', word: 'スーパー (マーケット)', reading: 'スーパー (マーケット)', meaning: ['supermarket'], jlptLevel: 4 },
+    { id: 'v-n4-0567', word: 'アクセサリー', reading: 'アクセサリー', meaning: ['accessory'], jlptLevel: 4 },
+    { id: 'v-n4-0568', word: '考える', reading: 'かんがえる', meaning: ['to think (about)', 'to consider'], jlptLevel: 4 },
+    { id: 'v-n4-0569', word: '向かう', reading: 'むかう', meaning: ['to face', 'to go towards'], jlptLevel: 4 },
+    { id: 'v-n4-0570', word: '自由', reading: 'じゆう', meaning: ['freedom'], jlptLevel: 4 },
+    { id: 'v-n4-0571', word: '仕方', reading: 'しかた', meaning: ['way (of doing something)'], jlptLevel: 4 },
+    { id: 'v-n4-0572', word: '首', reading: 'くび', meaning: ['neck'], jlptLevel: 4 },
+    { id: 'v-n4-0573', word: '程', reading: 'ほど', meaning: ['degree', 'extent'], jlptLevel: 4 },
+    { id: 'v-n4-0574', word: '代わり', reading: 'かわり', meaning: ['substitute', 'replacement'], jlptLevel: 4 },
+    { id: 'v-n4-0575', word: '失敗', reading: 'しっぱい', meaning: ['failure', 'mistake'], jlptLevel: 4 },
+    { id: 'v-n4-0576', word: '工業', reading: 'こうぎょう', meaning: ['(manufacturing) industry'], jlptLevel: 4 },
+    { id: 'v-n4-0577', word: '移る', reading: 'うつる', meaning: ['to move (from a house)', 'to transfer (from a department)', 'to shift'], jlptLevel: 4 },
+    { id: 'v-n4-0578', word: 'スーツケース', reading: 'スーツケース', meaning: ['suitcase'], jlptLevel: 4 },
+    { id: 'v-n4-0579', word: 'ひげ', reading: 'ひげ', meaning: ['beard'], jlptLevel: 4 },
+    { id: 'v-n4-0580', word: '研究室', reading: 'けんきゅうしつ', meaning: ['the professor\'s office', 'laboratory'], jlptLevel: 4 },
+    { id: 'v-n4-0581', word: '工場', reading: 'こうじょう', meaning: ['factory'], jlptLevel: 4 },
+    { id: 'v-n4-0582', word: '紹介', reading: 'しょうかい', meaning: ['an introduction'], jlptLevel: 4 },
+    { id: 'v-n4-0583', word: 'けれど', reading: 'けれど', meaning: ['but', 'although'], jlptLevel: 4 },
+    { id: 'v-n4-0584', word: '舟', reading: 'ふね', meaning: ['ship', 'boat'], jlptLevel: 4 },
+    { id: 'v-n4-0585', word: '動く', reading: 'うごく', meaning: ['to move'], jlptLevel: 4 },
+    { id: 'v-n4-0586', word: '～(に) ついて', reading: '～(に) ついて', meaning: ['about', 'concerning'], jlptLevel: 4 },
+    { id: 'v-n4-0587', word: 'コンサート', reading: 'コンサート', meaning: ['concert'], jlptLevel: 4 },
+    { id: 'v-n4-0588', word: '虫', reading: 'むし', meaning: ['insect'], jlptLevel: 4 },
+    { id: 'v-n4-0589', word: '優しい', reading: 'やさしい', meaning: ['kind (person)', 'gentle (person)', 'easy (problem)'], jlptLevel: 4 },
+    { id: 'v-n4-0590', word: 'コンピュータ', reading: 'コンピュータ', meaning: ['computer'], jlptLevel: 4 },
+    { id: 'v-n4-0591', word: '植える', reading: 'うえる', meaning: ['to plant'], jlptLevel: 4 },
+    { id: 'v-n4-0592', word: '両方', reading: 'りょうほう', meaning: ['both sides', 'both parties'], jlptLevel: 4 },
+    { id: 'v-n4-0593', word: '汚れる', reading: 'よごれる', meaning: ['to become dirty'], jlptLevel: 4 },
+    { id: 'v-n4-0594', word: '水泳', reading: 'すいえい', meaning: ['swimming'], jlptLevel: 4 },
+    { id: 'v-n4-0595', word: '経験', reading: 'けいけんする', meaning: ['experience'], jlptLevel: 4 },
+    { id: 'v-n4-0596', word: '勝つ', reading: 'かつ', meaning: ['to win'], jlptLevel: 4 },
+    { id: 'v-n4-0597', word: '砂', reading: 'すな', meaning: ['sand'], jlptLevel: 4 },
+    { id: 'v-n4-0598', word: '警察', reading: 'けいさつ', meaning: ['police', 'police station'], jlptLevel: 4 },
+    { id: 'v-n4-0599', word: '取り替える', reading: 'とりかえる', meaning: ['to exchange', 'to replace'], jlptLevel: 4 },
+    { id: 'v-n4-0600', word: '急ぐ', reading: 'いそぐ', meaning: ['to hurry', 'to be in a hurry', 'to rush'], jlptLevel: 4 },
+    { id: 'v-n4-0601', word: '簡単', reading: 'かんたん', meaning: ['simple'], jlptLevel: 4 },
+    { id: 'v-n4-0602', word: '参る', reading: 'まいる', meaning: ['humble expression for 行く and 来る'], jlptLevel: 4 },
+    { id: 'v-n4-0603', word: '全然', reading: 'ぜんぜん', meaning: ['not at all', 'wholly', 'entirely'], jlptLevel: 4 },
+    { id: 'v-n4-0604', word: '特別', reading: 'とくべつ', meaning: ['special'], jlptLevel: 4 },
+    { id: 'v-n4-0605', word: '復習', reading: 'ふくしゅう', meaning: ['review (of lessons)', 'revision'], jlptLevel: 4 },
+    { id: 'v-n4-0606', word: '間に合う', reading: 'まにあう', meaning: ['to be in time for'], jlptLevel: 4 },
+    { id: 'v-n4-0607', word: '役に立つ', reading: 'やくにたつ', meaning: ['to be helpful', 'to be useful'], jlptLevel: 4 },
+    { id: 'v-n4-0608', word: 'もうすぐ', reading: 'もうすぐ', meaning: ['very soon', 'in a few moments', 'days'], jlptLevel: 4 },
+    { id: 'v-n4-0609', word: '真中', reading: 'まんなか', meaning: ['middle', 'center'], jlptLevel: 4 },
+    { id: 'v-n4-0610', word: '戻る', reading: 'もどる', meaning: ['to return (v.i.)', 'to come back'], jlptLevel: 4 },
+    { id: 'v-n4-0611', word: '研究', reading: 'けんきゅう', meaning: ['study', 'research', 'investigation'], jlptLevel: 4 },
+    { id: 'v-n4-0612', word: 'ケーキ', reading: 'ケーキ', meaning: ['cake'], jlptLevel: 4 },
+    { id: 'v-n4-0613', word: '草', reading: 'くさ', meaning: ['grass'], jlptLevel: 4 },
+    { id: 'v-n4-0614', word: '込む', reading: 'こむ', meaning: ['to be crowded'], jlptLevel: 4 },
+    { id: 'v-n4-0615', word: 'この頃', reading: 'このごろ', meaning: ['these days', 'nowadays'], jlptLevel: 4 },
+    { id: 'v-n4-0616', word: '訪ねる', reading: 'たずねる', meaning: ['to visit'], jlptLevel: 4 },
+    { id: 'v-n4-0617', word: '下げる', reading: 'さげる', meaning: ['to lower (v.t.)', 'to hang'], jlptLevel: 4 },
+    { id: 'v-n4-0618', word: '花見', reading: 'はなみ', meaning: ['cherry-blossom viewing'], jlptLevel: 4 },
+    { id: 'v-n4-0619', word: '途中', reading: 'とちゅう', meaning: ['on the way', 'midway'], jlptLevel: 4 },
+    { id: 'v-n4-0620', word: '入院', reading: 'にゅういんする', meaning: ['hospitalization'], jlptLevel: 4 },
+    { id: 'v-n4-0621', word: '乗り換える', reading: 'のりかえる', meaning: ['to transfer (trains)', 'to change (bus', 'train', 'etc.)'], jlptLevel: 4 },
+    { id: 'v-n4-0622', word: '別れる', reading: 'わかれる', meaning: ['to part from', 'to separate'], jlptLevel: 4 },
+    { id: 'v-n4-0623', word: '～町', reading: '～ちょう', meaning: ['the town of ~'], jlptLevel: 4 },
+    { id: 'v-n4-0624', word: '安全', reading: 'あんぜん', meaning: ['safety', 'security'], jlptLevel: 4 },
+    { id: 'v-n4-0625', word: '看護婦', reading: 'かんごふ', meaning: ['(female) nurse'], jlptLevel: 4 },
+    { id: 'v-n4-0626', word: '見物', reading: 'けんぶつ', meaning: ['sightseeing'], jlptLevel: 4 },
+    { id: 'v-n4-0627', word: '相談', reading: 'そうだんする', meaning: ['consultation'], jlptLevel: 4 },
+    { id: 'v-n4-0628', word: 'ガソリンスタンド', reading: 'ガソリンスタンド', meaning: ['gas station', 'service station'], jlptLevel: 4 },
+    { id: 'v-n4-0629', word: 'テニス', reading: 'テニス', meaning: ['tennis'], jlptLevel: 4 },
+    { id: 'v-n4-0630', word: '眠る', reading: 'ねむる', meaning: ['to sleep'], jlptLevel: 4 },
+    { id: 'v-n4-0631', word: '上がる', reading: 'あがる', meaning: ['to rise', 'to go up'], jlptLevel: 4 },
+    { id: 'v-n4-0632', word: '翻訳', reading: 'ほんやく', meaning: ['translation'], jlptLevel: 4 },
+    { id: 'v-n4-0633', word: '食事', reading: 'しょくじする', meaning: ['meal'], jlptLevel: 4 },
+    { id: 'v-n4-0634', word: 'お陰', reading: 'おかげ', meaning: ['thanks or owing to'], jlptLevel: 4 },
+    { id: 'v-n4-0635', word: '娘', reading: 'むすめ', meaning: ['daughter (humble)'], jlptLevel: 4 },
+    { id: 'v-n4-0636', word: '湯', reading: 'ゆ', meaning: ['hot water'], jlptLevel: 4 },
+    { id: 'v-n4-0637', word: '競争', reading: 'きょうそう', meaning: ['competition', 'contest'], jlptLevel: 4 },
+    { id: 'v-n4-0638', word: '会議', reading: 'かいぎ', meaning: ['business meeting', 'conference'], jlptLevel: 4 },
+    { id: 'v-n4-0639', word: '湖', reading: 'みずうみ', meaning: ['lake'], jlptLevel: 4 },
+    { id: 'v-n4-0640', word: '集まる', reading: 'あつまる', meaning: ['to gather (v.i.)', 'to collect'], jlptLevel: 4 },
+    { id: 'v-n4-0641', word: '～にくい', reading: '～にくい', meaning: ['difficult to do ~'], jlptLevel: 4 },
+    { id: 'v-n4-0642', word: '生活', reading: 'せいかつする', meaning: ['living', 'life', 'to live'], jlptLevel: 4 },
+    { id: 'v-n4-0643', word: '糸', reading: 'いと', meaning: ['thread'], jlptLevel: 4 },
+    { id: 'v-n4-0644', word: '関係', reading: 'かんけい', meaning: ['relation(ship)', 'connection'], jlptLevel: 4 },
+    { id: 'v-n4-0645', word: 'ピアノ', reading: 'ピアノ', meaning: ['piano'], jlptLevel: 4 },
+    { id: 'v-n4-0646', word: '～目', reading: '～め', meaning: ['number ~ sequence', '~nd', '~th'], jlptLevel: 4 },
+    { id: 'v-n4-0647', word: '番組', reading: 'ばんぐみ', meaning: ['broadcast program'], jlptLevel: 4 },
+    { id: 'v-n4-0648', word: '急', reading: 'きゅう', meaning: ['urgent', 'sudden', 'steep'], jlptLevel: 4 },
+    { id: 'v-n4-0649', word: '棚', reading: 'たな', meaning: ['shelves', 'rack'], jlptLevel: 4 },
+    { id: 'v-n4-0650', word: '木綿', reading: 'もめん', meaning: ['cotton'], jlptLevel: 4 },
+    { id: 'v-n4-0651', word: '輸出', reading: 'ゆしゅつする', meaning: ['export'], jlptLevel: 4 },
+    { id: 'v-n4-0652', word: 'タイプ', reading: 'タイプ', meaning: ['type', 'style'], jlptLevel: 4 },
+    { id: 'v-n4-0653', word: '嬉しい', reading: 'うれしい', meaning: ['to be happy', 'to be glad'], jlptLevel: 4 },
+    { id: 'v-n4-0654', word: 'アルコール', reading: 'アルコール', meaning: ['alcohol'], jlptLevel: 4 },
+    { id: 'v-n4-0655', word: 'ソフト', reading: 'ソフト', meaning: ['soft', 'soft hat', 'software'], jlptLevel: 4 },
+    { id: 'v-n4-0656', word: '神社', reading: 'じんじゃ', meaning: ['Shinto shrine'], jlptLevel: 4 },
+    { id: 'v-n4-0657', word: '大分', reading: 'だいぶ', meaning: ['fairly well', 'to a large extent', 'considerably', 'pretty much'], jlptLevel: 4 },
+    { id: 'v-n4-0658', word: '楽しみ', reading: 'たのしみ', meaning: ['pleasure', 'joy'], jlptLevel: 4 },
+    { id: 'v-n4-0659', word: '趣味', reading: 'しゅみ', meaning: ['hobby', 'pastime'], jlptLevel: 4 },
+    { id: 'v-n4-0660', word: '電報', reading: 'でんぽう', meaning: ['telegram'], jlptLevel: 4 },
+    { id: 'v-n4-0661', word: '家内', reading: 'かない', meaning: ['(one\'s own) wife'], jlptLevel: 4 },
+    { id: 'v-n4-0662', word: '指', reading: 'ゆび', meaning: ['finger'], jlptLevel: 4 },
+    { id: 'v-n4-0663', word: 'これから', reading: 'これから', meaning: ['from now on', 'after this'], jlptLevel: 4 },
+    { id: 'v-n4-0664', word: 'たまに', reading: 'たまに', meaning: ['occasionally'], jlptLevel: 4 },
+    { id: 'v-n4-0665', word: '社会', reading: 'しゃかい', meaning: ['society'], jlptLevel: 4 }
 ];
