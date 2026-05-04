@@ -10,7 +10,7 @@ interface ItemDetailModalProps {
 }
 
 export function ItemDetailModal({ type, item, onClose, onNavigate }: ItemDetailModalProps) {
-    const { state, addToReview } = useStudy();
+    const { state, addToReview, removeFromReview } = useStudy();
 
     if (!item) return null;
 
@@ -24,6 +24,10 @@ export function ItemDetailModal({ type, item, onClose, onNavigate }: ItemDetailM
 
     const handleAddToReview = () => {
         addToReview(item.id, type);
+    };
+
+    const handleRemoveFromReview = () => {
+        removeFromReview(item.id);
     };
 
     return (
@@ -97,14 +101,27 @@ export function ItemDetailModal({ type, item, onClose, onNavigate }: ItemDetailM
                     position: 'sticky',
                     bottom: 0
                 }}>
-                    <button
-                        className={`btn ${isAlreadyInReview ? 'btn-secondary' : 'btn-primary'} w-full`}
-                        onClick={handleAddToReview}
-                        disabled={isAlreadyInReview}
-                        style={{ width: '100%' }}
-                    >
-                        {isAlreadyInReview ? 'Already in Review' : 'Add to Review'}
-                    </button>
+                    {isAlreadyInReview ? (
+                        <button
+                            className="btn btn-secondary w-full"
+                            onClick={handleRemoveFromReview}
+                            style={{
+                                width: '100%',
+                                color: 'var(--color-error, #c0392b)',
+                                borderColor: 'var(--color-error, #c0392b)',
+                            }}
+                        >
+                            Remove from Review
+                        </button>
+                    ) : (
+                        <button
+                            className="btn btn-primary w-full"
+                            onClick={handleAddToReview}
+                            style={{ width: '100%' }}
+                        >
+                            Add to Review
+                        </button>
+                    )}
                 </div>
             </div>
         </div>

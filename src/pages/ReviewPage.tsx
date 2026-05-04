@@ -14,7 +14,7 @@ import freetime from '../assets/freetime.png';
 
 export function ReviewPage() {
     const navigate = useNavigate();
-    const { state, getDueCards, rateCard, saveMnemonic, getMnemonic } = useStudy();
+    const { state, getDueCards, rateCard, saveMnemonic, getMnemonic, removeFromReview } = useStudy();
 
     const [isReviewing, setIsReviewing] = useState(false);
     const [reviewCards, setReviewCards] = useState<{ card: Kanji | Vocabulary; type: 'kanji' | 'vocabulary' }[]>([]);
@@ -80,6 +80,18 @@ export function ReviewPage() {
             // key changes will handle reset
         } else {
             setSessionComplete(true);
+        }
+    };
+
+    const handleRemoveFromReview = () => {
+        const current = reviewCards[currentIndex];
+        removeFromReview(current.card.id);
+        const updated = reviewCards.filter((_, i) => i !== currentIndex);
+        if (updated.length === 0) {
+            setSessionComplete(true);
+        } else {
+            setReviewCards(updated);
+            setCurrentIndex(Math.min(currentIndex, updated.length - 1));
         }
     };
 
@@ -187,6 +199,22 @@ export function ReviewPage() {
                 <RatingButtons
                     onRate={handleRate}
                 />
+
+                {/* Remove from Review */}
+                <button
+                    onClick={handleRemoveFromReview}
+                    style={{
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        fontSize: 'var(--text-xs)',
+                        color: 'var(--color-text-tertiary)',
+                        textDecoration: 'underline',
+                        padding: 'var(--space-1) var(--space-2)',
+                    }}
+                >
+                    Remove from Review
+                </button>
             </div>
 
             {/* Mnemonic Editor (Always visible, toggleable) */}

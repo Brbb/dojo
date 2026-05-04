@@ -16,6 +16,7 @@ type Action =
     | { type: 'UPDATE_SETTINGS'; payload: Partial<AppSettings> }
     | { type: 'UPDATE_PROGRESS'; payload: Partial<UserProgress> }
     | { type: 'ADD_TO_REVIEW'; payload: { cardId: string; cardType: CardType } }
+    | { type: 'REMOVE_FROM_REVIEW'; payload: { cardId: string } }
     | { type: 'ADD_CUSTOM_CARD'; payload: { card: CustomCard } }
     | { type: 'DELETE_CUSTOM_CARD'; payload: { id: string } }
     | { type: 'TOGGLE_GRAMMAR_STUDIED'; payload: { pointId: string } }
@@ -151,6 +152,16 @@ function studyReducer(state: AppState, action: Action): AppState {
             };
         }
 
+        case 'REMOVE_FROM_REVIEW': {
+            const { cardId } = action.payload;
+            const updatedSRSCards = { ...state.srsCards };
+            delete updatedSRSCards[cardId];
+            return {
+                ...state,
+                srsCards: updatedSRSCards,
+            };
+        }
+
         case 'ADD_CUSTOM_CARD': {
             return {
                 ...state,
@@ -206,6 +217,7 @@ interface StudyContextType {
     saveMnemonic: (cardId: string, cardType: CardType, text: string) => void;
     updateSettings: (settings: Partial<AppSettings>) => void;
     addToReview: (cardId: string, cardType: CardType) => void;
+    removeFromReview: (cardId: string) => void;
     addCustomCard: (card: CustomCard) => void;
     deleteCustomCard: (id: string) => void;
     toggleGrammarStudied: (pointId: string) => void;
@@ -246,6 +258,10 @@ export function StudyProvider({ children }: { children: ReactNode }) {
 
     const addToReview = (cardId: string, cardType: CardType) => {
         dispatch({ type: 'ADD_TO_REVIEW', payload: { cardId, cardType } });
+    };
+
+    const removeFromReview = (cardId: string) => {
+        dispatch({ type: 'REMOVE_FROM_REVIEW', payload: { cardId } });
     };
 
     const addCustomCard = (card: CustomCard) => {
@@ -325,6 +341,7 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         saveMnemonic,
         updateSettings,
         addToReview,
+        removeFromReview,
         addCustomCard,
         deleteCustomCard,
         toggleGrammarStudied,

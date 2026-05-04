@@ -1,0 +1,7597 @@
+[
+    [
+        "グループ",
+        "–",
+        "group"
+    ],
+    [
+        "ハイキング",
+        "–",
+        "hiking"
+    ],
+    [
+        "メモ",
+        "–",
+        "memorandum"
+    ],
+    [
+        "アルバム",
+        "–",
+        "album"
+    ],
+    [
+        "コード",
+        "–",
+        "code,cord,chord"
+    ],
+    [
+        "ユーモア",
+        "–",
+        "humor"
+    ],
+    [
+        "ボール",
+        "–",
+        "ball,bowl"
+    ],
+    [
+        "ソファー",
+        "–",
+        "sofa,couch"
+    ],
+    [
+        "ピクニック",
+        "–",
+        "picnic"
+    ],
+    [
+        "バン",
+        "–",
+        "bun,van"
+    ],
+    [
+        "おや",
+        "–",
+        "parents",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "カー",
+        "–",
+        "car"
+    ],
+    [
+        "チャンス",
+        "–",
+        "chance,opportunity"
+    ],
+    [
+        "ノック",
+        "–",
+        "knock"
+    ],
+    [
+        "アイロン",
+        "–",
+        "iron"
+    ],
+    [
+        "マーケット",
+        "—",
+        "market"
+    ],
+    [
+        "ケース",
+        "―",
+        "case"
+    ],
+    [
+        "パス",
+        "―",
+        "pass, path"
+    ],
+    [
+        "タオル",
+        "―",
+        "towel"
+    ],
+    [
+        "パーセント",
+        "―",
+        "percent"
+    ],
+    [
+        "ミス",
+        "―",
+        "mistake, Miss"
+    ],
+    [
+        "ダイヤ",
+        "―",
+        "diagram, diamond, schedule"
+    ],
+    [
+        "クリスマス",
+        "―",
+        "Christmas"
+    ],
+    [
+        "愛",
+        "あい",
+        "love"
+    ],
+    [
+        "合図",
+        "あいず",
+        "signal"
+    ],
+    [
+        "相手",
+        "あいて",
+        "companion, opponent"
+    ],
+    [
+        "明かり",
+        "あかり",
+        "light, brightness"
+    ],
+    [
+        "握手",
+        "あくしゅ",
+        "handshake"
+    ],
+    [
+        "汗",
+        "あせ",
+        "sweat"
+    ],
+    [
+        "辺り",
+        "あたり",
+        "vicinity, nearby"
+    ],
+    [
+        "辺り",
+        "あたり",
+        "nearby"
+    ],
+    [
+        "集まり",
+        "あつまり",
+        "gathering"
+    ],
+    [
+        "跡",
+        "あと",
+        "trace, mark"
+    ],
+    [
+        "穴",
+        "あな",
+        "hole"
+    ],
+    [
+        "誤り",
+        "あやまり",
+        "error"
+    ],
+    [
+        "嵐",
+        "あらし",
+        "storm"
+    ],
+    [
+        "現れ",
+        "あらわれ",
+        "embodiment"
+    ],
+    [
+        "哀れ",
+        "あわれ",
+        "pity"
+    ],
+    [
+        "案",
+        "あん",
+        "plan"
+    ],
+    [
+        "暗記",
+        "あんき",
+        "memorization"
+    ],
+    [
+        "暗記",
+        "あんき",
+        "memorization, learning by heart"
+    ],
+    [
+        "胃",
+        "い",
+        "stomach"
+    ],
+    [
+        "委員",
+        "いいん",
+        "committee member"
+    ],
+    [
+        "意外",
+        "いがい",
+        "unexpected (used as noun/adj)"
+    ],
+    [
+        "意外",
+        "いがい",
+        "unexpected, surprising"
+    ],
+    [
+        "行き",
+        "いき",
+        "going"
+    ],
+    [
+        "息",
+        "いき",
+        "breath"
+    ],
+    [
+        "勢い",
+        "いきおい",
+        "force, energy"
+    ],
+    [
+        "生き物",
+        "いきもの",
+        "living thing, creature"
+    ],
+    [
+        "幾つ",
+        "いくつ",
+        "how many?"
+    ],
+    [
+        "意思",
+        "いし",
+        "intention, purpose"
+    ],
+    [
+        "医師",
+        "いし",
+        "doctor"
+    ],
+    [
+        "維持",
+        "いじ",
+        "maintenance"
+    ],
+    [
+        "意識",
+        "いしき",
+        "consciousness, senses"
+    ],
+    [
+        "泉",
+        "いずみ",
+        "spring"
+    ],
+    [
+        "以前",
+        "いぜん",
+        "before, ago"
+    ],
+    [
+        "板",
+        "いた",
+        "board"
+    ],
+    [
+        "偉大",
+        "いだい",
+        "greatness"
+    ],
+    [
+        "痛み",
+        "いたみ",
+        "pain, ache, grief"
+    ],
+    [
+        "痛み",
+        "いたみ",
+        "pain, ache, sore, grief, distress"
+    ],
+    [
+        "位置",
+        "いち",
+        "place, situation, position, location"
+    ],
+    [
+        "位置",
+        "いち",
+        "position, location"
+    ],
+    [
+        "市場",
+        "いちば",
+        "market"
+    ],
+    [
+        "一番",
+        "いちばん",
+        "best, number one"
+    ],
+    [
+        "一家",
+        "いっか",
+        "family, household"
+    ],
+    [
+        "一瞬",
+        "いっしゅん",
+        "moment, instant"
+    ],
+    [
+        "一生",
+        "いっしょう",
+        "whole life"
+    ],
+    [
+        "一層",
+        "いっそう",
+        "much more"
+    ],
+    [
+        "一致",
+        "いっち",
+        "agreement"
+    ],
+    [
+        "移動",
+        "いどう",
+        "movement, migration"
+    ],
+    [
+        "稲",
+        "いね",
+        "rice plant"
+    ],
+    [
+        "居眠り",
+        "いねむり",
+        "dozing"
+    ],
+    [
+        "命",
+        "いのち",
+        "command,decree,life,destiny"
+    ],
+    [
+        "違反",
+        "いはん",
+        "violation"
+    ],
+    [
+        "違反",
+        "いはん",
+        "violation (of law), transgression, infringement, breach"
+    ],
+    [
+        "衣服",
+        "いふく",
+        "clothes"
+    ],
+    [
+        "居間",
+        "いま",
+        "living room"
+    ],
+    [
+        "依頼",
+        "いらい",
+        "request"
+    ],
+    [
+        "以来",
+        "いらい",
+        "since"
+    ],
+    [
+        "以来",
+        "いらい",
+        "since, henceforth"
+    ],
+    [
+        "医療",
+        "いりょう",
+        "medical treatment"
+    ],
+    [
+        "岩",
+        "いわ",
+        "rock, crag"
+    ],
+    [
+        "祝い",
+        "いわい",
+        "celebration"
+    ],
+    [
+        "印刷",
+        "いんさつ",
+        "printing"
+    ],
+    [
+        "印象",
+        "いんしょう",
+        "impression"
+    ],
+    [
+        "印象",
+        "いんしょう",
+        "impression"
+    ],
+    [
+        "魚",
+        "うお",
+        "fish"
+    ],
+    [
+        "魚",
+        "うお",
+        "fish"
+    ],
+    [
+        "兎",
+        "うさぎ",
+        "rabbit,hare,cony"
+    ],
+    [
+        "後",
+        "うしろ",
+        "back, behind, after"
+    ],
+    [
+        "嘘",
+        "うそ",
+        "lie"
+    ],
+    [
+        "内",
+        "うち",
+        "inside"
+    ],
+    [
+        "内",
+        "うち",
+        "inside"
+    ],
+    [
+        "馬",
+        "うま",
+        "horse"
+    ],
+    [
+        "梅",
+        "うめ",
+        "plum,plum-tree,lowest (of a three-tier ranking system)"
+    ],
+    [
+        "噂",
+        "うわさ",
+        "rumour, report, gossip"
+    ],
+    [
+        "噂",
+        "うわさ",
+        "rumour, report, gossip, common talk"
+    ],
+    [
+        "運",
+        "うん",
+        "fortune, luck"
+    ],
+    [
+        "運転",
+        "うんてん",
+        "driving"
+    ],
+    [
+        "運動",
+        "うんどう",
+        "exercise"
+    ],
+    [
+        "永遠",
+        "えいえん",
+        "eternity"
+    ],
+    [
+        "永久",
+        "えいきゅう",
+        "eternity"
+    ],
+    [
+        "影響",
+        "えいきょう",
+        "influence"
+    ],
+    [
+        "営業",
+        "えいぎょう",
+        "business"
+    ],
+    [
+        "衛星",
+        "えいせい",
+        "satellite"
+    ],
+    [
+        "笑顔",
+        "えがお",
+        "smiling face"
+    ],
+    [
+        "餌",
+        "えさ",
+        "feed"
+    ],
+    [
+        "円",
+        "えん",
+        "circle,money"
+    ],
+    [
+        "延期",
+        "えんき",
+        "postponement"
+    ],
+    [
+        "演技",
+        "えんぎ",
+        "performance"
+    ],
+    [
+        "援助",
+        "えんじょ",
+        "assistance, aid, support"
+    ],
+    [
+        "演説",
+        "えんぜつ",
+        "speech"
+    ],
+    [
+        "演奏",
+        "えんそう",
+        "musical performance"
+    ],
+    [
+        "遠慮",
+        "えんりょ",
+        "diffidence,restraint,reserve"
+    ],
+    [
+        "老い",
+        "おい",
+        "old age"
+    ],
+    [
+        "王",
+        "おう",
+        "king, ruler, sovereign, monarch"
+    ],
+    [
+        "王",
+        "おう",
+        "king"
+    ],
+    [
+        "王様",
+        "おうさま",
+        "king"
+    ],
+    [
+        "王子",
+        "おうじ",
+        "prince"
+    ],
+    [
+        "横断",
+        "おうだん",
+        "crossing"
+    ],
+    [
+        "横断",
+        "おうだん",
+        "crossing"
+    ],
+    [
+        "覆う",
+        "おおう",
+        "to cover, to hide, to conceal, to wrap, to disguise"
+    ],
+    [
+        "大家",
+        "おおや",
+        "rich family, distinguished family"
+    ],
+    [
+        "大家",
+        "おおや",
+        "rich family, landlord"
+    ],
+    [
+        "沖",
+        "おき",
+        "open sea"
+    ],
+    [
+        "奥",
+        "おく",
+        "interior"
+    ],
+    [
+        "奥",
+        "おく",
+        "interior, inner part"
+    ],
+    [
+        "汚染",
+        "おせん",
+        "pollution, contamination"
+    ],
+    [
+        "男の人",
+        "おとこのひと",
+        "man"
+    ],
+    [
+        "お腹",
+        "おなか",
+        "stomach"
+    ],
+    [
+        "鬼",
+        "おに",
+        "demon, ogre"
+    ],
+    [
+        "帯",
+        "おび",
+        "band, belt"
+    ],
+    [
+        "思い出",
+        "おもいで",
+        "memory"
+    ],
+    [
+        "泳ぎ",
+        "およぎ",
+        "swimming"
+    ],
+    [
+        "泳ぎ",
+        "およぎ",
+        "swimming"
+    ],
+    [
+        "終",
+        "おわり",
+        "the end",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "終",
+        "おわり",
+        "the end",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "恩",
+        "おん",
+        "favor, obligation"
+    ],
+    [
+        "温度",
+        "おんど",
+        "temperature"
+    ],
+    [
+        "可",
+        "か",
+        "passable"
+    ],
+    [
+        "回",
+        "かい",
+        "counter for occurrences"
+    ],
+    [
+        "回",
+        "かい",
+        "counter for occurrences"
+    ],
+    [
+        "会",
+        "かい",
+        "meeting"
+    ],
+    [
+        "会員",
+        "かいいん",
+        "member, the membership"
+    ],
+    [
+        "会員",
+        "かいいん",
+        "member"
+    ],
+    [
+        "絵画",
+        "かいが",
+        "painting"
+    ],
+    [
+        "海外",
+        "かいがい",
+        "overseas"
+    ],
+    [
+        "会計",
+        "かいけい",
+        "account, finance, accountant"
+    ],
+    [
+        "会計",
+        "かいけい",
+        "accounting"
+    ],
+    [
+        "外交",
+        "がいこう",
+        "diplomacy"
+    ],
+    [
+        "外交",
+        "がいこう",
+        "diplomacy"
+    ],
+    [
+        "開始",
+        "かいし",
+        "start"
+    ],
+    [
+        "解釈",
+        "かいしゃく",
+        "interpretation"
+    ],
+    [
+        "外出",
+        "がいしゅつ",
+        "outing"
+    ],
+    [
+        "香り",
+        "かおり",
+        "fragrance, scent"
+    ],
+    [
+        "画家",
+        "がか",
+        "painter, artist"
+    ],
+    [
+        "価格",
+        "かかく",
+        "price"
+    ],
+    [
+        "化学",
+        "かがく",
+        "chemistry"
+    ],
+    [
+        "係",
+        "かかり",
+        "person in charge"
+    ],
+    [
+        "鍵",
+        "かぎ",
+        "key"
+    ],
+    [
+        "家具",
+        "かぐ",
+        "furniture"
+    ],
+    [
+        "確実",
+        "かくじつ",
+        "certainty,reliability,soundness"
+    ],
+    [
+        "学者",
+        "がくしゃ",
+        "scholar"
+    ],
+    [
+        "学者",
+        "がくしゃ",
+        "scholar"
+    ],
+    [
+        "学習",
+        "がくしゅう",
+        "study, learning"
+    ],
+    [
+        "拡大",
+        "かくだい",
+        "magnification,enlargement"
+    ],
+    [
+        "陰",
+        "かげ",
+        "shade, shadow, other side"
+    ],
+    [
+        "陰",
+        "かげ",
+        "shade, shadow, other side"
+    ],
+    [
+        "過去",
+        "かこ",
+        "the past"
+    ],
+    [
+        "籠",
+        "かご",
+        "basket"
+    ],
+    [
+        "貸し",
+        "かし",
+        "loan, lending",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "菓子",
+        "かし",
+        "sweets"
+    ],
+    [
+        "菓子",
+        "かし",
+        "pastry"
+    ],
+    [
+        "歌手",
+        "かしゅ",
+        "singer"
+    ],
+    [
+        "歌手",
+        "かしゅ",
+        "singer"
+    ],
+    [
+        "数",
+        "かず",
+        "number"
+    ],
+    [
+        "肩",
+        "かた",
+        "shoulder"
+    ],
+    [
+        "肩",
+        "かた",
+        "shoulder"
+    ],
+    [
+        "刀",
+        "かたな",
+        "sword"
+    ],
+    [
+        "刀",
+        "かたな",
+        "sword, saber, knife, engraving tool"
+    ],
+    [
+        "価値",
+        "かち",
+        "value"
+    ],
+    [
+        "勝ち",
+        "かち",
+        "win, victory"
+    ],
+    [
+        "勝ち",
+        "かち",
+        "victory"
+    ],
+    [
+        "活気",
+        "かっき",
+        "liveliness"
+    ],
+    [
+        "学期",
+        "がっき",
+        "term (school)"
+    ],
+    [
+        "学期",
+        "がっき",
+        "semester"
+    ],
+    [
+        "格好",
+        "かっこう",
+        "appearance, shape"
+    ],
+    [
+        "活動",
+        "かつどう",
+        "activity"
+    ],
+    [
+        "活用",
+        "かつよう",
+        "conjugation, practical use"
+    ],
+    [
+        "活用",
+        "かつよう",
+        "usage, application"
+    ],
+    [
+        "金",
+        "かね",
+        "gold"
+    ],
+    [
+        "株",
+        "かぶ",
+        "stock, share"
+    ],
+    [
+        "我慢",
+        "がまん",
+        "patience"
+    ],
+    [
+        "上",
+        "かみ",
+        "(1) first volume, (2) superior quality, (3) governmental"
+    ],
+    [
+        "神",
+        "かみ",
+        "god"
+    ],
+    [
+        "上",
+        "かみ",
+        "superior, first part"
+    ],
+    [
+        "神",
+        "かみ",
+        "god"
+    ],
+    [
+        "雷",
+        "かみなり",
+        "thunder"
+    ],
+    [
+        "髪の毛",
+        "かみのけ",
+        "hair"
+    ],
+    [
+        "科目",
+        "かもく",
+        "school subject"
+    ],
+    [
+        "火曜",
+        "かよう",
+        "Tuesday"
+    ],
+    [
+        "空",
+        "から",
+        "sky"
+    ],
+    [
+        "空",
+        "から",
+        "sky"
+    ],
+    [
+        "川",
+        "かわ",
+        "river"
+    ],
+    [
+        "河",
+        "かわ",
+        "river"
+    ],
+    [
+        "缶",
+        "かん",
+        "can, tin"
+    ],
+    [
+        "考え",
+        "かんがえ",
+        "thought, idea"
+    ],
+    [
+        "感覚",
+        "かんかく",
+        "sensation, feeling"
+    ],
+    [
+        "観客",
+        "かんきゃく",
+        "audience"
+    ],
+    [
+        "歓迎",
+        "かんげい",
+        "welcome"
+    ],
+    [
+        "観光",
+        "かんこう",
+        "sightseeing"
+    ],
+    [
+        "観光",
+        "かんこう",
+        "sightseeing"
+    ],
+    [
+        "観察",
+        "かんさつ",
+        "observation"
+    ],
+    [
+        "感じ",
+        "かんじ",
+        "feeling, impression"
+    ],
+    [
+        "勘定",
+        "かんじょう",
+        "calculation, counting, consideration"
+    ],
+    [
+        "勘定",
+        "かんじょう",
+        "calculation, counting, consideration"
+    ],
+    [
+        "関心",
+        "かんしん",
+        "concern, interest"
+    ],
+    [
+        "感心",
+        "かんしん",
+        "admiration"
+    ],
+    [
+        "完成",
+        "かんせい",
+        "completion"
+    ],
+    [
+        "感動",
+        "かんどう",
+        "being deeply moved, excitement, impression, deep emotion"
+    ],
+    [
+        "感動",
+        "かんどう",
+        "deep emotion"
+    ],
+    [
+        "監督",
+        "かんとく",
+        "supervision"
+    ],
+    [
+        "管理",
+        "かんり",
+        "management"
+    ],
+    [
+        "完了",
+        "かんりょう",
+        "completion, conclusion"
+    ],
+    [
+        "完了",
+        "かんりょう",
+        "completion"
+    ],
+    [
+        "関連",
+        "かんれん",
+        "relation, connection"
+    ],
+    [
+        "記憶",
+        "きおく",
+        "memory"
+    ],
+    [
+        "気温",
+        "きおん",
+        "temperature"
+    ],
+    [
+        "気温",
+        "きおん",
+        "temperature"
+    ],
+    [
+        "機械",
+        "きかい",
+        "machine"
+    ],
+    [
+        "議会",
+        "ぎかい",
+        "parliament"
+    ],
+    [
+        "期間",
+        "きかん",
+        "period"
+    ],
+    [
+        "機関",
+        "きかん",
+        "engine, mechanism"
+    ],
+    [
+        "企業",
+        "きぎょう",
+        "enterprise"
+    ],
+    [
+        "機嫌",
+        "きげん",
+        "mood"
+    ],
+    [
+        "気候",
+        "きこう",
+        "climate"
+    ],
+    [
+        "岸",
+        "きし",
+        "shore"
+    ],
+    [
+        "記事",
+        "きじ",
+        "news article, report"
+    ],
+    [
+        "生地",
+        "きじ",
+        "birthplace"
+    ],
+    [
+        "生地",
+        "きじ",
+        "cloth, fabric"
+    ],
+    [
+        "技師",
+        "ぎし",
+        "engineer"
+    ],
+    [
+        "記者",
+        "きしゃ",
+        "reporter"
+    ],
+    [
+        "期待",
+        "きたい",
+        "expectation, hope"
+    ],
+    [
+        "帰宅",
+        "きたく",
+        "returning home"
+    ],
+    [
+        "議長",
+        "ぎちょう",
+        "chairman"
+    ],
+    [
+        "記入",
+        "きにゅう",
+        "entry, filling in forms"
+    ],
+    [
+        "記念",
+        "きねん",
+        "commemoration"
+    ],
+    [
+        "寄付",
+        "きふ",
+        "donation"
+    ],
+    [
+        "義務",
+        "ぎむ",
+        "duty,obligation"
+    ],
+    [
+        "疑問",
+        "ぎもん",
+        "doubt, question"
+    ],
+    [
+        "逆",
+        "ぎゃく",
+        "reverse, opposite"
+    ],
+    [
+        "九",
+        "きゅう",
+        "nine"
+    ],
+    [
+        "球",
+        "きゅう",
+        "globe,sphere,ball"
+    ],
+    [
+        "休憩",
+        "きゅうけい",
+        "rest, break"
+    ],
+    [
+        "吸収",
+        "きゅうしゅう",
+        "absorption"
+    ],
+    [
+        "救助",
+        "きゅうじょ",
+        "rescue"
+    ],
+    [
+        "給料",
+        "きゅうりょう",
+        "salary, wages"
+    ],
+    [
+        "教科書",
+        "きょうかしょ",
+        "textbook"
+    ],
+    [
+        "競技",
+        "きょうぎ",
+        "match"
+    ],
+    [
+        "供給",
+        "きょうきゅう",
+        "supply,provision"
+    ],
+    [
+        "教師",
+        "きょうし",
+        "teacher"
+    ],
+    [
+        "教師",
+        "きょうし",
+        "teacher (classroom)"
+    ],
+    [
+        "教授",
+        "きょうじゅ",
+        "professor"
+    ],
+    [
+        "強調",
+        "きょうちょう",
+        "emphasis"
+    ],
+    [
+        "恐怖",
+        "きょうふ",
+        "dread, terror"
+    ],
+    [
+        "協力",
+        "きょうりょく",
+        "cooperation"
+    ],
+    [
+        "強力",
+        "きょうりょく",
+        "herculean strength, mountain carrier-guide"
+    ],
+    [
+        "強力",
+        "きょうりょく",
+        "powerful"
+    ],
+    [
+        "許可",
+        "きょか",
+        "permission"
+    ],
+    [
+        "霧",
+        "きり",
+        "fog, mist"
+    ],
+    [
+        "切れ",
+        "きれ",
+        "piece, cloth"
+    ],
+    [
+        "議論",
+        "ぎろん",
+        "debate"
+    ],
+    [
+        "金",
+        "きん",
+        "gold"
+    ],
+    [
+        "銀",
+        "ぎん",
+        "silver"
+    ],
+    [
+        "禁煙",
+        "きんえん",
+        "no smoking"
+    ],
+    [
+        "金額",
+        "きんがく",
+        "amount of money"
+    ],
+    [
+        "禁止",
+        "きんし",
+        "prohibition,ban"
+    ],
+    [
+        "金銭",
+        "きんせん",
+        "money, cash"
+    ],
+    [
+        "金属",
+        "きんぞく",
+        "metal"
+    ],
+    [
+        "金属",
+        "きんぞく",
+        "metal"
+    ],
+    [
+        "近代",
+        "きんだい",
+        "modern times"
+    ],
+    [
+        "緊張",
+        "きんちょう",
+        "tension"
+    ],
+    [
+        "筋肉",
+        "きんにく",
+        "muscle"
+    ],
+    [
+        "金融",
+        "きんゆう",
+        "finance"
+    ],
+    [
+        "金曜",
+        "きんよう",
+        "Friday"
+    ],
+    [
+        "鎖",
+        "くさり",
+        "chain"
+    ],
+    [
+        "癖",
+        "くせ",
+        "habit"
+    ],
+    [
+        "管",
+        "くだ",
+        "pipe, tube"
+    ],
+    [
+        "管",
+        "くだ",
+        "pipe, tube"
+    ],
+    [
+        "組合",
+        "くみあい",
+        "union"
+    ],
+    [
+        "曇",
+        "くもり",
+        "cloudiness, cloudy weather, shadow"
+    ],
+    [
+        "位",
+        "くらい",
+        "rank, about"
+    ],
+    [
+        "位",
+        "くらい",
+        "grade, rank, about"
+    ],
+    [
+        "暮らし",
+        "くらし",
+        "living, livelihood"
+    ],
+    [
+        "暮れ",
+        "くれ",
+        "year end,sunset,nightfall,end"
+    ],
+    [
+        "訓",
+        "くん",
+        "native reading"
+    ],
+    [
+        "軍",
+        "ぐん",
+        "army"
+    ],
+    [
+        "軍隊",
+        "ぐんたい",
+        "army, troops"
+    ],
+    [
+        "軍隊",
+        "ぐんたい",
+        "army"
+    ],
+    [
+        "訓練",
+        "くんれん",
+        "training"
+    ],
+    [
+        "下",
+        "げ",
+        "under, below, beneath"
+    ],
+    [
+        "下",
+        "げ",
+        "below"
+    ],
+    [
+        "計",
+        "けい",
+        "plan",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "敬意",
+        "けいい",
+        "respect"
+    ],
+    [
+        "経営",
+        "けいえい",
+        "management"
+    ],
+    [
+        "計画",
+        "けいかく",
+        "plan"
+    ],
+    [
+        "景気",
+        "けいき",
+        "condition, state, business (condition)"
+    ],
+    [
+        "景気",
+        "けいき",
+        "economy"
+    ],
+    [
+        "経験",
+        "けいけん",
+        "experience"
+    ],
+    [
+        "傾向",
+        "けいこう",
+        "tendency, trend, inclination"
+    ],
+    [
+        "傾向",
+        "けいこう",
+        "tendency"
+    ],
+    [
+        "警告",
+        "けいこく",
+        "warning"
+    ],
+    [
+        "刑事",
+        "けいじ",
+        "detective"
+    ],
+    [
+        "掲示",
+        "けいじ",
+        "notice"
+    ],
+    [
+        "掲示",
+        "けいじ",
+        "notice, bulletin"
+    ],
+    [
+        "芸術",
+        "げいじゅつ",
+        "art"
+    ],
+    [
+        "芸術",
+        "げいじゅつ",
+        "(fine) art, the arts"
+    ],
+    [
+        "契約",
+        "けいやく",
+        "contract"
+    ],
+    [
+        "経由",
+        "けいゆ",
+        "via, route through"
+    ],
+    [
+        "怪我",
+        "けが",
+        "injury, hurt"
+    ],
+    [
+        "化粧",
+        "けしょう",
+        "makeup"
+    ],
+    [
+        "結果",
+        "けっか",
+        "result"
+    ],
+    [
+        "欠陥",
+        "けっかん",
+        "defect"
+    ],
+    [
+        "決心",
+        "けっしん",
+        "determination"
+    ],
+    [
+        "欠席",
+        "けっせき",
+        "absence"
+    ],
+    [
+        "決定",
+        "けってい",
+        "decision"
+    ],
+    [
+        "欠点",
+        "けってん",
+        "fault"
+    ],
+    [
+        "欠点",
+        "けってん",
+        "faults, defect, weakness"
+    ],
+    [
+        "月曜",
+        "げつよう",
+        "Monday"
+    ],
+    [
+        "結論",
+        "けつろん",
+        "conclusion"
+    ],
+    [
+        "軒",
+        "けん",
+        "eaves"
+    ],
+    [
+        "県",
+        "けん",
+        "prefecture"
+    ],
+    [
+        "券",
+        "けん",
+        "ticket"
+    ],
+    [
+        "見解",
+        "けんかい",
+        "opinion"
+    ],
+    [
+        "現金",
+        "げんきん",
+        "cash"
+    ],
+    [
+        "言語",
+        "げんご",
+        "language"
+    ],
+    [
+        "健康",
+        "けんこう",
+        "health"
+    ],
+    [
+        "健康",
+        "けんこう",
+        "health, sound, wholesome"
+    ],
+    [
+        "現在",
+        "げんざい",
+        "present, now"
+    ],
+    [
+        "現実",
+        "げんじつ",
+        "reality"
+    ],
+    [
+        "現象",
+        "げんしょう",
+        "phenomenon"
+    ],
+    [
+        "現状",
+        "げんじょう",
+        "present condition"
+    ],
+    [
+        "現状",
+        "げんじょう",
+        "present condition, existing state, status quo"
+    ],
+    [
+        "現代",
+        "げんだい",
+        "modern times, nowadays"
+    ],
+    [
+        "建築",
+        "けんちく",
+        "construction,architecture"
+    ],
+    [
+        "見当",
+        "けんとう",
+        "estimate, guess"
+    ],
+    [
+        "現場",
+        "げんば",
+        "scene"
+    ],
+    [
+        "憲法",
+        "けんぽう",
+        "constitution"
+    ],
+    [
+        "権利",
+        "けんり",
+        "right,privilege"
+    ],
+    [
+        "語",
+        "ご",
+        "word, language"
+    ],
+    [
+        "恋人",
+        "こいびと",
+        "lover, sweetheart"
+    ],
+    [
+        "恋人",
+        "こいびと",
+        "lover"
+    ],
+    [
+        "幸運",
+        "こううん",
+        "good fortune"
+    ],
+    [
+        "講演",
+        "こうえん",
+        "lecture"
+    ],
+    [
+        "硬貨",
+        "こうか",
+        "coin"
+    ],
+    [
+        "効果",
+        "こうか",
+        "effect"
+    ],
+    [
+        "高価",
+        "こうか",
+        "high price"
+    ],
+    [
+        "合格",
+        "ごうかく",
+        "success (exam)"
+    ],
+    [
+        "航空",
+        "こうくう",
+        "aviation"
+    ],
+    [
+        "光景",
+        "こうけい",
+        "scene"
+    ],
+    [
+        "攻撃",
+        "こうげき",
+        "attack"
+    ],
+    [
+        "広告",
+        "こうこく",
+        "advertisement"
+    ],
+    [
+        "後者",
+        "こうしゃ",
+        "the latter"
+    ],
+    [
+        "構成",
+        "こうせい",
+        "composition"
+    ],
+    [
+        "強盗",
+        "ごうとう",
+        "robbery"
+    ],
+    [
+        "工場",
+        "こうば",
+        "factory",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "幸福",
+        "こうふく",
+        "happiness"
+    ],
+    [
+        "公平",
+        "こうへい",
+        "fairness, justice"
+    ],
+    [
+        "考慮",
+        "こうりょ",
+        "consideration"
+    ],
+    [
+        "氷",
+        "こおり",
+        "ice"
+    ],
+    [
+        "誤解",
+        "ごかい",
+        "misunderstanding"
+    ],
+    [
+        "語学",
+        "ごがく",
+        "language learning"
+    ],
+    [
+        "呼吸",
+        "こきゅう",
+        "breath,respiration"
+    ],
+    [
+        "故郷",
+        "こきょう",
+        "hometown"
+    ],
+    [
+        "国語",
+        "こくご",
+        "national language"
+    ],
+    [
+        "国語",
+        "こくご",
+        "national language"
+    ],
+    [
+        "黒板",
+        "こくばん",
+        "blackboard"
+    ],
+    [
+        "黒板",
+        "こくばん",
+        "blackboard"
+    ],
+    [
+        "克服",
+        "こくふく",
+        "conquest, overcoming"
+    ],
+    [
+        "国民",
+        "こくみん",
+        "national, people, citizen"
+    ],
+    [
+        "国民",
+        "こくみん",
+        "nation, citizens"
+    ],
+    [
+        "穀物",
+        "こくもつ",
+        "grain, cereal"
+    ],
+    [
+        "腰",
+        "こし",
+        "hip"
+    ],
+    [
+        "故障",
+        "こしょう",
+        "break-down, failure"
+    ],
+    [
+        "個人",
+        "こじん",
+        "individual, private person"
+    ],
+    [
+        "国家",
+        "こっか",
+        "nation, country"
+    ],
+    [
+        "国会",
+        "こっかい",
+        "National Diet,parliament,congress"
+    ],
+    [
+        "国境",
+        "こっきょう",
+        "border"
+    ],
+    [
+        "骨折",
+        "こっせつ",
+        "bone fracture"
+    ],
+    [
+        "事",
+        "こと",
+        "thing, matter"
+    ],
+    [
+        "諺",
+        "ことわざ",
+        "proverb"
+    ],
+    [
+        "粉",
+        "こな",
+        "powder"
+    ],
+    [
+        "小麦",
+        "こむぎ",
+        "wheat"
+    ],
+    [
+        "小麦",
+        "こむぎ",
+        "wheat"
+    ],
+    [
+        "小屋",
+        "こや",
+        "hut"
+    ],
+    [
+        "今回",
+        "こんかい",
+        "this time"
+    ],
+    [
+        "今後",
+        "こんご",
+        "from now on,hereafter"
+    ],
+    [
+        "困難",
+        "こんなん",
+        "difficulty"
+    ],
+    [
+        "今日",
+        "こんにち",
+        "today"
+    ],
+    [
+        "婚約",
+        "こんやく",
+        "engagement"
+    ],
+    [
+        "混乱",
+        "こんらん",
+        "confusion"
+    ],
+    [
+        "差",
+        "さ",
+        "difference,variation"
+    ],
+    [
+        "際",
+        "さい",
+        "occasion"
+    ],
+    [
+        "財産",
+        "ざいさん",
+        "property, assets"
+    ],
+    [
+        "最中",
+        "さいちゅう",
+        "in the middle of"
+    ],
+    [
+        "才能",
+        "さいのう",
+        "talent"
+    ],
+    [
+        "裁判",
+        "さいばん",
+        "trial"
+    ],
+    [
+        "材料",
+        "ざいりょう",
+        "materials"
+    ],
+    [
+        "盛り",
+        "さかり",
+        "serving, helping"
+    ],
+    [
+        "作業",
+        "さぎょう",
+        "task, work"
+    ],
+    [
+        "昨",
+        "さく",
+        "last (year/day)",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "作品",
+        "さくひん",
+        "work, opus"
+    ],
+    [
+        "作品",
+        "さくひん",
+        "work, opus, performance, production"
+    ],
+    [
+        "作物",
+        "さくもつ",
+        "crops, agricultural produce"
+    ],
+    [
+        "座席",
+        "ざせき",
+        "seat"
+    ],
+    [
+        "札",
+        "さつ",
+        "label, ticket"
+    ],
+    [
+        "作家",
+        "さっか",
+        "writer"
+    ],
+    [
+        "作曲",
+        "さっきょく",
+        "composition"
+    ],
+    [
+        "作曲",
+        "さっきょく",
+        "composition, setting (of music)"
+    ],
+    [
+        "砂漠",
+        "さばく",
+        "desert"
+    ],
+    [
+        "左右",
+        "さゆう",
+        "left and right, influence"
+    ],
+    [
+        "皿",
+        "さら",
+        "plate"
+    ],
+    [
+        "騒ぎ",
+        "さわぎ",
+        "uproar"
+    ],
+    [
+        "参考",
+        "さんこう",
+        "reference"
+    ],
+    [
+        "酸素",
+        "さんそ",
+        "oxygen"
+    ],
+    [
+        "酸素",
+        "さんそ",
+        "oxygen"
+    ],
+    [
+        "散歩",
+        "さんぽ",
+        "walk, stroll"
+    ],
+    [
+        "四",
+        "し",
+        "four"
+    ],
+    [
+        "氏",
+        "し",
+        "family name, lineage"
+    ],
+    [
+        "詩",
+        "し",
+        "poem"
+    ],
+    [
+        "幸せ",
+        "しあわせ",
+        "happiness,good fortune,luck,blessing"
+    ],
+    [
+        "時期",
+        "じき",
+        "season"
+    ],
+    [
+        "刺激",
+        "しげき",
+        "stimulus"
+    ],
+    [
+        "資源",
+        "しげん",
+        "resources"
+    ],
+    [
+        "支出",
+        "ししゅつ",
+        "expenditure"
+    ],
+    [
+        "事情",
+        "じじょう",
+        "circumstances"
+    ],
+    [
+        "自然",
+        "しぜん",
+        "nature"
+    ],
+    [
+        "自然",
+        "しぜん",
+        "nature, spontaneous"
+    ],
+    [
+        "思想",
+        "しそう",
+        "thought, idea"
+    ],
+    [
+        "舌",
+        "した",
+        "tongue"
+    ],
+    [
+        "支度",
+        "したく",
+        "preparation"
+    ],
+    [
+        "七",
+        "しち・なな",
+        "seven"
+    ],
+    [
+        "失業",
+        "しつぎょう",
+        "unemployment"
+    ],
+    [
+        "実験",
+        "じっけん",
+        "experiment"
+    ],
+    [
+        "実行",
+        "じっこう",
+        "execution, practice"
+    ],
+    [
+        "実際",
+        "じっさい",
+        "actual condition, status quo"
+    ],
+    [
+        "実施",
+        "じっし",
+        "implementation"
+    ],
+    [
+        "指導",
+        "しどう",
+        "guidance"
+    ],
+    [
+        "品",
+        "しな",
+        "goods, item"
+    ],
+    [
+        "芝生",
+        "しばふ",
+        "lawn"
+    ],
+    [
+        "支払",
+        "しはらい",
+        "payment"
+    ],
+    [
+        "死亡",
+        "しぼう",
+        "death"
+    ],
+    [
+        "資本",
+        "しほん",
+        "capital"
+    ],
+    [
+        "姉妹",
+        "しまい",
+        "sisters"
+    ],
+    [
+        "事務",
+        "じむ",
+        "office work"
+    ],
+    [
+        "下",
+        "しも",
+        "below"
+    ],
+    [
+        "霜",
+        "しも",
+        "frost"
+    ],
+    [
+        "借金",
+        "しゃっきん",
+        "debt"
+    ],
+    [
+        "邪魔",
+        "じゃま",
+        "hindrance, obstacle"
+    ],
+    [
+        "州",
+        "しゅう",
+        "sandbank"
+    ],
+    [
+        "銃",
+        "じゅう",
+        "gun"
+    ],
+    [
+        "十",
+        "じゅう",
+        "ten"
+    ],
+    [
+        "周囲",
+        "しゅうい",
+        "surroundings"
+    ],
+    [
+        "収穫",
+        "しゅうかく",
+        "harvest"
+    ],
+    [
+        "週間",
+        "しゅうかん",
+        "week"
+    ],
+    [
+        "宗教",
+        "しゅうきょう",
+        "religion"
+    ],
+    [
+        "重視",
+        "じゅうし",
+        "serious consideration"
+    ],
+    [
+        "就職",
+        "しゅうしょく",
+        "employment"
+    ],
+    [
+        "就職",
+        "しゅうしょく",
+        "finding employment, inauguration"
+    ],
+    [
+        "修正",
+        "しゅうせい",
+        "correction"
+    ],
+    [
+        "渋滞",
+        "じゅうたい",
+        "congestion, delay"
+    ],
+    [
+        "住宅",
+        "じゅうたく",
+        "residence, housing"
+    ],
+    [
+        "集団",
+        "しゅうだん",
+        "group, mass"
+    ],
+    [
+        "集中",
+        "しゅうちゅう",
+        "concentration,focusing the mind"
+    ],
+    [
+        "収入",
+        "しゅうにゅう",
+        "income"
+    ],
+    [
+        "修理",
+        "しゅうり",
+        "repair"
+    ],
+    [
+        "主義",
+        "しゅぎ",
+        "principle"
+    ],
+    [
+        "宿泊",
+        "しゅくはく",
+        "lodging"
+    ],
+    [
+        "手術",
+        "しゅじゅつ",
+        "surgery"
+    ],
+    [
+        "首相",
+        "しゅしょう",
+        "Prime Minister"
+    ],
+    [
+        "手段",
+        "しゅだん",
+        "means, way"
+    ],
+    [
+        "主張",
+        "しゅちょう",
+        "claim, assertion"
+    ],
+    [
+        "出席",
+        "しゅっせき",
+        "attendance,presence"
+    ],
+    [
+        "出発",
+        "しゅっぱつ",
+        "departure"
+    ],
+    [
+        "出版",
+        "しゅっぱん",
+        "publication"
+    ],
+    [
+        "首都",
+        "しゅと",
+        "capital city"
+    ],
+    [
+        "需要",
+        "じゅよう",
+        "demand"
+    ],
+    [
+        "種類",
+        "しゅるい",
+        "kind"
+    ],
+    [
+        "順",
+        "じゅん",
+        "order"
+    ],
+    [
+        "瞬間",
+        "しゅんかん",
+        "moment"
+    ],
+    [
+        "順調",
+        "じゅんちょう",
+        "favorable, going well"
+    ],
+    [
+        "順番",
+        "じゅんばん",
+        "order"
+    ],
+    [
+        "使用",
+        "しよう",
+        "use"
+    ],
+    [
+        "章",
+        "しょう",
+        "chapter, medal"
+    ],
+    [
+        "賞",
+        "しょう",
+        "prize, award"
+    ],
+    [
+        "賞",
+        "しょう",
+        "prize, award"
+    ],
+    [
+        "小",
+        "しょう",
+        "small"
+    ],
+    [
+        "上",
+        "じょう",
+        "superior quality"
+    ],
+    [
+        "障害",
+        "しょうがい",
+        "obstacle"
+    ],
+    [
+        "奨学金",
+        "しょうがくきん",
+        "scholarship"
+    ],
+    [
+        "上京",
+        "じょうきょう",
+        "proceeding to the capital (Tokyo)"
+    ],
+    [
+        "上京",
+        "じょうきょう",
+        "proceeding to the capital (Tokyo)"
+    ],
+    [
+        "条件",
+        "じょうけん",
+        "condition, term"
+    ],
+    [
+        "条件",
+        "じょうけん",
+        "conditions, terms"
+    ],
+    [
+        "正午",
+        "しょうご",
+        "noon"
+    ],
+    [
+        "正午",
+        "しょうご",
+        "noon, mid-day"
+    ],
+    [
+        "少女",
+        "しょうじょ",
+        "little girl"
+    ],
+    [
+        "少々",
+        "しょうしょう",
+        "a little, small amount"
+    ],
+    [
+        "症状",
+        "しょうじょう",
+        "symptoms, condition"
+    ],
+    [
+        "招待",
+        "しょうたい",
+        "invitation"
+    ],
+    [
+        "上達",
+        "じょうたつ",
+        "improvement, advance, progress"
+    ],
+    [
+        "冗談",
+        "じょうだん",
+        "joke"
+    ],
+    [
+        "冗談",
+        "じょうだん",
+        "jest, joke"
+    ],
+    [
+        "承知",
+        "しょうち",
+        "consent, acceptance"
+    ],
+    [
+        "承認",
+        "しょうにん",
+        "approval"
+    ],
+    [
+        "商人",
+        "しょうにん",
+        "merchant"
+    ],
+    [
+        "少年",
+        "しょうねん",
+        "boy"
+    ],
+    [
+        "商売",
+        "しょうばい",
+        "trade,business,commerce,transaction,occupation"
+    ],
+    [
+        "消費",
+        "しょうひ",
+        "consumption"
+    ],
+    [
+        "情報",
+        "じょうほう",
+        "information"
+    ],
+    [
+        "女王",
+        "じょおう",
+        "queen"
+    ],
+    [
+        "職",
+        "しょく",
+        "employment"
+    ],
+    [
+        "職",
+        "しょく",
+        "job"
+    ],
+    [
+        "職業",
+        "しょくぎょう",
+        "occupation, profession"
+    ],
+    [
+        "植物",
+        "しょくぶつ",
+        "plant"
+    ],
+    [
+        "食物",
+        "しょくもつ",
+        "food, foodstuff"
+    ],
+    [
+        "食欲",
+        "しょくよく",
+        "appetite (for food)"
+    ],
+    [
+        "食欲",
+        "しょくよく",
+        "appetite (for food)"
+    ],
+    [
+        "食糧",
+        "しょくりょう",
+        "provisions,rations"
+    ],
+    [
+        "書斎",
+        "しょさい",
+        "study room"
+    ],
+    [
+        "女子",
+        "じょし",
+        "girl"
+    ],
+    [
+        "書物",
+        "しょもつ",
+        "books"
+    ],
+    [
+        "書類",
+        "しょるい",
+        "documents"
+    ],
+    [
+        "知らせ",
+        "しらせ",
+        "notice"
+    ],
+    [
+        "尻",
+        "しり",
+        "buttocks"
+    ],
+    [
+        "印",
+        "しるし",
+        "mark,symbol,evidence"
+    ],
+    [
+        "進学",
+        "しんがく",
+        "advancement to university"
+    ],
+    [
+        "神経",
+        "しんけい",
+        "nerve, sensitivity"
+    ],
+    [
+        "神経",
+        "しんけい",
+        "nerve"
+    ],
+    [
+        "真剣",
+        "しんけん",
+        "seriousness"
+    ],
+    [
+        "信仰",
+        "しんこう",
+        "religious belief"
+    ],
+    [
+        "信号",
+        "しんごう",
+        "traffic lights, signal, semaphore"
+    ],
+    [
+        "信号",
+        "しんごう",
+        "traffic light"
+    ],
+    [
+        "人工",
+        "じんこう",
+        "artificial"
+    ],
+    [
+        "深刻",
+        "しんこく",
+        "serious"
+    ],
+    [
+        "深刻",
+        "しんこく",
+        "serious"
+    ],
+    [
+        "診察",
+        "しんさつ",
+        "medical examination"
+    ],
+    [
+        "人生",
+        "じんせい",
+        "human life"
+    ],
+    [
+        "親戚",
+        "しんせき",
+        "relative"
+    ],
+    [
+        "心臓",
+        "しんぞう",
+        "heart"
+    ],
+    [
+        "心配",
+        "しんぱい",
+        "worry,concern,anxiety,care"
+    ],
+    [
+        "審判",
+        "しんぱん",
+        "referee, judgment"
+    ],
+    [
+        "親友",
+        "しんゆう",
+        "close friend"
+    ],
+    [
+        "親友",
+        "しんゆう",
+        "close friend, buddy"
+    ],
+    [
+        "信用",
+        "しんよう",
+        "trust"
+    ],
+    [
+        "信頼",
+        "しんらい",
+        "trust"
+    ],
+    [
+        "心理",
+        "しんり",
+        "mentality"
+    ],
+    [
+        "人類",
+        "じんるい",
+        "mankind, humanity"
+    ],
+    [
+        "図",
+        "ず",
+        "diagram, figure"
+    ],
+    [
+        "水準",
+        "すいじゅん",
+        "level"
+    ],
+    [
+        "水準",
+        "すいじゅん",
+        "(1) water level, (2) level, standard"
+    ],
+    [
+        "推薦",
+        "すいせん",
+        "recommendation"
+    ],
+    [
+        "睡眠",
+        "すいみん",
+        "sleep"
+    ],
+    [
+        "数",
+        "すう",
+        "number"
+    ],
+    [
+        "数字",
+        "すうじ",
+        "numeral"
+    ],
+    [
+        "姿",
+        "すがた",
+        "appearance, figure, shape"
+    ],
+    [
+        "スキー",
+        "スキー",
+        "skiing"
+    ],
+    [
+        "筋",
+        "すじ",
+        "muscle, line"
+    ],
+    [
+        "頭痛",
+        "ずつう",
+        "headache"
+    ],
+    [
+        "全て",
+        "すべて",
+        "everything, all"
+    ],
+    [
+        "角",
+        "すみ",
+        "corner"
+    ],
+    [
+        "性",
+        "せい",
+        "gender, sex"
+    ],
+    [
+        "所為",
+        "せい",
+        "cause, reason"
+    ],
+    [
+        "背",
+        "せい",
+        "height"
+    ],
+    [
+        "生",
+        "せい",
+        "raw, draft"
+    ],
+    [
+        "税",
+        "ぜい",
+        "tax"
+    ],
+    [
+        "世紀",
+        "せいき",
+        "century"
+    ],
+    [
+        "世紀",
+        "せいき",
+        "century, era"
+    ],
+    [
+        "成功",
+        "せいこう",
+        "success"
+    ],
+    [
+        "生産",
+        "せいさん",
+        "production, manufacture"
+    ],
+    [
+        "生産",
+        "せいさん",
+        "production, manufacture"
+    ],
+    [
+        "正式",
+        "せいしき",
+        "due form, official, formality"
+    ],
+    [
+        "正式",
+        "せいしき",
+        "official"
+    ],
+    [
+        "精神",
+        "せいしん",
+        "mind, soul, heart"
+    ],
+    [
+        "成績",
+        "せいせき",
+        "grades, performance"
+    ],
+    [
+        "製造",
+        "せいぞう",
+        "manufacturing"
+    ],
+    [
+        "贅沢",
+        "ぜいたく",
+        "luxury, extravagance"
+    ],
+    [
+        "成長",
+        "せいちょう",
+        "growth"
+    ],
+    [
+        "制度",
+        "せいど",
+        "system, institution"
+    ],
+    [
+        "青年",
+        "せいねん",
+        "youth, young man"
+    ],
+    [
+        "製品",
+        "せいひん",
+        "manufactured goods"
+    ],
+    [
+        "政府",
+        "せいふ",
+        "government"
+    ],
+    [
+        "生命",
+        "せいめい",
+        "life"
+    ],
+    [
+        "生命",
+        "せいめい",
+        "life, existence"
+    ],
+    [
+        "咳",
+        "せき",
+        "cough"
+    ],
+    [
+        "責任",
+        "せきにん",
+        "responsibility"
+    ],
+    [
+        "石油",
+        "せきゆ",
+        "oil, petroleum"
+    ],
+    [
+        "世間",
+        "せけん",
+        "society"
+    ],
+    [
+        "説",
+        "せつ",
+        "theory"
+    ],
+    [
+        "設備",
+        "せつび",
+        "facility"
+    ],
+    [
+        "絶滅",
+        "ぜつめつ",
+        "extinction"
+    ],
+    [
+        "世話",
+        "せわ",
+        "looking after, help, aid, assistance"
+    ],
+    [
+        "世話",
+        "せわ",
+        "help, assistance"
+    ],
+    [
+        "善",
+        "ぜん",
+        "good, virtue"
+    ],
+    [
+        "全員",
+        "ぜんいん",
+        "all members"
+    ],
+    [
+        "専攻",
+        "せんこう",
+        "major, special study"
+    ],
+    [
+        "全国",
+        "ぜんこく",
+        "nationwide"
+    ],
+    [
+        "先日",
+        "せんじつ",
+        "the other day"
+    ],
+    [
+        "前者",
+        "ぜんしゃ",
+        "the former"
+    ],
+    [
+        "選手",
+        "せんしゅ",
+        "player,team"
+    ],
+    [
+        "前進",
+        "ぜんしん",
+        "progress"
+    ],
+    [
+        "全体",
+        "ぜんたい",
+        "whole, entirety, whatever (is the matter)"
+    ],
+    [
+        "全体",
+        "ぜんたい",
+        "whole"
+    ],
+    [
+        "騒音",
+        "そうおん",
+        "noise"
+    ],
+    [
+        "騒音",
+        "そうおん",
+        "noise"
+    ],
+    [
+        "増加",
+        "ぞうか",
+        "increase"
+    ],
+    [
+        "増加",
+        "ぞうか",
+        "increase, addition"
+    ],
+    [
+        "掃除",
+        "そうじ",
+        "cleaning, sweeping"
+    ],
+    [
+        "掃除",
+        "そうじ",
+        "cleaning, sweeping"
+    ],
+    [
+        "想像",
+        "そうぞう",
+        "imagination, guess"
+    ],
+    [
+        "想像",
+        "そうぞう",
+        "imagination"
+    ],
+    [
+        "装置",
+        "そうち",
+        "equipment"
+    ],
+    [
+        "速度",
+        "そくど",
+        "speed"
+    ],
+    [
+        "底",
+        "そこ",
+        "bottom, sole"
+    ],
+    [
+        "組織",
+        "そしき",
+        "organization, tissue, structure"
+    ],
+    [
+        "袖",
+        "そで",
+        "sleeve"
+    ],
+    [
+        "側",
+        "そば",
+        "side"
+    ],
+    [
+        "損",
+        "そん",
+        "loss, disadvantage"
+    ],
+    [
+        "尊敬",
+        "そんけい",
+        "respect"
+    ],
+    [
+        "尊重",
+        "そんちょう",
+        "esteem"
+    ],
+    [
+        "田",
+        "た",
+        "rice field"
+    ],
+    [
+        "田",
+        "た",
+        "rice field"
+    ],
+    [
+        "題",
+        "だい",
+        "title, theme, topic"
+    ],
+    [
+        "台",
+        "だい",
+        "stand"
+    ],
+    [
+        "体育",
+        "たいいく",
+        "physical education"
+    ],
+    [
+        "体温",
+        "たいおん",
+        "body temperature"
+    ],
+    [
+        "大会",
+        "たいかい",
+        "convention, tournament"
+    ],
+    [
+        "大会",
+        "たいかい",
+        "convention, tournament, mass meeting, rally"
+    ],
+    [
+        "大気",
+        "たいき",
+        "atmosphere"
+    ],
+    [
+        "大気",
+        "たいき",
+        "atmosphere"
+    ],
+    [
+        "代金",
+        "だいきん",
+        "price"
+    ],
+    [
+        "退屈",
+        "たいくつ",
+        "boredom, tedium"
+    ],
+    [
+        "滞在",
+        "たいざい",
+        "stay"
+    ],
+    [
+        "大使",
+        "たいし",
+        "ambassador"
+    ],
+    [
+        "対象",
+        "たいしょう",
+        "target, subject"
+    ],
+    [
+        "大臣",
+        "だいじん",
+        "cabinet minister"
+    ],
+    [
+        "大戦",
+        "たいせん",
+        "great war"
+    ],
+    [
+        "態度",
+        "たいど",
+        "attitude, manner"
+    ],
+    [
+        "大半",
+        "たいはん",
+        "majority,mostly,generally"
+    ],
+    [
+        "代表",
+        "だいひょう",
+        "representative"
+    ],
+    [
+        "逮捕",
+        "たいほ",
+        "arrest,apprehension"
+    ],
+    [
+        "太陽",
+        "たいよう",
+        "sun"
+    ],
+    [
+        "大陸",
+        "たいりく",
+        "continent"
+    ],
+    [
+        "互い",
+        "たがい",
+        "each other, mutual"
+    ],
+    [
+        "宝",
+        "たから",
+        "treasure"
+    ],
+    [
+        "宝",
+        "たから",
+        "treasure"
+    ],
+    [
+        "宅",
+        "たく",
+        "home"
+    ],
+    [
+        "宅",
+        "たく",
+        "house, home, husband"
+    ],
+    [
+        "他人",
+        "たにん",
+        "another person, unrelated person, outsider, stranger"
+    ],
+    [
+        "他人",
+        "たにん",
+        "another person"
+    ],
+    [
+        "種",
+        "たね",
+        "seed, cause"
+    ],
+    [
+        "束",
+        "たば",
+        "handbreadth,bundle"
+    ],
+    [
+        "旅",
+        "たび",
+        "travel, trip"
+    ],
+    [
+        "度",
+        "たび",
+        "counter for occurrences"
+    ],
+    [
+        "度",
+        "たび",
+        "counter for occurrences"
+    ],
+    [
+        "弾",
+        "たま",
+        "bullet, shot"
+    ],
+    [
+        "玉",
+        "たま",
+        "ball, sphere, coin"
+    ],
+    [
+        "球",
+        "たま",
+        "ball"
+    ],
+    [
+        "駄目",
+        "だめ",
+        "no good"
+    ],
+    [
+        "試し",
+        "ためし",
+        "trial, test"
+    ],
+    [
+        "段",
+        "だん",
+        "step, rank, level"
+    ],
+    [
+        "単位",
+        "たんい",
+        "unit, credit (in school)"
+    ],
+    [
+        "単語",
+        "たんご",
+        "word, vocabulary"
+    ],
+    [
+        "男子",
+        "だんし",
+        "boy"
+    ],
+    [
+        "単純",
+        "たんじゅん",
+        "simplicity"
+    ],
+    [
+        "団体",
+        "だんたい",
+        "group"
+    ],
+    [
+        "担当",
+        "たんとう",
+        "person in charge"
+    ],
+    [
+        "地下",
+        "ちか",
+        "basement, underground"
+    ],
+    [
+        "近頃",
+        "ちかごろ",
+        "lately, recently, nowadays"
+    ],
+    [
+        "地球",
+        "ちきゅう",
+        "the earth"
+    ],
+    [
+        "地球",
+        "ちきゅう",
+        "Earth"
+    ],
+    [
+        "知事",
+        "ちじ",
+        "prefectural governor"
+    ],
+    [
+        "知識",
+        "ちしき",
+        "knowledge"
+    ],
+    [
+        "父親",
+        "ちちおや",
+        "father"
+    ],
+    [
+        "知能",
+        "ちのう",
+        "intelligence, brains"
+    ],
+    [
+        "知能",
+        "ちのう",
+        "intelligence, brains"
+    ],
+    [
+        "地平線",
+        "ちへいせん",
+        "horizon"
+    ],
+    [
+        "地方",
+        "ちほう",
+        "region"
+    ],
+    [
+        "茶",
+        "ちゃ",
+        "tea"
+    ],
+    [
+        "茶",
+        "ちゃ",
+        "tea"
+    ],
+    [
+        "中",
+        "ちゅう",
+        "inside,middle,among"
+    ],
+    [
+        "中央",
+        "ちゅうおう",
+        "centre, central, center, middle"
+    ],
+    [
+        "中央",
+        "ちゅうおう",
+        "center"
+    ],
+    [
+        "中学",
+        "ちゅうがく",
+        "middle school"
+    ],
+    [
+        "中古",
+        "ちゅうこ",
+        "secondhand"
+    ],
+    [
+        "駐車",
+        "ちゅうしゃ",
+        "parking (e.g. car)"
+    ],
+    [
+        "昼食",
+        "ちゅうしょく",
+        "lunch"
+    ],
+    [
+        "中心",
+        "ちゅうしん",
+        "center, core"
+    ],
+    [
+        "注目",
+        "ちゅうもく",
+        "attention, notice"
+    ],
+    [
+        "調査",
+        "ちょうさ",
+        "investigation, survey"
+    ],
+    [
+        "頂上",
+        "ちょうじょう",
+        "summit, top"
+    ],
+    [
+        "貯金",
+        "ちょきん",
+        "savings"
+    ],
+    [
+        "貯金",
+        "ちょきん",
+        "(bank) savings"
+    ],
+    [
+        "著者",
+        "ちょしゃ",
+        "author,writer"
+    ],
+    [
+        "通学",
+        "つうがく",
+        "commuting to school"
+    ],
+    [
+        "通信",
+        "つうしん",
+        "correspondence, communication, news, signal"
+    ],
+    [
+        "通信",
+        "つうしん",
+        "communication"
+    ],
+    [
+        "疲れ",
+        "つかれ",
+        "tiredness, fatigue"
+    ],
+    [
+        "疲れ",
+        "つかれ",
+        "tiredness, fatigue"
+    ],
+    [
+        "月",
+        "つき",
+        "moon, month"
+    ],
+    [
+        "付き合い",
+        "つきあい",
+        "association, socializing, fellowship"
+    ],
+    [
+        "包み",
+        "つつみ",
+        "bundle, package, parcel, bale"
+    ],
+    [
+        "包み",
+        "つつみ",
+        "parcel"
+    ],
+    [
+        "務め",
+        "つとめ",
+        "duty"
+    ],
+    [
+        "勤め",
+        "つとめ",
+        "duty,responsibility,task"
+    ],
+    [
+        "翼",
+        "つばさ",
+        "wings"
+    ],
+    [
+        "罪",
+        "つみ",
+        "crime, fault, indiscretion"
+    ],
+    [
+        "抵抗",
+        "ていこう",
+        "resistance"
+    ],
+    [
+        "提出",
+        "ていしゅつ",
+        "submission"
+    ],
+    [
+        "程度",
+        "ていど",
+        "degree"
+    ],
+    [
+        "停留所",
+        "ていりゅうじょ",
+        "bus stop"
+    ],
+    [
+        "適度",
+        "てきど",
+        "moderate"
+    ],
+    [
+        "適用",
+        "てきよう",
+        "application"
+    ],
+    [
+        "哲学",
+        "てつがく",
+        "philosophy"
+    ],
+    [
+        "徹底",
+        "てってい",
+        "thoroughness, completeness"
+    ],
+    [
+        "徹底",
+        "てってい",
+        "thoroughness"
+    ],
+    [
+        "鉄道",
+        "てつどう",
+        "railroad"
+    ],
+    [
+        "徹夜",
+        "てつや",
+        "all-night vigil"
+    ],
+    [
+        "手間",
+        "てま",
+        "time, labor"
+    ],
+    [
+        "デモ",
+        "デモ",
+        "demonstration"
+    ],
+    [
+        "典型",
+        "てんけい",
+        "type, pattern"
+    ],
+    [
+        "典型",
+        "てんけい",
+        "type, pattern, archetypal"
+    ],
+    [
+        "電子",
+        "でんし",
+        "electron"
+    ],
+    [
+        "テント",
+        "テント",
+        "tent"
+    ],
+    [
+        "伝統",
+        "でんとう",
+        "tradition"
+    ],
+    [
+        "伝統",
+        "でんとう",
+        "tradition, convention"
+    ],
+    [
+        "天然",
+        "てんねん",
+        "nature"
+    ],
+    [
+        "度",
+        "ど",
+        "counter for occurrences"
+    ],
+    [
+        "問い",
+        "とい",
+        "question"
+    ],
+    [
+        "同一",
+        "どういつ",
+        "identity,sameness,similarity"
+    ],
+    [
+        "動詞",
+        "どうし",
+        "verb"
+    ],
+    [
+        "同時",
+        "どうじ",
+        "same time"
+    ],
+    [
+        "投票",
+        "とうひょう",
+        "voting"
+    ],
+    [
+        "投票",
+        "とうひょう",
+        "voting, poll"
+    ],
+    [
+        "同様",
+        "どうよう",
+        "same kind"
+    ],
+    [
+        "同僚",
+        "どうりょう",
+        "colleague"
+    ],
+    [
+        "道路",
+        "どうろ",
+        "road"
+    ],
+    [
+        "都会",
+        "とかい",
+        "city"
+    ],
+    [
+        "時",
+        "とき",
+        "time, moment"
+    ],
+    [
+        "毒",
+        "どく",
+        "poison, toxicant"
+    ],
+    [
+        "毒",
+        "どく",
+        "poison"
+    ],
+    [
+        "得意",
+        "とくい",
+        "specialty"
+    ],
+    [
+        "読書",
+        "どくしょ",
+        "reading"
+    ],
+    [
+        "独身",
+        "どくしん",
+        "single life"
+    ],
+    [
+        "特徴",
+        "とくちょう",
+        "feature, characteristic"
+    ],
+    [
+        "特徴",
+        "とくちょう",
+        "feature, characteristic"
+    ],
+    [
+        "独特",
+        "どくとく",
+        "uniqueness"
+    ],
+    [
+        "独立",
+        "どくりつ",
+        "independence"
+    ],
+    [
+        "都市",
+        "とし",
+        "city"
+    ],
+    [
+        "都市",
+        "とし",
+        "town, city, municipal, urban"
+    ],
+    [
+        "年月",
+        "としつき",
+        "years and months"
+    ],
+    [
+        "年寄",
+        "としより",
+        "old person"
+    ],
+    [
+        "土地",
+        "とち",
+        "land, lot, soil"
+    ],
+    [
+        "友",
+        "とも",
+        "friend"
+    ],
+    [
+        "土曜",
+        "どよう",
+        "Saturday"
+    ],
+    [
+        "努力",
+        "どりょく",
+        "effort"
+    ],
+    [
+        "泥",
+        "どろ",
+        "mud"
+    ],
+    [
+        "名",
+        "な",
+        "name, reputation"
+    ],
+    [
+        "内容",
+        "ないよう",
+        "subject, contents, matter, substance, detail, import"
+    ],
+    [
+        "内容",
+        "ないよう",
+        "contents, subject, detail"
+    ],
+    [
+        "仲",
+        "なか",
+        "relation,relationship"
+    ],
+    [
+        "仲間",
+        "なかま",
+        "comrade, companion"
+    ],
+    [
+        "眺め",
+        "ながめ",
+        "view, outlook"
+    ],
+    [
+        "流れ",
+        "ながれ",
+        "stream"
+    ],
+    [
+        "謎",
+        "なぞ",
+        "riddle"
+    ],
+    [
+        "納得",
+        "なっとく",
+        "consent,assent,understanding"
+    ],
+    [
+        "波",
+        "なみ",
+        "wave"
+    ],
+    [
+        "縄",
+        "なわ",
+        "rope"
+    ],
+    [
+        "匂い",
+        "におい",
+        "smell"
+    ],
+    [
+        "日",
+        "にち",
+        "day"
+    ],
+    [
+        "日常",
+        "にちじょう",
+        "daily life"
+    ],
+    [
+        "日曜",
+        "にちよう",
+        "Sunday"
+    ],
+    [
+        "日本",
+        "にっぽん",
+        "Japan"
+    ],
+    [
+        "日本",
+        "にっぽん",
+        "Japan"
+    ],
+    [
+        "入院",
+        "にゅういん",
+        "hospitalization",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "入学",
+        "にゅうがく",
+        "school admission"
+    ],
+    [
+        "人気",
+        "にんき",
+        "popularity, sign of life"
+    ],
+    [
+        "人間",
+        "にんげん",
+        "human being"
+    ],
+    [
+        "根",
+        "ね",
+        "root"
+    ],
+    [
+        "願い",
+        "ねがい",
+        "wish"
+    ],
+    [
+        "鼠",
+        "ねずみ",
+        "mouse"
+    ],
+    [
+        "鼠",
+        "ねずみ",
+        "(1) mouse, rat, (2) dark gray, slate color"
+    ],
+    [
+        "値段",
+        "ねだん",
+        "price"
+    ],
+    [
+        "値段",
+        "ねだん",
+        "price, cost"
+    ],
+    [
+        "熱心",
+        "ねっしん",
+        "enthusiasm (also adj-na)"
+    ],
+    [
+        "熱心",
+        "ねっしん",
+        "zeal, enthusiasm"
+    ],
+    [
+        "熱帯",
+        "ねったい",
+        "tropics"
+    ],
+    [
+        "年間",
+        "ねんかん",
+        "(period of a) year"
+    ],
+    [
+        "年月",
+        "ねんげつ",
+        "months and years"
+    ],
+    [
+        "年代",
+        "ねんだい",
+        "era, period"
+    ],
+    [
+        "野",
+        "の",
+        "field"
+    ],
+    [
+        "野",
+        "の",
+        "field"
+    ],
+    [
+        "能",
+        "のう",
+        "ability"
+    ],
+    [
+        "農家",
+        "のうか",
+        "farm family"
+    ],
+    [
+        "農民",
+        "のうみん",
+        "farmer"
+    ],
+    [
+        "能力",
+        "のうりょく",
+        "ability"
+    ],
+    [
+        "残り",
+        "のこり",
+        "remaining"
+    ],
+    [
+        "望み",
+        "のぞみ",
+        "wish, desire"
+    ],
+    [
+        "後",
+        "のち",
+        "later, after"
+    ],
+    [
+        "灰",
+        "はい",
+        "ash"
+    ],
+    [
+        "梅雨",
+        "ばいう",
+        "rainy season"
+    ],
+    [
+        "パイプ",
+        "パイプ",
+        "pipe, tube"
+    ],
+    [
+        "墓",
+        "はか",
+        "grave"
+    ],
+    [
+        "博士",
+        "はかせ",
+        "PhD"
+    ],
+    [
+        "拍手",
+        "はくしゅ",
+        "applause"
+    ],
+    [
+        "莫大",
+        "ばくだい",
+        "enormous (amount)"
+    ],
+    [
+        "爆発",
+        "ばくはつ",
+        "explosion, eruption"
+    ],
+    [
+        "破産",
+        "はさん",
+        "(personal) bankruptcy"
+    ],
+    [
+        "端",
+        "はし",
+        "edge"
+    ],
+    [
+        "始まり",
+        "はじまり",
+        "beginning"
+    ],
+    [
+        "旗",
+        "はた",
+        "flag"
+    ],
+    [
+        "畑",
+        "はたけ",
+        "field"
+    ],
+    [
+        "二十",
+        "はたち",
+        "20 years old"
+    ],
+    [
+        "働き",
+        "はたらき",
+        "work, labor"
+    ],
+    [
+        "発見",
+        "はっけん",
+        "discovery, detection, finding"
+    ],
+    [
+        "発見",
+        "はっけん",
+        "discovery"
+    ],
+    [
+        "発行",
+        "はっこう",
+        "publication issue"
+    ],
+    [
+        "発展",
+        "はってん",
+        "development,growth"
+    ],
+    [
+        "発明",
+        "はつめい",
+        "invention"
+    ],
+    [
+        "発明",
+        "はつめい",
+        "invention"
+    ],
+    [
+        "羽",
+        "はね",
+        "counter for birds"
+    ],
+    [
+        "幅",
+        "はば",
+        "width"
+    ],
+    [
+        "幅",
+        "はば",
+        "width, breadth"
+    ],
+    [
+        "母親",
+        "ははおや",
+        "mother"
+    ],
+    [
+        "場面",
+        "ばめん",
+        "scene, setting"
+    ],
+    [
+        "腹",
+        "はら",
+        "belly"
+    ],
+    [
+        "原",
+        "はら",
+        "field, plain, prairie, tundra, moor, wilderness"
+    ],
+    [
+        "原",
+        "はら",
+        "plain, field"
+    ],
+    [
+        "針",
+        "はり",
+        "needle, hand (e.g. clock)"
+    ],
+    [
+        "針",
+        "はり",
+        "needle"
+    ],
+    [
+        "反抗",
+        "はんこう",
+        "resistance"
+    ],
+    [
+        "犯罪",
+        "はんざい",
+        "crime"
+    ],
+    [
+        "判断",
+        "はんだん",
+        "judgement"
+    ],
+    [
+        "犯人",
+        "はんにん",
+        "criminal"
+    ],
+    [
+        "被害",
+        "ひがい",
+        "damage"
+    ],
+    [
+        "被害",
+        "ひがい",
+        "damage"
+    ],
+    [
+        "悲劇",
+        "ひげき",
+        "tragedy"
+    ],
+    [
+        "飛行",
+        "ひこう",
+        "aviation"
+    ],
+    [
+        "非常",
+        "ひじょう",
+        "emergency, extraordinary, unusual"
+    ],
+    [
+        "非常",
+        "ひじょう",
+        "emergency"
+    ],
+    [
+        "美人",
+        "びじん",
+        "beautiful woman"
+    ],
+    [
+        "額",
+        "ひたい",
+        "forehead"
+    ],
+    [
+        "日付",
+        "ひづけ",
+        "date"
+    ],
+    [
+        "日付",
+        "ひづけ",
+        "date, dating"
+    ],
+    [
+        "必死",
+        "ひっし",
+        "desperation"
+    ],
+    [
+        "否定",
+        "ひてい",
+        "negation"
+    ],
+    [
+        "一言",
+        "ひとこと",
+        "single word"
+    ],
+    [
+        "人込み",
+        "ひとごみ",
+        "crowd"
+    ],
+    [
+        "独り",
+        "ひとり",
+        "alone"
+    ],
+    [
+        "批評",
+        "ひひょう",
+        "criticism"
+    ],
+    [
+        "微妙",
+        "びみょう",
+        "subtlety (also adj-na)"
+    ],
+    [
+        "微妙",
+        "びみょう",
+        "delicate, subtle"
+    ],
+    [
+        "費用",
+        "ひよう",
+        "cost, expense"
+    ],
+    [
+        "表",
+        "ひょう",
+        "table (e.g. Tab 1), chart, list"
+    ],
+    [
+        "秒",
+        "びょう",
+        "second (60th min)"
+    ],
+    [
+        "秒",
+        "びょう",
+        "second (60th min)"
+    ],
+    [
+        "表現",
+        "ひょうげん",
+        "expression, presentation, representation (math)"
+    ],
+    [
+        "表現",
+        "ひょうげん",
+        "expression"
+    ],
+    [
+        "表情",
+        "ひょうじょう",
+        "facial expression"
+    ],
+    [
+        "表情",
+        "ひょうじょう",
+        "facial expression"
+    ],
+    [
+        "平等",
+        "びょうどう",
+        "equality, evenness"
+    ],
+    [
+        "評判",
+        "ひょうばん",
+        "fame, reputation, popularity, arrant"
+    ],
+    [
+        "評判",
+        "ひょうばん",
+        "reputation"
+    ],
+    [
+        "表面",
+        "ひょうめん",
+        "surface"
+    ],
+    [
+        "品",
+        "ひん",
+        "item, product, elegance"
+    ],
+    [
+        "瓶",
+        "びん",
+        "bottle"
+    ],
+    [
+        "便",
+        "びん",
+        "way, means"
+    ],
+    [
+        "便",
+        "びん",
+        "way, means"
+    ],
+    [
+        "不",
+        "ふ",
+        "negative prefix"
+    ],
+    [
+        "分",
+        "ぶ",
+        "part, dividing"
+    ],
+    [
+        "無",
+        "ぶ",
+        "nothing"
+    ],
+    [
+        "不安",
+        "ふあん",
+        "anxiety"
+    ],
+    [
+        "風景",
+        "ふうけい",
+        "scenery"
+    ],
+    [
+        "夫婦",
+        "ふうふ",
+        "married couple"
+    ],
+    [
+        "武器",
+        "ぶき",
+        "weapon"
+    ],
+    [
+        "服装",
+        "ふくそう",
+        "garments"
+    ],
+    [
+        "袋",
+        "ふくろ",
+        "bag"
+    ],
+    [
+        "節",
+        "ふし",
+        "joint, section, tune"
+    ],
+    [
+        "不思議",
+        "ふしぎ",
+        "mystery"
+    ],
+    [
+        "不自由",
+        "ふじゆう",
+        "inconvenience, disability"
+    ],
+    [
+        "婦人",
+        "ふじん",
+        "woman"
+    ],
+    [
+        "不正",
+        "ふせい",
+        "injustice"
+    ],
+    [
+        "舞台",
+        "ぶたい",
+        "stage (theater)"
+    ],
+    [
+        "双子",
+        "ふたご",
+        "twins"
+    ],
+    [
+        "普段",
+        "ふだん",
+        "usually, habitually, ordinarily, always"
+    ],
+    [
+        "普段",
+        "ふだん",
+        "usually, habitual"
+    ],
+    [
+        "縁",
+        "ふち",
+        "edge, rim (or fate in some context)"
+    ],
+    [
+        "物質",
+        "ぶっしつ",
+        "material, substance"
+    ],
+    [
+        "筆",
+        "ふで",
+        "brush"
+    ],
+    [
+        "船",
+        "ふね",
+        "ship,boat"
+    ],
+    [
+        "部分",
+        "ぶぶん",
+        "section, part"
+    ],
+    [
+        "不満",
+        "ふまん",
+        "dissatisfaction, displeasure, discontent, complaints, unhappiness"
+    ],
+    [
+        "不満",
+        "ふまん",
+        "dissatisfaction"
+    ],
+    [
+        "プラン",
+        "プラン",
+        "plan"
+    ],
+    [
+        "分",
+        "ぶん",
+        "part, segment"
+    ],
+    [
+        "文",
+        "ぶん",
+        "sentence"
+    ],
+    [
+        "文",
+        "ぶん",
+        "sentence"
+    ],
+    [
+        "分析",
+        "ぶんせき",
+        "analysis"
+    ],
+    [
+        "文明",
+        "ぶんめい",
+        "civilization"
+    ],
+    [
+        "平均",
+        "へいきん",
+        "equilibrium, balance, average, mean"
+    ],
+    [
+        "変化",
+        "へんか",
+        "change, transformation"
+    ],
+    [
+        "勉強",
+        "べんきょう",
+        "study"
+    ],
+    [
+        "変更",
+        "へんこう",
+        "change,modification,alteration"
+    ],
+    [
+        "弁当",
+        "べんとう",
+        "lunch box"
+    ],
+    [
+        "方",
+        "ほう",
+        "side"
+    ],
+    [
+        "法",
+        "ほう",
+        "law"
+    ],
+    [
+        "棒",
+        "ぼう",
+        "rod, stick"
+    ],
+    [
+        "冒険",
+        "ぼうけん",
+        "adventure"
+    ],
+    [
+        "宝石",
+        "ほうせき",
+        "gem, jewel"
+    ],
+    [
+        "放送",
+        "ほうそう",
+        "broadcasting"
+    ],
+    [
+        "放送",
+        "ほうそう",
+        "broadcast, broadcasting"
+    ],
+    [
+        "豊富",
+        "ほうふ",
+        "abundance"
+    ],
+    [
+        "方々",
+        "ほうぼう",
+        "people, various places"
+    ],
+    [
+        "頬",
+        "ほお",
+        "cheek"
+    ],
+    [
+        "他",
+        "ほか",
+        "other"
+    ],
+    [
+        "外",
+        "ほか",
+        "outside",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "誇り",
+        "ほこり",
+        "pride"
+    ],
+    [
+        "保存",
+        "ほぞん",
+        "preservation"
+    ],
+    [
+        "程",
+        "ほど",
+        "extent"
+    ],
+    [
+        "歩道",
+        "ほどう",
+        "footpath,walkway,sidewalk"
+    ],
+    [
+        "仏",
+        "ほとけ",
+        "Buddha,the dead"
+    ],
+    [
+        "濠",
+        "ほり",
+        "moat"
+    ],
+    [
+        "本当",
+        "ほんとう",
+        "truth"
+    ],
+    [
+        "本人",
+        "ほんにん",
+        "the person himself"
+    ],
+    [
+        "間",
+        "ま",
+        "space,time"
+    ],
+    [
+        "迷子",
+        "まいご",
+        "lost child"
+    ],
+    [
+        "幕",
+        "まく",
+        "curtain, act"
+    ],
+    [
+        "負け",
+        "まけ",
+        "defeat"
+    ],
+    [
+        "孫",
+        "まご",
+        "grandchild"
+    ],
+    [
+        "真面目",
+        "まじめ",
+        "serious, diligent"
+    ],
+    [
+        "間違い",
+        "まちがい",
+        "mistake"
+    ],
+    [
+        "祭",
+        "まつり",
+        "festival"
+    ],
+    [
+        "真似",
+        "まね",
+        "mimicry"
+    ],
+    [
+        "丸",
+        "まる",
+        "circle, full (month), perfection, purity, suffix for ship names"
+    ],
+    [
+        "丸",
+        "まる",
+        "circle, perfection, suffix for ship names"
+    ],
+    [
+        "満足",
+        "まんぞく",
+        "satisfaction"
+    ],
+    [
+        "身",
+        "み",
+        "body, main part, oneself, sword"
+    ],
+    [
+        "身",
+        "み",
+        "body, oneself"
+    ],
+    [
+        "実",
+        "み",
+        "fruit, result"
+    ],
+    [
+        "見送り",
+        "みおくり",
+        "send-off"
+    ],
+    [
+        "味方",
+        "みかた",
+        "ally"
+    ],
+    [
+        "見事",
+        "みごと",
+        "splendid, admirable"
+    ],
+    [
+        "見舞い",
+        "みまい",
+        "enquiry, expression of sympathy"
+    ],
+    [
+        "土産",
+        "みやげ",
+        "souvenir"
+    ],
+    [
+        "都",
+        "みやこ",
+        "capital"
+    ],
+    [
+        "明後日",
+        "みょうごにち",
+        "day after tomorrow"
+    ],
+    [
+        "皆",
+        "みんな",
+        "all,everyone,everybody"
+    ],
+    [
+        "無",
+        "む",
+        "nothing, naught, nil, zero"
+    ],
+    [
+        "無",
+        "む",
+        "nothing, none"
+    ],
+    [
+        "迎え",
+        "むかえ",
+        "meeting, welcome"
+    ],
+    [
+        "虫歯",
+        "むしば",
+        "cavity, tooth decay"
+    ],
+    [
+        "無駄",
+        "むだ",
+        "futility,uselessness"
+    ],
+    [
+        "夢中",
+        "むちゅう",
+        "trance,ecstasy,delirium"
+    ],
+    [
+        "胸",
+        "むね",
+        "breast,chest"
+    ],
+    [
+        "無料",
+        "むりょう",
+        "free, no charge"
+    ],
+    [
+        "芽",
+        "め",
+        "sprout"
+    ],
+    [
+        "明確",
+        "めいかく",
+        "clarity (noun use)"
+    ],
+    [
+        "命令",
+        "めいれい",
+        "command"
+    ],
+    [
+        "迷惑",
+        "めいわく",
+        "nuisance"
+    ],
+    [
+        "飯",
+        "めし",
+        "(sl) meals,food"
+    ],
+    [
+        "綿",
+        "めん",
+        "cotton, padding"
+    ],
+    [
+        "綿",
+        "めん",
+        "cotton"
+    ],
+    [
+        "免許",
+        "めんきょ",
+        "license"
+    ],
+    [
+        "申し訳",
+        "もうしわけ",
+        "excuse"
+    ],
+    [
+        "毛布",
+        "もうふ",
+        "blanket"
+    ],
+    [
+        "目標",
+        "もくひょう",
+        "mark, objective, target"
+    ],
+    [
+        "木曜",
+        "もくよう",
+        "Thursday"
+    ],
+    [
+        "木曜",
+        "もくよう",
+        "Thursday"
+    ],
+    [
+        "文字",
+        "もじ",
+        "character"
+    ],
+    [
+        "基",
+        "もと",
+        "basis"
+    ],
+    [
+        "元",
+        "もと",
+        "origin"
+    ],
+    [
+        "素",
+        "もと",
+        "prime",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "物語",
+        "ものがたり",
+        "story, legend"
+    ],
+    [
+        "物事",
+        "ものごと",
+        "things"
+    ],
+    [
+        "模様",
+        "もよう",
+        "pattern"
+    ],
+    [
+        "文句",
+        "もんく",
+        "phrase, complaint"
+    ],
+    [
+        "文句",
+        "もんく",
+        "complaint, phrase"
+    ],
+    [
+        "文字",
+        "もんじ",
+        "letter (of alphabet), character"
+    ],
+    [
+        "文字",
+        "もんじ",
+        "character (written)"
+    ],
+    [
+        "役",
+        "やく",
+        "role, position"
+    ],
+    [
+        "約",
+        "やく",
+        "approximately"
+    ],
+    [
+        "役割",
+        "やくわり",
+        "role"
+    ],
+    [
+        "家賃",
+        "やちん",
+        "rent"
+    ],
+    [
+        "厄介",
+        "やっかい",
+        "trouble, burden, care"
+    ],
+    [
+        "厄介",
+        "やっかい",
+        "trouble, burden, care, bother"
+    ],
+    [
+        "宿",
+        "やど",
+        "inn"
+    ],
+    [
+        "唯一",
+        "ゆいいつ",
+        "only, sole, unique"
+    ],
+    [
+        "唯一",
+        "ゆいいつ",
+        "only, unique"
+    ],
+    [
+        "勇気",
+        "ゆうき",
+        "courage"
+    ],
+    [
+        "有効",
+        "ゆうこう",
+        "validity"
+    ],
+    [
+        "友情",
+        "ゆうじょう",
+        "friendship"
+    ],
+    [
+        "友人",
+        "ゆうじん",
+        "friend"
+    ],
+    [
+        "有能",
+        "ゆうのう",
+        "capable"
+    ],
+    [
+        "郵便",
+        "ゆうびん",
+        "mail,postal service"
+    ],
+    [
+        "床",
+        "ゆか",
+        "floor"
+    ],
+    [
+        "床",
+        "ゆか",
+        "floor"
+    ],
+    [
+        "愉快",
+        "ゆかい",
+        "pleasant"
+    ],
+    [
+        "行き",
+        "ゆき",
+        "going"
+    ],
+    [
+        "輸出",
+        "ゆしゅつ",
+        "export"
+    ],
+    [
+        "輸入",
+        "ゆにゅう",
+        "importation,import,introduction"
+    ],
+    [
+        "夜",
+        "よ",
+        "evening, night"
+    ],
+    [
+        "夜明け",
+        "よあけ",
+        "dawn"
+    ],
+    [
+        "様",
+        "よう",
+        "way,manner"
+    ],
+    [
+        "要求",
+        "ようきゅう",
+        "demand"
+    ],
+    [
+        "用心",
+        "ようじん",
+        "care, precaution, guarding, caution"
+    ],
+    [
+        "様子",
+        "ようす",
+        "appearance"
+    ],
+    [
+        "様子",
+        "ようす",
+        "aspect, state, appearance"
+    ],
+    [
+        "要素",
+        "ようそ",
+        "element"
+    ],
+    [
+        "要点",
+        "ようてん",
+        "main point, gist"
+    ],
+    [
+        "曜日",
+        "ようび",
+        "day of the week"
+    ],
+    [
+        "予期",
+        "よき",
+        "expectation"
+    ],
+    [
+        "予算",
+        "よさん",
+        "estimate, budget"
+    ],
+    [
+        "予算",
+        "よさん",
+        "budget"
+    ],
+    [
+        "予測",
+        "よそく",
+        "prediction, estimation"
+    ],
+    [
+        "世の中",
+        "よのなか",
+        "society, the world"
+    ],
+    [
+        "予報",
+        "よほう",
+        "forecast"
+    ],
+    [
+        "予防",
+        "よぼう",
+        "prevention"
+    ],
+    [
+        "読み",
+        "よみ",
+        "reading"
+    ],
+    [
+        "余裕",
+        "よゆう",
+        "surplus, composure, margin"
+    ],
+    [
+        "余裕",
+        "よゆう",
+        "surplus, composure, margin, room, time, allowance, scope, rope"
+    ],
+    [
+        "喜び",
+        "よろこび",
+        "joy"
+    ],
+    [
+        "四",
+        "よん",
+        "four"
+    ],
+    [
+        "楽",
+        "らく",
+        "ease, comfort"
+    ],
+    [
+        "利益",
+        "りえき",
+        "profit, gain"
+    ],
+    [
+        "理解",
+        "りかい",
+        "understanding"
+    ],
+    [
+        "陸",
+        "りく",
+        "six (used in legal documents)"
+    ],
+    [
+        "理想",
+        "りそう",
+        "ideal"
+    ],
+    [
+        "率",
+        "りつ",
+        "rate, ratio, proportion, percentage"
+    ],
+    [
+        "留学",
+        "りゅうがく",
+        "study abroad"
+    ],
+    [
+        "流行",
+        "りゅうこう",
+        "trend, fashion"
+    ],
+    [
+        "量",
+        "りょう",
+        "quantity, amount"
+    ],
+    [
+        "料金",
+        "りょうきん",
+        "fee"
+    ],
+    [
+        "礼",
+        "れい",
+        "gratitude"
+    ],
+    [
+        "例",
+        "れい",
+        "example"
+    ],
+    [
+        "礼儀",
+        "れいぎ",
+        "manners, etiquette"
+    ],
+    [
+        "冷静",
+        "れいせい",
+        "composure"
+    ],
+    [
+        "列",
+        "れつ",
+        "queue,line,row"
+    ],
+    [
+        "列車",
+        "れっしゃ",
+        "train"
+    ],
+    [
+        "連想",
+        "れんそう",
+        "association (of ideas), suggestion"
+    ],
+    [
+        "労働",
+        "ろうどう",
+        "labor, work"
+    ],
+    [
+        "論争",
+        "ろんそう",
+        "controversy, dispute"
+    ],
+    [
+        "論争",
+        "ろんそう",
+        "controversy, dispute"
+    ],
+    [
+        "論文",
+        "ろんぶん",
+        "thesis, paper"
+    ],
+    [
+        "論文",
+        "ろんぶん",
+        "thesis, essay, treatise, paper"
+    ],
+    [
+        "輪",
+        "わ",
+        "ring, circle"
+    ],
+    [
+        "別れ",
+        "わかれ",
+        "parting, farewell"
+    ],
+    [
+        "脇",
+        "わき",
+        "side"
+    ],
+    [
+        "脇",
+        "わき",
+        "side"
+    ],
+    [
+        "綿",
+        "わた",
+        "cotton"
+    ],
+    [
+        "話題",
+        "わだい",
+        "topic"
+    ],
+    [
+        "話題",
+        "わだい",
+        "topic, subject"
+    ],
+    [
+        "笑い",
+        "わらい",
+        "laugh, laughter, smile"
+    ],
+    [
+        "笑い",
+        "わらい",
+        "laughter"
+    ],
+    [
+        "悪口",
+        "わるくち",
+        "abuse, slander"
+    ],
+    [
+        "我々",
+        "われわれ",
+        "we"
+    ],
+    [
+        "我々",
+        "われわれ",
+        "we"
+    ],
+    [
+        "湾",
+        "わん",
+        "bay"
+    ],
+    [
+        "湾",
+        "わん",
+        "bay, gulf, inlet"
+    ],
+    [
+        "できる",
+        "―",
+        "to be able to"
+    ],
+    [
+        "愛する",
+        "あいする",
+        "to love"
+    ],
+    [
+        "明ける",
+        "あける",
+        "to dawn, to become daylight"
+    ],
+    [
+        "与える",
+        "あたえる",
+        "to give"
+    ],
+    [
+        "暖かい（い-adj）",
+        "あたたかい",
+        "warm, mild",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "当たる",
+        "あたる",
+        "to be hit"
+    ],
+    [
+        "扱う",
+        "あつかう",
+        "to handle"
+    ],
+    [
+        "当てる",
+        "あてる",
+        "to hit"
+    ],
+    [
+        "浴びる",
+        "あびる",
+        "to bathe, to shower"
+    ],
+    [
+        "表す",
+        "あらわす",
+        "to express, to reveal"
+    ],
+    [
+        "有る",
+        "ある",
+        "to be, to have"
+    ],
+    [
+        "抱く",
+        "いだく",
+        "to hold, to embrace"
+    ],
+    [
+        "頂く",
+        "いただく",
+        "to receive (humble)"
+    ],
+    [
+        "至る",
+        "いたる",
+        "to reach"
+    ],
+    [
+        "祝う",
+        "いわう",
+        "to celebrate"
+    ],
+    [
+        "引退",
+        "いんたい",
+        "to retire"
+    ],
+    [
+        "受け取る",
+        "うけとる",
+        "to receive"
+    ],
+    [
+        "動かす",
+        "うごかす",
+        "to move, to shift"
+    ],
+    [
+        "失う",
+        "うしなう",
+        "to lose"
+    ],
+    [
+        "疑う",
+        "うたがう",
+        "to doubt, to distrust, to be suspicious of"
+    ],
+    [
+        "撃つ",
+        "うつ",
+        "to attack"
+    ],
+    [
+        "移す",
+        "うつす",
+        "to move, to infect"
+    ],
+    [
+        "訴える",
+        "うったえる",
+        "to sue, appeal"
+    ],
+    [
+        "うなる",
+        "うなる",
+        "to groan"
+    ],
+    [
+        "奪う",
+        "うばう",
+        "to snatch away"
+    ],
+    [
+        "売れる",
+        "うれる",
+        "to be sold"
+    ],
+    [
+        "描く",
+        "えがく",
+        "to draw, paint"
+    ],
+    [
+        "得る",
+        "える・うる",
+        "to obtain"
+    ],
+    [
+        "追い付く",
+        "おいつく",
+        "to catch up, to overtake"
+    ],
+    [
+        "追う",
+        "おう",
+        "to chase"
+    ],
+    [
+        "応じる",
+        "おうじる",
+        "to respond"
+    ],
+    [
+        "終える",
+        "おえる",
+        "to finish"
+    ],
+    [
+        "覆う",
+        "おおう",
+        "to cover"
+    ],
+    [
+        "恐れる",
+        "おそれる",
+        "to fear"
+    ],
+    [
+        "劣る",
+        "おとる",
+        "to be inferior"
+    ],
+    [
+        "溺れる",
+        "おぼれる",
+        "to drown"
+    ],
+    [
+        "及ぼす",
+        "およぼす",
+        "to exert, to cause"
+    ],
+    [
+        "居る",
+        "おる",
+        "to be (animate)"
+    ],
+    [
+        "下す",
+        "おろす",
+        "to lower"
+    ],
+    [
+        "降ろす",
+        "おろす",
+        "to take down, to drop"
+    ],
+    [
+        "飼う",
+        "かう",
+        "to raise"
+    ],
+    [
+        "換える",
+        "かえる",
+        "to exchange",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "替える",
+        "かえる",
+        "to replace, to exchange"
+    ],
+    [
+        "抱える",
+        "かかえる",
+        "to carry (in arms)"
+    ],
+    [
+        "輝く",
+        "かがやく",
+        "to shine, to glitter"
+    ],
+    [
+        "罹る",
+        "かかる",
+        "to suffer"
+    ],
+    [
+        "掛かる",
+        "かかる",
+        "to take (time/money), to hang"
+    ],
+    [
+        "限る",
+        "かぎる",
+        "to limit"
+    ],
+    [
+        "描く",
+        "かく",
+        "to draw"
+    ],
+    [
+        "隠す",
+        "かくす",
+        "to hide"
+    ],
+    [
+        "隠れる",
+        "かくれる",
+        "to hide, to disappear"
+    ],
+    [
+        "欠ける",
+        "かける",
+        "to be lacking"
+    ],
+    [
+        "囲む",
+        "かこむ",
+        "to surround, to encircle"
+    ],
+    [
+        "稼ぐ",
+        "かせぐ",
+        "to earn"
+    ],
+    [
+        "数える",
+        "かぞえる",
+        "to count"
+    ],
+    [
+        "語る",
+        "かたる",
+        "to talk"
+    ],
+    [
+        "被る",
+        "かぶる",
+        "to suffer"
+    ],
+    [
+        "刈る",
+        "かる",
+        "to cut (hair), to mow (grass), to harvest"
+    ],
+    [
+        "感じる",
+        "かんじる",
+        "to feel"
+    ],
+    [
+        "関する",
+        "かんする",
+        "to concern"
+    ],
+    [
+        "効く",
+        "きく",
+        "to be effective"
+    ],
+    [
+        "気付く",
+        "きづく",
+        "to notice"
+    ],
+    [
+        "食う",
+        "くう",
+        "to eat (vulgar, male)"
+    ],
+    [
+        "暮らす",
+        "くらす",
+        "to live, to get along"
+    ],
+    [
+        "狂う",
+        "くるう",
+        "to go mad, to get out of order"
+    ],
+    [
+        "加える",
+        "くわえる",
+        "to add"
+    ],
+    [
+        "決定する",
+        "けっていする",
+        "to determine",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "行動する",
+        "こうどうする",
+        "to act, to behave",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "凍る",
+        "こおる",
+        "to freeze"
+    ],
+    [
+        "越す",
+        "こす",
+        "to go over, to pass"
+    ],
+    [
+        "異なる",
+        "ことなる",
+        "to differ"
+    ],
+    [
+        "断る",
+        "ことわる",
+        "to refuse, to decline"
+    ],
+    [
+        "好む",
+        "このむ",
+        "to like"
+    ],
+    [
+        "殺す",
+        "ころす",
+        "to kill"
+    ],
+    [
+        "転ぶ",
+        "ころぶ",
+        "to fall"
+    ],
+    [
+        "叫ぶ",
+        "さけぶ",
+        "to shout, to cry"
+    ],
+    [
+        "避ける",
+        "さける",
+        "to avoid, to ward off, to avert"
+    ],
+    [
+        "支える",
+        "ささえる",
+        "to support"
+    ],
+    [
+        "指す",
+        "さす",
+        "to point, to put up umbrella, to play"
+    ],
+    [
+        "誘う",
+        "さそう",
+        "to invite, to tempt"
+    ],
+    [
+        "覚ます",
+        "さます",
+        "to awaken"
+    ],
+    [
+        "覚める",
+        "さめる",
+        "to wake up"
+    ],
+    [
+        "従う",
+        "したがう",
+        "to obey, to follow, to accompany"
+    ],
+    [
+        "支配する",
+        "しはいする",
+        "to control",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "支払う",
+        "しはらう",
+        "to pay"
+    ],
+    [
+        "しまう",
+        "しまう",
+        "to finish"
+    ],
+    [
+        "示す",
+        "しめす",
+        "to show"
+    ],
+    [
+        "占める",
+        "しめる",
+        "to occupy, to account for"
+    ],
+    [
+        "処理する",
+        "しょりする",
+        "to process",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "信頼する",
+        "しんらいする",
+        "to trust",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "空く",
+        "すく",
+        "to be empty"
+    ],
+    [
+        "救う",
+        "すくう",
+        "to rescue from, to help out of"
+    ],
+    [
+        "優れる",
+        "すぐれる",
+        "to excel"
+    ],
+    [
+        "勧める",
+        "すすめる",
+        "to recommend"
+    ],
+    [
+        "進める",
+        "すすめる",
+        "to advance, to promote"
+    ],
+    [
+        "済ませる",
+        "すませる",
+        "to finish"
+    ],
+    [
+        "注ぐ",
+        "そそぐ",
+        "to pour"
+    ],
+    [
+        "育つ",
+        "そだつ",
+        "to grow up"
+    ],
+    [
+        "備える",
+        "そなえる",
+        "to provide"
+    ],
+    [
+        "対する",
+        "たいする",
+        "to confront"
+    ],
+    [
+        "倒す",
+        "たおす",
+        "to beat, to bring down"
+    ],
+    [
+        "確かめる",
+        "たしかめる",
+        "to confirm"
+    ],
+    [
+        "助ける",
+        "たすける",
+        "to help"
+    ],
+    [
+        "戦う",
+        "たたかう",
+        "to fight"
+    ],
+    [
+        "叩く",
+        "たたく",
+        "to strike"
+    ],
+    [
+        "立ち上がる",
+        "たちあがる",
+        "to stand up"
+    ],
+    [
+        "経つ",
+        "たつ",
+        "to pass, to lapse"
+    ],
+    [
+        "黙る",
+        "だまる",
+        "to be silent"
+    ],
+    [
+        "頼る",
+        "たよる",
+        "to rely on, to depend on"
+    ],
+    [
+        "通じる",
+        "つうじる",
+        "to communicate, lead to"
+    ],
+    [
+        "捕まる",
+        "つかまる",
+        "to be caught"
+    ],
+    [
+        "就く",
+        "つく",
+        "to take (position), to settle in"
+    ],
+    [
+        "注ぐ",
+        "つぐ",
+        "to pour (into), to irrigate, to pay"
+    ],
+    [
+        "付ける",
+        "つける",
+        "to attach, to join, to add, to append"
+    ],
+    [
+        "繋ぐ",
+        "つなぐ",
+        "to connect"
+    ],
+    [
+        "出会う",
+        "であう",
+        "to meet by chance"
+    ],
+    [
+        "適する",
+        "てきする",
+        "to suit"
+    ],
+    [
+        "通り過ぎる",
+        "とおりすぎる",
+        "to pass through"
+    ],
+    [
+        "解く",
+        "とく",
+        "to unfasten"
+    ],
+    [
+        "解ける",
+        "とける",
+        "to come untied"
+    ],
+    [
+        "届く",
+        "とどく",
+        "to reach"
+    ],
+    [
+        "飛ばす",
+        "とばす",
+        "to skip over, to omit"
+    ],
+    [
+        "留める",
+        "とめる",
+        "to fasten, to turn off"
+    ],
+    [
+        "取れる",
+        "とれる",
+        "to come off"
+    ],
+    [
+        "流す",
+        "ながす",
+        "to drain"
+    ],
+    [
+        "眺める",
+        "ながめる",
+        "to view, to gaze at"
+    ],
+    [
+        "流れる",
+        "ながれる",
+        "to stream, to flow"
+    ],
+    [
+        "怠ける",
+        "なまける",
+        "to neglect"
+    ],
+    [
+        "悩む",
+        "なやむ",
+        "to be troubled, to worry"
+    ],
+    [
+        "成る",
+        "なる",
+        "to become"
+    ],
+    [
+        "為る",
+        "なる",
+        "to become"
+    ],
+    [
+        "似合う",
+        "にあう",
+        "to suit, to match"
+    ],
+    [
+        "握る",
+        "にぎる",
+        "to grasp, to mold (sushi)"
+    ],
+    [
+        "濡れる",
+        "ぬれる",
+        "to get wet"
+    ],
+    [
+        "願う",
+        "ねがう",
+        "to desire, to wish, to request"
+    ],
+    [
+        "残す",
+        "のこす",
+        "to leave"
+    ],
+    [
+        "除く",
+        "のぞく",
+        "to remove"
+    ],
+    [
+        "伸ばす",
+        "のばす",
+        "to lengthen, to stretch, to grow (beard)"
+    ],
+    [
+        "伸びる",
+        "のびる",
+        "to stretch"
+    ],
+    [
+        "昇る",
+        "のぼる",
+        "to rise, ascend"
+    ],
+    [
+        "計る",
+        "はかる",
+        "to measure"
+    ],
+    [
+        "吐く",
+        "はく",
+        "to vomit"
+    ],
+    [
+        "履く",
+        "はく",
+        "to wear (lower body)"
+    ],
+    [
+        "外す",
+        "はずす",
+        "to remove"
+    ],
+    [
+        "罰する",
+        "ばっする",
+        "to punish"
+    ],
+    [
+        "話し合う",
+        "はなしあう",
+        "to discuss"
+    ],
+    [
+        "放す",
+        "はなす",
+        "to release"
+    ],
+    [
+        "離す",
+        "はなす",
+        "to separate"
+    ],
+    [
+        "離れる",
+        "はなれる",
+        "to separate"
+    ],
+    [
+        "省く",
+        "はぶく",
+        "to omit"
+    ],
+    [
+        "貼る",
+        "はる",
+        "to stick, paste",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "引っ張る",
+        "ひっぱる",
+        "to pull"
+    ],
+    [
+        "広がる",
+        "ひろがる",
+        "to spread"
+    ],
+    [
+        "含む",
+        "ふくむ",
+        "to include"
+    ],
+    [
+        "防ぐ",
+        "ふせぐ",
+        "to defend"
+    ],
+    [
+        "振る",
+        "ふる",
+        "to shake"
+    ],
+    [
+        "震える",
+        "ふるえる",
+        "to shiver"
+    ],
+    [
+        "触れる",
+        "ふれる",
+        "to touch"
+    ],
+    [
+        "吠える",
+        "ほえる",
+        "to bark, to roar"
+    ],
+    [
+        "微笑む",
+        "ほほえむ",
+        "to smile"
+    ],
+    [
+        "任せる",
+        "まかせる",
+        "to entrust"
+    ],
+    [
+        "増す",
+        "ます",
+        "to increase, to grow"
+    ],
+    [
+        "学ぶ",
+        "まなぶ",
+        "to learn"
+    ],
+    [
+        "招く",
+        "まねく",
+        "to invite"
+    ],
+    [
+        "守る",
+        "まもる",
+        "to protect, to obey"
+    ],
+    [
+        "満ちる",
+        "みちる",
+        "to be full, to expire"
+    ],
+    [
+        "見る",
+        "みる",
+        "to see",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "向く",
+        "むく",
+        "to face"
+    ],
+    [
+        "向ける",
+        "むける",
+        "to turn toward"
+    ],
+    [
+        "結ぶ",
+        "むすぶ",
+        "to tie, bind"
+    ],
+    [
+        "申し込む",
+        "もうしこむ",
+        "to apply"
+    ],
+    [
+        "燃える",
+        "もえる",
+        "to burn"
+    ],
+    [
+        "持ち上げる",
+        "もちあげる",
+        "to raise, to lift up"
+    ],
+    [
+        "戻す",
+        "もどす",
+        "to return"
+    ],
+    [
+        "基づく",
+        "もとづく",
+        "to be based on"
+    ],
+    [
+        "貰う",
+        "もらう",
+        "to receive"
+    ],
+    [
+        "雇う",
+        "やとう",
+        "to hire"
+    ],
+    [
+        "言う",
+        "ゆう",
+        "to say"
+    ],
+    [
+        "譲る",
+        "ゆずる",
+        "to hand over"
+    ],
+    [
+        "許す",
+        "ゆるす",
+        "to allow"
+    ],
+    [
+        "酔う",
+        "よう",
+        "to get drunk"
+    ],
+    [
+        "横切る",
+        "よこぎる",
+        "to cross"
+    ],
+    [
+        "止す",
+        "よす",
+        "to quit"
+    ],
+    [
+        "論じる",
+        "ろんじる",
+        "to argue, to debate"
+    ],
+    [
+        "分ける",
+        "わける",
+        "to divide"
+    ],
+    [
+        "割る",
+        "わる",
+        "to divide, to cut, to break, to halve"
+    ],
+    [
+        "かわいらしい",
+        "–",
+        "lovely"
+    ],
+    [
+        "うまい",
+        "–",
+        "delicious"
+    ],
+    [
+        "かわいそう",
+        "–",
+        "pitiable"
+    ],
+    [
+        "いい",
+        "–",
+        "good",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "もっとも",
+        "–",
+        "natural, most reasonable",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "すてき",
+        "–",
+        "lovely, dreamy"
+    ],
+    [
+        "きつい",
+        "―",
+        "tight, intense"
+    ],
+    [
+        "愛する",
+        "あいする",
+        "to love"
+    ],
+    [
+        "暖かい",
+        "あたたかい",
+        "warm"
+    ],
+    [
+        "新た",
+        "あらた",
+        "new"
+    ],
+    [
+        "偉大",
+        "いだい",
+        "great"
+    ],
+    [
+        "うるさい",
+        "うるさい",
+        "noisy, fussy",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "嬉しい",
+        "うれしい",
+        "happy"
+    ],
+    [
+        "穏やか",
+        "おだやか",
+        "calm, gentle"
+    ],
+    [
+        "快適",
+        "かいてき",
+        "comfortable"
+    ],
+    [
+        "賢い",
+        "かしこい",
+        "wise"
+    ],
+    [
+        "硬い",
+        "かたい",
+        "hard"
+    ],
+    [
+        "完全",
+        "かんぜん",
+        "perfect"
+    ],
+    [
+        "気の毒",
+        "きのどく",
+        "pitiful"
+    ],
+    [
+        "奇妙",
+        "きみょう",
+        "strange"
+    ],
+    [
+        "巨大",
+        "きょだい",
+        "gigantic"
+    ],
+    [
+        "臭い",
+        "くさい",
+        "odour, stench"
+    ],
+    [
+        "苦しい",
+        "くるしい",
+        "painful, difficult"
+    ],
+    [
+        "濃い",
+        "こい",
+        "thick, dense, strong"
+    ],
+    [
+        "高価",
+        "こうか",
+        "high-priced"
+    ],
+    [
+        "豪華",
+        "ごうか",
+        "wonderful, gorgeous, splendor, pomp, extravagance"
+    ],
+    [
+        "最終",
+        "さいしゅう",
+        "last, final"
+    ],
+    [
+        "最低",
+        "さいてい",
+        "least, worst"
+    ],
+    [
+        "親しい",
+        "したしい",
+        "intimate"
+    ],
+    [
+        "重大",
+        "じゅうだい",
+        "serious, important"
+    ],
+    [
+        "上等",
+        "じょうとう",
+        "superior"
+    ],
+    [
+        "新鮮",
+        "しんせん",
+        "fresh"
+    ],
+    [
+        "慎重",
+        "しんちょう",
+        "prudent, cautious"
+    ],
+    [
+        "すごい",
+        "すごい",
+        "amazing, terrific"
+    ],
+    [
+        "素晴らしい",
+        "すばらしい",
+        "wonderful"
+    ],
+    [
+        "鋭い",
+        "するどい",
+        "sharp, pointed"
+    ],
+    [
+        "正",
+        "せい",
+        "regular, correct"
+    ],
+    [
+        "正確",
+        "せいかく",
+        "accurate"
+    ],
+    [
+        "積極的",
+        "せっきょくてき",
+        "proactive"
+    ],
+    [
+        "粗末",
+        "そまつ",
+        "crude"
+    ],
+    [
+        "大抵",
+        "たいてい",
+        "usually"
+    ],
+    [
+        "単なる",
+        "たんなる",
+        "mere"
+    ],
+    [
+        "辛い",
+        "つらい",
+        "painful"
+    ],
+    [
+        "適切",
+        "てきせつ",
+        "appropriate"
+    ],
+    [
+        "典型的（な）",
+        "てんけいてき",
+        "typical (implied from 典型)",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "得意",
+        "とくい",
+        "proud/specialty"
+    ],
+    [
+        "苦手",
+        "にがて",
+        "poor at, dislike"
+    ],
+    [
+        "激しい",
+        "はげしい",
+        "violent, intense"
+    ],
+    [
+        "必死",
+        "ひっし",
+        "desperate (can be treated as na-adjective)"
+    ],
+    [
+        "等しい",
+        "ひとしい",
+        "equal"
+    ],
+    [
+        "不自由",
+        "ふじゆう",
+        "inconvenient (also noun)"
+    ],
+    [
+        "不利",
+        "ふり",
+        "disadvantageous"
+    ],
+    [
+        "豊富",
+        "ほうふ",
+        "abundant"
+    ],
+    [
+        "真面目",
+        "まじめ",
+        "serious, honest (also noun)"
+    ],
+    [
+        "貧しい",
+        "まずしい",
+        "poor, needy"
+    ],
+    [
+        "真っ赤",
+        "まっか",
+        "deep red"
+    ],
+    [
+        "真っ直ぐ",
+        "まっすぐ",
+        "straight"
+    ],
+    [
+        "満ちる",
+        "みちる",
+        "to be full, to expire"
+    ],
+    [
+        "妙",
+        "みょう",
+        "strange"
+    ],
+    [
+        "面倒",
+        "めんどう",
+        "troublesome"
+    ],
+    [
+        "有利",
+        "ゆうり",
+        "advantageous"
+    ],
+    [
+        "豊か",
+        "ゆたか",
+        "abundant"
+    ],
+    [
+        "よい",
+        "よい",
+        "good, nice, pleasant"
+    ],
+    [
+        "容易",
+        "ようい",
+        "easy, simple"
+    ],
+    [
+        "宜しい",
+        "よろしい",
+        "(hon) good, OK"
+    ],
+    [
+        "立派",
+        "りっぱ",
+        "splendid, fine"
+    ],
+    [
+        "冷静",
+        "れいせい",
+        "calm"
+    ],
+    [
+        "まさに",
+        "–",
+        "exactly"
+    ],
+    [
+        "それぞれ",
+        "–",
+        "each"
+    ],
+    [
+        "どんな",
+        "–",
+        "what kind of"
+    ],
+    [
+        "もしも",
+        "–",
+        "if"
+    ],
+    [
+        "いずれ",
+        "–",
+        "eventually"
+    ],
+    [
+        "いらいら",
+        "–",
+        "irritation"
+    ],
+    [
+        "どこか",
+        "–",
+        "somewhere"
+    ],
+    [
+        "かもしれない",
+        "–",
+        "perhaps"
+    ],
+    [
+        "がっかり",
+        "–",
+        "disappointed"
+    ],
+    [
+        "ただ",
+        "–",
+        "only"
+    ],
+    [
+        "おそらく",
+        "–",
+        "maybe"
+    ],
+    [
+        "あいにく",
+        "–",
+        "unfortunately"
+    ],
+    [
+        "そのうち",
+        "–",
+        "eventually"
+    ],
+    [
+        "いつも",
+        "–",
+        "always"
+    ],
+    [
+        "しきりに",
+        "–",
+        "frequently, eagerly"
+    ],
+    [
+        "やや",
+        "–",
+        "a little, somewhat"
+    ],
+    [
+        "たびたび",
+        "–",
+        "repeatedly"
+    ],
+    [
+        "どうしても",
+        "–",
+        "no matter what"
+    ],
+    [
+        "およそ",
+        "–",
+        "approximately"
+    ],
+    [
+        "ゆっくり",
+        "–",
+        "slowly"
+    ],
+    [
+        "ふと",
+        "–",
+        "suddenly, unexpectedly"
+    ],
+    [
+        "さっぱり",
+        "—",
+        "feeling refreshed, neatly, clearly"
+    ],
+    [
+        "なかなか",
+        "—",
+        "very, considerably, not easily (with negative)"
+    ],
+    [
+        "いつでも",
+        "—",
+        "always, at all times"
+    ],
+    [
+        "それとも",
+        "―",
+        "or, or else"
+    ],
+    [
+        "むしろ",
+        "―",
+        "rather",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "あちこち",
+        "―",
+        "here and there"
+    ],
+    [
+        "ばったり",
+        "―",
+        "with a crash, suddenly"
+    ],
+    [
+        "かなり",
+        "―",
+        "fairly, quite"
+    ],
+    [
+        "のんびり",
+        "―",
+        "carefree"
+    ],
+    [
+        "まさか",
+        "―",
+        "no way"
+    ],
+    [
+        "ぴったり",
+        "―",
+        "perfectly"
+    ],
+    [
+        "まるで",
+        "―",
+        "entirely"
+    ],
+    [
+        "だけど",
+        "―",
+        "however"
+    ],
+    [
+        "そして",
+        "―",
+        "and"
+    ],
+    [
+        "ますます",
+        "―",
+        "increasingly"
+    ],
+    [
+        "ちゃんと",
+        "―",
+        "properly"
+    ],
+    [
+        "じっと",
+        "―",
+        "firmly, patiently"
+    ],
+    [
+        "さて",
+        "―",
+        "now then"
+    ],
+    [
+        "より",
+        "―",
+        "more (comparison)",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "どう",
+        "―",
+        "how",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "では",
+        "―",
+        "then, well"
+    ],
+    [
+        "余り",
+        "あまり",
+        "not much"
+    ],
+    [
+        "あんなに",
+        "あんなに",
+        "to that extent"
+    ],
+    [
+        "一度に",
+        "いちどに",
+        "all at once"
+    ],
+    [
+        "いつか",
+        "いつか",
+        "someday"
+    ],
+    [
+        "いつまでも",
+        "いつまでも",
+        "forever"
+    ],
+    [
+        "今にも",
+        "いまにも",
+        "any moment"
+    ],
+    [
+        "言わば",
+        "いわば",
+        "so to speak"
+    ],
+    [
+        "思わず",
+        "おもわず",
+        "unintentionally"
+    ],
+    [
+        "必ずしも",
+        "かならずしも",
+        "(not) necessarily"
+    ],
+    [
+        "急に",
+        "きゅうに",
+        "suddenly"
+    ],
+    [
+        "偶然",
+        "ぐうぜん",
+        "by chance, unexpectedly"
+    ],
+    [
+        "ぐっすり",
+        "ぐっすり",
+        "sound asleep"
+    ],
+    [
+        "更に",
+        "さらに",
+        "furthermore, again"
+    ],
+    [
+        "直",
+        "じき",
+        "immediately"
+    ],
+    [
+        "したがって",
+        "したがって",
+        "therefore"
+    ],
+    [
+        "実に",
+        "じつに",
+        "truly"
+    ],
+    [
+        "しばしば",
+        "しばしば",
+        "often"
+    ],
+    [
+        "随分",
+        "ずいぶん",
+        "quite, extremely"
+    ],
+    [
+        "ずっと",
+        "ずっと",
+        "throughout"
+    ],
+    [
+        "既に",
+        "すでに",
+        "already"
+    ],
+    [
+        "精々",
+        "せいぜい",
+        "at best, at most"
+    ],
+    [
+        "是非",
+        "ぜひ",
+        "certainly"
+    ],
+    [
+        "そっくり",
+        "そっくり",
+        "exactly like, identical"
+    ],
+    [
+        "そっと",
+        "そっと",
+        "quietly, gently"
+    ],
+    [
+        "それと",
+        "それと",
+        "and then, also",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "だから",
+        "だから",
+        "so, therefore"
+    ],
+    [
+        "多少",
+        "たしょう",
+        "somewhat"
+    ],
+    [
+        "唯",
+        "ただ",
+        "only, free of charge"
+    ],
+    [
+        "直ちに",
+        "ただちに",
+        "immediately"
+    ],
+    [
+        "たった",
+        "たった",
+        "only, merely",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "たっぷり",
+        "たっぷり",
+        "full, plenty"
+    ],
+    [
+        "たとえ",
+        "たとえ",
+        "even if"
+    ],
+    [
+        "偶々",
+        "たまたま",
+        "by chance"
+    ],
+    [
+        "遂に",
+        "ついに",
+        "finally"
+    ],
+    [
+        "次々",
+        "つぎつぎ",
+        "one by one"
+    ],
+    [
+        "つまり",
+        "つまり",
+        "in short, in brief"
+    ],
+    [
+        "どんなに",
+        "どんなに",
+        "how much"
+    ],
+    [
+        "にっこり",
+        "にっこり",
+        "smile sweetly"
+    ],
+    [
+        "年中",
+        "ねんじゅう",
+        "year-round, always"
+    ],
+    [
+        "一人一人",
+        "ひとりひとり",
+        "one by one, each"
+    ],
+    [
+        "まだ",
+        "まだ",
+        "still, yet",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "全く",
+        "まったく",
+        "entirely, completely"
+    ],
+    [
+        "もちろん",
+        "もちろん",
+        "of course",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "最も",
+        "もっとも",
+        "most"
+    ],
+    [
+        "やがて",
+        "やがて",
+        "soon"
+    ],
+    [
+        "やはり",
+        "やはり",
+        "still, also, after all"
+    ],
+    [
+        "要するに",
+        "ようするに",
+        "in short"
+    ],
+    [
+        "ところが",
+        "–",
+        "however"
+    ],
+    [
+        "はあ",
+        "–",
+        "(interjection)"
+    ],
+    [
+        "で",
+        "–",
+        "(particle)",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "それ",
+        "–",
+        "(interjection, pronoun)"
+    ],
+    [
+        "ケチ",
+        "–",
+        "stingy person",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "ベルト",
+        "–",
+        "belt"
+    ],
+    [
+        "ボート",
+        "–",
+        "boat"
+    ],
+    [
+        "ゴール",
+        "–",
+        "goal"
+    ],
+    [
+        "ミルク",
+        "–",
+        "milk"
+    ],
+    [
+        "ワイン",
+        "–",
+        "wine"
+    ],
+    [
+        "ボーイ",
+        "–",
+        "boy"
+    ],
+    [
+        "キャンプ",
+        "–",
+        "camp"
+    ],
+    [
+        "プラス",
+        "–",
+        "plus"
+    ],
+    [
+        "トラック",
+        "–",
+        "truck"
+    ],
+    [
+        "スタイル",
+        "–",
+        "style"
+    ],
+    [
+        "トップ",
+        "–",
+        "top"
+    ],
+    [
+        "あっ",
+        "–",
+        "(interjection)"
+    ],
+    [
+        "いち",
+        "–",
+        "market",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "スイッチ",
+        "–",
+        "switch"
+    ],
+    [
+        "セット",
+        "–",
+        "set"
+    ],
+    [
+        "ごめんなさい",
+        "–",
+        "sorry"
+    ],
+    [
+        "た",
+        "–",
+        "other",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "がら",
+        "–",
+        "pattern/handle (ambiguous, multiple meanings)",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "よると",
+        "–",
+        "according to"
+    ],
+    [
+        "でも",
+        "–",
+        "but, however"
+    ],
+    [
+        "あんまり",
+        "–",
+        "not very, remainder"
+    ],
+    [
+        "そのまま",
+        "–",
+        "as it is, unchanged"
+    ],
+    [
+        "そこで",
+        "–",
+        "so, accordingly"
+    ],
+    [
+        "そう",
+        "—",
+        "so"
+    ],
+    [
+        "こんにちは",
+        "—",
+        "hello, good day"
+    ],
+    [
+        "いわゆる",
+        "—",
+        "so-called"
+    ],
+    [
+        "しかも",
+        "—",
+        "moreover, furthermore"
+    ],
+    [
+        "ところで",
+        "—",
+        "by the way"
+    ],
+    [
+        "わざと",
+        "—",
+        "on purpose"
+    ],
+    [
+        "おまえ",
+        "—",
+        "you (casual, rough)"
+    ],
+    [
+        "センター",
+        "—",
+        "center"
+    ],
+    [
+        "プロ",
+        "—",
+        "professional"
+    ],
+    [
+        "チーズ",
+        "—",
+        "cheese"
+    ],
+    [
+        "これら",
+        "—",
+        "these"
+    ],
+    [
+        "ざっと",
+        "—",
+        "roughly"
+    ],
+    [
+        "また",
+        "—",
+        "again, and",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "ジーンズ",
+        "—",
+        "jeans"
+    ],
+    [
+        "スピーチ",
+        "—",
+        "speech"
+    ],
+    [
+        "わがまま",
+        "—",
+        "selfishness"
+    ],
+    [
+        "クラシック",
+        "",
+        "classical music"
+    ],
+    [
+        "コンピューター",
+        "",
+        "computer"
+    ],
+    [
+        "クリーム",
+        "",
+        "cream"
+    ],
+    [
+        "オフィス",
+        "",
+        "office"
+    ],
+    [
+        "トランプ",
+        "",
+        "playing cards"
+    ],
+    [
+        "スープ",
+        "",
+        "soup"
+    ],
+    [
+        "チーム",
+        "",
+        "team"
+    ],
+    [
+        "しゃべる",
+        "to chat (colloquial, often kana only)",
+        ""
+    ],
+    [
+        "あした",
+        "あした",
+        "tomorrow",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "ありがとう",
+        "ありがとう",
+        "thank you"
+    ],
+    [
+        "あるいは",
+        "あるいは",
+        "or, possibly"
+    ],
+    [
+        "いただきます",
+        "いただきます",
+        "expression before meals"
+    ],
+    [
+        "インク",
+        "インク",
+        "ink"
+    ],
+    [
+        "うん（感）",
+        "うん",
+        "fortune, luck",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "御",
+        "お",
+        "honorific prefix"
+    ],
+    [
+        "おめでとう",
+        "おめでとう",
+        "congratulations!"
+    ],
+    [
+        "カード",
+        "カード",
+        "card"
+    ],
+    [
+        "曇",
+        "くもり",
+        "cloudy weather"
+    ],
+    [
+        "グラス",
+        "グラス",
+        "glass"
+    ],
+    [
+        "グランド",
+        "グランド",
+        "grand, ground, gland"
+    ],
+    [
+        "しまった",
+        "しまった",
+        "Damn it! (interjection)"
+    ],
+    [
+        "みません",
+        "すみません",
+        "sorry, excuse me",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "その",
+        "その",
+        "that (determiner)"
+    ],
+    [
+        "デート",
+        "デート",
+        "date (romantic)"
+    ],
+    [
+        "できれば",
+        "できれば",
+        "if possible"
+    ],
+    [
+        "通り",
+        "とおり",
+        "as per, street"
+    ],
+    [
+        "トンネル",
+        "トンネル",
+        "tunnel"
+    ],
+    [
+        "無し",
+        "なし",
+        "without"
+    ],
+    [
+        "なぜなら",
+        "なぜなら",
+        "because"
+    ],
+    [
+        "ノー",
+        "ノー",
+        "no"
+    ],
+    [
+        "ハンサム",
+        "ハンサム",
+        "handsome"
+    ],
+    [
+        "ビデオ",
+        "ビデオ",
+        "video"
+    ],
+    [
+        "不",
+        "ぶ",
+        "non-, un- (prefix)"
+    ],
+    [
+        "ペンキ",
+        "ペンキ",
+        "paint (loanword from Dutch)"
+    ],
+    [
+        "ホーム",
+        "ホーム",
+        "platform"
+    ],
+    [
+        "ぼんやり",
+        "ぼんやり",
+        "absent-mindedly, vaguely"
+    ],
+    [
+        "まあ",
+        "まあ",
+        "you might say"
+    ],
+    [
+        "マスター",
+        "マスター",
+        "bar owner, master"
+    ],
+    [
+        "よろしく（感）",
+        "よろしく",
+        "best regards, properly",
+        {
+            "missing": true
+        }
+    ],
+    [
+        "ライター",
+        "ライター",
+        "lighter, writer"
+    ],
+    [
+        "ラケット",
+        "ラケット",
+        "racket"
+    ]
+]
