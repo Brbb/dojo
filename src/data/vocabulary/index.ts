@@ -15,6 +15,19 @@ export const allVocabulary: Vocabulary[] = [
     ...n5Vocabulary,
 ];
 
+// Build a simple prefix index for faster lookups
+// Maps the first character of word/reading to an array of items
+const prefixIndex: Record<string, Vocabulary[]> = {};
+
+allVocabulary.forEach(v => {
+    const chars = new Set([v.word[0], v.reading[0]]);
+    chars.forEach(char => {
+        if (!char) return;
+        if (!prefixIndex[char]) prefixIndex[char] = [];
+        prefixIndex[char].push(v);
+    });
+});
+
 // Get vocabulary by JLPT level
 export function getVocabularyByLevel(level: 5 | 4 | 3 | 2 | 1): Vocabulary[] {
     return allVocabulary.filter(v => v.jlptLevel === level);
@@ -29,12 +42,26 @@ export function getRandomVocabulary(levels: (5 | 4 | 3 | 2 | 1)[], count: number
 
 // Search vocabulary by word, meaning, or reading
 export function searchVocabulary(query: string): Vocabulary[] {
-    const q = query.toLowerCase();
-    return allVocabulary.filter(v =>
-        v.word.includes(query) ||
-        v.reading.includes(query) ||
-        v.meaning.some(m => m.toLowerCase().includes(q))
-    );
+    if (!query) return allVocabulary;
+
+    const firstChar = query[0].toLowerCase();
+    const isAlphabetical = /^[a-z]$/i.test(firstChar);
+
+    if (isAlphabetical) {
+        // Search meanings if query starts with an alphabetical character
+        const q = query.toLowerCase();
+        return allVocabulary.filter(v =>
+            v.meaning.some(m => m.toLowerCase().includes(q))
+        );
+    } else {
+        // Fast prefix/startsWith search for Japanese word and reading
+        // Narrow down by the first character using our index
+        const candidates = prefixIndex[query[0]] || [];
+        return candidates.filter(v =>
+            v.word.startsWith(query) ||
+            v.reading.startsWith(query)
+        );
+    }
 }
 
 // Export individual level data

@@ -1,8 +1,9 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { allKanji, searchKanji } from '../data/kanji';
 import { allVocabulary, searchVocabulary } from '../data/vocabulary';
 import { ItemDetailModal } from '../components/ItemDetailModal';
+import { Search } from 'lucide-react';
 import type { JLPTLevel, Kanji, Vocabulary, CardType } from '../types';
 
 export function BrowsePage() {
@@ -10,16 +11,27 @@ export function BrowsePage() {
     const [tab, setTab] = useState<CardType>('kanji');
     const [levelFilter, setLevelFilter] = useState<JLPTLevel | 'all'>('all');
     const [searchQuery, setSearchQuery] = useState('');
+    const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
     const [selectedItem, setSelectedItem] = useState<{ type: CardType, item: Kanji | Vocabulary } | null>(null);
 
+    // Debounce search query
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedSearchQuery(searchQuery);
+        }, 200);
+        return () => clearTimeout(handler);
+    }, [searchQuery]);
+
     const filteredItems = useMemo(() => {
+        if (!debouncedSearchQuery) return [];
+
         let items: (Kanji | Vocabulary)[] = [];
 
         // 1. Get Base Items & Search
         if (tab === 'kanji') {
-            items = searchQuery ? searchKanji(searchQuery) : allKanji;
+            items = searchKanji(debouncedSearchQuery);
         } else {
-            items = searchQuery ? searchVocabulary(searchQuery) : allVocabulary;
+            items = searchVocabulary(debouncedSearchQuery);
         }
 
         // 2. Filter by Level
@@ -46,7 +58,7 @@ export function BrowsePage() {
             const bReading = (b as Vocabulary).reading || '';
             return aReading.localeCompare(bReading, 'ja');
         });
-    }, [tab, levelFilter, searchQuery]);
+    }, [tab, levelFilter, debouncedSearchQuery]);
 
     const levels: JLPTLevel[] = [5, 4, 3, 2, 1];
 
@@ -82,13 +94,13 @@ export function BrowsePage() {
                         className={`btn flex-1 ${tab === 'kanji' ? 'btn-primary' : 'btn-secondary'}`}
                         onClick={() => setTab('kanji')}
                     >
-                        漢字 Kanji ({tab === 'kanji' ? filteredItems.length : allKanji.length})
+                        漢字 Kanji ({debouncedSearchQuery ? filteredItems.length : allKanji.length})
                     </button>
                     <button
                         className={`btn flex-1 ${tab === 'vocabulary' ? 'btn-primary' : 'btn-secondary'}`}
                         onClick={() => setTab('vocabulary')}
                     >
-                        辞書 Jisho ({tab === 'vocabulary' ? filteredItems.length : allVocabulary.length})
+                        辞書 Jisho ({debouncedSearchQuery ? filteredItems.length : allVocabulary.length})
                     </button>
                 </div>
 
@@ -118,7 +130,17 @@ export function BrowsePage() {
             </div>
 
             {/* Results Grid/List */}
-            {tab === 'kanji' ? (
+            {!searchQuery ? (
+                <div className="flex flex-col items-center justify-center py-20 text-text-tertiary">
+                    <Search size={64} strokeWidth={1} className="mb-4 opacity-20" />
+                    <p className="text-lg">Type to search characters or words</p>
+                    <p className="text-sm opacity-60">Results appear as you type</p>
+                </div>
+            ) : filteredItems.length === 0 ? (
+                <div className="text-center py-12 text-text-tertiary">
+                    No items found matching your filters.
+                </div>
+            ) : tab === 'kanji' ? (
                 // Kanji Grid - 5 columns
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(60px, 1fr))', gap: '0.75rem' }}>
                     {filteredItems.map((item) => {
@@ -184,12 +206,6 @@ export function BrowsePage() {
                             </button>
                         );
                     })}
-                </div>
-            )}
-
-            {filteredItems.length === 0 && (
-                <div className="text-center py-12 text-text-tertiary">
-                    No items found matching your filters.
                 </div>
             )}
 
