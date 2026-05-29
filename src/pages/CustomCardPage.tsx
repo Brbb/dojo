@@ -214,6 +214,11 @@ export function CustomCardPage() {
         }
     };
 
+    const handleAddToReview = (card: CustomCard, e: React.MouseEvent) => {
+        e.stopPropagation();
+        addToReview(card.id, card.type);
+    };
+
     return (
         <div style={{ padding: 'var(--space-4)', paddingBottom: '5rem', minHeight: '100vh', backgroundColor: 'var(--color-bg-primary)' }}>
             {/* Header */}
@@ -267,50 +272,64 @@ export function CustomCardPage() {
                         </div>
                     ) : (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
-                            {filteredCards.map(card => (
-                                <div key={card.id} className="card" style={{ padding: 'var(--space-3)', display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
-                                    <div style={{
-                                        width: '48px',
-                                        height: '48px',
-                                        backgroundColor: 'var(--color-bg-secondary)',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        borderRadius: 'var(--radius-md)',
-                                        fontSize: '1.25rem',
-                                        fontWeight: 'bold',
-                                        color: card.type === 'kanji' ? 'var(--color-primary)' : 'var(--color-accent)'
-                                    }}>
-                                        {card.word.slice(0, 1)}
+                            {filteredCards.map(card => {
+                                const inReview = !!state.srsCards[card.id];
+                                return (
+                                    <div key={card.id} className="card" style={{ padding: 'var(--space-3)', display: 'flex', alignItems: 'center', gap: 'var(--space-4)', opacity: inReview ? 0.7 : 1 }}>
+                                        <div style={{
+                                            width: '48px',
+                                            height: '48px',
+                                            backgroundColor: 'var(--color-bg-secondary)',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            borderRadius: 'var(--radius-md)',
+                                            fontSize: '1.25rem',
+                                            fontWeight: 'bold',
+                                            color: card.type === 'kanji' ? 'var(--color-primary)' : 'var(--color-accent)'
+                                        }}>
+                                            {card.word.slice(0, 1)}
+                                        </div>
+                                        <div style={{ flex: 1, minWidth: 0 }}>
+                                            <div className="font-bold">{card.word}</div>
+                                            {card.type === 'kanji' ? (
+                                                <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
+                                                    {card.onReading && (
+                                                        <div className="text-sm" style={{ color: 'var(--color-primary)' }}>
+                                                            <span className="text-xs text-tertiary" style={{ marginRight: '4px' }}>ON</span>{card.onReading}
+                                                        </div>
+                                                    )}
+                                                    {card.kunReading && (
+                                                        <div className="text-sm" style={{ color: 'var(--color-accent)' }}>
+                                                            <span className="text-xs text-tertiary" style={{ marginRight: '4px' }}>KUN</span>{card.kunReading}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ) : (
+                                                <div className="text-sm text-secondary">{card.reading}</div>
+                                            )}
+                                            <div className="text-xs text-tertiary" style={{ marginTop: '2px' }}>{card.meaning.join(', ')}</div>
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
+                                            {!inReview && (
+                                                <button
+                                                    onClick={(e) => handleAddToReview(card, e)}
+                                                    title="Add to review queue"
+                                                    style={{ background: 'none', border: 'none', color: 'var(--color-primary)', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                                >
+                                                    <Plus size={18} />
+                                                </button>
+                                            )}
+                                            <button
+                                                onClick={(e) => handleDelete(card.id, e)}
+                                                style={{ background: 'none', border: 'none', color: 'var(--color-primary-light)', cursor: 'pointer', padding: '8px' }}
+                                            >
+                                                <Trash2 size={18} />
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div style={{ flex: 1, minWidth: 0 }}>
-                                        <div className="font-bold">{card.word}</div>
-                                        {card.type === 'kanji' ? (
-                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
-                                                {card.onReading && (
-                                                    <div className="text-sm" style={{ color: 'var(--color-primary)' }}>
-                                                        <span className="text-xs text-tertiary" style={{ marginRight: '4px' }}>ON</span>{card.onReading}
-                                                    </div>
-                                                )}
-                                                {card.kunReading && (
-                                                    <div className="text-sm" style={{ color: 'var(--color-accent)' }}>
-                                                        <span className="text-xs text-tertiary" style={{ marginRight: '4px' }}>KUN</span>{card.kunReading}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        ) : (
-                                            <div className="text-sm text-secondary">{card.reading}</div>
-                                        )}
-                                        <div className="text-xs text-tertiary" style={{ marginTop: '2px' }}>{card.meaning.join(', ')}</div>
-                                    </div>
-                                    <button
-                                        onClick={(e) => handleDelete(card.id, e)}
-                                        style={{ background: 'none', border: 'none', color: 'var(--color-primary-light)', cursor: 'pointer', padding: '8px' }}
-                                    >
-                                        <Trash2 size={18} />
-                                    </button>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     )}
                 </div>
