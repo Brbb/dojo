@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useStudy } from '../context/StudyContext';
 import { StudyCard } from '../components/StudyCard';
@@ -7,10 +7,10 @@ import { ProgressBar } from '../components/Progress';
 import { MnemonicEditor } from '../components/MnemonicEditor';
 import {
     RefreshCcw, Scroll, Clock, Brain, Flame, GitBranch, GitCompare,
-    Sparkles, CheckCircle2, Circle, MoreHorizontal
+    Sparkles, CheckCircle2, Circle, MoreHorizontal, Search, X
 } from 'lucide-react';
 import { ItemDetailModal } from '../components/ItemDetailModal';
-import { grammarTopics, type GrammarTopic } from '../data/grammar/grammar';
+import { grammarTopics, type GrammarTopic, type GrammarPoint } from '../data/grammar/grammar';
 import type { Kanji, Vocabulary, JLPTLevel, SRSRating, CardType } from '../types';
 
 type StudyMode = 'kanji' | 'vocabulary' | 'grammar';
@@ -41,6 +41,7 @@ export function StudyPage() {
     const [isStudying, setIsStudying] = useState(false);
     const [sessionComplete, setSessionComplete] = useState(false);
     const [selectedGrammarTopic, setSelectedGrammarTopic] = useState<GrammarTopic | null>(null);
+    const [grammarSearchQuery, setGrammarSearchQuery] = useState('');
     const [peekItem, setPeekItem] = useState<{ type: CardType, item: Kanji | Vocabulary } | null>(null);
 
     const startSession = useCallback(() => {
@@ -66,6 +67,30 @@ export function StudyPage() {
             setSessionComplete(true);
         }
     };
+
+    // Grammar search — computed unconditionally to satisfy rules of hooks
+    const filteredGrammarTopics = useMemo(() => grammarTopics.filter(t => levels.includes(t.level)), [levels]);
+    const trimmedGrammarQuery = grammarSearchQuery.trim().toLowerCase();
+
+    const grammarSearchResults = useMemo(() => {
+        if (!trimmedGrammarQuery) return null;
+        const results: { topic: GrammarTopic; point: GrammarPoint }[] = [];
+        for (const topic of filteredGrammarTopics) {
+            for (const gp of topic.grammarPoints) {
+                if (
+                    gp.point.toLowerCase().includes(trimmedGrammarQuery) ||
+                    gp.meaning.toLowerCase().includes(trimmedGrammarQuery) ||
+                    gp.exampleJp.toLowerCase().includes(trimmedGrammarQuery) ||
+                    gp.exampleEn.toLowerCase().includes(trimmedGrammarQuery) ||
+                    topic.topic.toLowerCase().includes(trimmedGrammarQuery) ||
+                    topic.description.toLowerCase().includes(trimmedGrammarQuery)
+                ) {
+                    results.push({ topic, point: gp });
+                }
+            }
+        }
+        return results;
+    }, [trimmedGrammarQuery, filteredGrammarTopics]);
 
     if (mode === 'grammar') {
         if (selectedGrammarTopic) {
@@ -125,7 +150,8 @@ export function StudyPage() {
             );
         }
 
-        const filteredTopics = grammarTopics.filter(t => levels.includes(t.level));
+        const filteredTopics = filteredGrammarTopics;
+        const searchResults = grammarSearchResults;
 
         return (
             <div className="page container">
@@ -139,34 +165,146 @@ export function StudyPage() {
                     onChange={setLevels}
                 />
 
-                <div className="grid grid-2" style={{ gap: 'var(--space-4)', marginTop: 'var(--space-6)' }}>
-                    {filteredTopics.map((topic, idx) => (
+                {/* Search bar */}
+                <div style={{ position: 'relative', marginTop: 'var(--space-4)' }}>
+                    <Search
+                        size={18}
+                        style={{
+                            position: 'absolute',
+                            left: 'var(--space-4)',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            color: 'var(--color-text-tertiary)',
+                            pointerEvents: 'none',
+                        }}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Search grammar points, meanings, examples..."
+                        className="input w-full"
+                        value={grammarSearchQuery}
+                        onChange={(e) => setGrammarSearchQuery(e.target.value)}
+                        style={{ paddingLeft: 'var(--space-10)', paddingRight: grammarSearchQuery ? 'var(--space-10)' : undefined }}
+                    />
+                    {grammarSearchQuery && (
                         <button
-                            key={idx}
-                            onClick={() => setSelectedGrammarTopic(topic)}
-                            className="card study-card animate-slide-up"
+                            onClick={() => setGrammarSearchQuery('')}
                             style={{
-                                textAlign: 'left',
-                                display: 'flex',
-                                alignItems: 'flex-start',
-                                gap: 'var(--space-4)',
-                                border: '1px solid var(--color-bg-tertiary)',
+                                position: 'absolute',
+                                right: 'var(--space-3)',
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                background: 'none',
+                                border: 'none',
                                 cursor: 'pointer',
+                                color: 'var(--color-text-tertiary)',
+                                padding: 'var(--space-1)',
+                                display: 'flex',
+                                alignItems: 'center',
                             }}
                         >
-                            <div className="mode-icon" style={{ color: 'var(--color-primary)' }}>
-                                {getTopicIcon(topic.id)}
-                            </div>
-                            <div style={{ flex: 1 }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-1)' }}>
-                                    <h3 className="font-bold">{topic.topic}</h3>
-                                    <span className={`jlpt-badge jlpt-n${topic.level}`} style={{ fontSize: 'var(--text-xs)' }}>N{topic.level}</span>
-                                </div>
-                                <p className="text-sm text-secondary line-clamp-2">{topic.description}</p>
-                            </div>
+                            <X size={16} />
                         </button>
-                    ))}
+                    )}
                 </div>
+
+                {/* Search results */}
+                {searchResults !== null ? (
+                    searchResults.length === 0 ? (
+                        <div className="center" style={{ padding: 'var(--space-12) 0', flexDirection: 'column', gap: 'var(--space-3)' }}>
+                            <Search size={48} strokeWidth={1} style={{ opacity: 0.2 }} />
+                            <p className="text-secondary">No grammar points found for "{grammarSearchQuery}"</p>
+                        </div>
+                    ) : (
+                        <div style={{ marginTop: 'var(--space-4)' }}>
+                            <p className="text-sm text-secondary" style={{ marginBottom: 'var(--space-4)' }}>
+                                {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} found
+                            </p>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', paddingBottom: 'var(--space-12)' }}>
+                                {searchResults.map(({ topic, point: gp }) => (
+                                    <div key={gp.id} className="card animate-slide-up" style={{ position: 'relative' }}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 'var(--space-3)' }}>
+                                            <div>
+                                                <h2 style={{ fontFamily: 'var(--font-japanese)', fontSize: 'var(--text-2xl)', fontWeight: 700, color: 'var(--color-primary)', marginBottom: 'var(--space-1)' }}>
+                                                    {gp.point}
+                                                </h2>
+                                                <p style={{ fontSize: 'var(--text-base)', color: 'var(--color-text-secondary)', fontWeight: 500 }}>
+                                                    {gp.meaning}
+                                                </p>
+                                            </div>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
+                                                <span className={`jlpt-badge jlpt-n${topic.level}`} style={{ fontSize: 'var(--text-xs)' }}>N{topic.level}</span>
+                                                <button
+                                                    onClick={() => toggleGrammarStudied(gp.id)}
+                                                    style={{
+                                                        background: 'none',
+                                                        border: 'none',
+                                                        cursor: 'pointer',
+                                                        color: grammarProgress[gp.id] ? 'var(--color-success)' : 'var(--color-text-tertiary)',
+                                                        transition: 'color 0.2s ease',
+                                                        padding: 'var(--space-1)'
+                                                    }}
+                                                    title={grammarProgress && grammarProgress[gp.id] ? "Marked as learned" : "Mark as learned"}
+                                                >
+                                                    {grammarProgress && grammarProgress[gp.id] ? <CheckCircle2 size={24} /> : <Circle size={24} />}
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div style={{ paddingLeft: 'var(--space-4)', borderLeft: '2px solid var(--color-bg-tertiary)', marginBottom: 'var(--space-3)' }}>
+                                            <p style={{ fontFamily: 'var(--font-japanese)', fontSize: 'var(--text-base)', lineHeight: 1.6, marginBottom: 'var(--space-1)' }}>{gp.exampleJp}</p>
+                                            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-tertiary)', fontStyle: 'italic' }}>{gp.exampleEn}</p>
+                                        </div>
+                                        <button
+                                            onClick={() => setSelectedGrammarTopic(topic)}
+                                            style={{
+                                                background: 'none',
+                                                border: 'none',
+                                                cursor: 'pointer',
+                                                fontSize: 'var(--text-xs)',
+                                                color: 'var(--color-text-tertiary)',
+                                                padding: 0,
+                                                textDecoration: 'underline',
+                                                textUnderlineOffset: '2px',
+                                            }}
+                                        >
+                                            {topic.topic} →
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )
+                ) : (
+                    /* Default: topic grid */
+                    <div className="grid grid-2" style={{ gap: 'var(--space-4)', marginTop: 'var(--space-6)' }}>
+                        {filteredTopics.map((topic, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setSelectedGrammarTopic(topic)}
+                                className="card study-card animate-slide-up"
+                                style={{
+                                    textAlign: 'left',
+                                    display: 'flex',
+                                    alignItems: 'flex-start',
+                                    gap: 'var(--space-4)',
+                                    border: '1px solid var(--color-bg-tertiary)',
+                                    cursor: 'pointer',
+                                }}
+                            >
+                                <div className="mode-icon" style={{ color: 'var(--color-primary)' }}>
+                                    {getTopicIcon(topic.id)}
+                                </div>
+                                <div style={{ flex: 1 }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-1)' }}>
+                                        <h3 className="font-bold">{topic.topic}</h3>
+                                        <span className={`jlpt-badge jlpt-n${topic.level}`} style={{ fontSize: 'var(--text-xs)' }}>N{topic.level}</span>
+                                    </div>
+                                    <p className="text-sm text-secondary line-clamp-2">{topic.description}</p>
+                                </div>
+                            </button>
+                        ))}
+                    </div>
+                )}
             </div>
         );
     }
