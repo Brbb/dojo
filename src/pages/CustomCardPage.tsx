@@ -4,7 +4,8 @@ import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
 import { ArrowLeft, Plus, AlertCircle, CheckCircle2, Search, Loader2, Trash2, Library } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import type { CardType, CustomCard } from '../types';
+import { JLPTSelector } from '../components/JLPTSelector';
+import type { CardType, CustomCard, JLPTLevel } from '../types';
 
 interface JishoSuggestion {
     reading: string;
@@ -25,6 +26,7 @@ export function CustomCardPage() {
     const [kunReading, setKunReading] = useState('');
     const [meaning, setMeaning] = useState('');
     const [isAutoAdd, setIsAutoAdd] = useState(true);
+    const [jlptLevel, setJlptLevel] = useState<JLPTLevel>(5);
     const [jishoSuggestions, setJishoSuggestions] = useState<JishoSuggestion[]>([]);
     const [loadingJisho, setLoadingJisho] = useState(false);
     const [showDuplicateModal, setShowDuplicateModal] = useState<{ id: string, type: CardType } | null>(null);
@@ -167,6 +169,7 @@ export function CustomCardPage() {
             onReading: type === 'kanji' ? onReading : undefined,
             kunReading: type === 'kanji' ? kunReading : undefined,
             meaning: meaning.split(',').map(s => s.trim()),
+            jlptLevel,
             frequency: freq,
             createdAt: Date.now()
         };
@@ -204,6 +207,7 @@ export function CustomCardPage() {
         setOnReading('');
         setKunReading('');
         setMeaning('');
+        setJlptLevel(5);
         setJishoSuggestions([]);
     };
 
@@ -517,6 +521,16 @@ export function CustomCardPage() {
                         />
                     </div>
 
+                    {/* JLPT Level Selector */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+                        <label className="text-sm font-semibold text-secondary">JLPT Level</label>
+                        <JLPTSelector
+                            selectedLevels={[jlptLevel]}
+                            onChange={(levels) => setJlptLevel(levels[0])}
+                            multiple={false}
+                        />
+                    </div>
+
                     {/* Auto-add Toggle */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', padding: 'var(--space-2) 0' }}>
                         <div
@@ -611,6 +625,7 @@ export function CustomCardPage() {
                                         onReading: type === 'kanji' ? onReading : undefined,
                                         kunReading: type === 'kanji' ? kunReading : undefined,
                                         meaning: meaning.split(',').map(s => s.trim()),
+                                        jlptLevel,
                                         createdAt: Date.now()
                                     });
                                     if (isAutoAdd) addToReview(newId, type);
