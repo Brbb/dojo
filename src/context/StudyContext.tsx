@@ -1,7 +1,7 @@
 import { createContext, useContext, useReducer, useEffect, type ReactNode } from 'react';
 import type {
     AppState, SRSCard, SRSRating, JLPTLevel, CardType,
-    UserProgress, AppSettings, Mnemonic, CustomCard
+    UserProgress, AppSettings, Mnemonic, CustomCard, KanjiExample
 } from '../types';
 import { loadState, saveState } from '../utils/storage';
 import { calculateNextReview, createSRSCard, getDueCards, calculateStats, getCardStatus, type CardStatus } from '../utils/srs';
@@ -19,6 +19,7 @@ type Action =
     | { type: 'REMOVE_FROM_REVIEW'; payload: { cardId: string } }
     | { type: 'ADD_CUSTOM_CARD'; payload: { card: CustomCard } }
     | { type: 'DELETE_CUSTOM_CARD'; payload: { id: string } }
+    | { type: 'SET_KANJI_EXAMPLES'; payload: { kanjiId: string; examples: KanjiExample[] } }
     | { type: 'TOGGLE_GRAMMAR_STUDIED'; payload: { pointId: string } }
     | { type: 'RESET_PROGRESS' };
 
@@ -27,6 +28,7 @@ const initialState: AppState = {
     srsCards: {},
     mnemonics: {},
     grammarProgress: {},
+    kanjiExampleOverrides: {},
     progress: {
         cardsLearned: 0,
         cardsReviewed: 0,
@@ -58,6 +60,7 @@ function studyReducer(state: AppState, action: Action): AppState {
                 progress: { ...initialState.progress, ...action.payload.progress },
                 settings: { ...initialState.settings, ...action.payload.settings },
                 grammarProgress: action.payload.grammarProgress || {},
+                kanjiExampleOverrides: action.payload.kanjiExampleOverrides || {},
             };
 
         case 'RATE_CARD': {
@@ -184,6 +187,17 @@ function studyReducer(state: AppState, action: Action): AppState {
             };
         }
 
+        case 'SET_KANJI_EXAMPLES': {
+            const { kanjiId, examples } = action.payload;
+            return {
+                ...state,
+                kanjiExampleOverrides: {
+                    ...state.kanjiExampleOverrides,
+                    [kanjiId]: examples,
+                },
+            };
+        }
+
         case 'TOGGLE_GRAMMAR_STUDIED': {
             const { pointId } = action.payload;
             const updatedGrammarProgress = { ...state.grammarProgress };
@@ -220,6 +234,7 @@ interface StudyContextType {
     removeFromReview: (cardId: string) => void;
     addCustomCard: (card: CustomCard) => void;
     deleteCustomCard: (id: string) => void;
+    setKanjiExamples: (kanjiId: string, examples: KanjiExample[]) => void;
     toggleGrammarStudied: (pointId: string) => void;
     resetProgress: () => void;
     // Helpers
@@ -270,6 +285,10 @@ export function StudyProvider({ children }: { children: ReactNode }) {
 
     const deleteCustomCard = (id: string) => {
         dispatch({ type: 'DELETE_CUSTOM_CARD', payload: { id } });
+    };
+
+    const setKanjiExamples = (kanjiId: string, examples: KanjiExample[]) => {
+        dispatch({ type: 'SET_KANJI_EXAMPLES', payload: { kanjiId, examples } });
     };
 
     const toggleGrammarStudied = (pointId: string) => {
@@ -344,6 +363,7 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         removeFromReview,
         addCustomCard,
         deleteCustomCard,
+        setKanjiExamples,
         toggleGrammarStudied,
         resetProgress,
         getMnemonic,

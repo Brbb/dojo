@@ -107,6 +107,7 @@ export interface AppState {
     srsCards: Record<string, SRSCard>;
     mnemonics: Record<string, Mnemonic>;
     grammarProgress: Record<string, boolean>; // topicId_pointId -> studied
+    kanjiExampleOverrides: Record<string, KanjiExample[]>; // kanjiId -> user-customized examples
     progress: UserProgress;
     settings: AppSettings;
     sessions: StudySession[];

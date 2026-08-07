@@ -1,8 +1,10 @@
-import { Fragment, useMemo } from 'react';
-import type { Kanji, Vocabulary, CardType, Mnemonic } from '../types';
+import { Fragment, useMemo, useState, useRef, useCallback } from 'react';
+import { X, Plus } from 'lucide-react';
+import type { Kanji, Vocabulary, CardType, Mnemonic, KanjiExample } from '../types';
 import { ReadingDisplay } from './ReadingDisplay';
 import { allVocabulary } from '../data/vocabulary';
 import { useStudy } from '../context/StudyContext';
+import { AddWordModal } from './AddWordModal';
 
 interface ItemCardProps {
     type: CardType;
@@ -17,59 +19,73 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
     // Type guards/casting for specific properties
     const kanjiItem = isKanji ? (item as Kanji) : null;
     const vocabItem = !isKanji ? (item as Vocabulary) : null;
-    const { state } = useStudy();
+    const { state, setKanjiExamples } = useStudy();
 
-    // Find vocabulary words containing this kanji character
+    // Editing state
+    const [editingWordIndex, setEditingWordIndex] = useState<number | null>(null);
+    const [showAddModal, setShowAddModal] = useState(false);
+    const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    // Get the effective examples for this kanji (overrides take priority)
+    const kanjiExamples = useMemo((): KanjiExample[] => {
+        if (!isKanji || !kanjiItem) return [];
+        if (state.kanjiExampleOverrides[kanjiItem.id]) {
+            return state.kanjiExampleOverrides[kanjiItem.id];
+        }
+        return kanjiItem.examples || [];
+    }, [isKanji, kanjiItem, state.kanjiExampleOverrides]);
+
+    // Find vocabulary words containing this kanji character (explicit top 3 examples only)
     const wordsWithKanji = useMemo(() => {
         if (!isKanji || !kanjiItem) return [];
-        const char = kanjiItem.character;
 
-        // Start with kanji examples (priority)
         const seen = new Set<string>();
         const combined: { word: string; reading: string; meaning: string; item: Vocabulary }[] = [];
-        if (kanjiItem.examples) {
-            for (const ex of kanjiItem.examples) {
-                if (!seen.has(ex.word)) {
-                    // Try to find the full vocabulary item for this example
-                    const fullItem = allVocabulary.find(v => v.word === ex.word) ||
-                        state.customCards.find(c => c.word === ex.word) as unknown as Vocabulary;
+        for (const ex of kanjiExamples.slice(0, 3)) {
+            if (!seen.has(ex.word)) {
+                seen.add(ex.word);
+                const fullItem = allVocabulary.find(v => v.word === ex.word) ||
+                    state.customCards.find(c => c.word === ex.word) as unknown as Vocabulary;
 
-                    if (fullItem) {
-                        seen.add(ex.word);
-                        combined.push({
-                            word: ex.word,
-                            reading: ex.reading,
-                            meaning: ex.meaning,
-                            item: fullItem
-                        });
-                    }
-                }
-            }
-        }
-
-        // Fill from browse vocabulary
-        const browseWords = allVocabulary
-            .filter(v => v.word.includes(char))
-            .map(v => ({ word: v.word, reading: v.reading, meaning: v.meaning[0], item: v }));
-
-        // Fill from custom vocabulary cards
-        const customWords = state.customCards
-            .filter(c => c.type === 'vocabulary' && c.word.includes(char))
-            .map(c => ({
-                word: c.word,
-                reading: c.reading || '',
-                meaning: c.meaning[0],
-                item: c as unknown as Vocabulary
-            }));
-
-        for (const w of [...browseWords, ...customWords]) {
-            if (!seen.has(w.word)) {
-                seen.add(w.word);
-                combined.push(w);
+                combined.push({
+                    word: ex.word,
+                    reading: ex.reading,
+                    meaning: ex.meaning,
+                    item: fullItem || ({
+                        id: `ex-${ex.word}`,
+                        word: ex.word,
+                        reading: ex.reading,
+                        meaning: [ex.meaning],
+                        jlptLevel: kanjiItem.jlptLevel
+                    } as Vocabulary)
+                });
             }
         }
         return combined;
-    }, [isKanji, kanjiItem, state.customCards]);
+    }, [isKanji, kanjiItem, kanjiExamples, state.customCards]);
+
+    // Long-press handlers for editing words
+    const handlePressStart = useCallback((index: number) => {
+        longPressTimer.current = setTimeout(() => {
+            setEditingWordIndex(index);
+        }, 500);
+    }, []);
+
+    const handlePressEnd = useCallback(() => {
+        if (longPressTimer.current) {
+            clearTimeout(longPressTimer.current);
+            longPressTimer.current = null;
+        }
+    }, []);
+
+    const handleRemoveWord = useCallback((wordToRemove: string) => {
+        if (!kanjiItem) return;
+        // If no overrides exist yet, initialize from current examples
+        const currentExamples = state.kanjiExampleOverrides[kanjiItem.id] || kanjiItem.examples || [];
+        const filtered = currentExamples.filter(ex => ex.word !== wordToRemove);
+        setKanjiExamples(kanjiItem.id, filtered);
+        setEditingWordIndex(null);
+    }, [kanjiItem, state.kanjiExampleOverrides, setKanjiExamples]);
 
     if (compact) {
         return (
@@ -163,43 +179,59 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
                         </div>
                     )}
 
-                    {/* Words containing this kanji */}
-                    {isKanji && wordsWithKanji.length > 0 && (
+                    {/* Words containing this kanji (compact: 3 fixed slots, vacant = empty space) */}
+                    {isKanji && (
                         <div>
                             <h3 className="section-title text-secondary text-xs uppercase tracking-wider mb-2">Found in Words</h3>
                             <table style={{ borderCollapse: 'collapse', width: '100%', tableLayout: 'fixed' }}>
                                 <tbody>
                                     <tr>
-                                        {wordsWithKanji.slice(0, 3).map((w, i) => (
-                                            <td
-                                                key={i}
-                                                className="font-japanese"
-                                                style={{
-                                                    padding: '0.1rem 0.5rem',
-                                                    fontSize: '0.85rem',
-                                                    fontWeight: 600,
-                                                    color: 'var(--color-primary)',
-                                                    borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none',
-                                                    cursor: onNavigate ? 'pointer' : 'default'
-                                                }}
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    onNavigate?.('vocabulary', w.item);
-                                                }}
-                                            >
-                                                {w.word}
-                                            </td>
-                                        ))}
+                                        {[0, 1, 2].map((i) => {
+                                            const w = wordsWithKanji[i];
+                                            return (
+                                                <td
+                                                    key={i}
+                                                    className="font-japanese"
+                                                    style={{
+                                                        padding: '0.1rem 0.5rem',
+                                                        fontSize: '0.85rem',
+                                                        fontWeight: 600,
+                                                        color: w ? 'var(--color-primary)' : 'transparent',
+                                                        borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none',
+                                                        cursor: w && onNavigate ? 'pointer' : 'default',
+                                                        height: '1.25rem',
+                                                    }}
+                                                    onClick={(e) => {
+                                                        if (w) {
+                                                            e.stopPropagation();
+                                                            onNavigate?.('vocabulary', w.item);
+                                                        }
+                                                    }}
+                                                >
+                                                    {w ? w.word : '\u00A0'}
+                                                </td>
+                                            );
+                                        })}
                                     </tr>
                                     <tr>
-                                        {wordsWithKanji.slice(0, 3).map((w, i) => (
-                                            <td key={i} className="font-japanese" style={{ padding: '0.1rem 0.5rem', fontSize: '0.75rem', color: 'var(--color-text-secondary)', borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none' }}>{w.reading}</td>
-                                        ))}
+                                        {[0, 1, 2].map((i) => {
+                                            const w = wordsWithKanji[i];
+                                            return (
+                                                <td key={i} className="font-japanese" style={{ padding: '0.1rem 0.5rem', fontSize: '0.75rem', color: w ? 'var(--color-text-secondary)' : 'transparent', borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none', height: '1.1rem' }}>
+                                                    {w ? w.reading : '\u00A0'}
+                                                </td>
+                                            );
+                                        })}
                                     </tr>
                                     <tr>
-                                        {wordsWithKanji.slice(0, 3).map((w, i) => (
-                                            <td key={i} style={{ padding: '0.1rem 0.5rem', fontSize: '0.7rem', color: 'var(--color-text-tertiary)', borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none' }}>{w.meaning}</td>
-                                        ))}
+                                        {[0, 1, 2].map((i) => {
+                                            const w = wordsWithKanji[i];
+                                            return (
+                                                <td key={i} style={{ padding: '0.1rem 0.5rem', fontSize: '0.7rem', color: w ? 'var(--color-text-tertiary)' : 'transparent', borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none', height: '1.1rem' }}>
+                                                    {w ? w.meaning : '\u00A0'}
+                                                </td>
+                                            );
+                                        })}
                                     </tr>
                                 </tbody>
                             </table>
@@ -318,46 +350,143 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
 
 
 
-                {/* Words containing this kanji */}
-                {isKanji && wordsWithKanji.length > 0 && (
+                {/* Words containing this kanji — 3 fixed slots, editable via long-press */}
+                {isKanji && kanjiItem && (
                     <div>
-                        <h3 className="text-secondary text-xs uppercase tracking-wider mb-2">Found in Words</h3>
-                        <table style={{ borderCollapse: 'collapse', width: '100%', tableLayout: 'fixed' }}>
-                            <tbody>
-                                <tr>
-                                    {wordsWithKanji.slice(0, 3).map((w, i) => (
-                                        <td
-                                            key={i}
-                                            className="font-japanese"
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                            <h3 className="text-secondary text-xs uppercase tracking-wider" style={{ margin: 0 }}>Found in Words</h3>
+                            <button
+                                onClick={() => {
+                                    if (kanjiExamples.length >= 3) {
+                                        alert('Maximum 3 words allowed. Please remove a word first.');
+                                    } else {
+                                        setShowAddModal(true);
+                                    }
+                                }}
+                                style={{
+                                    background: 'none',
+                                    border: '1px dashed var(--color-primary-light, var(--color-primary))',
+                                    borderRadius: 'var(--radius-sm)',
+                                    color: 'var(--color-primary)',
+                                    cursor: 'pointer',
+                                    padding: '2px 8px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '4px',
+                                    fontSize: '0.7rem',
+                                    fontWeight: 600,
+                                }}
+                            >
+                                <Plus size={12} /> Add
+                            </button>
+                        </div>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+                            {[0, 1, 2].map((i) => {
+                                const w = wordsWithKanji[i];
+                                if (!w) {
+                                    return (
+                                        <div
+                                            key={`empty-slot-${i}`}
                                             style={{
-                                                padding: '0.15rem 0.5rem',
-                                                fontSize: '0.9rem',
-                                                fontWeight: 600,
-                                                color: 'var(--color-primary)',
-                                                borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none',
-                                                cursor: onNavigate ? 'pointer' : 'default'
-                                            }}
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                onNavigate?.('vocabulary', w.item);
+                                                padding: '0.5rem 0.75rem',
+                                                backgroundColor: 'var(--color-bg-secondary)',
+                                                borderRadius: 'var(--radius-md)',
+                                                border: '1px dashed var(--color-bg-tertiary)',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                minHeight: '44px',
+                                                opacity: 0.35,
+                                                userSelect: 'none',
                                             }}
                                         >
-                                            {w.word}
-                                        </td>
-                                    ))}
-                                </tr>
-                                <tr>
-                                    {wordsWithKanji.slice(0, 3).map((w, i) => (
-                                        <td key={i} className="font-japanese" style={{ padding: '0.15rem 0.5rem', fontSize: '0.8rem', color: 'var(--color-text-secondary)', borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none' }}>{w.reading}</td>
-                                    ))}
-                                </tr>
-                                <tr>
-                                    {wordsWithKanji.slice(0, 3).map((w, i) => (
-                                        <td key={i} style={{ padding: '0.15rem 0.5rem', fontSize: '0.75rem', color: 'var(--color-text-tertiary)', borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none' }}>{w.meaning}</td>
-                                    ))}
-                                </tr>
-                            </tbody>
-                        </table>
+                                            <span className="text-xs text-tertiary">Empty space</span>
+                                        </div>
+                                    );
+                                }
+                                return (
+                                    <div
+                                        key={`${w.word}-${i}`}
+                                        style={{
+                                            position: 'relative',
+                                            padding: '0.5rem 0.75rem',
+                                            backgroundColor: 'var(--color-bg-secondary)',
+                                            borderRadius: 'var(--radius-md)',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '0.75rem',
+                                            cursor: onNavigate ? 'pointer' : 'default',
+                                            userSelect: 'none',
+                                            WebkitUserSelect: 'none',
+                                        }}
+                                        onClick={(e) => {
+                                            if (editingWordIndex !== null) {
+                                                setEditingWordIndex(null);
+                                                return;
+                                            }
+                                            e.stopPropagation();
+                                            if (w.item) onNavigate?.('vocabulary', w.item);
+                                        }}
+                                        onMouseDown={() => handlePressStart(i)}
+                                        onMouseUp={handlePressEnd}
+                                        onMouseLeave={handlePressEnd}
+                                        onTouchStart={() => handlePressStart(i)}
+                                        onTouchEnd={handlePressEnd}
+                                        onTouchCancel={handlePressEnd}
+                                        onContextMenu={(e) => e.preventDefault()}
+                                    >
+                                        <div style={{ flex: 1, minWidth: 0 }}>
+                                            <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                                                <span className="font-japanese" style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--color-primary)' }}>{w.word}</span>
+                                                <span className="font-japanese" style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)' }}>{w.reading}</span>
+                                            </div>
+                                            <div style={{ fontSize: '0.75rem', color: 'var(--color-text-tertiary)', marginTop: '1px' }}>{w.meaning}</div>
+                                        </div>
+
+                                        {/* Delete button — shown on long-press */}
+                                        {editingWordIndex === i && (
+                                            <button
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleRemoveWord(w.word);
+                                                }}
+                                                style={{
+                                                    position: 'absolute',
+                                                    top: '-6px',
+                                                    right: '-6px',
+                                                    width: '22px',
+                                                    height: '22px',
+                                                    borderRadius: '50%',
+                                                    backgroundColor: 'var(--color-error, #e74c3c)',
+                                                    border: '2px solid var(--color-bg-card)',
+                                                    color: 'white',
+                                                    cursor: 'pointer',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    padding: 0,
+                                                    zIndex: 1,
+                                                    animation: 'fadeIn 0.15s ease-out',
+                                                }}
+                                            >
+                                                <X size={12} />
+                                            </button>
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </div>
+
+                        {/* Add Word Modal */}
+                        {showAddModal && kanjiItem && (
+                            <AddWordModal
+                                kanjiCharacter={kanjiItem.character}
+                                kanjiId={kanjiItem.id}
+                                currentExamples={kanjiExamples}
+                                onClose={() => setShowAddModal(false)}
+                            />
+                        )}
                     </div>
                 )}
 

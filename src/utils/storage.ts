@@ -45,6 +45,7 @@ export function loadState(): AppState {
                 progress: { ...defaultProgress, ...parsed.progress },
                 settings: { ...defaultSettings, ...parsed.settings },
                 grammarProgress: parsed.grammarProgress || {},
+                kanjiExampleOverrides: parsed.kanjiExampleOverrides || {},
                 customCards: parsed.customCards || [],
             };
         }
