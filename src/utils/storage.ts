@@ -26,6 +26,7 @@ const defaultState: AppState = {
     srsCards: {},
     mnemonics: {},
     grammarProgress: {},
+    kanjiExampleOverrides: {},
     progress: defaultProgress,
     settings: defaultSettings,
     sessions: [],
