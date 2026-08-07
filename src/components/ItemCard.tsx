@@ -35,15 +35,63 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
         return kanjiItem.examples || [];
     }, [isKanji, kanjiItem, state.kanjiExampleOverrides]);
 
-    // Find vocabulary words containing this kanji character (explicit top 3 examples only)
+    // Find vocabulary words containing this kanji character
     const wordsWithKanji = useMemo(() => {
         if (!isKanji || !kanjiItem) return [];
 
-        const seen = new Set<string>();
+        const isOverridden = !!state.kanjiExampleOverrides[kanjiItem.id];
+        const char = kanjiItem.character;
+
+        let examplesToUse: KanjiExample[] = [];
+
+        if (isOverridden) {
+            examplesToUse = state.kanjiExampleOverrides[kanjiItem.id].slice(0, 3);
+        } else {
+            const seen = new Set<string>();
+            const initial = kanjiItem.examples || [];
+            for (const ex of initial) {
+                if (!seen.has(ex.word)) {
+                    seen.add(ex.word);
+                    examplesToUse.push(ex);
+                }
+            }
+
+            if (examplesToUse.length < 3) {
+                const browseWords = allVocabulary.filter(v => v.word.includes(char));
+                for (const v of browseWords) {
+                    if (examplesToUse.length >= 3) break;
+                    if (!seen.has(v.word)) {
+                        seen.add(v.word);
+                        examplesToUse.push({
+                            word: v.word,
+                            reading: v.reading,
+                            meaning: v.meaning[0] || '',
+                        });
+                    }
+                }
+            }
+
+            if (examplesToUse.length < 3) {
+                const customWords = state.customCards.filter(c => c.type === 'vocabulary' && c.word.includes(char));
+                for (const c of customWords) {
+                    if (examplesToUse.length >= 3) break;
+                    if (!seen.has(c.word)) {
+                        seen.add(c.word);
+                        examplesToUse.push({
+                            word: c.word,
+                            reading: c.reading || '',
+                            meaning: c.meaning[0] || '',
+                        });
+                    }
+                }
+            }
+        }
+
+        const seenFinal = new Set<string>();
         const combined: { word: string; reading: string; meaning: string; item: Vocabulary }[] = [];
-        for (const ex of kanjiExamples.slice(0, 3)) {
-            if (!seen.has(ex.word)) {
-                seen.add(ex.word);
+        for (const ex of examplesToUse) {
+            if (!seenFinal.has(ex.word)) {
+                seenFinal.add(ex.word);
                 const fullItem = allVocabulary.find(v => v.word === ex.word) ||
                     state.customCards.find(c => c.word === ex.word) as unknown as Vocabulary;
 
@@ -62,11 +110,15 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
             }
         }
         return combined;
-    }, [isKanji, kanjiItem, kanjiExamples, state.customCards]);
+    }, [isKanji, kanjiItem, state.kanjiExampleOverrides, state.customCards]);
 
     // Long-press handlers for editing words
+    const isLongPressTriggered = useRef(false);
+
     const handlePressStart = useCallback((index: number) => {
+        isLongPressTriggered.current = false;
         longPressTimer.current = setTimeout(() => {
+            isLongPressTriggered.current = true;
             setEditingWordIndex(index);
         }, 500);
     }, []);
@@ -80,12 +132,11 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
 
     const handleRemoveWord = useCallback((wordToRemove: string) => {
         if (!kanjiItem) return;
-        // If no overrides exist yet, initialize from current examples
-        const currentExamples = state.kanjiExampleOverrides[kanjiItem.id] || kanjiItem.examples || [];
-        const filtered = currentExamples.filter(ex => ex.word !== wordToRemove);
+        const currentList = wordsWithKanji.map(w => ({ word: w.word, reading: w.reading, meaning: w.meaning }));
+        const filtered = currentList.filter(ex => ex.word !== wordToRemove);
         setKanjiExamples(kanjiItem.id, filtered);
         setEditingWordIndex(null);
-    }, [kanjiItem, state.kanjiExampleOverrides, setKanjiExamples]);
+    }, [kanjiItem, wordsWithKanji, setKanjiExamples]);
 
     if (compact) {
         return (
@@ -179,15 +230,43 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
                         </div>
                     )}
 
-                    {/* Words containing this kanji (compact: 3 fixed slots, vacant = empty space) */}
-                    {isKanji && (
+                    {/* Words containing this kanji (compact / review mode: 3 fixed slots, editable via long-press) */}
+                    {isKanji && kanjiItem && (
                         <div>
-                            <h3 className="section-title text-secondary text-xs uppercase tracking-wider mb-2">Found in Words</h3>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
+                                <h3 className="section-title text-secondary text-xs uppercase tracking-wider" style={{ margin: 0 }}>Found in Words</h3>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (wordsWithKanji.length >= 3) {
+                                            alert('Maximum 3 words allowed. Please remove a word first.');
+                                        } else {
+                                            setShowAddModal(true);
+                                        }
+                                    }}
+                                    style={{
+                                        background: 'none',
+                                        border: '1px dashed var(--color-primary-light, var(--color-primary))',
+                                        borderRadius: 'var(--radius-sm)',
+                                        color: 'var(--color-primary)',
+                                        cursor: 'pointer',
+                                        padding: '1px 6px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '2px',
+                                        fontSize: '0.65rem',
+                                        fontWeight: 600,
+                                    }}
+                                >
+                                    <Plus size={10} /> Add
+                                </button>
+                            </div>
                             <table style={{ borderCollapse: 'collapse', width: '100%', tableLayout: 'fixed' }}>
                                 <tbody>
                                     <tr>
                                         {[0, 1, 2].map((i) => {
                                             const w = wordsWithKanji[i];
+                                            const isEditing = editingWordIndex === i;
                                             return (
                                                 <td
                                                     key={i}
@@ -198,17 +277,60 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
                                                         fontWeight: 600,
                                                         color: w ? 'var(--color-primary)' : 'transparent',
                                                         borderLeft: i > 0 ? '1px solid var(--color-bg-tertiary)' : 'none',
-                                                        cursor: w && onNavigate ? 'pointer' : 'default',
+                                                        cursor: w ? 'pointer' : 'default',
                                                         height: '1.25rem',
+                                                        position: 'relative',
+                                                        userSelect: 'none',
+                                                        WebkitUserSelect: 'none',
                                                     }}
                                                     onClick={(e) => {
-                                                        if (w) {
-                                                            e.stopPropagation();
-                                                            onNavigate?.('vocabulary', w.item);
+                                                        e.stopPropagation();
+                                                        if (isLongPressTriggered.current) {
+                                                            isLongPressTriggered.current = false;
+                                                            return;
                                                         }
+                                                        if (editingWordIndex !== null) {
+                                                            setEditingWordIndex(null);
+                                                            return;
+                                                        }
+                                                        if (w && onNavigate) onNavigate('vocabulary', w.item);
                                                     }}
+                                                    onMouseDown={(e) => { e.stopPropagation(); if (w) handlePressStart(i); }}
+                                                    onMouseUp={(e) => { e.stopPropagation(); handlePressEnd(); }}
+                                                    onMouseLeave={(e) => { e.stopPropagation(); handlePressEnd(); }}
+                                                    onTouchStart={(e) => { e.stopPropagation(); if (w) handlePressStart(i); }}
+                                                    onTouchEnd={(e) => { e.stopPropagation(); handlePressEnd(); }}
+                                                    onTouchCancel={(e) => { e.stopPropagation(); handlePressEnd(); }}
+                                                    onContextMenu={(e) => e.preventDefault()}
                                                 >
                                                     {w ? w.word : '\u00A0'}
+                                                    {isEditing && w && (
+                                                        <button
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                handleRemoveWord(w.word);
+                                                            }}
+                                                            style={{
+                                                                position: 'absolute',
+                                                                top: '-4px',
+                                                                right: '2px',
+                                                                width: '18px',
+                                                                height: '18px',
+                                                                borderRadius: '50%',
+                                                                backgroundColor: 'var(--color-error, #e74c3c)',
+                                                                border: '1px solid var(--color-bg-card)',
+                                                                color: 'white',
+                                                                cursor: 'pointer',
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                justifyContent: 'center',
+                                                                padding: 0,
+                                                                zIndex: 10,
+                                                            }}
+                                                        >
+                                                            <X size={10} />
+                                                        </button>
+                                                    )}
                                                 </td>
                                             );
                                         })}
@@ -421,11 +543,15 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
                                             WebkitUserSelect: 'none',
                                         }}
                                         onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (isLongPressTriggered.current) {
+                                                isLongPressTriggered.current = false;
+                                                return;
+                                            }
                                             if (editingWordIndex !== null) {
                                                 setEditingWordIndex(null);
                                                 return;
                                             }
-                                            e.stopPropagation();
                                             if (w.item) onNavigate?.('vocabulary', w.item);
                                         }}
                                         onMouseDown={() => handlePressStart(i)}
@@ -483,7 +609,7 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
                             <AddWordModal
                                 kanjiCharacter={kanjiItem.character}
                                 kanjiId={kanjiItem.id}
-                                currentExamples={kanjiExamples}
+                                currentExamples={wordsWithKanji.map(w => ({ word: w.word, reading: w.reading, meaning: w.meaning }))}
                                 onClose={() => setShowAddModal(false)}
                             />
                         )}
