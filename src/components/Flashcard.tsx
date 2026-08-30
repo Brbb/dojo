@@ -61,6 +61,23 @@ export function Flashcard({ card, type, mnemonic, isFlipped: controlledIsFlipped
             }
 
             if (examplesToUse.length < 3) {
+                // Prioritize same JLPT level words first
+                const sameLevelWords = allVocabulary.filter(v => v.word.includes(char) && v.jlptLevel === kanjiCard.jlptLevel);
+                for (const v of sameLevelWords) {
+                    if (examplesToUse.length >= 3) break;
+                    if (!seen.has(v.word)) {
+                        seen.add(v.word);
+                        examplesToUse.push({
+                            word: v.word,
+                            reading: v.reading,
+                            meaning: v.meaning[0] || '',
+                        });
+                    }
+                }
+            }
+
+            if (examplesToUse.length < 3) {
+                // Fill remaining slots with any level
                 const browseWords = allVocabulary.filter(v => v.word.includes(char));
                 for (const v of browseWords) {
                     if (examplesToUse.length >= 3) break;

@@ -3,6 +3,7 @@ import { X, Plus } from 'lucide-react';
 import type { Kanji, Vocabulary, CardType, Mnemonic, KanjiExample } from '../types';
 import { ReadingDisplay } from './ReadingDisplay';
 import { allVocabulary } from '../data/vocabulary';
+import { allKanji } from '../data/kanji';
 import { useStudy } from '../context/StudyContext';
 import { AddWordModal } from './AddWordModal';
 
@@ -57,6 +58,23 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
             }
 
             if (examplesToUse.length < 3) {
+                // Prioritize same JLPT level words first
+                const sameLevelWords = allVocabulary.filter(v => v.word.includes(char) && v.jlptLevel === kanjiItem.jlptLevel);
+                for (const v of sameLevelWords) {
+                    if (examplesToUse.length >= 3) break;
+                    if (!seen.has(v.word)) {
+                        seen.add(v.word);
+                        examplesToUse.push({
+                            word: v.word,
+                            reading: v.reading,
+                            meaning: v.meaning[0] || '',
+                        });
+                    }
+                }
+            }
+
+            if (examplesToUse.length < 3) {
+                // Fill remaining slots with any level
                 const browseWords = allVocabulary.filter(v => v.word.includes(char));
                 for (const v of browseWords) {
                     if (examplesToUse.length >= 3) break;
@@ -111,6 +129,23 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
         }
         return combined;
     }, [isKanji, kanjiItem, state.kanjiExampleOverrides, state.customCards]);
+
+    // Find kanji characters composing a vocabulary word (Bug 3)
+    const kanjiInWord = useMemo(() => {
+        if (isKanji || !vocabItem) return [];
+        const chars = [...vocabItem.word];
+        const results: { kanji: Kanji; }[] = [];
+        const seen = new Set<string>();
+        for (const ch of chars) {
+            if (seen.has(ch)) continue;
+            seen.add(ch);
+            const found = allKanji.find(k => k.character === ch);
+            if (found) {
+                results.push({ kanji: found });
+            }
+        }
+        return results;
+    }, [isKanji, vocabItem]);
 
     // Long-press handlers for editing words
     const isLongPressTriggered = useRef(false);
@@ -357,6 +392,51 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
                                     </tr>
                                 </tbody>
                             </table>
+
+                            {/* Add Word Modal (compact/review mode) */}
+                            {showAddModal && kanjiItem && (
+                                <div onClick={(e) => e.stopPropagation()}>
+                                    <AddWordModal
+                                        kanjiCharacter={kanjiItem.character}
+                                        kanjiId={kanjiItem.id}
+                                        currentExamples={wordsWithKanji.map(w => ({ word: w.word, reading: w.reading, meaning: w.meaning }))}
+                                        onClose={() => setShowAddModal(false)}
+                                    />
+                                </div>
+                            )}
+                        </div>
+                    )}
+
+                    {/* Kanji in this word (compact vocab view) */}
+                    {!isKanji && vocabItem && kanjiInWord.length > 0 && (
+                        <div>
+                            <h3 className="section-title text-secondary text-xs uppercase tracking-wider mb-2">Kanji</h3>
+                            <div style={{ display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap' }}>
+                                {kanjiInWord.map(({ kanji }) => (
+                                    <button
+                                        key={kanji.id}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (onNavigate) onNavigate('kanji', kanji);
+                                        }}
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: 'var(--space-2)',
+                                            padding: '0.2rem 0.5rem',
+                                            backgroundColor: 'var(--color-bg-secondary)',
+                                            borderRadius: 'var(--radius-md)',
+                                            border: '1px solid var(--color-bg-tertiary)',
+                                            cursor: 'pointer',
+                                            transition: 'background-color 0.15s',
+                                        }}
+                                    >
+                                        <span className="font-japanese" style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--color-text-primary)' }}>{kanji.character}</span>
+                                        <span className={`jlpt-badge jlpt-n${kanji.jlptLevel}`} style={{ fontSize: '0.6rem', padding: '0px 4px', lineHeight: '1.4' }}>N{kanji.jlptLevel}</span>
+                                        <span style={{ fontSize: '0.65rem', color: 'var(--color-text-tertiary)' }}>{kanji.meaning[0]}</span>
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     )}
 
@@ -613,6 +693,39 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
                                 onClose={() => setShowAddModal(false)}
                             />
                         )}
+                    </div>
+                )}
+
+                {/* Kanji in this word (full vocab view) */}
+                {!isKanji && vocabItem && kanjiInWord.length > 0 && (
+                    <div>
+                        <h3 className="text-secondary text-xs uppercase tracking-wider mb-2">Kanji</h3>
+                        <div style={{ display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap' }}>
+                            {kanjiInWord.map(({ kanji }) => (
+                                <button
+                                    key={kanji.id}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (onNavigate) onNavigate('kanji', kanji);
+                                    }}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: 'var(--space-2)',
+                                        padding: '0.35rem 0.65rem',
+                                        backgroundColor: 'var(--color-bg-secondary)',
+                                        borderRadius: 'var(--radius-md)',
+                                        border: '1px solid var(--color-bg-tertiary)',
+                                        cursor: 'pointer',
+                                        transition: 'background-color 0.15s',
+                                    }}
+                                >
+                                    <span className="font-japanese" style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--color-text-primary)' }}>{kanji.character}</span>
+                                    <span className={`jlpt-badge jlpt-n${kanji.jlptLevel}`} style={{ fontSize: '0.65rem', padding: '1px 5px' }}>N{kanji.jlptLevel}</span>
+                                    <span style={{ fontSize: '0.75rem', color: 'var(--color-text-tertiary)' }}>{kanji.meaning[0]}</span>
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 )}
 
