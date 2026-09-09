@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useStudy } from '../context/StudyContext';
 import { StudyCard } from '../components/StudyCard';
@@ -12,12 +12,20 @@ import type { SRSRating, Kanji, Vocabulary, CardType } from '../types';
 import reviewRacoon from '../assets/reviewracoon.png';
 import freetime from '../assets/freetime.png';
 
+type ReviewQueueItem = {
+    card: Kanji | Vocabulary;
+    type: 'kanji' | 'vocabulary';
+    /** All SRS records represented by this one visible prompt. */
+    cardIds: string[];
+    lastReview: number | null;
+};
+
 export function ReviewPage() {
     const navigate = useNavigate();
     const { state, getDueCards, rateCard, saveMnemonic, getMnemonic, removeFromReview } = useStudy();
 
     const [isReviewing, setIsReviewing] = useState(false);
-    const [reviewCards, setReviewCards] = useState<{ card: Kanji | Vocabulary; type: 'kanji' | 'vocabulary' }[]>([]);
+    const [reviewCards, setReviewCards] = useState<ReviewQueueItem[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [sessionComplete, setSessionComplete] = useState(false);
     const [peekItem, setPeekItem] = useState<{ type: CardType, item: Kanji | Vocabulary } | null>(null);
@@ -33,39 +41,78 @@ export function ReviewPage() {
         return false;
     });
 
+    const getCardData = (cardId: string, cardType: 'kanji' | 'vocabulary') => {
+        const libraryCard = cardType === 'kanji'
+            ? allKanji.find(k => k.id === cardId)
+            : allVocabulary.find(v => v.id === cardId);
+
+        if (libraryCard) return libraryCard;
+
+        const custom = state.customCards.find(c => c.id === cardId);
+        if (!custom) return null;
+
+        // Map CustomCard to a shape compatible with Kanji/Vocabulary for the UI.
+        return {
+            id: custom.id,
+            word: custom.word,
+            character: custom.word,
+            reading: custom.reading || '',
+            meaning: custom.meaning,
+            jlptLevel: custom.jlptLevel || 5,
+            onyomi: custom.onReading ? custom.onReading.split(/[、,]\s*/).filter(Boolean) : [],
+            kunyomi: custom.kunReading ? custom.kunReading.split(/[、,]\s*/).filter(Boolean) : [],
+            frequency: custom.frequency,
+            partOfSpeech: 'Custom',
+        } as Kanji | Vocabulary;
+    };
+
+    const repeatCounts = dueCards.reduce(
+        (counts, srsCard) => {
+            const cardType = srsCard.cardType as 'kanji' | 'vocabulary';
+            const card = getCardData(srsCard.cardId, cardType);
+            if (!card) return counts;
+
+            const displayedValue = cardType === 'kanji'
+                ? (card as Kanji).character
+                : (card as Vocabulary).word;
+            const key = `${cardType}:${displayedValue}`;
+            const seen = counts.seen.get(key) || 0;
+            counts.seen.set(key, seen + 1);
+            if (seen > 0) counts[cardType] += 1;
+            return counts;
+        },
+        { kanji: 0, vocabulary: 0, seen: new Map<string, number>() }
+    );
+    const totalRepeats = repeatCounts.kanji + repeatCounts.vocabulary;
+
     // Load cards for review
-    const startReview = useCallback(() => {
-        const cardsToReview = dueCards.map(srsCard => {
-            const isKanji = srsCard.cardType === 'kanji';
+    const startReview = () => {
+        const queueByDisplayedCard = new Map<string, ReviewQueueItem>();
 
-            // Try standard library first
-            let data = isKanji
-                ? allKanji.find(k => k.id === srsCard.cardId)
-                : allVocabulary.find(v => v.id === srsCard.cardId);
+        dueCards.forEach(srsCard => {
+            const type = srsCard.cardType as 'kanji' | 'vocabulary';
+            const card = getCardData(srsCard.cardId, type);
+            if (!card) return;
 
-            // If not found, try custom cards
-            if (!data) {
-                const custom = state.customCards.find(c => c.id === srsCard.cardId);
-                if (custom) {
-                    // Map CustomCard to a shape compatible with Kanji/Vocabulary for the UI
-                    data = {
-                        id: custom.id,
-                        word: custom.word,
-                        character: custom.word,
-                        reading: custom.reading || '',
-                        meaning: custom.meaning,
-                        jlptLevel: custom.jlptLevel || 5,
-                        onyomi: custom.onReading ? custom.onReading.split(/[、,]\s*/).filter(Boolean) : [],
-                        kunyomi: custom.kunReading ? custom.kunReading.split(/[、,]\s*/).filter(Boolean) : [],
-                        frequency: custom.frequency,
-                        partOfSpeech: 'Custom'
-                    } as any;
+            // Card IDs can differ even when they render as the same word/kanji.
+            // Show that prompt once and apply its rating to each matching SRS record.
+            const displayedValue = type === 'kanji'
+                ? (card as Kanji).character
+                : (card as Vocabulary).word;
+            const key = `${type}:${displayedValue}`;
+            const existing = queueByDisplayedCard.get(key);
+
+            if (existing) {
+                existing.cardIds.push(srsCard.cardId);
+                if (srsCard.lastReview && (!existing.lastReview || srsCard.lastReview > existing.lastReview)) {
+                    existing.lastReview = srsCard.lastReview;
                 }
+            } else {
+                queueByDisplayedCard.set(key, { card, type, cardIds: [srsCard.cardId], lastReview: srsCard.lastReview });
             }
+        });
 
-            if (!data) return null;
-            return { card: data, type: srsCard.cardType as 'kanji' | 'vocabulary' };
-        }).filter(Boolean) as { card: any; type: 'kanji' | 'vocabulary' }[];
+        const cardsToReview = [...queueByDisplayedCard.values()];
 
         if (cardsToReview.length === 0) {
             return;
@@ -76,11 +123,11 @@ export function ReviewPage() {
         setIsReviewing(true);
         setSessionComplete(false);
         // key changes will handle reset
-    }, [dueCards]);
+    };
 
     const handleRate = (rating: SRSRating) => {
         const current = reviewCards[currentIndex];
-        rateCard(current.card.id, current.type, rating);
+        current.cardIds.forEach(cardId => rateCard(cardId, current.type, rating));
 
         if (currentIndex < reviewCards.length - 1) {
             setCurrentIndex(prev => prev + 1);
@@ -92,7 +139,7 @@ export function ReviewPage() {
 
     const handleRemoveFromReview = () => {
         const current = reviewCards[currentIndex];
-        removeFromReview(current.card.id);
+        current.cardIds.forEach(removeFromReview);
         const updated = reviewCards.filter((_, i) => i !== currentIndex);
         if (updated.length === 0) {
             setSessionComplete(true);
@@ -140,6 +187,9 @@ export function ReviewPage() {
                 <header style={{ marginBottom: 'var(--space-8)' }}>
                     <h1 className="text-2xl font-bold">Review</h1>
                     <p className="text-secondary">There {dueCards.length > 1 ? "are" : "is"} <span className="text-l font-bold" style={{ color: 'var(--color-primary-light)', marginBottom: 'var(--space-2)' }}>{dueCards.length} </span>{dueCards.length > 1 ? "cards" : "card"} due
+                    </p>
+                    <p className="text-secondary text-sm" style={{ marginTop: 'var(--space-1)' }}>
+                        Repeats: {repeatCounts.vocabulary} word{repeatCounts.vocabulary === 1 ? '' : 's'} · {repeatCounts.kanji} kanji{totalRepeats > 0 ? '. Repeated cards appear once in this session.' : ''}
                     </p>
                 </header>
 
@@ -253,6 +303,7 @@ export function ReviewPage() {
                     type={current.type}
                     mnemonic={getMnemonic(current.card.id)}
                     mode="review"
+                    lastReview={current.lastReview}
                     onNavigate={(type, item) => setPeekItem({ type, item })}
                 />
 

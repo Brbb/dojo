@@ -25,6 +25,7 @@ type Action =
 
 // Initial state
 const initialState: AppState = {
+    schemaVersion: 2,
     srsCards: {},
     mnemonics: {},
     grammarProgress: {},
@@ -74,7 +75,7 @@ function studyReducer(state: AppState, action: Action): AppState {
             }
 
             const updatedCard = calculateNextReview(card, rating);
-            const isFirstEverReview = card.lastReview === null;
+            const isFirstSuccessfulReview = card.learnedAt === null && rating !== 'again';
 
             // Update streak
             const today = new Date().toISOString().split('T')[0];
@@ -99,8 +100,8 @@ function studyReducer(state: AppState, action: Action): AppState {
                 },
                 progress: {
                     ...state.progress,
-                    cardsLearned: state.progress.cardsLearned + (isFirstEverReview && rating !== 'again' ? 1 : 0),
-                    cardsReviewed: state.progress.cardsReviewed + (isFirstEverReview ? 0 : 1),
+                    cardsLearned: state.progress.cardsLearned + (isFirstSuccessfulReview ? 1 : 0),
+                    cardsReviewed: state.progress.cardsReviewed + (card.lastReview === null ? 0 : 1),
                     currentStreak,
                     longestStreak,
                     lastStudyDate,

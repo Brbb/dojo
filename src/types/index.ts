@@ -42,16 +42,20 @@ export interface Card {
 }
 
 // SRS (Spaced Repetition System) Types
-export type SRSRating = 'again' | 'hard' | 'good' | 'easy';
+export type SRSRating = 'again' | 'almost' | 'easy';
+export type LegacySRSRating = 'hard' | 'good';
 
 export interface SRSCard {
     cardId: string;
     cardType: CardType;
-    easeFactor: number;       // Starts at 2.5
+    stability: number;        // Estimated memory strength in days
+    difficulty: number;       // Difficulty from 1 (easiest) to 10 (hardest)
+    easeFactor: number;       // Legacy SM-2 value retained for backup compatibility
     interval: number;         // Days until next review
-    repetitions: number;      // Number of successful reviews
+    repetitions: number;      // Consecutive Almost/Easy reviews
     dueDate: number;          // Unix timestamp
     lastReview: number | null; // Unix timestamp
+    learnedAt: number | null; // First successful recall
 }
 
 export interface UserProgress {
@@ -70,7 +74,7 @@ export interface StudySession {
     mode: CardType | 'mixed';
     levels: JLPTLevel[];
     cardsStudied: number;
-    ratings: Record<SRSRating, number>;
+    ratings: Partial<Record<SRSRating | LegacySRSRating, number>>;
 }
 
 export interface Mnemonic {
@@ -104,6 +108,7 @@ export interface CustomCard {
 }
 
 export interface AppState {
+    schemaVersion: number;
     srsCards: Record<string, SRSCard>;
     mnemonics: Record<string, Mnemonic>;
     grammarProgress: Record<string, boolean>; // topicId_pointId -> studied

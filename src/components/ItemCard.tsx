@@ -6,6 +6,7 @@ import { allVocabulary } from '../data/vocabulary';
 import { allKanji } from '../data/kanji';
 import { useStudy } from '../context/StudyContext';
 import { AddWordModal } from './AddWordModal';
+import { getNextReviewDate, getNextReviewShortLabel } from '../utils/srs';
 
 interface ItemCardProps {
     type: CardType;
@@ -13,9 +14,10 @@ interface ItemCardProps {
     mnemonic?: Mnemonic | null;
     compact?: boolean;
     onNavigate?: (type: CardType, item: Kanji | Vocabulary) => void;
+    nextReviewAt?: number;
 }
 
-export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: ItemCardProps) {
+export function ItemCard({ type, item, mnemonic, compact = false, onNavigate, nextReviewAt }: ItemCardProps) {
     const isKanji = type === 'kanji';
     // Type guards/casting for specific properties
     const kanjiItem = isKanji ? (item as Kanji) : null;
@@ -502,6 +504,14 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate }: 
                             title="Frequency Rank"
                         >
                             #{kanjiItem.frequency}
+                        </span>
+                    )}
+                    {nextReviewAt !== undefined && (
+                        <span
+                            className="review-due-tag review-due-tag-detail"
+                            title={`Next review: ${getNextReviewDate(nextReviewAt)}`}
+                        >
+                            {getNextReviewShortLabel(nextReviewAt)}
                         </span>
                     )}
                 </div>

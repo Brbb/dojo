@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { ItemDetailModal } from '../components/ItemDetailModal';
 import { grammarTopics, type GrammarTopic, type GrammarPoint } from '../data/grammar/grammar';
-import type { Kanji, Vocabulary, JLPTLevel, SRSRating, CardType } from '../types';
+import type { Kanji, Vocabulary, JLPTLevel, CardType } from '../types';
 
 type StudyMode = 'kanji' | 'vocabulary' | 'grammar';
 
@@ -31,7 +31,7 @@ const getTopicIcon = (topicId: string) => {
 export function StudyPage() {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
-    const { state, rateCard, saveMnemonic, toggleGrammarStudied, getMnemonic, getNewKanji, getNewVocabulary } = useStudy();
+    const { state, addToReview, saveMnemonic, toggleGrammarStudied, getMnemonic, getNewKanji, getNewVocabulary } = useStudy();
     const { grammarProgress } = state;
 
     const [mode, setMode] = useState<StudyMode>((searchParams.get('mode') as StudyMode) || 'kanji');
@@ -51,17 +51,21 @@ export function StudyPage() {
         } else if (mode === 'vocabulary') {
             newCards = getNewVocabulary(levels, state.settings.dailyNewCards);
         }
+
+        if (newCards[0] && mode !== 'grammar') {
+            addToReview(newCards[0].id, mode);
+        }
+
         setCards(newCards);
         setCurrentIndex(0);
         setIsStudying(true);
         setSessionComplete(false);
-    }, [mode, levels, state.settings.dailyNewCards, getNewKanji, getNewVocabulary]);
+    }, [mode, levels, state.settings.dailyNewCards, getNewKanji, getNewVocabulary, addToReview]);
 
-    const handleRate = (rating: SRSRating) => {
-        const currentCard = cards[currentIndex];
-        rateCard(currentCard.id, mode as 'kanji' | 'vocabulary', rating);
-
+    const handleNextCard = () => {
         if (currentIndex < cards.length - 1) {
+            const nextCard = cards[currentIndex + 1];
+            addToReview(nextCard.id, mode as 'kanji' | 'vocabulary');
             setCurrentIndex(prev => prev + 1);
         } else {
             setSessionComplete(true);
@@ -315,7 +319,7 @@ export function StudyPage() {
                 <div className="page container center">
                     <div className="card text-center animate-bounce-in" style={{ maxWidth: '400px' }}>
                         <h2 className="text-2xl font-bold mb-4">Session Complete! 🎉</h2>
-                        <p className="text-secondary mb-6">You've studied {cards.length} new {mode} cards.</p>
+                        <p className="text-secondary mb-6">You've studied {cards.length} new {mode} cards. They're ready for review.</p>
                         <button onClick={() => setIsStudying(false)} className="btn btn-primary w-full">Back to Study</button>
                     </div>
                 </div>
@@ -360,7 +364,7 @@ export function StudyPage() {
                     </div>
 
                     <div style={{ marginTop: 'var(--space-8)' }}>
-                        <button onClick={() => handleRate('good')} className="btn btn-primary w-full">Next Card</button>
+                        <button onClick={handleNextCard} className="btn btn-primary w-full">Next Card</button>
                     </div>
                 </div>
             </div>

@@ -15,6 +15,7 @@ export function ItemDetailModal({ type, item, onClose, onNavigate }: ItemDetailM
     if (!item) return null;
 
     const isAlreadyInReview = !!state.srsCards[item.id];
+    const srsCard = state.srsCards[item.id];
 
     const handleOverlayClick = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget) {
@@ -90,7 +91,7 @@ export function ItemDetailModal({ type, item, onClose, onNavigate }: ItemDetailM
 
                 {/* Content */}
                 <div style={{ overflowY: 'auto', flex: 1 }}>
-                    <ItemCard type={type} item={item} onNavigate={onNavigate} />
+                    <ItemCard type={type} item={item} onNavigate={onNavigate} nextReviewAt={srsCard?.dueDate} />
                 </div>
 
                 {/* Footer Actions */}

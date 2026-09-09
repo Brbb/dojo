@@ -5,9 +5,12 @@ import { allVocabulary, searchVocabulary } from '../data/vocabulary';
 import { ItemDetailModal } from '../components/ItemDetailModal';
 import { Search } from 'lucide-react';
 import type { JLPTLevel, Kanji, Vocabulary, CardType } from '../types';
+import { useStudy } from '../context/StudyContext';
+import { getNextReviewDate, getNextReviewShortLabel } from '../utils/srs';
 
 export function BrowsePage() {
     const navigate = useNavigate();
+    const { state } = useStudy();
     const [tab, setTab] = useState<CardType>('kanji');
     const [levelFilter, setLevelFilter] = useState<JLPTLevel | 'all'>('all');
     const [searchQuery, setSearchQuery] = useState('');
@@ -145,6 +148,7 @@ export function BrowsePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(60px, 1fr))', gap: '0.75rem' }}>
                     {filteredItems.map((item) => {
                         const k = item as Kanji;
+                        const srsCard = state.srsCards[k.id];
                         return (
                             <button
                                 key={k.id}
@@ -163,6 +167,15 @@ export function BrowsePage() {
                             >
                                 <span className="kanji mb-1 text-text-primary" style={{ fontSize: '1.75rem', lineHeight: 1 }}>{k.character}</span>
                                 <span className="text-xs text-text-tertiary truncate w-full px-1 text-center" style={{ fontSize: '0.65rem' }}>{k.meaning[0]}</span>
+                                {srsCard && (
+                                    <span
+                                        className="review-due-tag"
+                                        style={{ marginTop: 'var(--space-1)' }}
+                                        title={`Next review: ${getNextReviewDate(srsCard.dueDate)}`}
+                                    >
+                                        {getNextReviewShortLabel(srsCard.dueDate)}
+                                    </span>
+                                )}
                             </button>
                         );
                     })}
@@ -172,6 +185,7 @@ export function BrowsePage() {
                 <div className="flex flex-col gap-3">
                     {filteredItems.map((item) => {
                         const v = item as Vocabulary;
+                        const srsCard = state.srsCards[v.id];
                         return (
                             <button
                                 key={v.id}
@@ -194,13 +208,21 @@ export function BrowsePage() {
                                 </div>
                                 <div className="text-right flex items-center gap-4 flex-shrink-0">
                                     <div className="text-base font-medium text-text-secondary truncate" style={{ maxWidth: '120px', textAlign: 'right' }}>{v.meaning[0]}</div>
-                                    <div style={{ width: '45px', display: 'flex', justifyContent: 'center' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-1)' }}>
                                         <span
                                             className={`jlpt-badge jlpt-n${v.jlptLevel}`}
                                             style={{ fontSize: '0.7rem' }}
                                         >
                                             N{v.jlptLevel}
                                         </span>
+                                        {srsCard && (
+                                            <span
+                                                className="review-due-tag"
+                                                title={`Next review: ${getNextReviewDate(srsCard.dueDate)}`}
+                                            >
+                                                {getNextReviewShortLabel(srsCard.dueDate)}
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
                             </button>

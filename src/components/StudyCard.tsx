@@ -9,9 +9,19 @@ interface StudyCardProps {
     mode?: 'study' | 'review'; // 'study' = always revealed, 'review' = click to reveal
     onFlip?: (isFlipped: boolean) => void; // Optional callback for review mode
     onNavigate?: (type: CardType, item: Kanji | Vocabulary) => void;
+    lastReview?: number | null;
 }
 
-export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip, onNavigate }: StudyCardProps) {
+function getLastSeenLabel(lastReview: number | null | undefined): string {
+    if (!lastReview) return 'Never seen before';
+
+    const elapsedDays = Math.floor(Math.max(0, Date.now() - lastReview) / (24 * 60 * 60 * 1000));
+    if (elapsedDays === 0) return 'Seen today';
+    if (elapsedDays === 1) return 'Seen yesterday';
+    return `Seen ${elapsedDays} days ago`;
+}
+
+export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip, onNavigate, lastReview }: StudyCardProps) {
     const [isRevealed, setIsRevealed] = useState(mode === 'study');
 
     // Reset state when card changes
@@ -73,6 +83,7 @@ export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip, onNavi
                         compact={true}
                         onNavigate={onNavigate}
                     />
+                    <div className="last-seen-label">{getLastSeenLabel(lastReview)}</div>
                 </div>
             </div>
         </div>

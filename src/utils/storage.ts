@@ -1,7 +1,9 @@
 // LocalStorage utilities for data persistence
 import type { AppState, SRSCard, Mnemonic, UserProgress, AppSettings, StudySession } from '../types';
+import { createSRSCard, migrateSRSCard } from './srs';
 
 const STORAGE_KEY = 'galactic-shepard-app';
+const CURRENT_SCHEMA_VERSION = 2;
 
 // Default app state
 const defaultProgress: UserProgress = {
@@ -23,6 +25,7 @@ const defaultSettings: AppSettings = {
 };
 
 const defaultState: AppState = {
+    schemaVersion: CURRENT_SCHEMA_VERSION,
     srsCards: {},
     mnemonics: {},
     grammarProgress: {},
@@ -33,22 +36,35 @@ const defaultState: AppState = {
     customCards: [],
 };
 
+function migrateState(storedState: Partial<AppState>): AppState {
+    const migratedCards = Object.fromEntries(
+        Object.entries(storedState.srsCards || {}).map(([cardId, card]) => [
+            cardId,
+            migrateSRSCard(card),
+        ])
+    );
+
+    return {
+        ...defaultState,
+        ...storedState,
+        schemaVersion: CURRENT_SCHEMA_VERSION,
+        srsCards: migratedCards,
+        progress: { ...defaultProgress, ...storedState.progress },
+        settings: { ...defaultSettings, ...storedState.settings },
+        grammarProgress: storedState.grammarProgress || {},
+        kanjiExampleOverrides: storedState.kanjiExampleOverrides || {},
+        customCards: storedState.customCards || [],
+        sessions: storedState.sessions || [],
+    };
+}
+
 // Load state from localStorage
 export function loadState(): AppState {
     try {
         const stored = localStorage.getItem(STORAGE_KEY);
         if (stored) {
-            const parsed = JSON.parse(stored);
-            // Merge with defaults to handle missing fields in old data
-            return {
-                ...defaultState,
-                ...parsed,
-                progress: { ...defaultProgress, ...parsed.progress },
-                settings: { ...defaultSettings, ...parsed.settings },
-                grammarProgress: parsed.grammarProgress || {},
-                kanjiExampleOverrides: parsed.kanjiExampleOverrides || {},
-                customCards: parsed.customCards || [],
-            };
+            const parsed = JSON.parse(stored) as Partial<AppState>;
+            return migrateState(parsed);
         }
     } catch (error) {
         console.error('Failed to load state:', error);
@@ -79,16 +95,7 @@ export function getSRSCard(cardId: string, cardType: 'kanji' | 'vocabulary'): SR
         return state.srsCards[cardId];
     }
     // Create new card
-    const newCard: SRSCard = {
-        cardId,
-        cardType,
-        easeFactor: 2.5,
-        interval: 0,
-        repetitions: 0,
-        dueDate: Date.now(),
-        lastReview: null,
-    };
-    return newCard;
+    return createSRSCard(cardId, cardType);
 }
 
 // Save mnemonic
@@ -175,9 +182,9 @@ export function exportData(): string {
 // Import data from backup
 export function importData(jsonString: string): boolean {
     try {
-        const data = JSON.parse(jsonString);
+        const data = JSON.parse(jsonString) as Partial<AppState>;
         if (data.srsCards && data.progress && data.settings) {
-            saveState(data);
+            saveState(migrateState(data));
             return true;
         }
         return false;

@@ -27,8 +27,7 @@
 
   /* SRS Rating Colors - Muted */
   --color-again: #C97064;
-  --color-hard: #D4A574;
-  --color-good: #7D8B74;
+  --color-almost: #D4A574;
   --color-easy: #8B9AA3;
 
   /* Text Colors */
@@ -510,7 +509,7 @@ body {
 /* SRS Rating Buttons */
 .rating-buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-2);
   width: 100%;
   max-width: 340px;
@@ -539,6 +538,13 @@ body {
   margin-top: var(--space-1);
 }
 
+.btn-rating .rating-hint {
+  margin-top: 2px;
+  color: inherit;
+  font-size: var(--text-xs);
+  opacity: 0.8;
+}
+
 
 .btn-rating.again {
   background: var(--color-again);
@@ -551,28 +557,16 @@ body {
   border-color: var(--color-error);
 }
 
-.btn-rating.hard {
-  background: var(--color-hard);
-  border-color: var(--color-hard);
+.btn-rating.almost {
+  background: var(--color-almost);
+  border-color: var(--color-almost);
   color: white;
 }
 
-.btn-rating.hard:hover {
+.btn-rating.almost:hover {
   background: #c3925e;
-  /* Slightly darker than hard color */
+  /* Slightly darker than almost color */
   border-color: #c3925e;
-}
-
-.btn-rating.good {
-  background: var(--color-good);
-  border-color: var(--color-good);
-  color: white;
-}
-
-.btn-rating.good:hover {
-  background: #6a7662;
-  /* Slightly darker than good color */
-  border-color: #6a7662;
 }
 
 .btn-rating.easy {
@@ -585,6 +579,39 @@ body {
   background: #768390;
   /* Slightly darker than easy color */
   border-color: #768390;
+}
+
+.last-seen-label {
+  margin-top: var(--space-3);
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+}
+
+.review-due-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  padding: 2px 5px;
+  border: 1px solid var(--color-bg-tertiary);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-tertiary);
+  font-size: 0.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.review-due-tag-detail {
+  min-width: 0;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: normal;
 }
 
 /* ============================================
