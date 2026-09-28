@@ -6,11 +6,18 @@ existing installations with saved progress.
 
 - Vocabulary matches `term` and the explicitly listed `match_forms` from both
   sections. When a card has a reading, that reading must match too.
-- Kanji matches the `characters` listed in the `kanji` section.
+- Defaults tag vocabulary cards only, including whole words in the source's
+  `kanji` questions. The `characters` arrays are source metadata, not a tag list.
+  For example, 家具 is tagged; its standalone kanji 家 and 具 are not.
+  Single-character vocabulary words still match by spelling and reading, but
+  their separate kanji cards do not inherit membership.
+- Kanji cards can still be tagged manually; existing manual overrides are kept.
 - Custom cards use the same rules, including terms not yet present in the library.
 - JLPT levels and SRS schedules are independent of these tags.
 - `fastPassCards` in saved user data stores overrides: `true` adds a card, `false`
   removes it from Fast Pass. No override means the bundled default applies.
+  Previously inherited kanji tags disappear on update without changing stored
+  reviews or requiring a data reset.
 
 ## Book vocabulary with definitions
 

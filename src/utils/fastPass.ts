@@ -2,7 +2,6 @@ import fastPassN3 from '../data/fastPass/n3.json';
 import fastPassBook from '../data/fastPass/book-0019-0036.json';
 import fastPassBookNext from '../data/fastPass/book-0037-0072.json';
 import fastPassBookMore from '../data/fastPass/book-0073-0203.json';
-import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
 import type { CardType, CustomCard } from '../types';
 
@@ -11,7 +10,6 @@ const normalizeReading = (value: string) => normalize(value)
     .replace(/[()（）.・\s]/g, '')
     .replace(/[ァ-ヶ]/g, char => String.fromCharCode(char.charCodeAt(0) - 0x60));
 
-const kanjiCharacters = new Set(fastPassN3.kanji.flatMap(entry => entry.characters).map(normalize));
 const vocabularyForms = new Map<string, Set<string>>();
 
 interface BookEntry {
@@ -82,7 +80,8 @@ export function mergeFastPassBookCards(customCards: CustomCard[], pendingImports
 }
 
 export function isDefaultFastPass(type: CardType, word: string, reading?: string): boolean {
-    if (type === 'kanji') return kanjiCharacters.has(normalize(word));
+    // These are word lists, even when a word comes from a kanji-reading question.
+    // Never infer membership for standalone kanji from a word's components.
     if (type !== 'vocabulary') return false;
     const readings = vocabularyForms.get(normalize(word));
     if (!readings) return false;
@@ -91,7 +90,6 @@ export function isDefaultFastPass(type: CardType, word: string, reading?: string
 }
 
 const defaultCardIds = new Set([
-    ...allKanji.filter(card => isDefaultFastPass('kanji', card.character)).map(card => card.id),
     ...allVocabulary.filter(card => isDefaultFastPass('vocabulary', card.word, card.reading)).map(card => card.id),
 ]);
 

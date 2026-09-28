@@ -50,6 +50,20 @@ assert.equal(app.isDefaultFastPass('vocabulary', '年', 'ねん'), false);
 assert.equal(app.isDefaultFastPass('vocabulary', '愛', 'あい'), false);
 assert.equal(app.isDefaultFastPass('kanji', '政'), false);
 assert.equal(app.isDefaultFastPass('kanji', '民'), false);
+assert.equal(app.isDefaultFastPass('vocabulary', '家具', 'かぐ'), true);
+assert.equal(app.isDefaultFastPass('vocabulary', '家', 'いえ'), false);
+assert.equal(app.isDefaultFastPass('vocabulary', '具', 'ぐ'), false);
+// Even a single-character word is tagged as vocabulary, not as a kanji card.
+assert.equal(app.isDefaultFastPass('vocabulary', '横', 'よこ'), true);
+assert.equal(app.isDefaultFastPass('kanji', '横'), false);
+const house = app.allKanji.find(card => card.character === '家');
+assert.ok(house);
+assert.ok(app.allKanji.every(card => !app.isFastPassCard(card.id, {}, state.customCards)));
+assert.equal(app.isFastPassCard(house.id, { [house.id]: true }, state.customCards), true);
+assert.equal(app.isFastPassCard(house.id, { [house.id]: false }, state.customCards), false);
+const customKanji = { id: 'custom-house', type: 'kanji', word: '家', reading: 'いえ', meaning: ['house'] };
+assert.equal(app.isFastPassCard(customKanji.id, {}, [customKanji]), false);
+assert.equal(app.isFastPassCard(customKanji.id, { [customKanji.id]: true }, [customKanji]), true);
 for (const cards of [app.allVocabulary, app.allKanji]) {
     for (const level of [5, 4, 3, 2, 1]) {
         const levelCards = cards.filter(card => card.jlptLevel === level);
@@ -75,14 +89,16 @@ assert.ok(all.every(card => membership(card.id)));
 const n3 = app.filterLibraryItems(items, 3, true, membership);
 assert.ok(n3.length > 0 && n3.every(card => card.jlptLevel === 3 && membership(card.id)));
 assert.ok(!n3.some(card => card.id === existing.id));
-assert.ok(app.filterLibraryItems(app.allKanji, 'all', true, membership).length > 0);
+assert.equal(app.filterLibraryItems(app.allKanji, 'all', true, membership).length, 0);
+assert.deepEqual(app.filterLibraryItems(app.allKanji, 'all', true,
+    id => app.isFastPassCard(id, { [house.id]: true }, state.customCards)), [house]);
 
 // Upgrade only the pending batch; never resurrect a deleted earlier custom card.
 const oldCards = app.mergeFastPassBookCards([], ['book-0019-0036-v1']);
 const old = {
     ...state, fastPassImports: ['book-0019-0036-v1'],
     customCards: oldCards.filter(card => card.id !== 'custom_fast-pass-book-0021'),
-    fastPassCards: { [existing.id]: false },
+    fastPassCards: { [existing.id]: false, [house.id]: true },
     srsCards: { [existing.id]: { ...app.createSRSCard(existing.id, 'vocabulary'), dueDate: 1800000000000 } },
 };
 app.saveState(old);
@@ -112,4 +128,4 @@ assert.deepEqual(merged.find(card => card.id === custom.id), custom);
 assert.ok(app.isFastPassCard(custom.id, {}, merged));
 assert.equal(app.importData(JSON.stringify(old)), true);
 assert.deepEqual(app.loadState().srsCards, old.srsCards);
-console.log('Fast Pass: 185 source entries covered; imports, aliases, overrides, JLPT intersections, untagged cards at every level, deletion safety, and backup migration passed.');
+console.log('Fast Pass: 185 source entries covered; word-only defaults, no component-kanji tags, manual overrides, safe imports, and unchanged review schedules passed.');
