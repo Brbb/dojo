@@ -1,9 +1,10 @@
 // LocalStorage utilities for data persistence
 import type { AppState, SRSCard, Mnemonic, UserProgress, AppSettings, StudySession } from '../types';
 import { createSRSCard, migrateSRSCard } from './srs';
+import { FAST_PASS_BOOK_IMPORTS, mergeFastPassBookCards } from './fastPass';
 
 const STORAGE_KEY = 'galactic-shepard-app';
-const CURRENT_SCHEMA_VERSION = 3;
+const CURRENT_SCHEMA_VERSION = 4;
 
 // Default app state
 const defaultProgress: UserProgress = {
@@ -27,6 +28,7 @@ const defaultSettings: AppSettings = {
 const defaultState: AppState = {
     schemaVersion: CURRENT_SCHEMA_VERSION,
     fastPassCards: {},
+    fastPassImports: [],
     srsCards: {},
     mnemonics: {},
     grammarProgress: {},
@@ -38,6 +40,11 @@ const defaultState: AppState = {
 };
 
 function migrateState(storedState: Partial<AppState>): AppState {
+    const fastPassImports = storedState.fastPassImports || [];
+    const pendingImports = FAST_PASS_BOOK_IMPORTS.filter(id => !fastPassImports.includes(id));
+    const customCards = pendingImports.length
+        ? mergeFastPassBookCards(storedState.customCards || [], pendingImports)
+        : storedState.customCards || [];
     const migratedCards = Object.fromEntries(
         Object.entries(storedState.srsCards || {}).map(([cardId, card]) => [
             cardId,
@@ -50,12 +57,13 @@ function migrateState(storedState: Partial<AppState>): AppState {
         ...storedState,
         schemaVersion: CURRENT_SCHEMA_VERSION,
         fastPassCards: storedState.fastPassCards || {},
+        fastPassImports: [...fastPassImports, ...pendingImports],
         srsCards: migratedCards,
         progress: { ...defaultProgress, ...storedState.progress },
         settings: { ...defaultSettings, ...storedState.settings },
         grammarProgress: storedState.grammarProgress || {},
         kanjiExampleOverrides: storedState.kanjiExampleOverrides || {},
-        customCards: storedState.customCards || [],
+        customCards,
         sessions: storedState.sessions || [],
     };
 }
@@ -71,7 +79,7 @@ export function loadState(): AppState {
     } catch (error) {
         console.error('Failed to load state:', error);
     }
-    return defaultState;
+    return migrateState({});
 }
 
 // Save state to localStorage

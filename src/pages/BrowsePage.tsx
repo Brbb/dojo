@@ -1,18 +1,24 @@
 import { useState, useMemo, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { allKanji, searchKanji } from '../data/kanji';
 import { allVocabulary, searchVocabulary } from '../data/vocabulary';
 import { ItemDetailModal } from '../components/ItemDetailModal';
 import { Search } from 'lucide-react';
-import type { JLPTLevel, Kanji, Vocabulary, CardType } from '../types';
+import type { JLPTLevel, Kanji, Vocabulary, CardType, CustomCard } from '../types';
 import { useStudy } from '../context/StudyContext';
 import { getNextReviewDate, getNextReviewShortLabel } from '../utils/srs';
+import { filterLibraryItems } from '../utils/library';
 
-export function BrowsePage() {
+export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
     const { state, isFastPass } = useStudy();
-    const [tab, setTab] = useState<CardType>('kanji');
-    const [levelFilter, setLevelFilter] = useState<JLPTLevel | 'all'>('all');
+    const [tab, setTab] = useState<CardType>(() => searchParams.get('type') === 'vocabulary'
+        ? 'vocabulary' : searchParams.get('type') === 'kanji' ? 'kanji' : fastPass ? 'vocabulary' : 'kanji');
+    const [levelFilter, setLevelFilter] = useState<JLPTLevel | 'all'>(() => {
+        const level = Number(searchParams.get('level'));
+        return [1, 2, 3, 4, 5].includes(level) ? level as JLPTLevel : 'all';
+    });
     const [searchQuery, setSearchQuery] = useState('');
     const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
     const [selectedItem, setSelectedItem] = useState<{ type: CardType, item: Kanji | Vocabulary } | null>(null);
@@ -25,23 +31,35 @@ export function BrowsePage() {
         return () => clearTimeout(handler);
     }, [searchQuery]);
 
+    const libraryItems = useMemo(() => {
+        const query = debouncedSearchQuery.toLowerCase();
+        const customMatches = (card: CustomCard) => (
+            !query || card.word.toLowerCase().includes(query) ||
+            [card.reading, card.onReading, card.kunReading].some(reading => reading?.toLowerCase().includes(query)) ||
+            card.meaning.some(meaning => meaning.toLowerCase().includes(query))
+        );
+        const customVocabulary: Vocabulary[] = state.customCards
+            .filter(card => card.type === 'vocabulary' && customMatches(card))
+            .map(card => ({
+                id: card.id, word: card.word, reading: card.reading || '',
+                meaning: card.meaning, jlptLevel: card.jlptLevel || 5, partOfSpeech: 'Custom',
+            }));
+        const customKanji: Kanji[] = state.customCards
+            .filter(card => card.type === 'kanji' && customMatches(card))
+            .map(card => ({
+                id: card.id, character: card.word, meaning: card.meaning,
+                onyomi: card.onReading ? [card.onReading] : [],
+                kunyomi: card.kunReading ? [card.kunReading] : (card.reading ? [card.reading] : []),
+                jlptLevel: card.jlptLevel || 5, frequency: card.frequency || 9999,
+            }));
+        return {
+            kanji: filterLibraryItems([...(query ? searchKanji(debouncedSearchQuery) : allKanji), ...customKanji], levelFilter, fastPass, isFastPass),
+            vocabulary: filterLibraryItems([...(query ? searchVocabulary(debouncedSearchQuery) : allVocabulary), ...customVocabulary], levelFilter, fastPass, isFastPass),
+        };
+    }, [levelFilter, debouncedSearchQuery, state.customCards, fastPass, isFastPass]);
+
     const filteredItems = useMemo(() => {
-        if (!debouncedSearchQuery) return [];
-
-        let items: (Kanji | Vocabulary)[] = [];
-
-        // 1. Get Base Items & Search
-        if (tab === 'kanji') {
-            items = searchKanji(debouncedSearchQuery);
-        } else {
-            items = searchVocabulary(debouncedSearchQuery);
-        }
-
-        // 2. Filter by Level
-        if (levelFilter !== 'all') {
-            items = items.filter(item => item.jlptLevel === levelFilter);
-        }
-
+        const items: (Kanji | Vocabulary)[] = tab === 'kanji' ? libraryItems.kanji : libraryItems.vocabulary;
         // 3. Sort logic: Level first (N5, N4, N3...), then Frequency
         return [...items].sort((a, b) => {
             // Primary sort: JLPT Level (Descending: 5, 4, 3, 2, 1)
@@ -61,9 +79,14 @@ export function BrowsePage() {
             const bReading = (b as Vocabulary).reading || '';
             return aReading.localeCompare(bReading, 'ja');
         });
-    }, [tab, levelFilter, debouncedSearchQuery]);
+    }, [tab, libraryItems]);
 
     const levels: JLPTLevel[] = [5, 4, 3, 2, 1];
+    const switchCollection = () => {
+        const params = new URLSearchParams({ type: tab });
+        if (levelFilter !== 'all') params.set('level', String(levelFilter));
+        navigate(`${fastPass ? '/browse' : '/fast-pass'}?${params}`);
+    };
 
     return (
         <div className="page container pb-24">
@@ -76,7 +99,7 @@ export function BrowsePage() {
                 >
                     ←
                 </button>
-                <h1 className="text-2xl font-bold">Library</h1>
+                <h1 className="text-2xl font-bold">{fastPass ? 'Fast Pass Library' : 'Library'}</h1>
             </header>
 
             {/* Controls */}
@@ -91,19 +114,18 @@ export function BrowsePage() {
                 />
 
                 {/* Type Toggle */}
-                {/* Type Toggle */}
                 <div className="flex gap-3 mb-2">
                     <button
                         className={`btn flex-1 ${tab === 'kanji' ? 'btn-primary' : 'btn-secondary'}`}
                         onClick={() => setTab('kanji')}
                     >
-                        漢字 Kanji ({debouncedSearchQuery ? filteredItems.length : allKanji.length})
+                        漢字 Kanji ({libraryItems.kanji.length})
                     </button>
                     <button
                         className={`btn flex-1 ${tab === 'vocabulary' ? 'btn-primary' : 'btn-secondary'}`}
                         onClick={() => setTab('vocabulary')}
                     >
-                        辞書 Jisho ({debouncedSearchQuery ? filteredItems.length : allVocabulary.length})
+                        辞書 Jisho ({libraryItems.vocabulary.length})
                     </button>
                 </div>
 
@@ -118,7 +140,7 @@ export function BrowsePage() {
                         }}
                         onClick={() => setLevelFilter('all')}
                     >
-                        All
+                        All levels
                     </button>
                     {levels.map(l => (
                         <button
@@ -129,11 +151,29 @@ export function BrowsePage() {
                             N{l}
                         </button>
                     ))}
+                    <button
+                        className={`jlpt-toggle ${fastPass ? 'active' : ''}`}
+                        aria-pressed={fastPass}
+                        style={{
+                            minWidth: '140px',
+                            background: fastPass ? 'var(--color-primary)' : 'var(--color-bg-card)',
+                            color: fastPass ? 'white' : 'var(--color-text-secondary)',
+                        }}
+                        onClick={switchCollection}
+                    >
+                        Fast Pass only
+                    </button>
                 </div>
+                {fastPass ? (
+                    <div className="text-sm" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 'var(--space-2)' }}>
+                        <span className="text-text-secondary">Showing only Fast Pass {levelFilter === 'all' ? 'cards across all levels' : `N${levelFilter} cards`} — not the full library.</span>
+                        <button className="btn btn-ghost btn-sm" onClick={switchCollection}>Show full library</button>
+                    </div>
+                ) : <p className="text-sm text-text-tertiary">Full library. Only cards with a Fast Pass badge belong to that collection.</p>}
             </div>
 
             {/* Results Grid/List */}
-            {!searchQuery ? (
+            {!searchQuery && !fastPass && levelFilter === 'all' ? (
                 <div className="flex flex-col items-center justify-center py-20 text-text-tertiary">
                     <Search size={64} strokeWidth={1} className="mb-4 opacity-20" />
                     <p className="text-lg">Type to search characters or words</p>

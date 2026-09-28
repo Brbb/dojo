@@ -1,0 +1,233 @@
+{
+  "source": "N3 Fast Pass book photo, entries 0019–0036",
+  "notes": "Entry 0036 is partly cropped; completed as 申し上げる using the visible spelling, reading and humble 'say' gloss.",
+  "entries": [
+    {
+      "number": "0019",
+      "term": "食物",
+      "reading": "しょくもつ",
+      "meaning": [
+        "food",
+        "foodstuff"
+      ],
+      "suru": false,
+      "match_forms": [
+        "食物"
+      ]
+    },
+    {
+      "number": "0020",
+      "term": "食欲",
+      "reading": "しょくよく",
+      "meaning": [
+        "appetite"
+      ],
+      "suru": false,
+      "match_forms": [
+        "食欲"
+      ]
+    },
+    {
+      "number": "0021",
+      "term": "朝食",
+      "reading": "ちょうしょく",
+      "meaning": [
+        "breakfast"
+      ],
+      "suru": false,
+      "match_forms": [
+        "朝食"
+      ]
+    },
+    {
+      "number": "0022",
+      "term": "昼食",
+      "reading": "ちゅうしょく",
+      "meaning": [
+        "lunch"
+      ],
+      "suru": false,
+      "match_forms": [
+        "昼食"
+      ]
+    },
+    {
+      "number": "0023",
+      "term": "夕食",
+      "reading": "ゆうしょく",
+      "meaning": [
+        "dinner"
+      ],
+      "suru": false,
+      "match_forms": [
+        "夕食"
+      ]
+    },
+    {
+      "number": "0024",
+      "term": "試食",
+      "reading": "ししょく",
+      "meaning": [
+        "tasting",
+        "to taste food"
+      ],
+      "suru": true,
+      "match_forms": [
+        "試食",
+        "試食する"
+      ]
+    },
+    {
+      "number": "0025",
+      "term": "飲食",
+      "reading": "いんしょく",
+      "meaning": [
+        "eating and drinking",
+        "to eat and drink"
+      ],
+      "suru": true,
+      "match_forms": [
+        "飲食",
+        "飲食する"
+      ]
+    },
+    {
+      "number": "0026",
+      "term": "飲食店",
+      "reading": "いんしょくてん",
+      "meaning": [
+        "restaurant",
+        "eating establishment"
+      ],
+      "suru": false,
+      "match_forms": [
+        "飲食店"
+      ]
+    },
+    {
+      "number": "0027",
+      "term": "生きる",
+      "reading": "いきる",
+      "meaning": [
+        "to live"
+      ],
+      "suru": false,
+      "match_forms": [
+        "生きる"
+      ]
+    },
+    {
+      "number": "0028",
+      "term": "生える",
+      "reading": "はえる",
+      "meaning": [
+        "to grow"
+      ],
+      "suru": false,
+      "match_forms": [
+        "生える"
+      ]
+    },
+    {
+      "number": "0029",
+      "term": "生き物",
+      "reading": "いきもの",
+      "meaning": [
+        "living thing"
+      ],
+      "suru": false,
+      "match_forms": [
+        "生き物"
+      ]
+    },
+    {
+      "number": "0030",
+      "term": "生産",
+      "reading": "せいさん",
+      "meaning": [
+        "production",
+        "to produce"
+      ],
+      "suru": true,
+      "match_forms": [
+        "生産",
+        "生産する"
+      ]
+    },
+    {
+      "number": "0031",
+      "term": "生活習慣",
+      "reading": "せいかつしゅうかん",
+      "meaning": [
+        "lifestyle habits"
+      ],
+      "suru": false,
+      "match_forms": [
+        "生活習慣"
+      ]
+    },
+    {
+      "number": "0032",
+      "term": "発生",
+      "reading": "はっせい",
+      "meaning": [
+        "occurrence",
+        "to occur"
+      ],
+      "suru": true,
+      "match_forms": [
+        "発生",
+        "発生する"
+      ]
+    },
+    {
+      "number": "0033",
+      "term": "新入生",
+      "reading": "しんにゅうせい",
+      "meaning": [
+        "new student"
+      ],
+      "suru": false,
+      "match_forms": [
+        "新入生"
+      ]
+    },
+    {
+      "number": "0034",
+      "term": "大学院生",
+      "reading": "だいがくいんせい",
+      "meaning": [
+        "graduate student"
+      ],
+      "suru": false,
+      "match_forms": [
+        "大学院生"
+      ]
+    },
+    {
+      "number": "0035",
+      "term": "申す",
+      "reading": "もうす",
+      "meaning": [
+        "to say (humble)"
+      ],
+      "suru": false,
+      "match_forms": [
+        "申す"
+      ]
+    },
+    {
+      "number": "0036",
+      "term": "申し上げる",
+      "reading": "もうしあげる",
+      "meaning": [
+        "to say (humble)",
+        "to tell (humble)"
+      ],
+      "suru": false,
+      "match_forms": [
+        "申し上げる"
+      ]
+    }
+  ]
+}

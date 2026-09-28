@@ -7,7 +7,7 @@ import { loadState, saveState } from '../utils/storage';
 import { calculateNextReview, createSRSCard, getDueCards, calculateStats, getCardStatus, type CardStatus } from '../utils/srs';
 import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
-import { isFastPassCard } from '../utils/fastPass';
+import { FAST_PASS_BOOK_IMPORTS, isFastPassCard, mergeFastPassBookCards } from '../utils/fastPass';
 
 // Action types
 type Action =
@@ -27,8 +27,9 @@ type Action =
 
 // Initial state
 const initialState: AppState = {
-    schemaVersion: 3,
+    schemaVersion: 4,
     fastPassCards: {},
+    fastPassImports: [...FAST_PASS_BOOK_IMPORTS],
     srsCards: {},
     mnemonics: {},
     grammarProgress: {},
@@ -50,7 +51,7 @@ const initialState: AppState = {
         selectedLevels: [5],
     },
     sessions: [],
-    customCards: [],
+    customCards: mergeFastPassBookCards([]),
 };
 
 // Reducer

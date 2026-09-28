@@ -110,6 +110,7 @@ export interface CustomCard {
 export interface AppState {
     schemaVersion: number;
     fastPassCards: Record<string, boolean>; // Per-card overrides of the bundled Fast Pass defaults
+    fastPassImports: string[]; // Completed book imports, so deleted cards stay deleted
     srsCards: Record<string, SRSCard>;
     mnemonics: Record<string, Mnemonic>;
     grammarProgress: Record<string, boolean>; // topicId_pointId -> studied

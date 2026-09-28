@@ -202,6 +202,19 @@ export function HomePage() {
                         </div>
                     </Link>
 
+                    <Link to="/fast-pass" style={{ textDecoration: 'none' }}>
+                        <div className="mode-card">
+                            <div className="mode-icon" style={{ backgroundColor: 'var(--color-bg-tertiary)', color: 'var(--color-text-secondary)' }}>
+                                <LibraryIcon size={24} />
+                            </div>
+                            <div className="mode-content">
+                                <div className="mode-title" style={{ color: 'chocolate' }}>Fast Pass Library</div>
+                                <div className="mode-subtitle">Exam preparation words and kanji across JLPT levels</div>
+                            </div>
+                            <div style={{ color: 'var(--color-text-tertiary)' }}>→</div>
+                        </div>
+                    </Link>
+
                     <Link to="/custom-cards" style={{ textDecoration: 'none' }}>
                         <div className="mode-card">
                             <div className="mode-icon" style={{ backgroundColor: 'var(--color-bg-tertiary)', color: 'var(--color-text-secondary)' }}>

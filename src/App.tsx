@@ -22,7 +22,8 @@ function App() {
             <Route path="/review" element={<ReviewPage />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/settings" element={<SettingsPage />} />
-            <Route path="/browse" element={<BrowsePage />} />
+            <Route path="/browse" element={<BrowsePage key="library" />} />
+            <Route path="/fast-pass" element={<BrowsePage key="fast-pass" fastPass />} />
             <Route path="/read" element={<ReadPage />} />
             <Route path="/custom-cards" element={<CustomCardPage />} />
           </Routes>

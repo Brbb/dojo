@@ -532,6 +532,20 @@ body {
   color: white;
 }
 
+/* An add action is not a membership badge. Only active tags use a filled pill. */
+.fast-pass-tag.add-fast-pass {
+  background: transparent;
+  border-color: transparent;
+  border-radius: var(--radius-sm);
+  font-weight: normal;
+  color: var(--color-text-tertiary);
+}
+
+.fast-pass-tag.add-fast-pass:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
 .rating-buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
