@@ -7,10 +7,12 @@ import { loadState, saveState } from '../utils/storage';
 import { calculateNextReview, createSRSCard, getDueCards, calculateStats, getCardStatus, type CardStatus } from '../utils/srs';
 import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
+import { isFastPassCard } from '../utils/fastPass';
 
 // Action types
 type Action =
     | { type: 'LOAD_STATE'; payload: AppState }
+    | { type: 'SET_FAST_PASS'; payload: { cardIds: string[]; enabled: boolean } }
     | { type: 'RATE_CARD'; payload: { cardId: string; cardType: CardType; rating: SRSRating } }
     | { type: 'SAVE_MNEMONIC'; payload: { cardId: string; cardType: CardType; text: string } }
     | { type: 'UPDATE_SETTINGS'; payload: Partial<AppSettings> }
@@ -25,7 +27,8 @@ type Action =
 
 // Initial state
 const initialState: AppState = {
-    schemaVersion: 2,
+    schemaVersion: 3,
+    fastPassCards: {},
     srsCards: {},
     mnemonics: {},
     grammarProgress: {},
@@ -62,7 +65,16 @@ function studyReducer(state: AppState, action: Action): AppState {
                 settings: { ...initialState.settings, ...action.payload.settings },
                 grammarProgress: action.payload.grammarProgress || {},
                 kanjiExampleOverrides: action.payload.kanjiExampleOverrides || {},
+                fastPassCards: action.payload.fastPassCards || {},
             };
+
+        case 'SET_FAST_PASS': {
+            const fastPassCards = { ...state.fastPassCards };
+            for (const cardId of action.payload.cardIds) {
+                fastPassCards[cardId] = action.payload.enabled;
+            }
+            return { ...state, fastPassCards };
+        }
 
         case 'RATE_CARD': {
             const { cardId, cardType, rating } = action.payload;
@@ -175,12 +187,15 @@ function studyReducer(state: AppState, action: Action): AppState {
 
         case 'DELETE_CUSTOM_CARD': {
             const { id } = action.payload;
+            const fastPassCards = { ...state.fastPassCards };
+            delete fastPassCards[id];
             const updatedSRSCards = { ...state.srsCards };
             delete updatedSRSCards[id];
 
             return {
                 ...state,
                 customCards: state.customCards.filter(c => c.id !== id),
+                fastPassCards,
                 srsCards: updatedSRSCards,
                 mnemonics: Object.fromEntries(
                     Object.entries(state.mnemonics).filter(([cardId]) => cardId !== id)
@@ -227,6 +242,8 @@ function studyReducer(state: AppState, action: Action): AppState {
 // Context types
 interface StudyContextType {
     state: AppState;
+    setFastPass: (cardIds: string[], enabled: boolean) => void;
+    isFastPass: (cardId: string) => boolean;
     // Actions
     rateCard: (cardId: string, cardType: CardType, rating: SRSRating) => void;
     saveMnemonic: (cardId: string, cardType: CardType, text: string) => void;
@@ -263,6 +280,12 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     const rateCard = (cardId: string, cardType: CardType, rating: SRSRating) => {
         dispatch({ type: 'RATE_CARD', payload: { cardId, cardType, rating } });
     };
+
+    const setFastPass = (cardIds: string[], enabled: boolean) => {
+        dispatch({ type: 'SET_FAST_PASS', payload: { cardIds, enabled } });
+    };
+
+    const isFastPass = (cardId: string) => isFastPassCard(cardId, state.fastPassCards, state.customCards);
 
     const saveMnemonic = (cardId: string, cardType: CardType, text: string) => {
         dispatch({ type: 'SAVE_MNEMONIC', payload: { cardId, cardType, text } });
@@ -357,6 +380,8 @@ export function StudyProvider({ children }: { children: ReactNode }) {
 
     const value: StudyContextType = {
         state,
+        setFastPass,
+        isFastPass,
         rateCard,
         saveMnemonic,
         updateSettings,

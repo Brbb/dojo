@@ -1,0 +1,1766 @@
+{
+  "kanji": [
+    {
+      "term": "割る",
+      "reading": "わる",
+      "match_forms": [
+        "割る",
+        "わる",
+        "割って"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 1,
+      "tag": "fast past",
+      "characters": [
+        "割"
+      ]
+    },
+    {
+      "term": "基本",
+      "reading": "きほん",
+      "match_forms": [
+        "基本",
+        "きほん"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 2,
+      "tag": "fast past",
+      "characters": [
+        "基",
+        "本"
+      ]
+    },
+    {
+      "term": "横",
+      "reading": "よこ",
+      "match_forms": [
+        "横",
+        "よこ"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 3,
+      "tag": "fast past",
+      "characters": [
+        "横"
+      ]
+    },
+    {
+      "term": "最初",
+      "reading": "さいしょ",
+      "match_forms": [
+        "最初",
+        "さいしょ"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 4,
+      "tag": "fast past",
+      "characters": [
+        "最",
+        "初"
+      ]
+    },
+    {
+      "term": "返す",
+      "reading": "かえす",
+      "match_forms": [
+        "返す",
+        "かえす",
+        "返しました"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 5,
+      "tag": "fast past",
+      "characters": [
+        "返"
+      ]
+    },
+    {
+      "term": "包丁",
+      "reading": "ほうちょう",
+      "match_forms": [
+        "包丁",
+        "ほうちょう"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 6,
+      "tag": "fast past",
+      "characters": [
+        "包",
+        "丁"
+      ]
+    },
+    {
+      "term": "適当",
+      "reading": "てきとう",
+      "match_forms": [
+        "適当",
+        "てきとう"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 7,
+      "tag": "fast past",
+      "characters": [
+        "適",
+        "当"
+      ]
+    },
+    {
+      "term": "家具",
+      "reading": "かぐ",
+      "match_forms": [
+        "家具",
+        "かぐ"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 8,
+      "tag": "fast past",
+      "characters": [
+        "家",
+        "具"
+      ]
+    },
+    {
+      "term": "解く",
+      "reading": "とく",
+      "match_forms": [
+        "解く",
+        "とく",
+        "解いて"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 9,
+      "tag": "fast past",
+      "characters": [
+        "解"
+      ]
+    },
+    {
+      "term": "腰",
+      "reading": "こし",
+      "match_forms": [
+        "腰",
+        "こし"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 10,
+      "tag": "fast past",
+      "characters": [
+        "腰"
+      ]
+    },
+    {
+      "term": "翌週",
+      "reading": "よくしゅう",
+      "match_forms": [
+        "翌週",
+        "よくしゅう"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 11,
+      "tag": "fast past",
+      "characters": [
+        "翌",
+        "週"
+      ]
+    },
+    {
+      "term": "低い",
+      "reading": "ひくい",
+      "match_forms": [
+        "低い",
+        "ひくい",
+        "低かった"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 12,
+      "tag": "fast past",
+      "characters": [
+        "低"
+      ]
+    },
+    {
+      "term": "方向",
+      "reading": "ほうこう",
+      "match_forms": [
+        "方向",
+        "ほうこう"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 13,
+      "tag": "fast past",
+      "characters": [
+        "方",
+        "向"
+      ]
+    },
+    {
+      "term": "規則",
+      "reading": "きそく",
+      "match_forms": [
+        "規則",
+        "きそく"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 14,
+      "tag": "fast past",
+      "characters": [
+        "規",
+        "則"
+      ]
+    },
+    {
+      "term": "配る",
+      "reading": "くばる",
+      "match_forms": [
+        "配る",
+        "くばる",
+        "配った"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 1,
+      "tag": "fast past",
+      "characters": [
+        "配"
+      ]
+    },
+    {
+      "term": "石油",
+      "reading": "せきゆ",
+      "match_forms": [
+        "石油",
+        "せきゆ"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 2,
+      "tag": "fast past",
+      "characters": [
+        "石",
+        "油"
+      ]
+    },
+    {
+      "term": "父母",
+      "reading": "ふぼ",
+      "match_forms": [
+        "父母",
+        "ふぼ"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 3,
+      "tag": "fast past",
+      "characters": [
+        "父",
+        "母"
+      ]
+    },
+    {
+      "term": "主要",
+      "reading": "しゅよう",
+      "match_forms": [
+        "主要",
+        "しゅよう"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 4,
+      "tag": "fast past",
+      "characters": [
+        "主",
+        "要"
+      ]
+    },
+    {
+      "term": "加熱",
+      "reading": "かねつ",
+      "match_forms": [
+        "加熱",
+        "かねつ"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 5,
+      "tag": "fast past",
+      "characters": [
+        "加",
+        "熱"
+      ]
+    },
+    {
+      "term": "深い",
+      "reading": "ふかい",
+      "match_forms": [
+        "深い",
+        "ふかい",
+        "深く"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 6,
+      "tag": "fast past",
+      "characters": [
+        "深"
+      ]
+    },
+    {
+      "term": "感情的",
+      "reading": "かんじょうてき",
+      "match_forms": [
+        "感情的",
+        "かんじょうてき"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 7,
+      "tag": "fast past",
+      "characters": [
+        "感",
+        "情",
+        "的"
+      ]
+    },
+    {
+      "term": "残す",
+      "reading": "のこす",
+      "match_forms": [
+        "残す",
+        "のこす",
+        "残さないで"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 8,
+      "tag": "fast past",
+      "characters": [
+        "残"
+      ]
+    },
+    {
+      "term": "順番",
+      "reading": "じゅんばん",
+      "match_forms": [
+        "順番",
+        "じゅんばん"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 9,
+      "tag": "fast past",
+      "characters": [
+        "順",
+        "番"
+      ]
+    },
+    {
+      "term": "勤める",
+      "reading": "つとめる",
+      "match_forms": [
+        "勤める",
+        "つとめる",
+        "勤めて"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 10,
+      "tag": "fast past",
+      "characters": [
+        "勤"
+      ]
+    },
+    {
+      "term": "左右",
+      "reading": "さゆう",
+      "match_forms": [
+        "左右",
+        "さゆう"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 11,
+      "tag": "fast past",
+      "characters": [
+        "左",
+        "右"
+      ]
+    },
+    {
+      "term": "負ける",
+      "reading": "まける",
+      "match_forms": [
+        "負ける",
+        "まける",
+        "負けて"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 12,
+      "tag": "fast past",
+      "characters": [
+        "負"
+      ]
+    },
+    {
+      "term": "過去",
+      "reading": "かこ",
+      "match_forms": [
+        "過去",
+        "かこ"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 13,
+      "tag": "fast past",
+      "characters": [
+        "過",
+        "去"
+      ]
+    },
+    {
+      "term": "逆",
+      "reading": "ぎゃく",
+      "match_forms": [
+        "逆",
+        "ぎゃく"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 14,
+      "tag": "fast past",
+      "characters": [
+        "逆"
+      ]
+    },
+    {
+      "term": "涙",
+      "reading": "なみだ",
+      "match_forms": [
+        "涙",
+        "なみだ"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 1,
+      "tag": "fast past",
+      "characters": [
+        "涙"
+      ]
+    },
+    {
+      "term": "完全",
+      "reading": "かんぜん",
+      "match_forms": [
+        "完全",
+        "かんぜん"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 2,
+      "tag": "fast past",
+      "characters": [
+        "完",
+        "全"
+      ]
+    },
+    {
+      "term": "地面",
+      "reading": "じめん",
+      "match_forms": [
+        "地面",
+        "じめん"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 3,
+      "tag": "fast past",
+      "characters": [
+        "地",
+        "面"
+      ]
+    },
+    {
+      "term": "移す",
+      "reading": "うつす",
+      "match_forms": [
+        "移す",
+        "うつす",
+        "移した"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 4,
+      "tag": "fast past",
+      "characters": [
+        "移"
+      ]
+    },
+    {
+      "term": "呼吸",
+      "reading": "こきゅう",
+      "match_forms": [
+        "呼吸",
+        "こきゅう"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 5,
+      "tag": "fast past",
+      "characters": [
+        "呼",
+        "吸"
+      ]
+    },
+    {
+      "term": "身長",
+      "reading": "しんちょう",
+      "match_forms": [
+        "身長",
+        "しんちょう"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 6,
+      "tag": "fast past",
+      "characters": [
+        "身",
+        "長"
+      ]
+    },
+    {
+      "term": "困る",
+      "reading": "こまる",
+      "match_forms": [
+        "困る",
+        "こまる",
+        "困って"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 7,
+      "tag": "fast past",
+      "characters": [
+        "困"
+      ]
+    },
+    {
+      "term": "薬局",
+      "reading": "やっきょく",
+      "match_forms": [
+        "薬局",
+        "やっきょく"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 8,
+      "tag": "fast past",
+      "characters": [
+        "薬",
+        "局"
+      ]
+    },
+    {
+      "term": "育てる",
+      "reading": "そだてる",
+      "match_forms": [
+        "育てる",
+        "そだてる",
+        "育てたい"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 9,
+      "tag": "fast past",
+      "characters": [
+        "育"
+      ]
+    },
+    {
+      "term": "煙",
+      "reading": "けむり",
+      "match_forms": [
+        "煙",
+        "けむり"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 10,
+      "tag": "fast past",
+      "characters": [
+        "煙"
+      ]
+    },
+    {
+      "term": "森林",
+      "reading": "しんりん",
+      "match_forms": [
+        "森林",
+        "しんりん"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 11,
+      "tag": "fast past",
+      "characters": [
+        "森",
+        "林"
+      ]
+    },
+    {
+      "term": "浴びる",
+      "reading": "あびる",
+      "match_forms": [
+        "浴びる",
+        "あびる",
+        "浴びました"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 12,
+      "tag": "fast past",
+      "characters": [
+        "浴"
+      ]
+    },
+    {
+      "term": "可能",
+      "reading": "かのう",
+      "match_forms": [
+        "可能",
+        "かのう"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 13,
+      "tag": "fast past",
+      "characters": [
+        "可",
+        "能"
+      ]
+    },
+    {
+      "term": "送信",
+      "reading": "そうしん",
+      "match_forms": [
+        "送信",
+        "そうしん"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 14,
+      "tag": "fast past",
+      "characters": [
+        "送",
+        "信"
+      ]
+    },
+    {
+      "term": "西洋",
+      "reading": "せいよう",
+      "match_forms": [
+        "西洋",
+        "せいよう"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 1,
+      "tag": "fast past",
+      "characters": [
+        "西",
+        "洋"
+      ]
+    },
+    {
+      "term": "苦しい",
+      "reading": "くるしい",
+      "match_forms": [
+        "苦しい",
+        "くるしい"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 2,
+      "tag": "fast past",
+      "characters": [
+        "苦"
+      ]
+    },
+    {
+      "term": "他人",
+      "reading": "たにん",
+      "match_forms": [
+        "他人",
+        "たにん"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 3,
+      "tag": "fast past",
+      "characters": [
+        "他",
+        "人"
+      ]
+    },
+    {
+      "term": "腹痛",
+      "reading": "ふくつう",
+      "match_forms": [
+        "腹痛",
+        "ふくつう"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 4,
+      "tag": "fast past",
+      "characters": [
+        "腹",
+        "痛"
+      ]
+    },
+    {
+      "term": "終点",
+      "reading": "しゅうてん",
+      "match_forms": [
+        "終点",
+        "しゅうてん"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 5,
+      "tag": "fast past",
+      "characters": [
+        "終",
+        "点"
+      ]
+    },
+    {
+      "term": "泣く",
+      "reading": "なく",
+      "match_forms": [
+        "泣く",
+        "なく",
+        "泣いて"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 6,
+      "tag": "fast past",
+      "characters": [
+        "泣"
+      ]
+    },
+    {
+      "term": "帯",
+      "reading": "おび",
+      "match_forms": [
+        "帯",
+        "おび"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 7,
+      "tag": "fast past",
+      "characters": [
+        "帯"
+      ]
+    },
+    {
+      "term": "郵便",
+      "reading": "ゆうびん",
+      "match_forms": [
+        "郵便",
+        "ゆうびん"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 8,
+      "tag": "fast past",
+      "characters": [
+        "郵",
+        "便"
+      ]
+    },
+    {
+      "term": "辺り",
+      "reading": "あたり",
+      "match_forms": [
+        "辺り",
+        "あたり"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 9,
+      "tag": "fast past",
+      "characters": [
+        "辺"
+      ]
+    },
+    {
+      "term": "図",
+      "reading": "ず",
+      "match_forms": [
+        "図",
+        "ず"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 10,
+      "tag": "fast past",
+      "characters": [
+        "図"
+      ]
+    },
+    {
+      "term": "減る",
+      "reading": "へる",
+      "match_forms": [
+        "減る",
+        "へる",
+        "減りました"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 11,
+      "tag": "fast past",
+      "characters": [
+        "減"
+      ]
+    },
+    {
+      "term": "歩道",
+      "reading": "ほどう",
+      "match_forms": [
+        "歩道",
+        "ほどう"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 12,
+      "tag": "fast past",
+      "characters": [
+        "歩",
+        "道"
+      ]
+    },
+    {
+      "term": "打つ",
+      "reading": "うつ",
+      "match_forms": [
+        "打つ",
+        "うつ"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 13,
+      "tag": "fast past",
+      "characters": [
+        "打"
+      ]
+    },
+    {
+      "term": "性格",
+      "reading": "せいかく",
+      "match_forms": [
+        "性格",
+        "せいかく"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 14,
+      "tag": "fast past",
+      "characters": [
+        "性",
+        "格"
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "term": "影響",
+      "reading": "えいきょう",
+      "match_forms": [
+        "影響",
+        "えいきょう"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 15,
+      "tag": "fast past"
+    },
+    {
+      "term": "うらやましい",
+      "reading": "うらやましい",
+      "match_forms": [
+        "うらやましい",
+        "羨ましい"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 16,
+      "tag": "fast past"
+    },
+    {
+      "term": "我慢",
+      "reading": "がまん",
+      "match_forms": [
+        "我慢",
+        "がまん"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 17,
+      "tag": "fast past"
+    },
+    {
+      "term": "消極的",
+      "reading": "しょうきょくてき",
+      "match_forms": [
+        "消極的",
+        "しょうきょくてき"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 18,
+      "tag": "fast past"
+    },
+    {
+      "term": "経由",
+      "reading": "けいゆ",
+      "match_forms": [
+        "経由",
+        "けいゆ"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 19,
+      "tag": "fast past"
+    },
+    {
+      "term": "仲",
+      "reading": "なか",
+      "match_forms": [
+        "仲",
+        "なか"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 20,
+      "tag": "fast past"
+    },
+    {
+      "term": "取り出す",
+      "reading": "とりだす",
+      "match_forms": [
+        "取り出す",
+        "とりだす",
+        "取り出した"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 21,
+      "tag": "fast past"
+    },
+    {
+      "term": "一度に",
+      "reading": "いちどに",
+      "match_forms": [
+        "一度に",
+        "いちどに"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 22,
+      "tag": "fast past"
+    },
+    {
+      "term": "アクセス",
+      "reading": "アクセス",
+      "match_forms": [
+        "アクセス"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 23,
+      "tag": "fast past"
+    },
+    {
+      "term": "あきらめる",
+      "reading": "あきらめる",
+      "match_forms": [
+        "あきらめる",
+        "あきらめた",
+        "諦める"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 24,
+      "tag": "fast past"
+    },
+    {
+      "term": "うろうろ",
+      "reading": "うろうろ",
+      "match_forms": [
+        "うろうろ"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 25,
+      "tag": "fast past"
+    },
+    {
+      "term": "売り切れる",
+      "reading": "うりきれる",
+      "match_forms": [
+        "売り切れる",
+        "うりきれる",
+        "売り切れました"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 26,
+      "tag": "fast past"
+    },
+    {
+      "term": "カーブする",
+      "reading": "カーブする",
+      "match_forms": [
+        "カーブする",
+        "カーブして"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 27,
+      "tag": "fast past"
+    },
+    {
+      "term": "退屈",
+      "reading": "たいくつ",
+      "match_forms": [
+        "退屈",
+        "たいくつ"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 28,
+      "tag": "fast past"
+    },
+    {
+      "term": "さっそく",
+      "reading": "さっそく",
+      "match_forms": [
+        "さっそく",
+        "早速"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 29,
+      "tag": "fast past"
+    },
+    {
+      "term": "ゆるい",
+      "reading": "ゆるい",
+      "match_forms": [
+        "ゆるい",
+        "緩い"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 30,
+      "tag": "fast past"
+    },
+    {
+      "term": "知識",
+      "reading": "ちしき",
+      "match_forms": [
+        "知識",
+        "ちしき"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 31,
+      "tag": "fast past"
+    },
+    {
+      "term": "ひびく",
+      "reading": "ひびく",
+      "match_forms": [
+        "ひびく",
+        "響く"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 32,
+      "tag": "fast past"
+    },
+    {
+      "term": "完成",
+      "reading": "かんせい",
+      "match_forms": [
+        "完成",
+        "かんせい"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 33,
+      "tag": "fast past"
+    },
+    {
+      "term": "あわてる",
+      "reading": "あわてる",
+      "match_forms": [
+        "あわてる",
+        "慌てる"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 34,
+      "tag": "fast past"
+    },
+    {
+      "term": "実物",
+      "reading": "じつぶつ",
+      "match_forms": [
+        "実物",
+        "じつぶつ"
+      ],
+      "test": "JLPT N3 July 2024",
+      "question": 35,
+      "tag": "fast past"
+    },
+    {
+      "term": "運休",
+      "reading": "うんきゅう",
+      "match_forms": [
+        "運休",
+        "うんきゅう"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 15,
+      "tag": "fast past"
+    },
+    {
+      "term": "あせ",
+      "reading": "あせ",
+      "match_forms": [
+        "あせ",
+        "汗"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 16,
+      "tag": "fast past"
+    },
+    {
+      "term": "マイク",
+      "reading": "マイク",
+      "match_forms": [
+        "マイク"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 17,
+      "tag": "fast past"
+    },
+    {
+      "term": "覚める",
+      "reading": "さめる",
+      "match_forms": [
+        "覚める",
+        "さめる",
+        "覚めて"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 18,
+      "tag": "fast past"
+    },
+    {
+      "term": "あやしい",
+      "reading": "あやしい",
+      "match_forms": [
+        "あやしい",
+        "怪しい"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 19,
+      "tag": "fast past"
+    },
+    {
+      "term": "通知",
+      "reading": "つうち",
+      "match_forms": [
+        "通知",
+        "つうち"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 20,
+      "tag": "fast past"
+    },
+    {
+      "term": "派手",
+      "reading": "はで",
+      "match_forms": [
+        "派手",
+        "はで",
+        "派手な"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 21,
+      "tag": "fast past"
+    },
+    {
+      "term": "禁止",
+      "reading": "きんし",
+      "match_forms": [
+        "禁止",
+        "きんし"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 22,
+      "tag": "fast past"
+    },
+    {
+      "term": "もったいない",
+      "reading": "もったいない",
+      "match_forms": [
+        "もったいない",
+        "勿体ない"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 23,
+      "tag": "fast past"
+    },
+    {
+      "term": "隠す",
+      "reading": "かくす",
+      "match_forms": [
+        "隠す",
+        "かくす",
+        "隠した"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 24,
+      "tag": "fast past"
+    },
+    {
+      "term": "一応",
+      "reading": "いちおう",
+      "match_forms": [
+        "一応",
+        "いちおう"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 25,
+      "tag": "fast past"
+    },
+    {
+      "term": "検討",
+      "reading": "けんとう",
+      "match_forms": [
+        "検討",
+        "けんとう",
+        "検討して"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 26,
+      "tag": "fast past"
+    },
+    {
+      "term": "企業",
+      "reading": "きぎょう",
+      "match_forms": [
+        "企業",
+        "きぎょう"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 27,
+      "tag": "fast past"
+    },
+    {
+      "term": "バックする",
+      "reading": "バックする",
+      "match_forms": [
+        "バックする",
+        "バックして"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 28,
+      "tag": "fast past"
+    },
+    {
+      "term": "一流",
+      "reading": "いちりゅう",
+      "match_forms": [
+        "一流",
+        "いちりゅう"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 29,
+      "tag": "fast past"
+    },
+    {
+      "term": "ようやく",
+      "reading": "ようやく",
+      "match_forms": [
+        "ようやく"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 30,
+      "tag": "fast past"
+    },
+    {
+      "term": "内容",
+      "reading": "ないよう",
+      "match_forms": [
+        "内容",
+        "ないよう"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 31,
+      "tag": "fast past"
+    },
+    {
+      "term": "活動",
+      "reading": "かつどう",
+      "match_forms": [
+        "活動",
+        "かつどう"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 32,
+      "tag": "fast past"
+    },
+    {
+      "term": "落ち着く",
+      "reading": "おちつく",
+      "match_forms": [
+        "落ち着く",
+        "おちつく"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 33,
+      "tag": "fast past"
+    },
+    {
+      "term": "ぐっすり",
+      "reading": "ぐっすり",
+      "match_forms": [
+        "ぐっすり"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 34,
+      "tag": "fast past"
+    },
+    {
+      "term": "性格",
+      "reading": "せいかく",
+      "match_forms": [
+        "性格",
+        "せいかく"
+      ],
+      "test": "JLPT N3 December 2024",
+      "question": 35,
+      "tag": "fast past"
+    },
+    {
+      "term": "感動",
+      "reading": "かんどう",
+      "match_forms": [
+        "感動",
+        "かんどう"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 15,
+      "tag": "fast past"
+    },
+    {
+      "term": "中古",
+      "reading": "ちゅうこ",
+      "match_forms": [
+        "中古",
+        "ちゅうこ"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 16,
+      "tag": "fast past"
+    },
+    {
+      "term": "リスト",
+      "reading": "リスト",
+      "match_forms": [
+        "リスト"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 17,
+      "tag": "fast past"
+    },
+    {
+      "term": "くやしい",
+      "reading": "くやしい",
+      "match_forms": [
+        "くやしい",
+        "くやしかった",
+        "悔しい"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 18,
+      "tag": "fast past"
+    },
+    {
+      "term": "距離",
+      "reading": "きょり",
+      "match_forms": [
+        "距離",
+        "きょり"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 19,
+      "tag": "fast past"
+    },
+    {
+      "term": "ふく",
+      "reading": "ふく",
+      "match_forms": [
+        "ふく",
+        "ふいて",
+        "拭く"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 20,
+      "tag": "fast past"
+    },
+    {
+      "term": "文句",
+      "reading": "もんく",
+      "match_forms": [
+        "文句",
+        "もんく"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 21,
+      "tag": "fast past"
+    },
+    {
+      "term": "思いつく",
+      "reading": "おもいつく",
+      "match_forms": [
+        "思いつく",
+        "おもいつく",
+        "思いついた"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 22,
+      "tag": "fast past"
+    },
+    {
+      "term": "坂道",
+      "reading": "さかみち",
+      "match_forms": [
+        "坂道",
+        "さかみち"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 23,
+      "tag": "fast past"
+    },
+    {
+      "term": "列",
+      "reading": "れつ",
+      "match_forms": [
+        "列",
+        "れつ"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 24,
+      "tag": "fast past"
+    },
+    {
+      "term": "記録",
+      "reading": "きろく",
+      "match_forms": [
+        "記録",
+        "きろく"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 25,
+      "tag": "fast past"
+    },
+    {
+      "term": "苦労",
+      "reading": "くろう",
+      "match_forms": [
+        "苦労",
+        "くろう",
+        "苦労した"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 26,
+      "tag": "fast past"
+    },
+    {
+      "term": "そっと",
+      "reading": "そっと",
+      "match_forms": [
+        "そっと"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 27,
+      "tag": "fast past"
+    },
+    {
+      "term": "早退",
+      "reading": "そうたい",
+      "match_forms": [
+        "早退",
+        "そうたい",
+        "早退した"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 28,
+      "tag": "fast past"
+    },
+    {
+      "term": "たつ",
+      "reading": "たつ",
+      "match_forms": [
+        "たつ",
+        "たちました",
+        "経つ"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 29,
+      "tag": "fast past"
+    },
+    {
+      "term": "さまざま",
+      "reading": "さまざま",
+      "match_forms": [
+        "さまざま",
+        "様々"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 30,
+      "tag": "fast past"
+    },
+    {
+      "term": "減少",
+      "reading": "げんしょう",
+      "match_forms": [
+        "減少",
+        "げんしょう"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 31,
+      "tag": "fast past"
+    },
+    {
+      "term": "重大",
+      "reading": "じゅうだい",
+      "match_forms": [
+        "重大",
+        "じゅうだい"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 32,
+      "tag": "fast past"
+    },
+    {
+      "term": "ばらばら",
+      "reading": "ばらばら",
+      "match_forms": [
+        "ばらばら"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 33,
+      "tag": "fast past"
+    },
+    {
+      "term": "皮",
+      "reading": "かわ",
+      "match_forms": [
+        "皮",
+        "かわ"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 34,
+      "tag": "fast past"
+    },
+    {
+      "term": "オーダー",
+      "reading": "オーダー",
+      "match_forms": [
+        "オーダー"
+      ],
+      "test": "JLPT N3 July 2025",
+      "question": 35,
+      "tag": "fast past"
+    },
+    {
+      "term": "時差",
+      "reading": "じさ",
+      "match_forms": [
+        "時差",
+        "じさ"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 15,
+      "tag": "fast past"
+    },
+    {
+      "term": "しかたない",
+      "reading": "しかたない",
+      "match_forms": [
+        "しかたない",
+        "仕方ない"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 16,
+      "tag": "fast past"
+    },
+    {
+      "term": "決心",
+      "reading": "けっしん",
+      "match_forms": [
+        "決心",
+        "けっしん"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 17,
+      "tag": "fast past"
+    },
+    {
+      "term": "冗談",
+      "reading": "じょうだん",
+      "match_forms": [
+        "冗談",
+        "じょうだん"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 18,
+      "tag": "fast past"
+    },
+    {
+      "term": "預ける",
+      "reading": "あずける",
+      "match_forms": [
+        "預ける",
+        "あずける",
+        "預けて"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 19,
+      "tag": "fast past"
+    },
+    {
+      "term": "アナウンス",
+      "reading": "アナウンス",
+      "match_forms": [
+        "アナウンス"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 20,
+      "tag": "fast past"
+    },
+    {
+      "term": "案外",
+      "reading": "あんがい",
+      "match_forms": [
+        "案外",
+        "あんがい"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 21,
+      "tag": "fast past"
+    },
+    {
+      "term": "努力",
+      "reading": "どりょく",
+      "match_forms": [
+        "努力",
+        "どりょく"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 22,
+      "tag": "fast past"
+    },
+    {
+      "term": "ぺこぺこ",
+      "reading": "ぺこぺこ",
+      "match_forms": [
+        "ぺこぺこ"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 23,
+      "tag": "fast past"
+    },
+    {
+      "term": "確実",
+      "reading": "かくじつ",
+      "match_forms": [
+        "確実",
+        "かくじつ",
+        "確実な"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 24,
+      "tag": "fast past"
+    },
+    {
+      "term": "取り付ける",
+      "reading": "とりつける",
+      "match_forms": [
+        "取り付ける",
+        "とりつける",
+        "取り付けて"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 25,
+      "tag": "fast past"
+    },
+    {
+      "term": "清潔",
+      "reading": "せいけつ",
+      "match_forms": [
+        "清潔",
+        "せいけつ",
+        "清潔な"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 26,
+      "tag": "fast past"
+    },
+    {
+      "term": "さっき",
+      "reading": "さっき",
+      "match_forms": [
+        "さっき"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 27,
+      "tag": "fast past"
+    },
+    {
+      "term": "キッチン",
+      "reading": "キッチン",
+      "match_forms": [
+        "キッチン"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 28,
+      "tag": "fast past"
+    },
+    {
+      "term": "指導",
+      "reading": "しどう",
+      "match_forms": [
+        "指導",
+        "しどう",
+        "指導して"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 29,
+      "tag": "fast past"
+    },
+    {
+      "term": "おしまい",
+      "reading": "おしまい",
+      "match_forms": [
+        "おしまい",
+        "お仕舞い"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 30,
+      "tag": "fast past"
+    },
+    {
+      "term": "にぎる",
+      "reading": "にぎる",
+      "match_forms": [
+        "にぎる",
+        "握る"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 31,
+      "tag": "fast past"
+    },
+    {
+      "term": "修理",
+      "reading": "しゅうり",
+      "match_forms": [
+        "修理",
+        "しゅうり"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 32,
+      "tag": "fast past"
+    },
+    {
+      "term": "目的",
+      "reading": "もくてき",
+      "match_forms": [
+        "目的",
+        "もくてき"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 33,
+      "tag": "fast past"
+    },
+    {
+      "term": "懐かしい",
+      "reading": "なつかしい",
+      "match_forms": [
+        "懐かしい",
+        "なつかしい"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 34,
+      "tag": "fast past"
+    },
+    {
+      "term": "変化",
+      "reading": "へんか",
+      "match_forms": [
+        "変化",
+        "へんか"
+      ],
+      "test": "JLPT N3 December 2025",
+      "question": 35,
+      "tag": "fast past"
+    }
+  ]
+}

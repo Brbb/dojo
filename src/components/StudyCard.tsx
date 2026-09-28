@@ -10,6 +10,7 @@ interface StudyCardProps {
     onFlip?: (isFlipped: boolean) => void; // Optional callback for review mode
     onNavigate?: (type: CardType, item: Kanji | Vocabulary) => void;
     lastReview?: number | null;
+    fastPassCardIds?: string[];
 }
 
 function getLastSeenLabel(lastReview: number | null | undefined): string {
@@ -21,7 +22,7 @@ function getLastSeenLabel(lastReview: number | null | undefined): string {
     return `Seen ${elapsedDays} days ago`;
 }
 
-export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip, onNavigate, lastReview }: StudyCardProps) {
+export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip, onNavigate, lastReview, fastPassCardIds }: StudyCardProps) {
     const [isRevealed, setIsRevealed] = useState(mode === 'study');
 
     // Reset state when card changes
@@ -81,6 +82,7 @@ export function StudyCard({ card, type, mnemonic, mode = 'study', onFlip, onNavi
                         item={card}
                         mnemonic={mnemonic}
                         compact={true}
+                        fastPassCardIds={fastPassCardIds}
                         onNavigate={onNavigate}
                     />
                     <div className="last-seen-label">{getLastSeenLabel(lastReview)}</div>

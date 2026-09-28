@@ -8,7 +8,9 @@ import { MnemonicEditor } from '../components/MnemonicEditor';
 import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
 import { ItemDetailModal } from '../components/ItemDetailModal';
-import type { SRSRating, Kanji, Vocabulary, CardType } from '../types';
+import { JLPTSelector } from '../components/JLPTSelector';
+import { matchesReviewFilters } from '../utils/reviewFilters';
+import type { SRSRating, Kanji, Vocabulary, CardType, JLPTLevel } from '../types';
 import reviewRacoon from '../assets/reviewracoon.png';
 import freetime from '../assets/freetime.png';
 
@@ -22,7 +24,7 @@ type ReviewQueueItem = {
 
 export function ReviewPage() {
     const navigate = useNavigate();
-    const { state, getDueCards, rateCard, saveMnemonic, getMnemonic, removeFromReview } = useStudy();
+    const { state, getDueCards, rateCard, saveMnemonic, getMnemonic, removeFromReview, isFastPass } = useStudy();
 
     const [isReviewing, setIsReviewing] = useState(false);
     const [reviewCards, setReviewCards] = useState<ReviewQueueItem[]>([]);
@@ -31,15 +33,12 @@ export function ReviewPage() {
     const [peekItem, setPeekItem] = useState<{ type: CardType, item: Kanji | Vocabulary } | null>(null);
     const [reviewKanji, setReviewKanji] = useState(true);
     const [reviewVocab, setReviewVocab] = useState(true);
+    const [fastPassOnly, setFastPassOnly] = useState(false);
+    const [reviewLevels, setReviewLevels] = useState<JLPTLevel[]>([5, 4, 3, 2, 1]);
 
     // const { key: flashcardKey, reset: resetFlashcard } = useFlashcardReset();
 
-    const dueCards = getDueCards().filter(c => {
-        if (reviewKanji && reviewVocab) return true;
-        if (reviewKanji) return c.cardType === 'kanji';
-        if (reviewVocab) return c.cardType === 'vocabulary';
-        return false;
-    });
+    const allDueCards = getDueCards();
 
     const getCardData = (cardId: string, cardType: 'kanji' | 'vocabulary') => {
         const libraryCard = cardType === 'kanji'
@@ -65,6 +64,17 @@ export function ReviewPage() {
             partOfSpeech: 'Custom',
         } as Kanji | Vocabulary;
     };
+
+    const dueCards = allDueCards.filter(c => {
+        if (c.cardType !== 'kanji' && c.cardType !== 'vocabulary') return false;
+        const card = getCardData(c.cardId, c.cardType);
+        return !!card && matchesReviewFilters(c.cardType, card.jlptLevel, isFastPass(c.cardId), {
+            kanji: reviewKanji,
+            vocabulary: reviewVocab,
+            fastPassOnly,
+            levels: reviewLevels,
+        });
+    });
 
     const repeatCounts = dueCards.reduce(
         (counts, srsCard) => {
@@ -155,7 +165,7 @@ export function ReviewPage() {
     };
 
     // No cards due
-    if (dueCards.length === 0 && !isReviewing) {
+    if (allDueCards.length === 0 && !isReviewing) {
         return (
             <div className="page container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
                 <img
@@ -205,7 +215,9 @@ export function ReviewPage() {
                     marginBottom: 'var(--space-3)',
                 }}>
                     <button
-                        onClick={() => setReviewKanji(!reviewKanji)}
+                        onClick={() => {
+                            setReviewKanji(!reviewKanji);
+                        }}
                         style={{
                             flex: 1,
                             padding: 'var(--space-3) var(--space-4)',
@@ -223,7 +235,9 @@ export function ReviewPage() {
                         漢字 Kanji
                     </button>
                     <button
-                        onClick={() => setReviewVocab(!reviewVocab)}
+                        onClick={() => {
+                            setReviewVocab(!reviewVocab);
+                        }}
                         style={{
                             flex: 1,
                             padding: 'var(--space-3) var(--space-4)',
@@ -242,11 +256,29 @@ export function ReviewPage() {
                     </button>
                 </div>
 
+                <div style={{ marginBottom: 'var(--space-4)' }}>
+                    <p className="text-sm text-secondary" style={{ marginBottom: 'var(--space-2)' }}>JLPT levels</p>
+                    <JLPTSelector selectedLevels={reviewLevels} onChange={setReviewLevels} />
+                    <button
+                        type="button"
+                        className={`fast-pass-tag ${fastPassOnly ? 'active' : ''}`}
+                        style={{ marginTop: 'var(--space-3)' }}
+                        aria-pressed={fastPassOnly}
+                        onClick={() => setFastPassOnly(!fastPassOnly)}
+                    >
+                        Fast Pass only
+                    </button>
+                    <p className="text-xs text-tertiary" style={{ marginTop: 'var(--space-2)' }}>
+                        {fastPassOnly ? 'Only Fast Pass words and kanji due for the selected types and levels.' : 'Filter words and kanji from mock tests and the N3 Fast Pass book.'}
+                    </p>
+                    {dueCards.length === 0 && <p className="text-sm text-secondary">No due cards match these filters.</p>}
+                </div>
+
                 <button
                     className="btn btn-primary btn-lg"
                     style={{ width: '100%' }}
                     onClick={startReview}
-                    disabled={dueCards.length === 0 || (!reviewKanji && !reviewVocab)}
+                    disabled={dueCards.length === 0}
                 >
                     Start Review
                 </button>
@@ -304,6 +336,7 @@ export function ReviewPage() {
                     mnemonic={getMnemonic(current.card.id)}
                     mode="review"
                     lastReview={current.lastReview}
+                    fastPassCardIds={current.cardIds}
                     onNavigate={(type, item) => setPeekItem({ type, item })}
                 />
 

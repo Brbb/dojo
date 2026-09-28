@@ -6,6 +6,7 @@ import { allVocabulary } from '../data/vocabulary';
 import { allKanji } from '../data/kanji';
 import { useStudy } from '../context/StudyContext';
 import { AddWordModal } from './AddWordModal';
+import { FastPassTag } from './FastPassTag';
 import { getNextReviewDate, getNextReviewShortLabel } from '../utils/srs';
 
 interface ItemCardProps {
@@ -15,9 +16,10 @@ interface ItemCardProps {
     compact?: boolean;
     onNavigate?: (type: CardType, item: Kanji | Vocabulary) => void;
     nextReviewAt?: number;
+    fastPassCardIds?: string[];
 }
 
-export function ItemCard({ type, item, mnemonic, compact = false, onNavigate, nextReviewAt }: ItemCardProps) {
+export function ItemCard({ type, item, mnemonic, compact = false, onNavigate, nextReviewAt, fastPassCardIds }: ItemCardProps) {
     const isKanji = type === 'kanji';
     // Type guards/casting for specific properties
     const kanjiItem = isKanji ? (item as Kanji) : null;
@@ -194,13 +196,14 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate, ne
                     </div>
 
                     <div style={{ flex: 1, textAlign: 'right', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)', alignItems: 'flex-end' }}>
-                        <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
+                        <div style={{ display: 'flex', gap: 'var(--space-2)', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
                             <span
                                 className={`jlpt-badge jlpt-n${item.jlptLevel}`}
                                 style={{ fontSize: '0.75rem', fontWeight: 'bold' }}
                             >
                                 N{item.jlptLevel}
                             </span>
+                            {type !== 'grammar' && <FastPassTag cardIds={fastPassCardIds || [item.id]} compact />}
                             {isKanji && kanjiItem && kanjiItem.frequency && kanjiItem.frequency < 9999 && (
                                 <span
                                     className="jlpt-badge"
@@ -489,6 +492,7 @@ export function ItemCard({ type, item, mnemonic, compact = false, onNavigate, ne
                     >
                         N{item.jlptLevel}
                     </span>
+                    {type !== 'grammar' && <FastPassTag cardIds={fastPassCardIds || [item.id]} />}
                     {isKanji && kanjiItem && kanjiItem.frequency && kanjiItem.frequency < 9999 && (
                         <span
                             style={{

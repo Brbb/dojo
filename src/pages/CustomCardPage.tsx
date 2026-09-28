@@ -5,6 +5,8 @@ import { allVocabulary } from '../data/vocabulary';
 import { ArrowLeft, Plus, AlertCircle, CheckCircle2, Search, Loader2, Trash2, Library } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { JLPTSelector } from '../components/JLPTSelector';
+import { FastPassTag } from '../components/FastPassTag';
+import { isDefaultFastPass } from '../utils/fastPass';
 import type { CardType, CustomCard, JLPTLevel } from '../types';
 
 interface JishoSuggestion {
@@ -16,7 +18,7 @@ interface JishoSuggestion {
 
 export function CustomCardPage() {
     const navigate = useNavigate();
-    const { state, addCustomCard, addToReview, deleteCustomCard } = useStudy();
+    const { state, addCustomCard, addToReview, deleteCustomCard, setFastPass } = useStudy();
 
     const [showForm, setShowForm] = useState(false);
     const [type, setType] = useState<CardType>('kanji');
@@ -26,6 +28,8 @@ export function CustomCardPage() {
     const [kunReading, setKunReading] = useState('');
     const [meaning, setMeaning] = useState('');
     const [isAutoAdd, setIsAutoAdd] = useState(true);
+    const [fastPassChoice, setFastPassChoice] = useState<boolean | null>(null);
+    const isFastPass = fastPassChoice ?? isDefaultFastPass(type, word, reading);
     const [jlptLevel, setJlptLevel] = useState<JLPTLevel>(5);
     const [jishoSuggestions, setJishoSuggestions] = useState<JishoSuggestion[]>([]);
     const [loadingJisho, setLoadingJisho] = useState(false);
@@ -175,6 +179,7 @@ export function CustomCardPage() {
         };
 
         addCustomCard(newCard);
+        if (fastPassChoice !== null) setFastPass([newId], fastPassChoice);
 
         if (isAutoAdd) {
             addToReview(newId, type);
@@ -191,6 +196,9 @@ export function CustomCardPage() {
     const handleAddExisting = () => {
         if (showDuplicateModal) {
             addToReview(showDuplicateModal.id, showDuplicateModal.type);
+            if (fastPassChoice !== null) {
+                setFastPass([showDuplicateModal.id], fastPassChoice);
+            }
             setSuccess(true);
             setShowDuplicateModal(null);
             setTimeout(() => {
@@ -207,6 +215,7 @@ export function CustomCardPage() {
         setOnReading('');
         setKunReading('');
         setMeaning('');
+        setFastPassChoice(null);
         setJlptLevel(5);
         setJishoSuggestions([]);
     };
@@ -315,6 +324,7 @@ export function CustomCardPage() {
                                             <div className="text-xs text-tertiary" style={{ marginTop: '2px' }}>{card.meaning.join(', ')}</div>
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
+                                            <FastPassTag cardIds={[card.id]} compact />
                                             {!inReview && (
                                                 <button
                                                     onClick={(e) => handleAddToReview(card, e)}
@@ -531,6 +541,11 @@ export function CustomCardPage() {
                         />
                     </div>
 
+                        <label style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', padding: 'var(--space-2) 0' }}>
+                            <input type="checkbox" checked={isFastPass} onChange={event => setFastPassChoice(event.target.checked)} />
+                            <span className="text-sm text-secondary">Fast Pass — mock tests / N3 Fast Pass book</span>
+                        </label>
+
                     {/* Auto-add Toggle */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', padding: 'var(--space-2) 0' }}>
                         <div
@@ -629,6 +644,7 @@ export function CustomCardPage() {
                                         createdAt: Date.now()
                                     });
                                     if (isAutoAdd) addToReview(newId, type);
+                                    if (fastPassChoice !== null) setFastPass([newId], fastPassChoice);
                                     setSuccess(true);
                                     setTimeout(() => {
                                         setSuccess(false);

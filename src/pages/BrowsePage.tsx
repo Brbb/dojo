@@ -10,7 +10,7 @@ import { getNextReviewDate, getNextReviewShortLabel } from '../utils/srs';
 
 export function BrowsePage() {
     const navigate = useNavigate();
-    const { state } = useStudy();
+    const { state, isFastPass } = useStudy();
     const [tab, setTab] = useState<CardType>('kanji');
     const [levelFilter, setLevelFilter] = useState<JLPTLevel | 'all'>('all');
     const [searchQuery, setSearchQuery] = useState('');
@@ -167,6 +167,7 @@ export function BrowsePage() {
                             >
                                 <span className="kanji mb-1 text-text-primary" style={{ fontSize: '1.75rem', lineHeight: 1 }}>{k.character}</span>
                                 <span className="text-xs text-text-tertiary truncate w-full px-1 text-center" style={{ fontSize: '0.65rem' }}>{k.meaning[0]}</span>
+                                {isFastPass(k.id) && <span className="fast-pass-tag compact active" style={{ marginTop: 'var(--space-1)' }}>Fast Pass</span>}
                                 {srsCard && (
                                     <span
                                         className="review-due-tag"
@@ -215,6 +216,7 @@ export function BrowsePage() {
                                         >
                                             N{v.jlptLevel}
                                         </span>
+                                        {isFastPass(v.id) && <span className="fast-pass-tag compact active">Fast Pass</span>}
                                         {srsCard && (
                                             <span
                                                 className="review-due-tag"

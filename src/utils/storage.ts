@@ -3,7 +3,7 @@ import type { AppState, SRSCard, Mnemonic, UserProgress, AppSettings, StudySessi
 import { createSRSCard, migrateSRSCard } from './srs';
 
 const STORAGE_KEY = 'galactic-shepard-app';
-const CURRENT_SCHEMA_VERSION = 2;
+const CURRENT_SCHEMA_VERSION = 3;
 
 // Default app state
 const defaultProgress: UserProgress = {
@@ -26,6 +26,7 @@ const defaultSettings: AppSettings = {
 
 const defaultState: AppState = {
     schemaVersion: CURRENT_SCHEMA_VERSION,
+    fastPassCards: {},
     srsCards: {},
     mnemonics: {},
     grammarProgress: {},
@@ -48,6 +49,7 @@ function migrateState(storedState: Partial<AppState>): AppState {
         ...defaultState,
         ...storedState,
         schemaVersion: CURRENT_SCHEMA_VERSION,
+        fastPassCards: storedState.fastPassCards || {},
         srsCards: migratedCards,
         progress: { ...defaultProgress, ...storedState.progress },
         settings: { ...defaultSettings, ...storedState.settings },
