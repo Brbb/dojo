@@ -752,6 +752,111 @@ body {
   border-color: var(--color-n1);
 }
 
+.library-type-filter {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.library-type-filter .btn {
+  min-width: 0;
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+  white-space: normal;
+  text-align: center;
+}
+
+.library-level-filter {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.library-level-filter .jlpt-toggle {
+  min-width: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.library-fast-pass-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-bg-tertiary);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-secondary);
+}
+
+.library-fast-pass-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.library-fast-pass-label svg {
+  color: var(--color-primary);
+}
+
+.library-switch {
+  position: relative;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 24px;
+  padding: 2px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-bg-tertiary);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.library-switch.active {
+  background: var(--color-primary);
+}
+
+.library-switch-thumb {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast);
+}
+
+.library-switch.active .library-switch-thumb {
+  transform: translateX(18px);
+}
+
+.library-card-bolt,
+.library-kanji-bolt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 4px;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.library-card-bolt[aria-pressed="false"] {
+  color: var(--color-text-tertiary);
+}
+
+.library-kanji-bolt {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  padding: 1px;
+}
+
 /* ============================================
    PROGRESS COMPONENTS
    ============================================ */

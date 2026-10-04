@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { allKanji, searchKanji } from '../data/kanji';
 import { allVocabulary, searchVocabulary } from '../data/vocabulary';
 import { ItemDetailModal } from '../components/ItemDetailModal';
-import { Search } from 'lucide-react';
+import { Search, Zap } from 'lucide-react';
 import type { JLPTLevel, Kanji, Vocabulary, CardType, CustomCard } from '../types';
 import { useStudy } from '../context/StudyContext';
 import { getNextReviewDate, getNextReviewShortLabel } from '../utils/srs';
@@ -12,7 +12,7 @@ import { filterLibraryItems } from '../utils/library';
 export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
-    const { state, isFastPass } = useStudy();
+    const { state, isFastPass, setFastPass } = useStudy();
     const [tab, setTab] = useState<CardType>(() => searchParams.get('type') === 'vocabulary'
         ? 'vocabulary' : searchParams.get('type') === 'kanji' ? 'kanji' : fastPass ? 'vocabulary' : 'kanji');
     const [levelFilter, setLevelFilter] = useState<JLPTLevel | 'all'>(() => {
@@ -83,7 +83,9 @@ export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
 
     const levels: JLPTLevel[] = [5, 4, 3, 2, 1];
     const switchCollection = () => {
-        const params = new URLSearchParams({ type: tab });
+        const nextTab = !fastPass && tab === 'kanji' && !libraryItems.kanji.some(item => isFastPass(item.id))
+            ? 'vocabulary' : tab;
+        const params = new URLSearchParams({ type: nextTab });
         if (levelFilter !== 'all') params.set('level', String(levelFilter));
         navigate(`${fastPass ? '/browse' : '/fast-pass'}?${params}`);
     };
@@ -103,7 +105,7 @@ export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
             </header>
 
             {/* Controls */}
-            <div className="flex flex-col gap-4 mb-6">
+            <div className="flex flex-col gap-4" style={{ marginBottom: 'var(--space-6)' }}>
                 {/* Search */}
                 <input
                     type="text"
@@ -114,7 +116,7 @@ export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
                 />
 
                 {/* Type Toggle */}
-                <div className="flex gap-3 mb-2">
+                <div className="library-type-filter">
                     <button
                         className={`btn flex-1 ${tab === 'kanji' ? 'btn-primary' : 'btn-secondary'}`}
                         onClick={() => setTab('kanji')}
@@ -130,46 +132,32 @@ export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
                 </div>
 
                 {/* Level Filter */}
-                <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide" style={{ marginBottom: 'var(--space-2)' }}>
-                    <button
-                        className={`jlpt-toggle ${levelFilter === 'all' ? 'active' : ''}`}
-                        style={{
-                            background: levelFilter === 'all' ? 'var(--color-primary)' : 'var(--color-bg-card)',
-                            color: levelFilter === 'all' ? 'white' : 'var(--color-text-secondary)',
-                            minWidth: '60px'
-                        }}
-                        onClick={() => setLevelFilter('all')}
-                    >
-                        All levels
-                    </button>
+                <div className="library-level-filter" role="group" aria-label="JLPT level filters">
                     {levels.map(l => (
                         <button
                             key={l}
                             className={`jlpt-toggle n${l} ${levelFilter === l ? 'active' : ''}`}
-                            onClick={() => setLevelFilter(l)}
+                            aria-pressed={levelFilter === l}
+                            title={levelFilter === l ? 'Show all levels' : `Show N${l} only`}
+                            onClick={() => setLevelFilter(levelFilter === l ? 'all' : l)}
                         >
                             N{l}
                         </button>
                     ))}
+                </div>
+                <div className="library-fast-pass-filter">
+                    <span className="library-fast-pass-label"><Zap size={16} aria-hidden="true" /> Fast Pass only</span>
                     <button
-                        className={`jlpt-toggle ${fastPass ? 'active' : ''}`}
-                        aria-pressed={fastPass}
-                        style={{
-                            minWidth: '140px',
-                            background: fastPass ? 'var(--color-primary)' : 'var(--color-bg-card)',
-                            color: fastPass ? 'white' : 'var(--color-text-secondary)',
-                        }}
+                        type="button"
+                        className={`library-switch ${fastPass ? 'active' : ''}`}
+                        role="switch"
+                        aria-label="Fast Pass only"
+                        aria-checked={fastPass}
                         onClick={switchCollection}
                     >
-                        Fast Pass only
+                        <span className="library-switch-thumb" />
                     </button>
                 </div>
-                {fastPass ? (
-                    <div className="text-sm" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 'var(--space-2)' }}>
-                        <span className="text-text-secondary">Showing only Fast Pass {levelFilter === 'all' ? 'cards across all levels' : `N${levelFilter} cards`} — not the full library.</span>
-                        <button className="btn btn-ghost btn-sm" onClick={switchCollection}>Show full library</button>
-                    </div>
-                ) : <p className="text-sm text-text-tertiary">Full library. Only cards with a Fast Pass badge belong to that collection.</p>}
             </div>
 
             {/* Results Grid/List */}
@@ -189,12 +177,14 @@ export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
                     {filteredItems.map((item) => {
                         const k = item as Kanji;
                         const srsCard = state.srsCards[k.id];
+                        const fastPassEnabled = isFastPass(k.id);
                         return (
-                            <button
+                            <div
                                 key={k.id}
                                 className="card aspect-square flex flex-col items-center justify-center transition-all"
                                 style={{
                                     padding: '0.5rem',
+                                    position: 'relative',
                                     borderRadius: 'var(--radius-lg)',
                                     display: 'flex',
                                     flexDirection: 'column',
@@ -203,21 +193,36 @@ export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
                                     borderLeft: `3.5px solid var(--color-n${k.jlptLevel})`,
                                     paddingLeft: 'calc(0.5rem - 1.75px)' // Adjust padding to center character
                                 }}
-                                onClick={() => setSelectedItem({ type: 'kanji', item: k })}
                             >
-                                <span className="kanji mb-1 text-text-primary" style={{ fontSize: '1.75rem', lineHeight: 1 }}>{k.character}</span>
-                                <span className="text-xs text-text-tertiary truncate w-full px-1 text-center" style={{ fontSize: '0.65rem' }}>{k.meaning[0]}</span>
-                                {isFastPass(k.id) && <span className="fast-pass-tag compact active" style={{ marginTop: 'var(--space-1)' }}>Fast Pass</span>}
-                                {srsCard && (
-                                    <span
-                                        className="review-due-tag"
-                                        style={{ marginTop: 'var(--space-1)' }}
-                                        title={`Next review: ${getNextReviewDate(srsCard.dueDate)}`}
+                                <button
+                                    type="button"
+                                    onClick={() => setSelectedItem({ type: 'kanji', item: k })}
+                                    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', padding: 0, border: 0, background: 'none', cursor: 'pointer' }}
+                                >
+                                    <span className="kanji mb-1 text-text-primary" style={{ fontSize: '1.75rem', lineHeight: 1 }}>{k.character}</span>
+                                    <span className="text-xs text-text-tertiary truncate w-full px-1 text-center" style={{ fontSize: '0.65rem' }}>{k.meaning[0]}</span>
+                                    {srsCard && (
+                                        <span
+                                            className="review-due-tag"
+                                            style={{ marginTop: 'var(--space-1)' }}
+                                            title={`Next review: ${getNextReviewDate(srsCard.dueDate)}`}
+                                        >
+                                            {getNextReviewShortLabel(srsCard.dueDate)}
+                                        </span>
+                                    )}
+                                </button>
+                                {fastPassEnabled && (
+                                    <button
+                                        type="button"
+                                        className="library-kanji-bolt"
+                                        aria-label={`Remove ${k.character} from Fast Pass`}
+                                        title="Remove from Fast Pass"
+                                        onClick={() => setFastPass([k.id], false)}
                                     >
-                                        {getNextReviewShortLabel(srsCard.dueDate)}
-                                    </span>
+                                        <Zap size={14} fill="currentColor" aria-hidden="true" />
+                                    </button>
                                 )}
-                            </button>
+                            </div>
                         );
                     })}
                 </div>
@@ -227,47 +232,63 @@ export function BrowsePage({ fastPass = false }: { fastPass?: boolean }) {
                     {filteredItems.map((item) => {
                         const v = item as Vocabulary;
                         const srsCard = state.srsCards[v.id];
+                        const fastPassEnabled = isFastPass(v.id);
                         return (
-                            <button
+                            <div
                                 key={v.id}
                                 className="card flex items-center justify-between p-4 transition-all text-left"
                                 style={{
                                     display: 'flex',
+                                    alignItems: 'center',
                                     padding: 'var(--space-4)',
                                     width: '100%',
                                     marginBottom: '0',
-                                    gap: 'var(--space-4)',
+                                    gap: 'var(--space-2)',
                                     textAlign: 'left',
                                     borderLeft: `4px solid var(--color-n${v.jlptLevel})`,
                                     paddingLeft: 'calc(var(--space-4) - 2px)'
                                 }}
-                                onClick={() => setSelectedItem({ type: 'vocabulary', item: v })}
                             >
-                                <div style={{ minWidth: 0, flex: 1, display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                                    <div className="kanji font-bold text-text-primary truncate" style={{ fontSize: '1.25rem', lineHeight: 1.2 }}>{v.word}</div>
-                                    <div className="text-sm text-text-tertiary truncate japanese">{v.reading}</div>
-                                </div>
-                                <div className="text-right flex items-center gap-4 flex-shrink-0">
-                                    <div className="text-base font-medium text-text-secondary truncate" style={{ maxWidth: '120px', textAlign: 'right' }}>{v.meaning[0]}</div>
-                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-1)' }}>
-                                        <span
-                                            className={`jlpt-badge jlpt-n${v.jlptLevel}`}
-                                            style={{ fontSize: '0.7rem' }}
-                                        >
-                                            N{v.jlptLevel}
-                                        </span>
-                                        {isFastPass(v.id) && <span className="fast-pass-tag compact active">Fast Pass</span>}
-                                        {srsCard && (
-                                            <span
-                                                className="review-due-tag"
-                                                title={`Next review: ${getNextReviewDate(srsCard.dueDate)}`}
-                                            >
-                                                {getNextReviewShortLabel(srsCard.dueDate)}
-                                            </span>
-                                        )}
+                                <button
+                                    type="button"
+                                    onClick={() => setSelectedItem({ type: 'vocabulary', item: v })}
+                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-3)', flex: 1, minWidth: 0, padding: 0, border: 0, background: 'none', textAlign: 'left', cursor: 'pointer' }}
+                                >
+                                    <div style={{ minWidth: 0, flex: 1, display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                                        <div className="kanji font-bold text-text-primary truncate" style={{ fontSize: '1.25rem', lineHeight: 1.2 }}>{v.word}</div>
+                                        <div className="text-sm text-text-tertiary truncate japanese">{v.reading}</div>
                                     </div>
-                                </div>
-                            </button>
+                                    <div className="text-right flex items-center gap-2 flex-shrink-0">
+                                        <div className="text-base font-medium text-text-secondary truncate" style={{ maxWidth: '100px', textAlign: 'right' }}>{v.meaning[0]}</div>
+                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-1)' }}>
+                                            <span
+                                                className={`jlpt-badge jlpt-n${v.jlptLevel}`}
+                                                style={{ fontSize: '0.7rem' }}
+                                            >
+                                                N{v.jlptLevel}
+                                            </span>
+                                            {srsCard && (
+                                                <span
+                                                    className="review-due-tag"
+                                                    title={`Next review: ${getNextReviewDate(srsCard.dueDate)}`}
+                                                >
+                                                    {getNextReviewShortLabel(srsCard.dueDate)}
+                                                </span>
+                                            )}
+                                        </div>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    className="library-card-bolt"
+                                    aria-pressed={fastPassEnabled}
+                                    aria-label={fastPassEnabled ? `Remove ${v.word} from Fast Pass` : `Add ${v.word} to Fast Pass`}
+                                    title={fastPassEnabled ? 'Remove from Fast Pass' : 'Add to Fast Pass'}
+                                    onClick={() => setFastPass([v.id], !fastPassEnabled)}
+                                >
+                                    <Zap size={18} fill={fastPassEnabled ? 'currentColor' : 'none'} aria-hidden="true" />
+                                </button>
+                            </div>
                         );
                     })}
                 </div>

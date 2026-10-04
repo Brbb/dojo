@@ -7,7 +7,7 @@ import { ProgressBar } from '../components/Progress';
 import { MnemonicEditor } from '../components/MnemonicEditor';
 import {
     RefreshCcw, Scroll, Clock, Brain, Flame, GitBranch, GitCompare,
-    Sparkles, CheckCircle2, Circle, MoreHorizontal, Search, X
+    Sparkles, CheckCircle2, Circle, MoreHorizontal, Search, X, ArrowLeft
 } from 'lucide-react';
 import { ItemDetailModal } from '../components/ItemDetailModal';
 import { grammarTopics, type GrammarTopic, type GrammarPoint } from '../data/grammar/grammar';
@@ -160,7 +160,18 @@ export function StudyPage() {
         return (
             <div className="page container">
                 <header style={{ marginBottom: 'var(--space-8)' }}>
-                    <h1 className="text-2xl font-bold">Grammar Topics</h1>
+                    <div className="flex items-center gap-4">
+                        <button
+                            type="button"
+                            onClick={() => navigate('/')}
+                            className="btn btn-ghost btn-sm"
+                            style={{ padding: '0.5rem' }}
+                            aria-label="Back to home"
+                        >
+                            <ArrowLeft size={20} />
+                        </button>
+                        <h1 className="text-2xl font-bold">Grammar Topics</h1>
+                    </div>
                     <p className="text-secondary">Explore particles, active structures, and patterns</p>
                 </header>
 

@@ -271,7 +271,6 @@ export function ReviewPage() {
                     <p className="text-xs text-tertiary" style={{ marginTop: 'var(--space-2)' }}>
                         {fastPassOnly ? 'Only Fast Pass words and kanji due for the selected types and levels.' : 'Filter words and kanji from mock tests and the N3 Fast Pass book.'}
                     </p>
-                    {dueCards.length === 0 && <p className="text-sm text-secondary">No due cards match these filters.</p>}
                 </div>
 
                 <button

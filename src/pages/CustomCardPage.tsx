@@ -2,10 +2,9 @@ import { useState, useMemo } from 'react';
 import { useStudy } from '../context/StudyContext';
 import { allKanji } from '../data/kanji';
 import { allVocabulary } from '../data/vocabulary';
-import { ArrowLeft, Plus, AlertCircle, CheckCircle2, Search, Loader2, Trash2, Library } from 'lucide-react';
+import { ArrowLeft, Plus, AlertCircle, CheckCircle2, Search, Loader2, Trash2, Library, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { JLPTSelector } from '../components/JLPTSelector';
-import { FastPassTag } from '../components/FastPassTag';
 import { isDefaultFastPass } from '../utils/fastPass';
 import type { CardType, CustomCard, JLPTLevel } from '../types';
 
@@ -16,9 +15,14 @@ interface JishoSuggestion {
     kunReading?: string;
 }
 
+interface JishoApiEntry {
+    japanese: { reading?: string }[];
+    senses: { english_definitions: string[] }[];
+}
+
 export function CustomCardPage() {
     const navigate = useNavigate();
-    const { state, addCustomCard, addToReview, deleteCustomCard, setFastPass } = useStudy();
+    const { state, addCustomCard, addToReview, deleteCustomCard, setFastPass, isFastPass: isFastPassCard } = useStudy();
 
     const [showForm, setShowForm] = useState(false);
     const [type, setType] = useState<CardType>('kanji');
@@ -29,7 +33,7 @@ export function CustomCardPage() {
     const [meaning, setMeaning] = useState('');
     const [isAutoAdd, setIsAutoAdd] = useState(true);
     const [fastPassChoice, setFastPassChoice] = useState<boolean | null>(null);
-    const isFastPass = fastPassChoice ?? isDefaultFastPass(type, word, reading);
+    const isFastPassChoice = fastPassChoice ?? isDefaultFastPass(type, word, reading);
     const [jlptLevel, setJlptLevel] = useState<JLPTLevel>(5);
     const [jishoSuggestions, setJishoSuggestions] = useState<JishoSuggestion[]>([]);
     const [loadingJisho, setLoadingJisho] = useState(false);
@@ -103,15 +107,15 @@ export function CustomCardPage() {
             const proxyUrl = 'https://api.allorigins.win/raw?url=';
             const targetUrl = `https://jisho.org/api/v1/search/words?keyword=${encodeURIComponent(word)}`;
             const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
-            const data = await response.json();
+            const data: { data?: JishoApiEntry[] } = await response.json();
 
             if (data.data && data.data.length > 0) {
-                const suggestions: JishoSuggestion[] = data.data.slice(0, 3).map((item: any) => {
-                    const mainReading = item.japanese[0].reading;
-                    const readings = item.japanese.map((j: any) => j.reading);
+                const suggestions: JishoSuggestion[] = data.data.slice(0, 3).map((item) => {
+                    const mainReading = item.japanese[0]?.reading || '';
+                    const readings = item.japanese.map(j => j.reading || '');
 
-                    let on: string[] = [];
-                    let kun: string[] = [];
+                    const on: string[] = [];
+                    const kun: string[] = [];
 
                     if (type === 'kanji') {
                         // Heuristic separation
@@ -123,7 +127,7 @@ export function CustomCardPage() {
 
                     return {
                         reading: mainReading,
-                        meanings: item.senses[0].english_definitions,
+                        meanings: item.senses[0]?.english_definitions || [],
                         onReading: on.length > 0 ? on.join(', ') : undefined,
                         kunReading: kun.length > 0 ? kun.join(', ') : undefined
                     };
@@ -287,11 +291,13 @@ export function CustomCardPage() {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
                             {filteredCards.map(card => {
                                 const inReview = !!state.srsCards[card.id];
+                                const fastPassEnabled = isFastPassCard(card.id);
                                 return (
-                                    <div key={card.id} className="card" style={{ padding: 'var(--space-3)', display: 'flex', alignItems: 'center', gap: 'var(--space-4)', opacity: inReview ? 0.7 : 1 }}>
+                                    <div key={card.id} className="card" style={{ padding: 'var(--space-3)', display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>
                                         <div style={{
-                                            width: '48px',
-                                            height: '48px',
+                                            width: '44px',
+                                            height: '44px',
+                                            flexShrink: 0,
                                             backgroundColor: 'var(--color-bg-secondary)',
                                             display: 'flex',
                                             alignItems: 'center',
@@ -304,7 +310,7 @@ export function CustomCardPage() {
                                             {card.word.slice(0, 1)}
                                         </div>
                                         <div style={{ flex: 1, minWidth: 0 }}>
-                                            <div className="font-bold">{card.word}</div>
+                                            <div className="font-bold" style={{ overflowWrap: 'anywhere' }}>{card.word}</div>
                                             {card.type === 'kanji' ? (
                                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
                                                     {card.onReading && (
@@ -323,8 +329,20 @@ export function CustomCardPage() {
                                             )}
                                             <div className="text-xs text-tertiary" style={{ marginTop: '2px' }}>{card.meaning.join(', ')}</div>
                                         </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-                                            <FastPassTag cardIds={[card.id]} compact />
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-1)', flexShrink: 0 }}>
+                                            <button
+                                                type="button"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setFastPass([card.id], !fastPassEnabled);
+                                                }}
+                                                aria-pressed={fastPassEnabled}
+                                                aria-label={fastPassEnabled ? `Remove ${card.word} from Fast Pass` : `Add ${card.word} to Fast Pass`}
+                                                title={fastPassEnabled ? 'Remove from Fast Pass' : 'Add to Fast Pass'}
+                                                style={{ background: 'none', border: 'none', color: fastPassEnabled ? 'var(--color-primary)' : 'var(--color-text-tertiary)', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                            >
+                                                <Zap size={18} fill={fastPassEnabled ? 'currentColor' : 'none'} aria-hidden="true" />
+                                            </button>
                                             {!inReview && (
                                                 <button
                                                     onClick={(e) => handleAddToReview(card, e)}
@@ -542,7 +560,7 @@ export function CustomCardPage() {
                     </div>
 
                         <label style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', padding: 'var(--space-2) 0' }}>
-                            <input type="checkbox" checked={isFastPass} onChange={event => setFastPassChoice(event.target.checked)} />
+                            <input type="checkbox" checked={isFastPassChoice} onChange={event => setFastPassChoice(event.target.checked)} />
                             <span className="text-sm text-secondary">Fast Pass — mock tests / N3 Fast Pass book</span>
                         </label>
 
