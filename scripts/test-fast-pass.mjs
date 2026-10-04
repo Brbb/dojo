@@ -21,7 +21,7 @@ globalThis.localStorage = {
     getItem: key => saved.get(key) ?? null,
     setItem: (key, value) => saved.set(key, value),
 };
-const batches = ['book-0019-0036', 'book-0037-0072', 'book-0073-0203'].map(name =>
+const batches = ['book-0019-0036', 'book-0037-0072', 'book-0073-0203', 'book-0204-0227', 'book-0228-0331', 'book-0308'].map(name =>
     JSON.parse(readFileSync(`src/data/fastPass/${name}.json`, 'utf8')));
 const normalize = value => value.normalize('NFKC')
     .replace(/[ァ-ヶ]/g, char => String.fromCharCode(char.charCodeAt(0) - 0x60));
@@ -30,7 +30,7 @@ const matches = (entry, card) => entry.match_forms.some(form => normalize(form) 
         .some(reading => normalize(reading) === normalize(card.reading));
 
 const state = app.loadState();
-assert.equal(state.customCards.length, 63); // 7 + 14 + 42 missing book words.
+assert.equal(state.customCards.length, 101); // 7 + 14 + 42 + 7 + 30 + 1 missing book words.
 assert.deepEqual(state.fastPassImports, app.FAST_PASS_BOOK_IMPORTS);
 assert.deepEqual(app.mergeFastPassBookCards(state.customCards), state.customCards);
 assert.equal(new Set(state.customCards.map(card => card.id)).size, state.customCards.length);
@@ -53,6 +53,30 @@ assert.equal(app.isDefaultFastPass('kanji', '民'), false);
 assert.equal(app.isDefaultFastPass('vocabulary', '家具', 'かぐ'), true);
 assert.equal(app.isDefaultFastPass('vocabulary', '家', 'いえ'), false);
 assert.equal(app.isDefaultFastPass('vocabulary', '具', 'ぐ'), false);
+assert.equal(app.isDefaultFastPass('vocabulary', '番組', 'ばんぐみ'), true);
+assert.equal(app.isDefaultFastPass('kanji', '番'), false);
+assert.equal(app.isDefaultFastPass('vocabulary', '確実', 'かくじつ'), true);
+assert.equal(app.isDefaultFastPass('vocabulary', '確実な', 'かくじつな'), true);
+assert.equal(app.isDefaultFastPass('vocabulary', '基本的な', 'きほんてきな'), true);
+assert.equal(app.isDefaultFastPass('vocabulary', '持ち帰る', 'もちかえる'), true);
+assert.equal(app.isDefaultFastPass('vocabulary', '閉館', 'へいかん'), true);
+assert.equal(app.isDefaultFastPass('vocabulary', '閉館する', 'へいかんする'), true);
+assert.equal(app.isDefaultFastPass('vocabulary', '持つ', 'もつ'), false);
+assert.equal(app.isDefaultFastPass('kanji', '持'), false);
+assert.equal(batches.flatMap(batch => batch.entries).filter(entry => entry.number === '0308').length, 1);
+const confirmation = app.allVocabulary.find(card => card.word === '確認' && card.reading === 'かくにん');
+assert.ok(confirmation);
+assert.ok(app.isFastPassCard(confirmation.id, {}, state.customCards));
+assert.ok(!state.customCards.some(card => card.word === '確認' || card.word === '確認する'));
+for (const entry of batches.flatMap(batch => batch.entries).filter(entry => entry.suru)) {
+    assert.ok(app.isDefaultFastPass('vocabulary', entry.term, entry.reading));
+    assert.ok(app.isDefaultFastPass('vocabulary', `${entry.term}する`, `${entry.reading}する`));
+    const libraryMatch = app.allVocabulary.some(card => matches(entry, card));
+    if (libraryMatch) {
+        assert.ok(!state.customCards.some(card => card.id === `custom_fast-pass-book-${entry.number}`),
+            `Duplicate custom card for existing （する） entry ${entry.number}: ${entry.term}`);
+    }
+}
 // Even a single-character word is tagged as vocabulary, not as a kanji card.
 assert.equal(app.isDefaultFastPass('vocabulary', '横', 'よこ'), true);
 assert.equal(app.isDefaultFastPass('kanji', '横'), false);
@@ -103,22 +127,59 @@ const old = {
 };
 app.saveState(old);
 const upgraded = app.loadState();
-assert.equal(upgraded.customCards.length, 62);
+assert.equal(upgraded.customCards.length, 100);
 assert.ok(!upgraded.customCards.some(card => card.id === 'custom_fast-pass-book-0021'));
 assert.deepEqual(upgraded.srsCards, old.srsCards);
 assert.deepEqual(upgraded.fastPassCards, old.fastPassCards);
 app.saveState({ ...upgraded, customCards: upgraded.customCards.filter(card => card.id !== 'custom_fast-pass-book-0067') });
 assert.ok(!app.loadState().customCards.some(card => card.id === 'custom_fast-pass-book-0067'));
 
+// An installation with all three earlier batches gets only the new seven cards.
+const priorThree = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.slice(0, 3));
+app.saveState({ ...old, fastPassImports: app.FAST_PASS_BOOK_IMPORTS.slice(0, 3),
+    customCards: priorThree.filter(card => card.id !== 'custom_fast-pass-book-0202') });
+const fourthBatch = app.loadState();
+assert.equal(fourthBatch.customCards.length, 100);
+assert.ok(!fourthBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0202'));
+assert.ok(fourthBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0226'));
+assert.deepEqual(fourthBatch.srsCards, old.srsCards);
+assert.deepEqual(fourthBatch.fastPassCards, old.fastPassCards);
+app.saveState({ ...fourthBatch, customCards: fourthBatch.customCards.filter(card => card.id !== 'custom_fast-pass-book-0226') });
+assert.ok(!app.loadState().customCards.some(card => card.id === 'custom_fast-pass-book-0226'));
+
 // A user already on both earlier imports receives only the third batch.
 const priorCards = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.slice(0, 2));
 app.saveState({ ...old, fastPassImports: app.FAST_PASS_BOOK_IMPORTS.slice(0, 2),
     customCards: priorCards.filter(card => card.id !== 'custom_fast-pass-book-0067') });
 const thirdBatch = app.loadState();
-assert.equal(thirdBatch.customCards.length, 62);
+assert.equal(thirdBatch.customCards.length, 100);
 assert.ok(!thirdBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0067'));
 assert.ok(thirdBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0202'));
 assert.deepEqual(thirdBatch.srsCards, old.srsCards);
+
+// An installation with the first four batches receives the later 30-card batch and 0308.
+const priorFour = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.slice(0, 4));
+app.saveState({ ...old, fastPassImports: app.FAST_PASS_BOOK_IMPORTS.slice(0, 4),
+    customCards: priorFour.filter(card => card.id !== 'custom_fast-pass-book-0226') });
+const fifthBatch = app.loadState();
+assert.equal(fifthBatch.customCards.length, 100);
+assert.ok(!fifthBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0226'));
+assert.ok(fifthBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0331'));
+assert.deepEqual(fifthBatch.srsCards, old.srsCards);
+assert.deepEqual(fifthBatch.fastPassCards, old.fastPassCards);
+app.saveState({ ...fifthBatch, customCards: fifthBatch.customCards.filter(card => card.id !== 'custom_fast-pass-book-0331') });
+assert.ok(!app.loadState().customCards.some(card => card.id === 'custom_fast-pass-book-0331'));
+
+// An installation that already imported 0228–0331 receives only the new 0308 card.
+const priorFive = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.slice(0, 5));
+app.saveState({ ...old, fastPassImports: app.FAST_PASS_BOOK_IMPORTS.slice(0, 5),
+    customCards: priorFive.filter(card => card.id !== 'custom_fast-pass-book-0226') });
+const supplemental = app.loadState();
+assert.equal(supplemental.customCards.length, 100);
+assert.ok(supplemental.customCards.some(card => card.id === 'custom_fast-pass-book-0308'));
+assert.ok(!supplemental.customCards.some(card => card.id === 'custom_fast-pass-book-0226'));
+assert.deepEqual(supplemental.srsCards, old.srsCards);
+assert.deepEqual(supplemental.fastPassCards, old.fastPassCards);
 
 // Respect a pre-existing user's alias card, definition, ID, and JLPT level.
 const custom = { id: 'user-own-card', type: 'vocabulary', word: '人工的', reading: 'じんこうてき', meaning: ['my definition'], jlptLevel: 2 };
@@ -128,4 +189,4 @@ assert.deepEqual(merged.find(card => card.id === custom.id), custom);
 assert.ok(app.isFastPassCard(custom.id, {}, merged));
 assert.equal(app.importData(JSON.stringify(old)), true);
 assert.deepEqual(app.loadState().srsCards, old.srsCards);
-console.log('Fast Pass: 185 source entries covered; word-only defaults, no component-kanji tags, manual overrides, safe imports, and unchanged review schedules passed.');
+console.log('Fast Pass: 313 source entries covered; word-only defaults, no component-kanji tags, manual overrides, safe imports, and unchanged review schedules passed.');

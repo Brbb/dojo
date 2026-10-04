@@ -2,6 +2,9 @@ import fastPassN3 from '../data/fastPass/n3.json';
 import fastPassBook from '../data/fastPass/book-0019-0036.json';
 import fastPassBookNext from '../data/fastPass/book-0037-0072.json';
 import fastPassBookMore from '../data/fastPass/book-0073-0203.json';
+import fastPassBookLatest from '../data/fastPass/book-0204-0227.json';
+import fastPassBookExtended from '../data/fastPass/book-0228-0331.json';
+import fastPassBook0308 from '../data/fastPass/book-0308.json';
 import { allVocabulary } from '../data/vocabulary';
 import type { CardType, CustomCard } from '../types';
 
@@ -26,11 +29,32 @@ const bookImports: { id: string; entries: BookEntry[] }[] = [
     { id: 'book-0019-0036-v1', entries: fastPassBook.entries },
     { id: 'book-0037-0072-v1', entries: fastPassBookNext.entries },
     { id: 'book-0073-0203-v1', entries: fastPassBookMore.entries },
+    { id: 'book-0204-0227-v1', entries: fastPassBookLatest.entries },
+    { id: 'book-0228-0331-v1', entries: fastPassBookExtended.entries },
+    // Separate marker: installs that already imported the earlier photo batch still receive 0308.
+    { id: 'book-0308-v1', entries: fastPassBook0308.entries },
 ];
 export const FAST_PASS_BOOK_IMPORTS = bookImports.map(batch => batch.id);
 
+function bookForms(entry: BookEntry): string[] {
+    const forms = new Set([...entry.match_forms, entry.term].map(normalize));
+    if (entry.suru) {
+        // （する） describes a verb form, not a different vocabulary card.
+        const base = normalize(entry.term).replace(/(?:\(する\)|する)$/, '');
+        forms.add(base);
+        forms.add(`${base}する`);
+    }
+    return [...forms];
+}
+
 function bookReadings(entry: BookEntry): string[] {
-    return [entry.reading, ...(entry.reading_variants || []), ...(entry.suru ? [`${entry.reading}する`] : [])];
+    const readings = new Set([entry.reading, ...(entry.reading_variants || [])]);
+    if (entry.suru) {
+        const base = normalizeReading(entry.reading).replace(/する$/, '');
+        readings.add(base);
+        readings.add(`${base}する`);
+    }
+    return [...readings];
 }
 
 function registerVocabulary(forms: string[], readings: string[]) {
@@ -48,7 +72,7 @@ for (const entry of [...fastPassN3.kanji, ...fastPassN3.vocab]) {
 }
 
 for (const entry of bookImports.flatMap(batch => batch.entries)) {
-    registerVocabulary(entry.match_forms, bookReadings(entry));
+    registerVocabulary(bookForms(entry), bookReadings(entry));
 }
 
 // Keep existing library and user cards; create only the missing book words.
@@ -56,7 +80,7 @@ export function mergeFastPassBookCards(customCards: CustomCard[], pendingImports
     const result = [...customCards];
     for (const entry of bookImports.filter(batch => pendingImports.includes(batch.id)).flatMap(batch => batch.entries)) {
         const matches = (word: string, reading?: string) => {
-            if (!entry.match_forms.some(form => normalize(form) === normalize(word))) return false;
+            if (!bookForms(entry).includes(normalize(word))) return false;
             if (!reading?.trim()) return true;
             const expected = bookReadings(entry);
             return expected.some(value => normalizeReading(value) === normalizeReading(reading));

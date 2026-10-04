@@ -1,0 +1,30 @@
+{
+  "source": "N3 Fast Pass book photo, entries 0204–0227 (three photographed page sections)",
+  "notes": "Printed readings are normalized into continuous kana. Entry 0207 matches the base dictionary form 確実 as well as 確実な. Entry 0227 has a partly cropped English gloss, read as Shinto shrine.",
+  "entries": [
+    {"number":"0204","term":"確か","reading":"たしか","meaning":["if I remember correctly","certain"],"suru":false,"match_forms":["確か"]},
+    {"number":"0205","term":"確かに","reading":"たしかに","meaning":["certainly","surely"],"suru":false,"match_forms":["確かに"]},
+    {"number":"0206","term":"確認","reading":"かくにん","meaning":["confirmation","to confirm"],"suru":true,"match_forms":["確認","確認する"]},
+    {"number":"0207","term":"確実な","reading":"かくじつな","reading_variants":["かくじつ"],"meaning":["certain","reliable"],"suru":false,"match_forms":["確実な","確実"]},
+    {"number":"0208","term":"愛する","reading":"あいする","meaning":["to love"],"suru":false,"match_forms":["愛する"]},
+    {"number":"0209","term":"愛用","reading":"あいよう","meaning":["regular use","favorite item","to use regularly"],"suru":true,"match_forms":["愛用","愛用する"]},
+    {"number":"0210","term":"愛用者","reading":"あいようしゃ","meaning":["regular user"],"suru":false,"match_forms":["愛用者"]},
+    {"number":"0211","term":"可愛らしい","reading":"かわいらしい","meaning":["cute","lovely"],"suru":false,"match_forms":["可愛らしい"]},
+    {"number":"0212","term":"番","reading":"ばん","meaning":["turn","number in an order"],"suru":false,"match_forms":["番"]},
+    {"number":"0213","term":"番組","reading":"ばんぐみ","meaning":["program","broadcast program"],"suru":false,"match_forms":["番組"]},
+    {"number":"0214","term":"順番","reading":"じゅんばん","meaning":["order","turn"],"suru":false,"match_forms":["順番"]},
+    {"number":"0215","term":"暗証番号","reading":"あんしょうばんごう","meaning":["PIN","personal identification number"],"suru":false,"match_forms":["暗証番号"]},
+    {"number":"0216","term":"着物","reading":"きもの","meaning":["kimono","traditional Japanese clothing"],"suru":false,"match_forms":["着物"]},
+    {"number":"0217","term":"着替える","reading":"きがえる","meaning":["to change clothes"],"suru":false,"match_forms":["着替える"]},
+    {"number":"0218","term":"到着","reading":"とうちゃく","meaning":["arrival","to arrive"],"suru":true,"match_forms":["到着","到着する"]},
+    {"number":"0219","term":"落ち着く","reading":"おちつく","meaning":["to calm down","to settle down"],"suru":false,"match_forms":["落ち着く"]},
+    {"number":"0220","term":"点","reading":"てん","meaning":["point","dot"],"suru":false,"match_forms":["点"]},
+    {"number":"0221","term":"点数","reading":"てんすう","meaning":["score","points"],"suru":false,"match_forms":["点数"]},
+    {"number":"0222","term":"欠点","reading":"けってん","meaning":["weak point","flaw"],"suru":false,"match_forms":["欠点"]},
+    {"number":"0223","term":"注意点","reading":"ちゅういてん","meaning":["points to note","point requiring attention"],"suru":false,"match_forms":["注意点"]},
+    {"number":"0224","term":"社長","reading":"しゃちょう","meaning":["company president"],"suru":false,"match_forms":["社長"]},
+    {"number":"0225","term":"社会","reading":"しゃかい","meaning":["society"],"suru":false,"match_forms":["社会"]},
+    {"number":"0226","term":"社会学","reading":"しゃかいがく","meaning":["sociology"],"suru":false,"match_forms":["社会学"]},
+    {"number":"0227","term":"神社","reading":"じんじゃ","meaning":["Shinto shrine"],"suru":false,"match_forms":["神社"]}
+  ]
+}

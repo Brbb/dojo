@@ -22,11 +22,16 @@ existing installations with saved progress.
 ## Book vocabulary with definitions
 
 `book-0019-0036.json` contains 18 entries and `book-0037-0072.json` contains 36
-entries; `book-0073-0203.json` adds 131 entries extracted from the supplied book
-photos, including readings and meanings. Overlapping photographed pages reuse
+entries; `book-0073-0203.json` adds 131, `book-0204-0227.json` adds 24,
+and `book-0228-0331.json` adds 103 entries extracted from the supplied book
+photos, including readings and meanings. `book-0308.json` adds the separately
+supplied 閉館（する） with its own import marker, so installations that already
+imported the photographed batch still receive it.
+Overlapping photographed pages reuse
 the earlier batches rather than importing duplicates.
 The two senses of `～代` share one card. Explicit adjective aliases match dictionary
-forms with or without `な`. Existing library words are tagged;
+forms with or without `な`; （する） entries reuse matching base-form library
+vocabulary rather than creating duplicates. Existing library words are tagged;
 missing words are imported once as N3 custom cards. Matching custom cards are
 reused with their existing IDs and definitions. The import marker in saved
 `fastPassImports` prevents subsequent reloads from recreating cards the user
@@ -40,7 +45,7 @@ while preserving the selected N-level and card type. Untagged detail/review card
 show an **Add to Fast Pass** action, not a filled membership badge. No JLPT level,
 card type, or page navigation automatically tags cards.
 
-The [latest extraction table](book-0073-0203-import.md) records each source word,
+The [latest extraction table](book-0228-0331-import.md) records each source word,
 reading, meaning, and whether it reused library vocabulary or created a card.
 Run `node scripts/test-fast-pass.mjs` to check coverage, per-level tag boundaries,
 aliases, explicit overrides, and safe migrations between book batches.
