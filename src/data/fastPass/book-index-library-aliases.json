@@ -1,0 +1,278 @@
+{
+  "source": "Photographed N3 Fast Pass index, alternate kana/kanji spellings explicitly matched to existing library entries.",
+  "entries": [
+    {
+      "sourceTerm": "あきらめる",
+      "term": "諦める",
+      "reading": "あきらめる",
+      "page": 182,
+      "photo": 1
+    },
+    {
+      "sourceTerm": "あこがれる",
+      "term": "憧れる",
+      "reading": "あこがれる",
+      "page": 182,
+      "photo": 1
+    },
+    {
+      "sourceTerm": "あたる",
+      "term": "当たる",
+      "reading": "あたる",
+      "page": 50,
+      "photo": 1
+    },
+    {
+      "sourceTerm": "あやしい",
+      "term": "怪しい",
+      "reading": "あやしい",
+      "page": 184,
+      "photo": 1
+    },
+    {
+      "sourceTerm": "あわてる",
+      "term": "慌てる",
+      "reading": "あわてる",
+      "page": 184,
+      "photo": 1
+    },
+    {
+      "sourceTerm": "おたく",
+      "term": "お宅",
+      "reading": "おたく",
+      "page": 174,
+      "photo": 2
+    },
+    {
+      "sourceTerm": "おとなしい",
+      "term": "大人しい",
+      "reading": "おとなしい",
+      "page": 190,
+      "photo": 2
+    },
+    {
+      "sourceTerm": "かもく",
+      "term": "科目",
+      "reading": "かもく",
+      "page": 114,
+      "photo": 3
+    },
+    {
+      "sourceTerm": "ほえる",
+      "term": "吠える",
+      "reading": "ほえる",
+      "page": 228,
+      "photo": 4
+    },
+    {
+      "sourceTerm": "たたく",
+      "term": "叩く",
+      "reading": "たたく",
+      "page": 212,
+      "photo": 5
+    },
+    {
+      "sourceTerm": "たまる",
+      "term": "溜まる",
+      "reading": "たまる",
+      "page": 214,
+      "photo": 5
+    },
+    {
+      "sourceTerm": "うわさ",
+      "term": "噂",
+      "reading": "うわさ",
+      "page": 186,
+      "photo": 8
+    },
+    {
+      "sourceTerm": "えさ",
+      "term": "餌",
+      "reading": "えさ",
+      "page": 188,
+      "photo": 8
+    },
+    {
+      "sourceTerm": "ごぶさた",
+      "term": "御無沙汰",
+      "reading": "ごぶさた",
+      "page": 200,
+      "photo": 10
+    },
+    {
+      "sourceTerm": "じゃま",
+      "term": "邪魔",
+      "reading": "じゃま",
+      "page": 206,
+      "photo": 11
+    },
+    {
+      "sourceTerm": "ぞうきん",
+      "term": "雑巾",
+      "reading": "ぞうきん",
+      "page": 210,
+      "photo": 12
+    },
+    {
+      "sourceTerm": "ついに",
+      "term": "遂に",
+      "reading": "ついに",
+      "page": 216,
+      "photo": 13
+    },
+    {
+      "sourceTerm": "ゆるい",
+      "term": "緩い",
+      "reading": "ゆるい",
+      "page": 236,
+      "photo": 15
+    },
+    {
+      "sourceTerm": "ゆれる",
+      "term": "揺れる",
+      "reading": "ゆれる",
+      "page": 236,
+      "photo": 15
+    },
+    {
+      "sourceTerm": "ようやく",
+      "term": "漸く",
+      "reading": "ようやく",
+      "page": 236,
+      "photo": 15
+    },
+    {
+      "sourceTerm": "むね",
+      "term": "胸",
+      "reading": "むね",
+      "page": 230,
+      "photo": 16
+    },
+    {
+      "sourceTerm": "ものすごい",
+      "term": "物凄い",
+      "reading": "ものすごい",
+      "page": 232,
+      "photo": 16
+    },
+    {
+      "sourceTerm": "やせる",
+      "term": "痩せる",
+      "reading": "やせる",
+      "page": 234,
+      "photo": 16
+    },
+    {
+      "sourceTerm": "ひなん",
+      "term": "避難",
+      "reading": "ひなん",
+      "page": 224,
+      "photo": 17
+    },
+    {
+      "sourceTerm": "ひも",
+      "term": "紐",
+      "reading": "ひも",
+      "page": 224,
+      "photo": 17
+    },
+    {
+      "sourceTerm": "ぬるい",
+      "term": "温い",
+      "reading": "ぬるい",
+      "page": 222,
+      "photo": 18
+    },
+    {
+      "sourceTerm": "ずいぶん",
+      "term": "随分",
+      "reading": "ずいぶん",
+      "page": 208,
+      "photo": 19
+    },
+    {
+      "sourceTerm": "くしゃみ",
+      "term": "くしゃみ",
+      "reading": "くしゃみ",
+      "page": 196,
+      "photo": 20
+    },
+    {
+      "sourceTerm": "くやしい",
+      "term": "悔しい",
+      "reading": "くやしい",
+      "page": 198,
+      "photo": 20
+    },
+    {
+      "sourceTerm": "ける",
+      "term": "蹴る",
+      "reading": "ける",
+      "page": 198,
+      "photo": 20
+    },
+    {
+      "sourceTerm": "いらっしゃる",
+      "term": "いらっしゃる",
+      "reading": "いらっしゃる",
+      "page": 184,
+      "photo": 8
+    },
+    {
+      "sourceTerm": "当然",
+      "term": "当然",
+      "reading": "とうぜん",
+      "page": 52,
+      "photo": 13
+    },
+    {
+      "sourceTerm": "ひびく",
+      "term": "響く",
+      "reading": "ひびく",
+      "page": 224,
+      "photo": 17
+    },
+    {
+      "sourceTerm": "ふるさと",
+      "term": "故郷",
+      "reading": "ふるさと",
+      "page": 226,
+      "photo": 17
+    },
+    {
+      "sourceTerm": "どなる",
+      "term": "怒鳴る",
+      "reading": "どなる",
+      "page": 216,
+      "photo": 18
+    },
+    {
+      "sourceTerm": "～軒",
+      "term": "～軒",
+      "reading": "～けん",
+      "page": 198,
+      "photo": 20
+    },
+    {
+      "sourceTerm": "～部",
+      "term": "～部",
+      "reading": "～ぶ",
+      "page": 44,
+      "photo": 17
+    },
+    {
+      "sourceTerm": "決して～ない",
+      "term": "決して",
+      "reading": "けっして",
+      "page": 198,
+      "photo": 20
+    },
+    {
+      "sourceTerm": "むく",
+      "term": "剥く",
+      "reading": "むく",
+      "page": 230,
+      "photo": 16
+    }
+  ]
+}

@@ -27,6 +27,22 @@ and `book-0228-0331.json` adds 103 entries extracted from the supplied book
 photos, including readings and meanings. `book-0308.json` adds the separately
 supplied 閉館（する） with its own import marker, so installations that already
 imported the photographed batch still receive it.
+`book-index-existing.json` records 415 additional printed word/reading pairs
+from the supplied alphabetical index that match library vocabulary exactly;
+these add default tags only, with no new cards. `book-index-library-aliases.json`
+records 39 checked alternate spellings that reuse existing library cards.
+`book-index-defined.json` adds 103 exact printed word/reading pairs with
+definitions for missing cards. Its meanings are adapted from JMdict_e
+(© Electronic Dictionary Research and Development Group, CC BY-SA 4.0),
+downloaded 2026-10-05. Settings > About provides attribution and license links.
+`book-index-na.json` covers 28 printed `な` adjectives, matching existing
+dictionary-base cards where present rather than duplicating them.
+`book-index-manual.json` covers 27 additional clearly readable entries that
+the photographed two-column layout caused OCR to pair incorrectly. Its short
+English glosses were checked editorially against the printed words.
+Each index record retains the referenced book page and photo number for checking
+against the source. The black kana section bars are not vocabulary entries.
+Each row is read as two independent three-column entries, one in each half.
 Overlapping photographed pages reuse
 the earlier batches rather than importing duplicates.
 The two senses of `～代` share one card. Explicit adjective aliases match dictionary

@@ -21,18 +21,40 @@ globalThis.localStorage = {
     getItem: key => saved.get(key) ?? null,
     setItem: (key, value) => saved.set(key, value),
 };
-const batches = ['book-0019-0036', 'book-0037-0072', 'book-0073-0203', 'book-0204-0227', 'book-0228-0331', 'book-0308'].map(name =>
+const batches = ['book-0019-0036', 'book-0037-0072', 'book-0073-0203', 'book-0204-0227', 'book-0228-0331', 'book-0308', 'book-index-defined', 'book-index-na', 'book-index-manual'].map(name =>
     JSON.parse(readFileSync(`src/data/fastPass/${name}.json`, 'utf8')));
+const indexExisting = JSON.parse(readFileSync('src/data/fastPass/book-index-existing.json', 'utf8')).entries;
+const indexAliases = JSON.parse(readFileSync('src/data/fastPass/book-index-library-aliases.json', 'utf8')).entries;
 const normalize = value => value.normalize('NFKC')
+    .replace(/[〜～~]/g, '~')
     .replace(/[ァ-ヶ]/g, char => String.fromCharCode(char.charCodeAt(0) - 0x60));
 const matches = (entry, card) => entry.match_forms.some(form => normalize(form) === normalize(card.word))
     && [entry.reading, ...(entry.reading_variants || []), ...(entry.suru ? [`${entry.reading}する`] : [])]
         .some(reading => normalize(reading) === normalize(card.reading));
 
 const state = app.loadState();
-assert.equal(state.customCards.length, 101); // 7 + 14 + 42 + 7 + 30 + 1 missing book words.
+const priorBookCards = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.slice(0, 6));
+assert.equal(priorBookCards.length, 101); // Earlier photographed batches.
+const newCustomCardCount = state.customCards.length - priorBookCards.length;
+assert.ok(newCustomCardCount > 0 && newCustomCardCount <= 150);
 assert.deepEqual(state.fastPassImports, app.FAST_PASS_BOOK_IMPORTS);
 assert.deepEqual(app.mergeFastPassBookCards(state.customCards), state.customCards);
+assert.equal(indexExisting.length, 415);
+assert.equal(indexAliases.length, 39);
+assert.equal(new Set(indexExisting.map(entry => `${entry.term}:${entry.reading}`)).size, indexExisting.length);
+for (const entry of indexExisting) {
+    assert.ok(entry.page >= 14 && entry.page <= 258 && entry.page % 2 === 0, `Invalid page for ${entry.term}`);
+    const cards = app.allVocabulary.filter(card => normalize(card.word) === normalize(entry.term)
+        && normalize(card.reading) === normalize(entry.reading));
+    assert.ok(cards.length, `Index entry missing from library: ${entry.term}`);
+    assert.ok(cards.every(card => app.isFastPassCard(card.id, {}, state.customCards)), `Index entry not tagged: ${entry.term}`);
+}
+for (const entry of indexAliases) {
+    const cards = app.allVocabulary.filter(card => normalize(card.word) === normalize(entry.term)
+        && normalize(card.reading) === normalize(entry.reading));
+    assert.ok(cards.length, `Library alias missing: ${entry.term}`);
+    assert.ok(cards.every(card => app.isFastPassCard(card.id, {}, state.customCards)), `Library alias not tagged: ${entry.term}`);
+}
 assert.equal(new Set(state.customCards.map(card => card.id)).size, state.customCards.length);
 const suffix = state.customCards.filter(card => card.word === '～代');
 assert.equal(suffix.length, 1);
@@ -68,6 +90,14 @@ const confirmation = app.allVocabulary.find(card => card.word === '確認' && ca
 assert.ok(confirmation);
 assert.ok(app.isFastPassCard(confirmation.id, {}, state.customCards));
 assert.ok(!state.customCards.some(card => card.word === '確認' || card.word === '確認する'));
+const peel = app.allVocabulary.find(card => card.word === '剥く' && card.reading === 'むく');
+assert.ok(peel && app.isFastPassCard(peel.id, {}, state.customCards));
+assert.ok(!state.customCards.some(card => card.word === 'むく' || card.word === '剥く'));
+const certain = state.customCards.find(card => card.word === 'ある～' && card.reading === 'ある～');
+assert.ok(certain && certain.meaning[0].includes('a certain'));
+for (const reused of ['真面目な', '無駄な', 'ひびく', 'ふるさと', 'どなる']) {
+    assert.ok(!state.customCards.some(card => card.word === reused), `Duplicate custom card for ${reused}`);
+}
 for (const entry of batches.flatMap(batch => batch.entries).filter(entry => entry.suru)) {
     assert.ok(app.isDefaultFastPass('vocabulary', entry.term, entry.reading));
     assert.ok(app.isDefaultFastPass('vocabulary', `${entry.term}する`, `${entry.reading}する`));
@@ -127,7 +157,7 @@ const old = {
 };
 app.saveState(old);
 const upgraded = app.loadState();
-assert.equal(upgraded.customCards.length, 100);
+assert.equal(upgraded.customCards.length, 100 + newCustomCardCount);
 assert.ok(!upgraded.customCards.some(card => card.id === 'custom_fast-pass-book-0021'));
 assert.deepEqual(upgraded.srsCards, old.srsCards);
 assert.deepEqual(upgraded.fastPassCards, old.fastPassCards);
@@ -139,7 +169,7 @@ const priorThree = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.sli
 app.saveState({ ...old, fastPassImports: app.FAST_PASS_BOOK_IMPORTS.slice(0, 3),
     customCards: priorThree.filter(card => card.id !== 'custom_fast-pass-book-0202') });
 const fourthBatch = app.loadState();
-assert.equal(fourthBatch.customCards.length, 100);
+assert.equal(fourthBatch.customCards.length, 100 + newCustomCardCount);
 assert.ok(!fourthBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0202'));
 assert.ok(fourthBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0226'));
 assert.deepEqual(fourthBatch.srsCards, old.srsCards);
@@ -152,7 +182,7 @@ const priorCards = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.sli
 app.saveState({ ...old, fastPassImports: app.FAST_PASS_BOOK_IMPORTS.slice(0, 2),
     customCards: priorCards.filter(card => card.id !== 'custom_fast-pass-book-0067') });
 const thirdBatch = app.loadState();
-assert.equal(thirdBatch.customCards.length, 100);
+assert.equal(thirdBatch.customCards.length, 100 + newCustomCardCount);
 assert.ok(!thirdBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0067'));
 assert.ok(thirdBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0202'));
 assert.deepEqual(thirdBatch.srsCards, old.srsCards);
@@ -162,7 +192,7 @@ const priorFour = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.slic
 app.saveState({ ...old, fastPassImports: app.FAST_PASS_BOOK_IMPORTS.slice(0, 4),
     customCards: priorFour.filter(card => card.id !== 'custom_fast-pass-book-0226') });
 const fifthBatch = app.loadState();
-assert.equal(fifthBatch.customCards.length, 100);
+assert.equal(fifthBatch.customCards.length, 100 + newCustomCardCount);
 assert.ok(!fifthBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0226'));
 assert.ok(fifthBatch.customCards.some(card => card.id === 'custom_fast-pass-book-0331'));
 assert.deepEqual(fifthBatch.srsCards, old.srsCards);
@@ -175,7 +205,7 @@ const priorFive = app.mergeFastPassBookCards([], app.FAST_PASS_BOOK_IMPORTS.slic
 app.saveState({ ...old, fastPassImports: app.FAST_PASS_BOOK_IMPORTS.slice(0, 5),
     customCards: priorFive.filter(card => card.id !== 'custom_fast-pass-book-0226') });
 const supplemental = app.loadState();
-assert.equal(supplemental.customCards.length, 100);
+assert.equal(supplemental.customCards.length, 100 + newCustomCardCount);
 assert.ok(supplemental.customCards.some(card => card.id === 'custom_fast-pass-book-0308'));
 assert.ok(!supplemental.customCards.some(card => card.id === 'custom_fast-pass-book-0226'));
 assert.deepEqual(supplemental.srsCards, old.srsCards);
@@ -189,4 +219,4 @@ assert.deepEqual(merged.find(card => card.id === custom.id), custom);
 assert.ok(app.isFastPassCard(custom.id, {}, merged));
 assert.equal(app.importData(JSON.stringify(old)), true);
 assert.deepEqual(app.loadState().srsCards, old.srsCards);
-console.log('Fast Pass: 313 source entries covered; word-only defaults, no component-kanji tags, manual overrides, safe imports, and unchanged review schedules passed.');
+console.log(`Fast Pass: ${batches.flatMap(batch => batch.entries).length + indexExisting.length + indexAliases.length} photographed source entries covered; ${newCustomCardCount} new custom cards, word-only defaults, no component-kanji tags, manual overrides, safe imports, and unchanged review schedules passed.`);

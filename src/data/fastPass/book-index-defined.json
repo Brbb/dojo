@@ -1,0 +1,1604 @@
+{
+  "source": "N3 Fast Pass photographed index, 2026-10-05. Definitions: JMdict_e (EDRDG, CC BY-SA 4.0); exact printed spelling and reading checked against JMdict, with explicitly listed library spelling aliases.",
+  "entries": [
+    {
+      "number": "index-01-001",
+      "term": "アイドル",
+      "reading": "アイドル",
+      "meaning": [
+        "performer (usu. in a boy band or girl group) with an image cultivated to foster a dedicated fan following",
+        "Japanese idol",
+        "(cultural) icon"
+      ],
+      "page": 240,
+      "photo": 1,
+      "suru": false,
+      "match_forms": [
+        "アイドル"
+      ]
+    },
+    {
+      "number": "index-01-002",
+      "term": "アクセス",
+      "reading": "アクセス",
+      "meaning": [
+        "access (to a place, esp. using public transport)",
+        "access (to a website, data, etc.)"
+      ],
+      "page": 240,
+      "photo": 1,
+      "suru": true,
+      "match_forms": [
+        "アクセス"
+      ]
+    },
+    {
+      "number": "index-01-003",
+      "term": "アドバイス",
+      "reading": "アドバイス",
+      "meaning": [
+        "advice"
+      ],
+      "page": 240,
+      "photo": 1,
+      "suru": false,
+      "match_forms": [
+        "アドバイス"
+      ]
+    },
+    {
+      "number": "index-01-004",
+      "term": "アドレス",
+      "reading": "アドレス",
+      "meaning": [
+        "address",
+        "address",
+        "email address"
+      ],
+      "page": 240,
+      "photo": 1,
+      "suru": false,
+      "match_forms": [
+        "アドレス"
+      ]
+    },
+    {
+      "number": "index-01-005",
+      "term": "歩き回る",
+      "reading": "あるきまわる",
+      "meaning": [
+        "to walk about",
+        "to walk around",
+        "to walk to and fro"
+      ],
+      "page": 132,
+      "photo": 1,
+      "suru": false,
+      "match_forms": [
+        "歩き回る"
+      ]
+    },
+    {
+      "number": "index-01-006",
+      "term": "アレルギー",
+      "reading": "アレルギー",
+      "meaning": [
+        "allergy",
+        "aversion (to)",
+        "strong distaste (for)"
+      ],
+      "page": 240,
+      "photo": 1,
+      "suru": false,
+      "match_forms": [
+        "アレルギー"
+      ]
+    },
+    {
+      "number": "index-02-007",
+      "term": "お釣り",
+      "reading": "おつり",
+      "meaning": [
+        "change (for a purchase)",
+        "toilet splashback"
+      ],
+      "page": 152,
+      "photo": 2,
+      "suru": false,
+      "match_forms": [
+        "お釣り",
+        "おつり"
+      ]
+    },
+    {
+      "number": "index-02-008",
+      "term": "お泊まり",
+      "reading": "おとまり",
+      "meaning": [
+        "(overnight) stay",
+        "lodging"
+      ],
+      "page": 158,
+      "photo": 2,
+      "suru": false,
+      "match_forms": [
+        "お泊まり"
+      ]
+    },
+    {
+      "number": "index-02-009",
+      "term": "お目にかかる",
+      "reading": "おめにかかる",
+      "meaning": [
+        "to meet (someone of higher status)",
+        "to be recognized (esp. by someone of higher status)",
+        "to be visible"
+      ],
+      "page": 58,
+      "photo": 2,
+      "suru": false,
+      "match_forms": [
+        "お目にかかる",
+        "お目に掛かる"
+      ]
+    },
+    {
+      "number": "index-02-010",
+      "term": "思いつく",
+      "reading": "おもいつく",
+      "meaning": [
+        "to think of",
+        "to hit upon",
+        "to come into one's mind"
+      ],
+      "page": 158,
+      "photo": 2,
+      "suru": false,
+      "match_forms": [
+        "思いつく",
+        "思い付く"
+      ]
+    },
+    {
+      "number": "index-02-011",
+      "term": "折り紙",
+      "reading": "おりがみ",
+      "meaning": [
+        "origami",
+        "art of paper folding",
+        "hallmark"
+      ],
+      "page": 164,
+      "photo": 2,
+      "suru": false,
+      "match_forms": [
+        "折り紙"
+      ]
+    },
+    {
+      "number": "index-02-012",
+      "term": "音楽家",
+      "reading": "おんがくか",
+      "meaning": [
+        "musician"
+      ],
+      "page": 98,
+      "photo": 2,
+      "suru": false,
+      "match_forms": [
+        "音楽家"
+      ]
+    },
+    {
+      "number": "index-02-013",
+      "term": "改札口",
+      "reading": "かいさつぐち",
+      "meaning": [
+        "ticket barrier",
+        "ticket gate",
+        "wicket"
+      ],
+      "page": 138,
+      "photo": 2,
+      "suru": false,
+      "match_forms": [
+        "改札口"
+      ]
+    },
+    {
+      "number": "index-02-014",
+      "term": "開店",
+      "reading": "かいてん",
+      "meaning": [
+        "opening a new shop",
+        "opening a shop (for the day)"
+      ],
+      "page": 118,
+      "photo": 2,
+      "suru": true,
+      "match_forms": [
+        "開店"
+      ]
+    },
+    {
+      "number": "index-03-015",
+      "term": "片方",
+      "reading": "かたほう",
+      "meaning": [
+        "one side",
+        "one party",
+        "the other side"
+      ],
+      "page": 92,
+      "photo": 3,
+      "suru": false,
+      "match_forms": [
+        "片方"
+      ]
+    },
+    {
+      "number": "index-03-016",
+      "term": "学期末",
+      "reading": "がっきまつ",
+      "meaning": [
+        "end of term",
+        "end of semester"
+      ],
+      "page": 16,
+      "photo": 3,
+      "suru": false,
+      "match_forms": [
+        "学期末"
+      ]
+    },
+    {
+      "number": "index-03-017",
+      "term": "楽曲",
+      "reading": "がっきょく",
+      "meaning": [
+        "musical composition",
+        "tune"
+      ],
+      "page": 172,
+      "photo": 3,
+      "suru": false,
+      "match_forms": [
+        "楽曲"
+      ]
+    },
+    {
+      "number": "index-03-018",
+      "term": "カフェ",
+      "reading": "カフェ",
+      "meaning": [
+        "café",
+        "cafe",
+        "coffeehouse"
+      ],
+      "page": 242,
+      "photo": 3,
+      "suru": false,
+      "match_forms": [
+        "カフェ"
+      ]
+    },
+    {
+      "number": "index-03-019",
+      "term": "構わない",
+      "reading": "かまわない",
+      "meaning": [
+        "no problem",
+        "it doesn't matter"
+      ],
+      "page": 194,
+      "photo": 3,
+      "suru": false,
+      "match_forms": [
+        "構わない"
+      ]
+    },
+    {
+      "number": "index-03-020",
+      "term": "かむ",
+      "reading": "かむ",
+      "meaning": [
+        "to bite",
+        "to chew"
+      ],
+      "page": 194,
+      "photo": 3,
+      "suru": false,
+      "match_forms": [
+        "かむ",
+        "噛む"
+      ]
+    },
+    {
+      "number": "index-03-021",
+      "term": "歓迎会",
+      "reading": "かんげいかい",
+      "meaning": [
+        "welcome party"
+      ],
+      "page": 134,
+      "photo": 3,
+      "suru": false,
+      "match_forms": [
+        "歓迎会"
+      ]
+    },
+    {
+      "number": "index-04-022",
+      "term": "ペらぺら",
+      "reading": "ぺらぺら",
+      "meaning": [
+        "fluently (speaking a foreign language)",
+        "incessantly (speaking)",
+        "glibly"
+      ],
+      "page": 228,
+      "photo": 4,
+      "suru": false,
+      "match_forms": [
+        "ペらぺら"
+      ]
+    },
+    {
+      "number": "index-04-023",
+      "term": "ベランダ",
+      "reading": "ベランダ",
+      "meaning": [
+        "balcony",
+        "veranda",
+        "verandah"
+      ],
+      "page": 256,
+      "photo": 4,
+      "suru": false,
+      "match_forms": [
+        "ベランダ"
+      ]
+    },
+    {
+      "number": "index-04-024",
+      "term": "返信",
+      "reading": "へんしん",
+      "meaning": [
+        "reply (e.g. email, fax, letter)",
+        "answer"
+      ],
+      "page": 92,
+      "photo": 4,
+      "suru": true,
+      "match_forms": [
+        "返信"
+      ]
+    },
+    {
+      "number": "index-04-025",
+      "term": "保育園",
+      "reading": "ほいくえん",
+      "meaning": [
+        "nursery school",
+        "day nursery",
+        "day care center"
+      ],
+      "page": 170,
+      "photo": 4,
+      "suru": false,
+      "match_forms": [
+        "保育園"
+      ]
+    },
+    {
+      "number": "index-04-026",
+      "term": "毎回",
+      "reading": "まいかい",
+      "meaning": [
+        "every time",
+        "each round"
+      ],
+      "page": 168,
+      "photo": 4,
+      "suru": false,
+      "match_forms": [
+        "毎回"
+      ]
+    },
+    {
+      "number": "index-04-027",
+      "term": "マナー",
+      "reading": "マナー",
+      "meaning": [
+        "manners",
+        "etiquette",
+        "polite behaviour"
+      ],
+      "page": 256,
+      "photo": 4,
+      "suru": false,
+      "match_forms": [
+        "マナー"
+      ]
+    },
+    {
+      "number": "index-05-028",
+      "term": "たった",
+      "reading": "たった",
+      "meaning": [
+        "only",
+        "merely",
+        "but"
+      ],
+      "page": 212,
+      "photo": 5,
+      "suru": false,
+      "match_forms": [
+        "たった"
+      ]
+    },
+    {
+      "number": "index-05-029",
+      "term": "朝刊",
+      "reading": "ちょうかん",
+      "meaning": [
+        "morning edition (of a daily newspaper)",
+        "morning paper"
+      ],
+      "page": 214,
+      "photo": 5,
+      "suru": false,
+      "match_forms": [
+        "朝刊"
+      ]
+    },
+    {
+      "number": "index-06-030",
+      "term": "互いに",
+      "reading": "たがいに",
+      "meaning": [
+        "mutually",
+        "with each other",
+        "reciprocally"
+      ],
+      "page": 212,
+      "photo": 6,
+      "suru": false,
+      "match_forms": [
+        "互いに"
+      ]
+    },
+    {
+      "number": "index-06-031",
+      "term": "ちかちか",
+      "reading": "ちかちか",
+      "meaning": [
+        "flickering",
+        "flashing on and off",
+        "twinkling"
+      ],
+      "page": 214,
+      "photo": 6,
+      "suru": false,
+      "match_forms": [
+        "ちかちか"
+      ]
+    },
+    {
+      "number": "index-06-032",
+      "term": "チャレンジ",
+      "reading": "チャレンジ",
+      "meaning": [
+        "taking on (a challenge)",
+        "attempt",
+        "try"
+      ],
+      "page": 250,
+      "photo": 6,
+      "suru": true,
+      "match_forms": [
+        "チャレンジ"
+      ]
+    },
+    {
+      "number": "index-07-033",
+      "term": "下がる",
+      "reading": "さがる",
+      "meaning": [
+        "to come down",
+        "to go down",
+        "to fall"
+      ],
+      "page": 154,
+      "photo": 7,
+      "suru": false,
+      "match_forms": [
+        "下がる",
+        "下る"
+      ]
+    },
+    {
+      "number": "index-07-034",
+      "term": "参加者",
+      "reading": "さんかしゃ",
+      "meaning": [
+        "participant",
+        "entrant",
+        "player"
+      ],
+      "page": 96,
+      "photo": 7,
+      "suru": false,
+      "match_forms": [
+        "参加者"
+      ]
+    },
+    {
+      "number": "index-07-035",
+      "term": "仕方ない",
+      "reading": "しかたない",
+      "meaning": [
+        "there's no (other) way",
+        "cannot be helped",
+        "unavoidable"
+      ],
+      "page": 134,
+      "photo": 7,
+      "suru": false,
+      "match_forms": [
+        "仕方ない"
+      ]
+    },
+    {
+      "number": "index-08-036",
+      "term": "ウェブサイト",
+      "reading": "ウェブサイト",
+      "meaning": [
+        "website",
+        "web site"
+      ],
+      "page": 242,
+      "photo": 8,
+      "suru": false,
+      "match_forms": [
+        "ウェブサイト"
+      ]
+    },
+    {
+      "number": "index-08-037",
+      "term": "ウェブページ",
+      "reading": "ウェブページ",
+      "meaning": [
+        "web page",
+        "webpage"
+      ],
+      "page": 242,
+      "photo": 8,
+      "suru": false,
+      "match_forms": [
+        "ウェブページ"
+      ]
+    },
+    {
+      "number": "index-08-038",
+      "term": "おい",
+      "reading": "おい",
+      "meaning": [
+        "hey!",
+        "say!",
+        "I say!"
+      ],
+      "page": 188,
+      "photo": 8,
+      "suru": false,
+      "match_forms": [
+        "おい"
+      ]
+    },
+    {
+      "number": "index-08-039",
+      "term": "応答",
+      "reading": "おうとう",
+      "meaning": [
+        "reply",
+        "answer",
+        "response"
+      ],
+      "page": 104,
+      "photo": 8,
+      "suru": true,
+      "match_forms": [
+        "応答"
+      ]
+    },
+    {
+      "number": "index-09-040",
+      "term": "気がする",
+      "reading": "きがする",
+      "meaning": [
+        "to feel (as if)",
+        "to have a feeling (that)",
+        "to have a hunch (that)"
+      ],
+      "page": 14,
+      "photo": 9,
+      "suru": false,
+      "match_forms": [
+        "気がする"
+      ]
+    },
+    {
+      "number": "index-09-041",
+      "term": "気がつく",
+      "reading": "きがつく",
+      "meaning": [
+        "to notice",
+        "to realize",
+        "to realise"
+      ],
+      "page": 14,
+      "photo": 9,
+      "suru": false,
+      "match_forms": [
+        "気がつく"
+      ]
+    },
+    {
+      "number": "index-09-042",
+      "term": "希望者",
+      "reading": "きぼうしゃ",
+      "meaning": [
+        "applicant",
+        "candidate",
+        "person interested in doing something"
+      ],
+      "page": 136,
+      "photo": 9,
+      "suru": false,
+      "match_forms": [
+        "希望者"
+      ]
+    },
+    {
+      "number": "index-09-043",
+      "term": "キャンセル",
+      "reading": "キャンセル",
+      "meaning": [
+        "cancellation",
+        "cancelling (a person, e.g. for an inflammatory remark)",
+        "cancel culture"
+      ],
+      "page": 242,
+      "photo": 9,
+      "suru": true,
+      "match_forms": [
+        "キャンセル"
+      ]
+    },
+    {
+      "number": "index-09-044",
+      "term": "曲",
+      "reading": "きょく",
+      "meaning": [
+        "composition",
+        "piece of music",
+        "song"
+      ],
+      "page": 172,
+      "photo": 9,
+      "suru": false,
+      "match_forms": [
+        "曲"
+      ]
+    },
+    {
+      "number": "index-10-045",
+      "term": "後期",
+      "reading": "こうき",
+      "meaning": [
+        "latter period",
+        "second half",
+        "late stage"
+      ],
+      "page": 16,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "後期"
+      ]
+    },
+    {
+      "number": "index-10-046",
+      "term": "小型",
+      "reading": "こがた",
+      "meaning": [
+        "small-sized",
+        "small-scale",
+        "miniature"
+      ],
+      "page": 200,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "小型"
+      ]
+    },
+    {
+      "number": "index-10-047",
+      "term": "子育て",
+      "reading": "こそだて",
+      "meaning": [
+        "child rearing",
+        "child raising",
+        "raising children"
+      ],
+      "page": 152,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "子育て"
+      ]
+    },
+    {
+      "number": "index-10-048",
+      "term": "ご存知",
+      "reading": "ごぞんじ",
+      "meaning": [
+        "knowing",
+        "being aware (of)",
+        "(an) acquaintance"
+      ],
+      "page": 162,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "ご存知",
+        "ご存じ"
+      ]
+    },
+    {
+      "number": "index-10-049",
+      "term": "この辺",
+      "reading": "このへん",
+      "meaning": [
+        "this area",
+        "around here",
+        "this point"
+      ],
+      "page": 200,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "この辺"
+      ]
+    },
+    {
+      "number": "index-10-050",
+      "term": "この前",
+      "reading": "このまえ",
+      "meaning": [
+        "the other day",
+        "previously",
+        "before"
+      ],
+      "page": 160,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "この前"
+      ]
+    },
+    {
+      "number": "index-10-051",
+      "term": "ごみ箱",
+      "reading": "ごみばこ",
+      "meaning": [
+        "trash can",
+        "garbage can",
+        "rubbish bin"
+      ],
+      "page": 176,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "ごみ箱"
+      ]
+    },
+    {
+      "number": "index-10-052",
+      "term": "ごみ拾い",
+      "reading": "ごみひろい",
+      "meaning": [
+        "picking up trash",
+        "litter picking",
+        "litter cleanup"
+      ],
+      "page": 202,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "ごみ拾い"
+      ]
+    },
+    {
+      "number": "index-10-053",
+      "term": "ごみ袋",
+      "reading": "ごみぶくろ",
+      "meaning": [
+        "garbage bag",
+        "trash bag",
+        "bin bag"
+      ],
+      "page": 202,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "ごみ袋"
+      ]
+    },
+    {
+      "number": "index-10-054",
+      "term": "ゴルフ",
+      "reading": "ゴルフ",
+      "meaning": [
+        "golf"
+      ],
+      "page": 244,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "ゴルフ"
+      ]
+    },
+    {
+      "number": "index-11-055",
+      "term": "事務室",
+      "reading": "じむしつ",
+      "meaning": [
+        "office (room)"
+      ],
+      "page": 124,
+      "photo": 11,
+      "suru": false,
+      "match_forms": [
+        "事務室"
+      ]
+    },
+    {
+      "number": "index-11-056",
+      "term": "ジャケット",
+      "reading": "ジャケット",
+      "meaning": [
+        "jacket",
+        "book jacket",
+        "dust cover"
+      ],
+      "page": 246,
+      "photo": 11,
+      "suru": false,
+      "match_forms": [
+        "ジャケット"
+      ]
+    },
+    {
+      "number": "index-11-057",
+      "term": "喋る",
+      "reading": "しゃべる",
+      "meaning": [
+        "to talk",
+        "to chat",
+        "to chatter"
+      ],
+      "page": 206,
+      "photo": 11,
+      "suru": false,
+      "match_forms": [
+        "喋る",
+        "しゃべる"
+      ]
+    },
+    {
+      "number": "index-11-058",
+      "term": "消費者",
+      "reading": "しょうひしゃ",
+      "meaning": [
+        "consumer (of a product, service, etc.)",
+        "customer",
+        "(end) user"
+      ],
+      "page": 96,
+      "photo": 11,
+      "suru": false,
+      "match_forms": [
+        "消費者"
+      ]
+    },
+    {
+      "number": "index-11-059",
+      "term": "食後",
+      "reading": "しょくご",
+      "meaning": [
+        "after a meal"
+      ],
+      "page": 144,
+      "photo": 11,
+      "suru": false,
+      "match_forms": [
+        "食後"
+      ]
+    },
+    {
+      "number": "index-12-060",
+      "term": "セミナー",
+      "reading": "セミナー",
+      "meaning": [
+        "seminar"
+      ],
+      "page": 248,
+      "photo": 12,
+      "suru": false,
+      "match_forms": [
+        "セミナー"
+      ]
+    },
+    {
+      "number": "index-12-061",
+      "term": "前期",
+      "reading": "ぜんき",
+      "meaning": [
+        "first term",
+        "first half-year",
+        "preceding period"
+      ],
+      "page": 16,
+      "photo": 12,
+      "suru": false,
+      "match_forms": [
+        "前期"
+      ]
+    },
+    {
+      "number": "index-12-062",
+      "term": "前方",
+      "reading": "ぜんぽう",
+      "meaning": [
+        "ahead",
+        "forward",
+        "(in) front"
+      ],
+      "page": 160,
+      "photo": 12,
+      "suru": false,
+      "match_forms": [
+        "前方"
+      ]
+    },
+    {
+      "number": "index-12-063",
+      "term": "専門家",
+      "reading": "せんもんか",
+      "meaning": [
+        "specialist",
+        "expert",
+        "professional"
+      ],
+      "page": 138,
+      "photo": 12,
+      "suru": false,
+      "match_forms": [
+        "専門家"
+      ]
+    },
+    {
+      "number": "index-13-064",
+      "term": "ツアー",
+      "reading": "ツアー",
+      "meaning": [
+        "tour"
+      ],
+      "page": 250,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "ツアー"
+      ]
+    },
+    {
+      "number": "index-13-065",
+      "term": "付き合う",
+      "reading": "つきあう",
+      "meaning": [
+        "to associate with",
+        "to keep company with",
+        "to go out with"
+      ],
+      "page": 130,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "付き合う",
+        "付合う"
+      ]
+    },
+    {
+      "number": "index-13-066",
+      "term": "連れて行く",
+      "reading": "つれていく",
+      "meaning": [
+        "to take (someone to a place)",
+        "to take (someone) with one",
+        "to take along"
+      ],
+      "page": 216,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "連れて行く"
+      ]
+    },
+    {
+      "number": "index-13-067",
+      "term": "デザイナー",
+      "reading": "デザイナー",
+      "meaning": [
+        "designer"
+      ],
+      "page": 250,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "デザイナー"
+      ]
+    },
+    {
+      "number": "index-13-068",
+      "term": "デジタル",
+      "reading": "デジタル",
+      "meaning": [
+        "digital"
+      ],
+      "page": 250,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "デジタル"
+      ]
+    },
+    {
+      "number": "index-13-069",
+      "term": "店長",
+      "reading": "てんちょう",
+      "meaning": [
+        "shop manager"
+      ],
+      "page": 108,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "店長"
+      ]
+    },
+    {
+      "number": "index-13-070",
+      "term": "店内",
+      "reading": "てんない",
+      "meaning": [
+        "inside of a store (restaurant, café, etc.)",
+        "store interior",
+        "on the premises"
+      ],
+      "page": 108,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "店内"
+      ]
+    },
+    {
+      "number": "index-14-071",
+      "term": "乗り場",
+      "reading": "のりば",
+      "meaning": [
+        "place for boarding vehicles",
+        "bus stop",
+        "bus terminal"
+      ],
+      "page": 162,
+      "photo": 14,
+      "suru": false,
+      "match_forms": [
+        "乗り場"
+      ]
+    },
+    {
+      "number": "index-14-072",
+      "term": "葉っぱ",
+      "reading": "はっぱ",
+      "meaning": [
+        "leaf",
+        "blade (of grass)",
+        "(pine) needle"
+      ],
+      "page": 222,
+      "photo": 14,
+      "suru": false,
+      "match_forms": [
+        "葉っぱ"
+      ]
+    },
+    {
+      "number": "index-14-073",
+      "term": "話しかける",
+      "reading": "はなしかける",
+      "meaning": [
+        "to address (someone)",
+        "to accost a person",
+        "to talk (to someone)"
+      ],
+      "page": 138,
+      "photo": 14,
+      "suru": false,
+      "match_forms": [
+        "話しかける",
+        "話し掛ける"
+      ]
+    },
+    {
+      "number": "index-14-074",
+      "term": "早起き",
+      "reading": "はやおき",
+      "meaning": [
+        "getting up early",
+        "early rising",
+        "early riser"
+      ],
+      "page": 124,
+      "photo": 14,
+      "suru": false,
+      "match_forms": [
+        "早起き"
+      ]
+    },
+    {
+      "number": "index-14-075",
+      "term": "バレエ",
+      "reading": "バレエ",
+      "meaning": [
+        "ballet"
+      ],
+      "page": 252,
+      "photo": 14,
+      "suru": false,
+      "match_forms": [
+        "バレエ"
+      ]
+    },
+    {
+      "number": "index-14-076",
+      "term": "パンフレット",
+      "reading": "パンフレット",
+      "meaning": [
+        "pamphlet",
+        "brochure",
+        "leaflet"
+      ],
+      "page": 252,
+      "photo": 14,
+      "suru": false,
+      "match_forms": [
+        "パンフレット"
+      ]
+    },
+    {
+      "number": "index-15-077",
+      "term": "やって来る",
+      "reading": "やってくる",
+      "meaning": [
+        "to come along",
+        "to come around",
+        "to turn up"
+      ],
+      "page": 234,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "やって来る"
+      ]
+    },
+    {
+      "number": "index-15-078",
+      "term": "リサイクル",
+      "reading": "リサイクル",
+      "meaning": [
+        "recycling"
+      ],
+      "page": 258,
+      "photo": 15,
+      "suru": true,
+      "match_forms": [
+        "リサイクル"
+      ]
+    },
+    {
+      "number": "index-15-079",
+      "term": "リスト",
+      "reading": "リスト",
+      "meaning": [
+        "list"
+      ],
+      "page": 258,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "リスト"
+      ]
+    },
+    {
+      "number": "index-15-080",
+      "term": "利用者",
+      "reading": "りようしゃ",
+      "meaning": [
+        "user",
+        "end-user",
+        "consumer"
+      ],
+      "page": 94,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "利用者"
+      ]
+    },
+    {
+      "number": "index-15-081",
+      "term": "両手",
+      "reading": "りょうて",
+      "meaning": [
+        "both hands",
+        "both arms",
+        "ten"
+      ],
+      "page": 174,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "両手"
+      ]
+    },
+    {
+      "number": "index-15-082",
+      "term": "留守番電話",
+      "reading": "るすばんでんわ",
+      "meaning": [
+        "answering machine",
+        "answerphone"
+      ],
+      "page": 152,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "留守番電話"
+      ]
+    },
+    {
+      "number": "index-15-083",
+      "term": "レシピ",
+      "reading": "レシピ",
+      "meaning": [
+        "recipe",
+        "(medical) prescription",
+        "how-to guide (e.g. for crafts)"
+      ],
+      "page": 258,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "レシピ"
+      ]
+    },
+    {
+      "number": "index-15-084",
+      "term": "若者",
+      "reading": "わかもの",
+      "meaning": [
+        "young person",
+        "youngster",
+        "young people"
+      ],
+      "page": 94,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "若者"
+      ]
+    },
+    {
+      "number": "index-16-085",
+      "term": "目が覚める",
+      "reading": "めがさめる",
+      "meaning": [
+        "to wake up",
+        "to awake",
+        "to perk up"
+      ],
+      "page": 156,
+      "photo": 16,
+      "suru": false,
+      "match_forms": [
+        "目が覚める"
+      ]
+    },
+    {
+      "number": "index-16-086",
+      "term": "戻ってくる",
+      "reading": "もどってくる",
+      "meaning": [
+        "to come back"
+      ],
+      "page": 178,
+      "photo": 16,
+      "suru": false,
+      "match_forms": [
+        "戻ってくる"
+      ]
+    },
+    {
+      "number": "index-17-087",
+      "term": "ファッション",
+      "reading": "ファッション",
+      "meaning": [
+        "fashion"
+      ],
+      "page": 254,
+      "photo": 17,
+      "suru": false,
+      "match_forms": [
+        "ファッション"
+      ]
+    },
+    {
+      "number": "index-17-088",
+      "term": "ファミレス",
+      "reading": "ファミレス",
+      "meaning": [
+        "family restaurant (i.e. a restaurant with varied and inexpensive menu options)",
+        "casual dining restaurant"
+      ],
+      "page": 254,
+      "photo": 17,
+      "suru": false,
+      "match_forms": [
+        "ファミレス"
+      ]
+    },
+    {
+      "number": "index-17-089",
+      "term": "振り込む",
+      "reading": "ふりこむ",
+      "meaning": [
+        "to make a payment via bank deposit transfer",
+        "to discard another player's winning tile"
+      ],
+      "page": 130,
+      "photo": 17,
+      "suru": false,
+      "match_forms": [
+        "振り込む"
+      ]
+    },
+    {
+      "number": "index-18-090",
+      "term": "停まる",
+      "reading": "とまる",
+      "meaning": [
+        "to stop (moving)",
+        "to come to a stop",
+        "to stop (doing, working, being supplied)"
+      ],
+      "page": 128,
+      "photo": 18,
+      "suru": false,
+      "match_forms": [
+        "停まる",
+        "止まる"
+      ]
+    },
+    {
+      "number": "index-18-091",
+      "term": "取り込む",
+      "reading": "とりこむ",
+      "meaning": [
+        "to take in",
+        "to bring in",
+        "to adopt (e.g. behaviour)"
+      ],
+      "page": 178,
+      "photo": 18,
+      "suru": false,
+      "match_forms": [
+        "取り込む"
+      ]
+    },
+    {
+      "number": "index-18-092",
+      "term": "とんとん",
+      "reading": "とんとん",
+      "meaning": [
+        "with a tap",
+        "with a knock",
+        "with a knocking sound"
+      ],
+      "page": 218,
+      "photo": 18,
+      "suru": false,
+      "match_forms": [
+        "とんとん"
+      ]
+    },
+    {
+      "number": "index-18-093",
+      "term": "治す",
+      "reading": "なおす",
+      "meaning": [
+        "to cure",
+        "to heal"
+      ],
+      "page": 218,
+      "photo": 18,
+      "suru": false,
+      "match_forms": [
+        "治す"
+      ]
+    },
+    {
+      "number": "index-18-094",
+      "term": "日常生活",
+      "reading": "にちじょうせいかつ",
+      "meaning": [
+        "everyday life",
+        "daily life"
+      ],
+      "page": 164,
+      "photo": 18,
+      "suru": false,
+      "match_forms": [
+        "日常生活"
+      ]
+    },
+    {
+      "number": "index-19-095",
+      "term": "新学期",
+      "reading": "しんがっき",
+      "meaning": [
+        "new school term"
+      ],
+      "page": 16,
+      "photo": 19,
+      "suru": false,
+      "match_forms": [
+        "新学期"
+      ]
+    },
+    {
+      "number": "index-19-096",
+      "term": "新製品",
+      "reading": "しんせいひん",
+      "meaning": [
+        "new product"
+      ],
+      "page": 176,
+      "photo": 19,
+      "suru": false,
+      "match_forms": [
+        "新製品"
+      ]
+    },
+    {
+      "number": "index-19-097",
+      "term": "進路",
+      "reading": "しんろ",
+      "meaning": [
+        "route",
+        "course",
+        "path"
+      ],
+      "page": 118,
+      "photo": 19,
+      "suru": false,
+      "match_forms": [
+        "進路"
+      ]
+    },
+    {
+      "number": "index-19-098",
+      "term": "数年",
+      "reading": "すうねん",
+      "meaning": [
+        "several years",
+        "a few years"
+      ],
+      "page": 112,
+      "photo": 19,
+      "suru": false,
+      "match_forms": [
+        "数年"
+      ]
+    },
+    {
+      "number": "index-19-099",
+      "term": "スピード",
+      "reading": "スピード",
+      "meaning": [
+        "speed"
+      ],
+      "page": 248,
+      "photo": 19,
+      "suru": false,
+      "match_forms": [
+        "スピード"
+      ]
+    },
+    {
+      "number": "index-20-100",
+      "term": "グラウンド",
+      "reading": "グラウンド",
+      "meaning": [
+        "(sports) ground",
+        "(playing) field",
+        "playground"
+      ],
+      "page": 244,
+      "photo": 20,
+      "suru": false,
+      "match_forms": [
+        "グラウンド"
+      ]
+    },
+    {
+      "number": "index-20-101",
+      "term": "ぐらぐら",
+      "reading": "ぐらぐら",
+      "meaning": [
+        "wobbling",
+        "tottering",
+        "shaking"
+      ],
+      "page": 198,
+      "photo": 20,
+      "suru": false,
+      "match_forms": [
+        "ぐらぐら"
+      ]
+    },
+    {
+      "number": "index-20-102",
+      "term": "グラフ",
+      "reading": "グラフ",
+      "meaning": [
+        "graph",
+        "chart",
+        "diagram"
+      ],
+      "page": 244,
+      "photo": 20,
+      "suru": false,
+      "match_forms": [
+        "グラフ"
+      ]
+    },
+    {
+      "number": "index-20-103",
+      "term": "車いす",
+      "reading": "くるまいす",
+      "meaning": [
+        "wheelchair"
+      ],
+      "page": 156,
+      "photo": 20,
+      "suru": false,
+      "match_forms": [
+        "車いす"
+      ]
+    }
+  ]
+}

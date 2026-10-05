@@ -165,6 +165,17 @@ export function SettingsPage() {
                     <p className="text-sm text-tertiary">
                         Built with ❤️ for Japanese learners
                     </p>
+                    <p className="text-sm text-tertiary" style={{ marginTop: 'var(--space-3)' }}>
+                        Some Fast Pass card definitions are adapted from JMdict, © Electronic Dictionary Research and Development Group,
+                        licensed under CC BY-SA 4.0.{' '}
+                        <a href="https://www.edrdg.org/wiki/JMdict-EDICT_Dictionary_Project.html" target="_blank" rel="noopener noreferrer">
+                            Dictionary source
+                        </a>
+                        {' · '}
+                        <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener noreferrer">
+                            License
+                        </a>
+                    </p>
                 </div>
             </section>
         </div>

@@ -1,0 +1,501 @@
+{
+  "source": "N3 Fast Pass photographed index na-adjectives; dictionary base forms checked against JMdict_e (EDRDG, CC BY-SA 4.0), concise adjective definitions adapted.",
+  "entries": [
+    {
+      "number": "index-na-001",
+      "term": "異常な",
+      "reading": "いじょうな",
+      "reading_variants": [
+        "いじょう"
+      ],
+      "meaning": [
+        "abnormal",
+        "unusual"
+      ],
+      "page": 164,
+      "photo": 1,
+      "suru": false,
+      "match_forms": [
+        "異常な",
+        "異常"
+      ]
+    },
+    {
+      "number": "index-na-002",
+      "term": "楽な",
+      "reading": "らくな",
+      "reading_variants": [
+        "らく"
+      ],
+      "meaning": [
+        "easy",
+        "comfortable"
+      ],
+      "page": 128,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "楽な",
+        "楽"
+      ]
+    },
+    {
+      "number": "index-na-003",
+      "term": "具体的な",
+      "reading": "ぐたいてきな",
+      "reading_variants": [
+        "ぐたいてき"
+      ],
+      "meaning": [
+        "concrete",
+        "specific"
+      ],
+      "page": 164,
+      "photo": 20,
+      "suru": false,
+      "match_forms": [
+        "具体的な",
+        "具体的"
+      ]
+    },
+    {
+      "number": "index-na-004",
+      "term": "効果的な",
+      "reading": "こうかてきな",
+      "reading_variants": [
+        "こうかてき"
+      ],
+      "meaning": [
+        "effective"
+      ],
+      "page": 136,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "効果的な",
+        "効果的"
+      ]
+    },
+    {
+      "number": "index-na-005",
+      "term": "高価な",
+      "reading": "こうかな",
+      "reading_variants": [
+        "こうか"
+      ],
+      "meaning": [
+        "expensive",
+        "valuable"
+      ],
+      "page": 90,
+      "photo": 10,
+      "suru": false,
+      "match_forms": [
+        "高価な",
+        "高価"
+      ]
+    },
+    {
+      "number": "index-na-006",
+      "term": "主要な",
+      "reading": "しゅような",
+      "reading_variants": [
+        "しゅよう"
+      ],
+      "meaning": [
+        "main",
+        "principal"
+      ],
+      "page": 126,
+      "photo": 11,
+      "suru": false,
+      "match_forms": [
+        "主要な",
+        "主要"
+      ]
+    },
+    {
+      "number": "index-na-007",
+      "term": "重要な",
+      "reading": "じゅうような",
+      "reading_variants": [
+        "じゅうよう"
+      ],
+      "meaning": [
+        "important",
+        "essential"
+      ],
+      "page": 84,
+      "photo": 11,
+      "suru": false,
+      "match_forms": [
+        "重要な",
+        "重要"
+      ]
+    },
+    {
+      "number": "index-na-008",
+      "term": "新鮮な",
+      "reading": "しんせんな",
+      "reading_variants": [
+        "しんせん"
+      ],
+      "meaning": [
+        "fresh"
+      ],
+      "page": 206,
+      "photo": 19,
+      "suru": false,
+      "match_forms": [
+        "新鮮な",
+        "新鮮"
+      ]
+    },
+    {
+      "number": "index-na-009",
+      "term": "盛んな",
+      "reading": "さかんな",
+      "reading_variants": [
+        "さかん"
+      ],
+      "meaning": [
+        "prosperous",
+        "flourishing"
+      ],
+      "page": 202,
+      "photo": 7,
+      "suru": false,
+      "match_forms": [
+        "盛んな",
+        "盛ん"
+      ]
+    },
+    {
+      "number": "index-na-010",
+      "term": "素直な",
+      "reading": "すなおな",
+      "reading_variants": [
+        "すなお"
+      ],
+      "meaning": [
+        "honest",
+        "obedient"
+      ],
+      "page": 134,
+      "photo": 19,
+      "suru": false,
+      "match_forms": [
+        "素直な",
+        "素直"
+      ]
+    },
+    {
+      "number": "index-na-011",
+      "term": "適当な",
+      "reading": "てきとうな",
+      "reading_variants": [
+        "てきとう"
+      ],
+      "meaning": [
+        "appropriate",
+        "suitable"
+      ],
+      "page": 52,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "適当な",
+        "適当"
+      ]
+    },
+    {
+      "number": "index-na-012",
+      "term": "得意な",
+      "reading": "とくいな",
+      "reading_variants": [
+        "とくい"
+      ],
+      "meaning": [
+        "good at",
+        "skilled in"
+      ],
+      "page": 72,
+      "photo": 13,
+      "suru": false,
+      "match_forms": [
+        "得意な",
+        "得意"
+      ]
+    },
+    {
+      "number": "index-na-013",
+      "term": "派手な",
+      "reading": "はでな",
+      "reading_variants": [
+        "はで"
+      ],
+      "meaning": [
+        "flashy",
+        "showy"
+      ],
+      "page": 174,
+      "photo": 14,
+      "suru": false,
+      "match_forms": [
+        "派手な",
+        "派手"
+      ]
+    },
+    {
+      "number": "index-na-014",
+      "term": "不安な",
+      "reading": "ふあんな",
+      "reading_variants": [
+        "ふあん"
+      ],
+      "meaning": [
+        "anxious",
+        "uneasy"
+      ],
+      "page": 76,
+      "photo": 17,
+      "suru": false,
+      "match_forms": [
+        "不安な",
+        "不安"
+      ]
+    },
+    {
+      "number": "index-na-015",
+      "term": "不規則な",
+      "reading": "ふきそくな",
+      "reading_variants": [
+        "ふきそく"
+      ],
+      "meaning": [
+        "irregular"
+      ],
+      "page": 178,
+      "photo": 17,
+      "suru": false,
+      "match_forms": [
+        "不規則な",
+        "不規則"
+      ]
+    },
+    {
+      "number": "index-na-016",
+      "term": "不思議な",
+      "reading": "ふしぎな",
+      "reading_variants": [
+        "ふしぎ"
+      ],
+      "meaning": [
+        "mysterious",
+        "strange"
+      ],
+      "page": 158,
+      "photo": 17,
+      "suru": false,
+      "match_forms": [
+        "不思議な",
+        "不思議"
+      ]
+    },
+    {
+      "number": "index-na-017",
+      "term": "複雑な",
+      "reading": "ふくざつな",
+      "reading_variants": [
+        "ふくざつ"
+      ],
+      "meaning": [
+        "complex",
+        "complicated"
+      ],
+      "page": 122,
+      "photo": 17,
+      "suru": false,
+      "match_forms": [
+        "複雑な",
+        "複雑"
+      ]
+    },
+    {
+      "number": "index-na-018",
+      "term": "平気な",
+      "reading": "へいきな",
+      "reading_variants": [
+        "へいき"
+      ],
+      "meaning": [
+        "unbothered",
+        "calm"
+      ],
+      "page": 124,
+      "photo": 4,
+      "suru": false,
+      "match_forms": [
+        "平気な",
+        "平気"
+      ]
+    },
+    {
+      "number": "index-na-019",
+      "term": "平等な",
+      "reading": "びょうどうな",
+      "reading_variants": [
+        "びょうどう"
+      ],
+      "meaning": [
+        "equal",
+        "fair"
+      ],
+      "page": 124,
+      "photo": 17,
+      "suru": false,
+      "match_forms": [
+        "平等な",
+        "平等"
+      ]
+    },
+    {
+      "number": "index-na-020",
+      "term": "無理な",
+      "reading": "むりな",
+      "reading_variants": [
+        "むり"
+      ],
+      "meaning": [
+        "unreasonable",
+        "impossible"
+      ],
+      "page": 104,
+      "photo": 16,
+      "suru": false,
+      "match_forms": [
+        "無理な",
+        "無理"
+      ]
+    },
+    {
+      "number": "index-na-021",
+      "term": "歴史的な",
+      "reading": "れきしてきな",
+      "reading_variants": [
+        "れきしてき"
+      ],
+      "meaning": [
+        "historical"
+      ],
+      "page": 136,
+      "photo": 15,
+      "suru": false,
+      "match_forms": [
+        "歴史的な",
+        "歴史的"
+      ]
+    },
+    {
+      "number": "index-na-022",
+      "term": "様々な",
+      "reading": "さまざまな",
+      "reading_variants": [
+        "さまざま"
+      ],
+      "meaning": [
+        "various",
+        "diverse"
+      ],
+      "page": 88,
+      "photo": 7,
+      "suru": false,
+      "match_forms": [
+        "様々な",
+        "様々"
+      ]
+    },
+    {
+      "number": "index-na-023",
+      "term": "幸せな",
+      "reading": "しあわせな",
+      "reading_variants": [
+        "しあわせ"
+      ],
+      "meaning": [
+        "happy",
+        "fortunate"
+      ],
+      "page": 204,
+      "photo": 7,
+      "suru": false,
+      "match_forms": [
+        "幸せな",
+        "幸せ"
+      ]
+    },
+    {
+      "number": "index-na-024",
+      "term": "経済的な",
+      "reading": "けいざいてきな",
+      "reading_variants": [
+        "けいざいてき"
+      ],
+      "meaning": [
+        "economical",
+        "financial"
+      ],
+      "page": 104,
+      "photo": 20,
+      "suru": false,
+      "match_forms": [
+        "経済的な",
+        "経済的"
+      ]
+    },
+    {
+      "number": "index-na-025",
+      "term": "おしゃれな",
+      "reading": "おしゃれな",
+      "reading_variants": ["おしゃれ"],
+      "meaning": ["fashionable", "stylish"],
+      "page": 190,
+      "photo": 2,
+      "suru": false,
+      "match_forms": ["おしゃれな", "おしゃれ"]
+    },
+    {
+      "number": "index-na-026",
+      "term": "真面目な",
+      "reading": "まじめな",
+      "reading_variants": ["まじめ"],
+      "meaning": ["serious", "diligent"],
+      "page": 228,
+      "photo": 4,
+      "suru": false,
+      "match_forms": ["真面目な", "真面目", "まじめな"]
+    },
+    {
+      "number": "index-na-027",
+      "term": "ばらばらな",
+      "reading": "ばらばらな",
+      "reading_variants": ["ばらばら"],
+      "meaning": ["scattered", "in pieces"],
+      "page": 224,
+      "photo": 14,
+      "suru": false,
+      "match_forms": ["ばらばらな", "ばらばら"]
+    },
+    {
+      "number": "index-na-028",
+      "term": "無駄な",
+      "reading": "むだな",
+      "reading_variants": ["むだ"],
+      "meaning": ["wasteful", "useless"],
+      "page": 104,
+      "photo": 16,
+      "suru": false,
+      "match_forms": ["無駄な", "無駄"]
+    }
+  ]
+}

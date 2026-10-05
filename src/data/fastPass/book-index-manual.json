@@ -1,0 +1,32 @@
+{
+  "source": "N3 Fast Pass photographed index. Clearly readable entries recovered by checking the left and right halves of each row independently; concise editorial English glosses.",
+  "entries": [
+    { "number": "index-manual-001", "term": "Eメール", "reading": "Eメール", "meaning": ["email"], "page": 240, "photo": 1, "suru": false, "match_forms": ["Eメール"] },
+    { "number": "index-manual-002", "term": "オープン", "reading": "オープン", "meaning": ["open", "opening"], "page": 242, "photo": 2, "suru": false, "match_forms": ["オープン"] },
+    { "number": "index-manual-003", "term": "おこづかい", "reading": "おこづかい", "meaning": ["pocket money", "allowance"], "page": 190, "photo": 2, "suru": false, "match_forms": ["おこづかい"] },
+    { "number": "index-manual-004", "term": "かび", "reading": "かび", "meaning": ["mold", "mildew"], "page": 194, "photo": 3, "suru": false, "match_forms": ["かび"] },
+    { "number": "index-manual-005", "term": "ちょうどいい", "reading": "ちょうどいい", "meaning": ["just right"], "page": 214, "photo": 5, "suru": false, "match_forms": ["ちょうどいい"] },
+    { "number": "index-manual-006", "term": "大量", "reading": "たいりょう", "meaning": ["large quantity"], "page": 172, "photo": 6, "suru": false, "match_forms": ["大量"] },
+    { "number": "index-manual-007", "term": "ダウンロード", "reading": "ダウンロード", "meaning": ["download"], "page": 248, "photo": 6, "suru": false, "match_forms": ["ダウンロード"] },
+    { "number": "index-manual-008", "term": "サイト", "reading": "サイト", "meaning": ["website", "site"], "page": 244, "photo": 7, "suru": false, "match_forms": ["サイト"] },
+    { "number": "index-manual-009", "term": "自然に", "reading": "しぜんに", "meaning": ["naturally"], "page": 94, "photo": 7, "suru": false, "match_forms": ["自然に"] },
+    { "number": "index-manual-010", "term": "いろんな", "reading": "いろんな", "meaning": ["various", "all kinds of"], "page": 186, "photo": 8, "suru": false, "match_forms": ["いろんな"] },
+    { "number": "index-manual-011", "term": "しみ", "reading": "しみ", "meaning": ["stain", "spot"], "page": 206, "photo": 11, "suru": false, "match_forms": ["しみ"] },
+    { "number": "index-manual-012", "term": "そういう", "reading": "そういう", "meaning": ["that kind of", "such"], "page": 210, "photo": 12, "suru": false, "match_forms": ["そういう"] },
+    { "number": "index-manual-013", "term": "ちらし", "reading": "ちらし", "meaning": ["flyer", "leaflet"], "page": 214, "photo": 13, "suru": false, "match_forms": ["ちらし"] },
+    { "number": "index-manual-014", "term": "ついでに", "reading": "ついでに", "meaning": ["while doing something else", "at the same time"], "page": 216, "photo": 13, "suru": false, "match_forms": ["ついでに"] },
+    { "number": "index-manual-015", "term": "パスワード", "reading": "パスワード", "meaning": ["password"], "page": 252, "photo": 14, "suru": false, "match_forms": ["パスワード"] },
+    { "number": "index-manual-016", "term": "美容院", "reading": "びよういん", "meaning": ["beauty salon", "hair salon"], "page": 160, "photo": 17, "suru": false, "match_forms": ["美容院"] },
+    { "number": "index-manual-017", "term": "夏祭り", "reading": "なつまつり", "meaning": ["summer festival"], "page": 218, "photo": 18, "suru": false, "match_forms": ["夏祭り"] },
+    { "number": "index-manual-018", "term": "なめる", "reading": "なめる", "meaning": ["to lick"], "page": 220, "photo": 18, "suru": false, "match_forms": ["なめる"] },
+    { "number": "index-manual-019", "term": "ずきずき", "reading": "ずきずき", "meaning": ["throbbing", "pulsating pain"], "page": 208, "photo": 19, "suru": false, "match_forms": ["ずきずき"] },
+    { "number": "index-manual-020", "term": "～秒", "reading": "～びょう", "meaning": ["seconds (counter)"], "page": 224, "photo": 17, "suru": false, "match_forms": ["～秒"] },
+    { "number": "index-manual-021", "term": "～キロ", "reading": "～キロ", "meaning": ["kilo-", "kilometers or kilograms (counter)"], "page": 244, "photo": 9, "suru": false, "match_forms": ["～キロ"] },
+    { "number": "index-manual-022", "term": "～センター", "reading": "～センター", "meaning": ["center (suffix)"], "page": 248, "photo": 12, "suru": false, "match_forms": ["～センター"] },
+    { "number": "index-manual-023", "term": "～センチ", "reading": "～センチ", "meaning": ["centimeters (counter)"], "page": 248, "photo": 12, "suru": false, "match_forms": ["～センチ"] },
+    { "number": "index-manual-024", "term": "真っ～", "reading": "まっ～", "meaning": ["intensifying prefix (e.g. straight, completely)"], "page": 230, "photo": 4, "suru": false, "match_forms": ["真っ～"] },
+    { "number": "index-manual-025", "term": "～先", "reading": "～さき", "meaning": ["destination or point ahead (suffix)"], "page": 118, "photo": 7, "suru": false, "match_forms": ["～先"] },
+    { "number": "index-manual-026", "term": "～時過ぎ", "reading": "～じすぎ", "meaning": ["just after a stated hour"], "page": 94, "photo": 7, "suru": false, "match_forms": ["～時過ぎ"] },
+    { "number": "index-manual-027", "term": "ある～", "reading": "ある～", "meaning": ["a certain … (e.g. ある本, a certain book)"], "page": 184, "photo": 1, "suru": false, "match_forms": ["ある～"] }
+  ]
+}

@@ -5,10 +5,15 @@ import fastPassBookMore from '../data/fastPass/book-0073-0203.json';
 import fastPassBookLatest from '../data/fastPass/book-0204-0227.json';
 import fastPassBookExtended from '../data/fastPass/book-0228-0331.json';
 import fastPassBook0308 from '../data/fastPass/book-0308.json';
+import fastPassBookIndexExisting from '../data/fastPass/book-index-existing.json';
+import fastPassBookIndexDefined from '../data/fastPass/book-index-defined.json';
+import fastPassBookIndexAliases from '../data/fastPass/book-index-library-aliases.json';
+import fastPassBookIndexNa from '../data/fastPass/book-index-na.json';
+import fastPassBookIndexManual from '../data/fastPass/book-index-manual.json';
 import { allVocabulary } from '../data/vocabulary';
 import type { CardType, CustomCard } from '../types';
 
-const normalize = (value: string) => value.normalize('NFKC').trim();
+const normalize = (value: string) => value.normalize('NFKC').trim().replace(/[〜～~]/g, '~');
 const normalizeReading = (value: string) => normalize(value)
     .replace(/[()（）.・\s]/g, '')
     .replace(/[ァ-ヶ]/g, char => String.fromCharCode(char.charCodeAt(0) - 0x60));
@@ -33,6 +38,9 @@ const bookImports: { id: string; entries: BookEntry[] }[] = [
     { id: 'book-0228-0331-v1', entries: fastPassBookExtended.entries },
     // Separate marker: installs that already imported the earlier photo batch still receive 0308.
     { id: 'book-0308-v1', entries: fastPassBook0308.entries },
+    { id: 'book-index-defined-2026-10-05-v1', entries: fastPassBookIndexDefined.entries },
+    { id: 'book-index-na-2026-10-05-v1', entries: fastPassBookIndexNa.entries },
+    { id: 'book-index-manual-2026-10-05-v1', entries: fastPassBookIndexManual.entries },
 ];
 export const FAST_PASS_BOOK_IMPORTS = bookImports.map(batch => batch.id);
 
@@ -73,6 +81,17 @@ for (const entry of [...fastPassN3.kanji, ...fastPassN3.vocab]) {
 
 for (const entry of bookImports.flatMap(batch => batch.entries)) {
     registerVocabulary(bookForms(entry), bookReadings(entry));
+}
+
+// Index-only entries already have definitions in the vocabulary library.
+// The photographed index provides exact spellings/readings and book pages;
+// it must not create duplicate custom cards or infer component-kanji tags.
+for (const entry of fastPassBookIndexExisting.entries) {
+    registerVocabulary([entry.term], [entry.reading]);
+}
+
+for (const entry of fastPassBookIndexAliases.entries) {
+    registerVocabulary([entry.term], [entry.reading]);
 }
 
 // Keep existing library and user cards; create only the missing book words.
