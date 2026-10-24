@@ -1,4 +1,9 @@
-# React + TypeScript + Vite
+# Japanese learning app
+Dojo provides an all in one tool to learn japanese grammar, kanji, vocabulary via SRS and mnemonics.
+
+Note: currently focused on N3 level.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
